@@ -9,11 +9,15 @@ import time
 import threading
 from tkinter import filedialog
 import matplotlib.pyplot as plt
+import argparse
 
 # Geometric parameters
 DISPLAY_DISTANCE_CM = 40.0  # Distance from eye to display in cm (adjust to your setup)
 DISPLAY_DISTANCE_MM = DISPLAY_DISTANCE_CM * 10.0
 DISPLAY_DPI = 96.0  # Adjust for your monitor (typical: 96, high-DPI: 144-192)
+CAMERA_FOV_DEGREES = 60.0  # Camera field of view in degrees (adjust if needed)
+GAZE_SCALING_FACTOR = 1.0  # Scaling factor to adjust gaze sensitivity (increase if gaze doesn't reach screen edges)
+FLIP_CAMERA_HORIZONTAL = True  # Flip camera horizontally to fix mirroring
 
 # Monitor resolution (will be auto-detected)
 monitor_width = None
@@ -26,12 +30,17 @@ gaze_overlay_window = None
 gaze_overlay_canvas = None
 current_gaze_x = None
 current_gaze_y = None
+raw_gaze_x = None  # Raw gaze position before calibration offset
+raw_gaze_y = None
 overlay_running = False
 
 # Calibration globals
 calibration_offset_x = 0.0  # Offset in pixels
 calibration_offset_y = 0.0
 calibration_active = False
+
+# Debug calibration flag
+debug_calibration = False
 
 # Crop the image to maintain a specific aspect ratio (width:height) before resizing. 
 def crop_to_aspect_ratio(image, width=640, height=480):
@@ -313,6 +322,7 @@ def get_monitor_resolution():
         root.destroy()
         return monitor_width, monitor_height
     except:
+        print("using default monitor resolution")
         monitor_width, monitor_height = 1920, 1080  # Default fallback
         return monitor_width, monitor_height
 
@@ -327,17 +337,20 @@ def calculate_display_dimensions():
     display_height_mm = monitor_height / pixels_per_mm
     print(f"Display: {display_width_mm:.1f}mm × {display_height_mm:.1f}mm at {DISPLAY_DISTANCE_CM}cm distance")
 
-def compute_gaze_to_screen(pupil_x, pupil_y, frame_width, frame_height):
+def compute_gaze_to_screen(pupil_x, pupil_y, frame_width, frame_height, apply_calibration=True):
     """
     Convert pupil position to screen coordinates using geometric projection.
     
     Assumes:
     - Eye center is at frame center
-    - Camera FOV is approximately 60 degrees (adjust if needed)
+    - Camera FOV is set by CAMERA_FOV_DEGREES
     - Display is at DISPLAY_DISTANCE_MM from eye
+    
+    Returns:
+    - (screen_x, screen_y): Screen coordinates with calibration applied if apply_calibration=True
     """
     global display_width_mm, display_height_mm, monitor_width, monitor_height, DISPLAY_DISTANCE_MM
-    global calibration_offset_x, calibration_offset_y
+    global calibration_offset_x, calibration_offset_y, CAMERA_FOV_DEGREES
     
     if display_width_mm is None:
         calculate_display_dimensions()
@@ -350,23 +363,24 @@ def compute_gaze_to_screen(pupil_x, pupil_y, frame_width, frame_height):
     offset_x = pupil_x - eye_center_x
     offset_y = pupil_y - eye_center_y
     
-    # Convert pixel offset to angle
-    # Assuming ~60 degree FOV (adjust FOV_degrees if needed)
-    FOV_degrees = 60.0
-    FOV_rad = np.radians(FOV_degrees)
+    # Convert pixel offset to angle using actual FOV
+    FOV_rad = np.radians(CAMERA_FOV_DEGREES)
     
     # Normalized device coordinates [-1, 1]
+    # Map from frame coordinates to normalized coordinates
     ndc_x = (2.0 * pupil_x / frame_width) - 1.0
-    ndc_y = 1.0 - (2.0 * pupil_y / frame_height)
+    ndc_y = 1.0 - (2.0 * pupil_y / frame_height)  # Invert Y axis
     
-    # Convert to angle (approximate)
+    # Convert to angle (approximate, using FOV)
     angle_x = ndc_x * (FOV_rad / 2.0)
     angle_y = ndc_y * (FOV_rad / 2.0)
     
     # Project onto display plane at DISPLAY_DISTANCE_MM
     # tan(angle) = offset / distance
-    screen_x_mm = np.tan(angle_x) * DISPLAY_DISTANCE_MM
-    screen_y_mm = np.tan(angle_y) * DISPLAY_DISTANCE_MM
+    # Apply scaling factor to adjust sensitivity
+    global GAZE_SCALING_FACTOR
+    screen_x_mm = np.tan(angle_x) * DISPLAY_DISTANCE_MM * GAZE_SCALING_FACTOR
+    screen_y_mm = np.tan(angle_y) * DISPLAY_DISTANCE_MM * GAZE_SCALING_FACTOR
     
     # Convert to screen coordinates (center of screen is origin)
     screen_x_mm += display_width_mm / 2.0
@@ -376,35 +390,45 @@ def compute_gaze_to_screen(pupil_x, pupil_y, frame_width, frame_height):
     pixels_per_mm_x = monitor_width / display_width_mm
     pixels_per_mm_y = monitor_height / display_height_mm
     
-    screen_x = int(screen_x_mm * pixels_per_mm_x)
-    screen_y = int(screen_y_mm * pixels_per_mm_y)
+    # Raw gaze position (before calibration)
+    raw_screen_x = int(screen_x_mm * pixels_per_mm_x)
+    raw_screen_y = int(screen_y_mm * pixels_per_mm_y)
     
-    # Apply calibration offset
-    screen_x += int(calibration_offset_x)
-    screen_y += int(calibration_offset_y)
-    
-    # Clamp to screen bounds
-    screen_x = max(0, min(monitor_width - 1, screen_x))
-    screen_y = max(0, min(monitor_height - 1, screen_y))
+    # Apply calibration offset if requested
+    if apply_calibration:
+        screen_x = raw_screen_x + int(calibration_offset_x)
+        screen_y = raw_screen_y + int(calibration_offset_y)
+        
+        # Clamp to screen bounds
+        screen_x = max(0, min(monitor_width - 1, screen_x))
+        screen_y = max(0, min(monitor_height - 1, screen_y))
+    else:
+        screen_x = raw_screen_x
+        screen_y = raw_screen_y
     
     return screen_x, screen_y
 
-def calibrate_gaze(screen_x, screen_y):
-    """Calibrate gaze by computing offset from current position to screen center"""
+def calibrate_gaze(raw_screen_x, raw_screen_y):
+    """Calibrate gaze by computing offset from raw gaze position to screen center"""
     global calibration_offset_x, calibration_offset_y, monitor_width, monitor_height
     
     if monitor_width is None:
         get_monitor_resolution()
     
     # Compute offset needed to center the gaze
+    # Use raw gaze position (before any calibration offset)
     screen_center_x = monitor_width // 2
     screen_center_y = monitor_height // 2
     
-    calibration_offset_x = screen_center_x - screen_x
-    calibration_offset_y = screen_center_y - screen_y
+    # Calculate offset: what we need to add to raw gaze to get to center
+    calibration_offset_x = screen_center_x - raw_screen_x
+    calibration_offset_y = screen_center_y - raw_screen_y
     
-    print(f"Calibration complete! Offset: ({calibration_offset_x:.1f}, {calibration_offset_y:.1f})")
-    print("Look at the center of your screen and press 'c' again to calibrate.")
+    print(f"Calibration complete!")
+    print(f"  Raw gaze was at: ({raw_screen_x}, {raw_screen_y})")
+    print(f"  Screen center is: ({screen_center_x}, {screen_center_y})")
+    print(f"  Applied offset: ({calibration_offset_x:.1f}, {calibration_offset_y:.1f})")
+    print("  After calibration, gaze should be at screen center when looking at center.")
 
 # ------------------- Gaze Overlay Functions -------------------
 def create_gaze_overlay():
@@ -449,7 +473,7 @@ def create_gaze_overlay():
 
 def update_gaze_overlay(screen_x, screen_y):
     """Update red dot position on overlay"""
-    global gaze_overlay_window, gaze_overlay_canvas
+    global gaze_overlay_window, gaze_overlay_canvas, debug_calibration, monitor_width, monitor_height
     
     if gaze_overlay_window is None or gaze_overlay_canvas is None:
         return
@@ -479,6 +503,37 @@ def update_gaze_overlay(screen_x, screen_y):
             screen_x + 4, screen_y + 4,
             fill='white', outline='white'
         )
+        
+        # Debug calibration: draw ovals at key points
+        if debug_calibration:
+            # Draw oval at gaze position (cyan)
+            gaze_radius = 30
+            gaze_overlay_canvas.create_oval(
+                screen_x - gaze_radius, screen_y - gaze_radius,
+                screen_x + gaze_radius, screen_y + gaze_radius,
+                outline='cyan', width=3
+            )
+            
+            # Draw oval at screen center (green)
+            if monitor_width and monitor_height:
+                screen_center_x = monitor_width // 2
+                screen_center_y = monitor_height // 2
+                center_radius = 40
+                gaze_overlay_canvas.create_oval(
+                    screen_center_x - center_radius, screen_center_y - center_radius,
+                    screen_center_x + center_radius, screen_center_y + center_radius,
+                    outline='green', width=4
+                )
+                # Label for screen center
+                gaze_overlay_canvas.create_text(
+                    screen_center_x, screen_center_y - center_radius - 20,
+                    text="Screen Center", fill='green', font=('Arial', 12, 'bold')
+                )
+                # Label for gaze position
+                gaze_overlay_canvas.create_text(
+                    screen_x, screen_y - gaze_radius - 20,
+                    text="Gaze", fill='cyan', font=('Arial', 12, 'bold')
+                )
         
         # Force canvas update
         gaze_overlay_canvas.update_idletasks()
@@ -607,7 +662,7 @@ def stop_gaze_overlay():
     
     print("Gaze overlay stopped.")
 
-def process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, render_cv_window):
+def process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, render_cv_window, debug_calibration_flag=False):
   
     final_rotated_rect = ((0,0),(0,0),0)
 
@@ -698,9 +753,17 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
         
         # Compute gaze position
         frame_height, frame_width = frame.shape[:2]
-        screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height)
         
-        # Store for overlay (force update even if same values)
+        # Get raw gaze position (before calibration)
+        raw_screen_x, raw_screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=False)
+        
+        # Get calibrated gaze position (with offset applied)
+        screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=True)
+        
+        # Store both raw and calibrated gaze positions
+        global raw_gaze_x, raw_gaze_y
+        raw_gaze_x = raw_screen_x
+        raw_gaze_y = raw_screen_y
         current_gaze_x = screen_x
         current_gaze_y = screen_y
         
@@ -729,6 +792,22 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
         if calibration_offset_x != 0 or calibration_offset_y != 0:
             cv2.putText(test_frame, f"Calib: ({int(calibration_offset_x)}, {int(calibration_offset_y)})", 
                        (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 200, 0), 1)
+        
+        # Debug calibration: draw ovals on frame at key points
+        if debug_calibration_flag:
+            # Draw oval at pupil position (magenta)
+            pupil_radius = 25
+            cv2.circle(test_frame, (center_x, center_y), pupil_radius, (255, 0, 255), 3)
+            cv2.putText(test_frame, "Pupil", (center_x - 20, center_y - pupil_radius - 10),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+            
+            # Draw oval at frame center (yellow)
+            cv2.circle(test_frame, (frame_center_x, frame_center_y), 30, (0, 255, 255), 3)
+            cv2.putText(test_frame, "Frame Center", (frame_center_x - 50, frame_center_y - 40),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+            
+            # Draw line from frame center to pupil
+            cv2.line(test_frame, (frame_center_x, frame_center_y), (center_x, center_y), (128, 128, 128), 2)
         
         # Debug: print occasionally to console
         import random
@@ -808,7 +887,7 @@ def process_frame(frame):
     return final_rotated_rect, pupil_center
 
 # Loads a video and finds the pupil in each frame
-def process_video(video_path, input_method):
+def process_video(video_path, input_method, debug_calibration_flag=False):
 
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for MP4 format
     out = cv2.VideoWriter('output_video.mp4', fourcc, 30.0, (640, 480))  # Output video filename, codec, frame rate, and frame size
@@ -830,6 +909,10 @@ def process_video(video_path, input_method):
     calculate_display_dimensions()
     start_gaze_overlay()
     
+    # Set global debug_calibration flag
+    global debug_calibration
+    debug_calibration = debug_calibration_flag
+    
     debug_mode_on = False
     
     temp_center = (0,0)
@@ -838,6 +921,11 @@ def process_video(video_path, input_method):
         ret, frame = cap.read()
         if not ret:
             break
+
+        # Flip camera horizontally to fix mirroring (if enabled)
+        global FLIP_CAMERA_HORIZONTAL
+        if FLIP_CAMERA_HORIZONTAL:
+            frame = cv2.flip(frame, 1)  # 1 = horizontal flip
 
         # Crop and resize frame
         frame = crop_to_aspect_ratio(frame)
@@ -866,7 +954,7 @@ def process_video(video_path, input_method):
         thresholded_image_relaxed = mask_outside_square(thresholded_image_relaxed, darkest_point, 250)
         
         #take the three images thresholded at different levels and process them
-        pupil_rotated_rect, pupil_center = process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, True)
+        pupil_rotated_rect, pupil_center = process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, True, debug_calibration_flag)
         
         # Update gaze overlay if enabled - directly call update from video loop
         if overlay_running and current_gaze_x is not None and current_gaze_y is not None:
@@ -891,8 +979,8 @@ def process_video(video_path, input_method):
         
         # Calibration: look at screen center and press 'c'
         if key == ord('c'):
-            if current_gaze_x is not None and current_gaze_y is not None:
-                calibrate_gaze(current_gaze_x, current_gaze_y)
+            if raw_gaze_x is not None and raw_gaze_y is not None:
+                calibrate_gaze(raw_gaze_x, raw_gaze_y)
             else:
                 print("No gaze data available for calibration. Make sure pupil is detected.")
         
@@ -921,7 +1009,7 @@ def process_video(video_path, input_method):
 
 #Prompts the user to select a video file if the hardcoded path is not found
 #This is just for my debugging convenience :)
-def select_video():
+def select_video(debug_calibration_flag=False):
     root = tk.Tk()
     root.withdraw()  # Hide the main window
     video_path = 'C:/Google Drive/Eye Tracking/fulleyetest.mp4'
@@ -933,9 +1021,24 @@ def select_video():
             return
             
     #second parameter is 1 for video 2 for webcam
-    process_video(video_path, 2)
+    process_video(video_path, 2, debug_calibration_flag)
 
 if __name__ == "__main__":
-    select_video()
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Eye Tracking Phygital Application')
+    parser.add_argument('--debug', action='store_true', 
+                       help='Enable debug calibration mode with visual ovals at key points')
+    args = parser.parse_args()
+    
+    if args.debug:
+        print("🔍 Debug calibration mode enabled")
+        print("   Visual ovals will be shown at:")
+        print("   - Pupil position (magenta on frame)")
+        print("   - Frame center (yellow on frame)")
+        print("   - Gaze position (cyan on overlay)")
+        print("   - Screen center (green on overlay)")
+        print("")
+    
+    select_video(debug_calibration_flag=args.debug)
 
 
