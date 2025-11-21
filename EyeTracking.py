@@ -19,7 +19,7 @@ DISPLAY_DISTANCE_CM = 40.0  # Distance from eye to display in cm (adjust to your
 DISPLAY_DISTANCE_MM = DISPLAY_DISTANCE_CM * 10.0
 DISPLAY_DPI = 96.0  # Adjust for your monitor (typical: 96, high-DPI: 144-192)
 CAMERA_FOV_DEGREES = 60.0  # Camera field of view in degrees (adjust if needed)
-GAZE_SCALING_FACTOR = 1.0  # Scaling factor to adjust gaze sensitivity (increase if gaze doesn't reach screen edges)
+GAZE_SCALING_FACTOR = 5.0  # Scaling factor to adjust gaze sensitivity (increase if gaze doesn't reach screen edges)
 FLIP_CAMERA_HORIZONTAL = True  # Flip camera horizontally to fix mirroring
 
 # Monitor resolution (will be auto-detected)
