@@ -1,20 +1,9 @@
-#OLD FILE - DO NOT USE
-
 import cv2
 import numpy as np
-import random
-import math
 import tkinter as tk
-import os
 import sys
 import time
 import threading
-from tkinter import filedialog
-import matplotlib.pyplot as plt
-import argparse
-import csv
-import json
-from datetime import datetime
 
 # Geometric parameters
 DISPLAY_DISTANCE_CM = 40.0  # Distance from eye to display in cm (adjust to your setup)
@@ -47,15 +36,8 @@ calibration_active = False
 # Debug calibration flag
 debug_calibration = False
 
-# Accuracy testing globals
-accuracy_testing_active = False
-accuracy_data = []  # List to store accuracy measurements
-target_position = None  # Current target position (x, y)
-target_start_time = None
-target_duration = 2.0  # How long to stay at each target (seconds)
-target_path = []  # List of target positions to visit
-target_index = 0
-accuracy_test_start_time = None
+# Callbacks for overlay drawing (list of callbacks from different test modules)
+overlay_callbacks = []
 
 # Crop the image to maintain a specific aspect ratio (width:height) before resizing. 
 def crop_to_aspect_ratio(image, width=640, height=480):
@@ -446,6 +428,22 @@ def calibrate_gaze(raw_screen_x, raw_screen_y):
     print("  After calibration, gaze should be at screen center when looking at center.")
 
 # ------------------- Gaze Overlay Functions -------------------
+def set_accuracy_overlay_callback(callback):
+    """Set a callback function for drawing accuracy testing elements on the overlay"""
+    add_overlay_callback(callback)
+
+def add_overlay_callback(callback):
+    """Add a callback function for drawing elements on the overlay"""
+    global overlay_callbacks
+    if callback is not None and callback not in overlay_callbacks:
+        overlay_callbacks.append(callback)
+
+def remove_overlay_callback(callback):
+    """Remove a callback function from overlay drawing"""
+    global overlay_callbacks
+    if callback in overlay_callbacks:
+        overlay_callbacks.remove(callback)
+
 def create_gaze_overlay():
     """Create transparent overlay window for gaze dot"""
     global gaze_overlay_window, gaze_overlay_canvas, monitor_width, monitor_height
@@ -465,7 +463,7 @@ def create_gaze_overlay():
     root.attributes('-fullscreen', True)
     root.attributes('-topmost', True)
     root.configure(bg='black')
-    root.attributes('-alpha', 0.3)  # Semi-transparent
+    root.attributes('-alpha', 0.9)  # almost full opacity (0.3 before)
     root.overrideredirect(True)  # Remove window decorations
     
     # Try to make it stay on top
@@ -489,7 +487,7 @@ def create_gaze_overlay():
 def update_gaze_overlay(screen_x, screen_y):
     """Update red dot position on overlay"""
     global gaze_overlay_window, gaze_overlay_canvas, debug_calibration, monitor_width, monitor_height
-    global accuracy_testing_active, target_position, target_index, target_path
+    global overlay_callbacks
     
     if gaze_overlay_window is None or gaze_overlay_canvas is None:
         return
@@ -505,29 +503,13 @@ def update_gaze_overlay(screen_x, screen_y):
         # Clear and redraw
         gaze_overlay_canvas.delete("all")
         
-        # Draw accuracy testing target if active
-        if accuracy_testing_active and target_position is not None:
-            target_x, target_y = target_position
-            # Draw large target circle (green)
-            target_radius = 30
-            gaze_overlay_canvas.create_oval(
-                target_x - target_radius, target_y - target_radius,
-                target_x + target_radius, target_y + target_radius,
-                fill='green', outline='darkgreen', width=3
-            )
-            # Draw inner white dot
-            gaze_overlay_canvas.create_oval(
-                target_x - 8, target_y - 8,
-                target_x + 8, target_y + 8,
-                fill='white', outline='white'
-            )
-            # Show target number
-            if target_path:
-                gaze_overlay_canvas.create_text(
-                    target_x, target_y - target_radius - 20,
-                    text=f"Target {target_index + 1}/{len(target_path)}",
-                    fill='green', font=('Arial', 14, 'bold')
-                )
+        # Draw elements from all registered callbacks
+        for callback in overlay_callbacks:
+            try:
+                callback(gaze_overlay_canvas)
+            except Exception:
+                # Silently handle errors in callbacks
+                pass
         
         # Draw red dot (gaze position)
         dot_radius = 20
@@ -543,14 +525,6 @@ def update_gaze_overlay(screen_x, screen_y):
             screen_x + 4, screen_y + 4,
             fill='white', outline='white'
         )
-        
-        # Draw line from target to gaze if accuracy testing
-        if accuracy_testing_active and target_position is not None:
-            target_x, target_y = target_position
-            gaze_overlay_canvas.create_line(
-                target_x, target_y, screen_x, screen_y,
-                fill='yellow', width=2, dash=(5, 5)
-            )
         
         # Debug calibration: draw ovals at key points
         if debug_calibration:
@@ -693,7 +667,6 @@ def start_gaze_overlay():
     print("Gaze overlay started! Red dot shows where you're looking.")
     print("Press 'c' to calibrate (look at screen center and press 'c')")
     print("Press 'g' to toggle overlay on/off")
-    print("Press 'a' to start/stop accuracy testing")
 
 def stop_gaze_overlay():
     """Stop and close overlay"""
@@ -710,254 +683,6 @@ def stop_gaze_overlay():
         gaze_overlay_canvas = None
     
     print("Gaze overlay stopped.")
-
-# ------------------- Accuracy Testing Functions -------------------
-def generate_target_path(grid_size=3, margin_percent=0.15):
-    """
-    Generate a grid of target positions across the screen.
-    
-    Args:
-        grid_size: Number of targets per row/column (default 3x3 = 9 targets)
-        margin_percent: Percentage of screen to leave as margin (default 15%)
-    
-    Returns:
-        List of (x, y) tuples representing target positions
-    """
-    global monitor_width, monitor_height
-    
-    if monitor_width is None or monitor_height is None:
-        get_monitor_resolution()
-    
-    margin_x = int(monitor_width * margin_percent)
-    margin_y = int(monitor_height * margin_percent)
-    
-    usable_width = monitor_width - 2 * margin_x
-    usable_height = monitor_height - 2 * margin_y
-    
-    targets = []
-    for row in range(grid_size):
-        for col in range(grid_size):
-            x = margin_x + int((col / (grid_size - 1)) * usable_width) if grid_size > 1 else margin_x + usable_width // 2
-            y = margin_y + int((row / (grid_size - 1)) * usable_height) if grid_size > 1 else margin_y + usable_height // 2
-            targets.append((x, y))
-    
-    return targets
-
-def start_accuracy_testing(grid_size=3):
-    """Start accuracy testing with moving target"""
-    global accuracy_testing_active, target_path, target_index, target_position
-    global target_start_time, accuracy_data, accuracy_test_start_time, monitor_width, monitor_height
-    
-    if monitor_width is None or monitor_height is None:
-        get_monitor_resolution()
-    
-    # Generate target path
-    target_path = generate_target_path(grid_size)
-    target_index = 0
-    target_position = target_path[0]
-    target_start_time = time.time()
-    accuracy_test_start_time = time.time()
-    accuracy_data = []
-    accuracy_testing_active = True
-    
-    print(f"Accuracy testing started!")
-    print(f"  Grid size: {grid_size}x{grid_size} ({len(target_path)} targets)")
-    print(f"  Duration per target: {target_duration:.1f} seconds")
-    print(f"  Total estimated time: {len(target_path) * target_duration:.1f} seconds")
-    print(f"  Press 'a' again to stop early")
-
-def stop_accuracy_testing():
-    """Stop accuracy testing and calculate results"""
-    global accuracy_testing_active, accuracy_data, target_path
-    
-    if not accuracy_testing_active:
-        return
-    
-    accuracy_testing_active = False
-    target_position = None
-    
-    if len(accuracy_data) == 0:
-        print("No accuracy data collected.")
-        return
-    
-    # Calculate accuracy metrics
-    results = calculate_accuracy_metrics(accuracy_data)
-    
-    # Save data
-    save_accuracy_data(accuracy_data, results)
-    
-    # Print results
-    print_accuracy_results(results)
-    
-    return results
-
-def update_accuracy_target():
-    """Update target position based on time"""
-    global target_position, target_index, target_path, target_start_time, target_duration
-    
-    if not accuracy_testing_active or len(target_path) == 0:
-        return
-    
-    current_time = time.time()
-    elapsed = current_time - target_start_time
-    
-    # Move to next target if duration exceeded
-    if elapsed >= target_duration:
-        target_index += 1
-        if target_index >= len(target_path):
-            # All targets visited, stop testing
-            stop_accuracy_testing()
-            return
-        target_position = target_path[target_index]
-        target_start_time = current_time
-
-def record_accuracy_measurement(gaze_x, gaze_y):
-    """Record a single accuracy measurement"""
-    global accuracy_data, target_position, accuracy_testing_active
-    
-    if not accuracy_testing_active or target_position is None:
-        return
-    
-    if gaze_x is None or gaze_y is None:
-        return
-    
-    # Calculate error
-    target_x, target_y = target_position
-    error_x = gaze_x - target_x
-    error_y = gaze_y - target_y
-    error_distance = math.sqrt(error_x**2 + error_y**2)
-    
-    # Record measurement
-    measurement = {
-        'timestamp': time.time(),
-        'target_x': target_x,
-        'target_y': target_y,
-        'gaze_x': gaze_x,
-        'gaze_y': gaze_y,
-        'error_x': error_x,
-        'error_y': error_y,
-        'error_distance': error_distance,
-        'target_index': target_index
-    }
-    
-    accuracy_data.append(measurement)
-
-def calculate_accuracy_metrics(data):
-    """Calculate accuracy metrics from collected data"""
-    if len(data) == 0:
-        return None
-    
-    errors = [d['error_distance'] for d in data]
-    errors_x = [d['error_x'] for d in data]
-    errors_y = [d['error_y'] for d in data]
-    
-    mean_error = np.mean(errors)
-    median_error = np.median(errors)
-    std_error = np.std(errors)
-    max_error = np.max(errors)
-    min_error = np.min(errors)
-    
-    # Calculate percentage within different thresholds (in pixels)
-    thresholds = [50, 100, 150, 200]
-    within_threshold = {}
-    for threshold in thresholds:
-        count = sum(1 for e in errors if e <= threshold)
-        within_threshold[f'within_{threshold}px'] = (count / len(errors)) * 100
-    
-    # Calculate RMS (Root Mean Square) error
-    rms_error = np.sqrt(np.mean([e**2 for e in errors]))
-    
-    # Calculate mean absolute error for X and Y
-    mean_error_x = np.mean([abs(e) for e in errors_x])
-    mean_error_y = np.mean([abs(e) for e in errors_y])
-    
-    # Calculate accuracy score (0-100, higher is better)
-    # Score based on how close to perfect (0 error)
-    # Using inverse of mean error, normalized
-    max_reasonable_error = 500  # pixels - adjust based on screen size
-    accuracy_score = max(0, min(100, 100 * (1 - mean_error / max_reasonable_error)))
-    
-    results = {
-        'total_measurements': len(data),
-        'mean_error_pixels': mean_error,
-        'median_error_pixels': median_error,
-        'std_error_pixels': std_error,
-        'max_error_pixels': max_error,
-        'min_error_pixels': min_error,
-        'rms_error_pixels': rms_error,
-        'mean_error_x_pixels': mean_error_x,
-        'mean_error_y_pixels': mean_error_y,
-        'within_threshold_percent': within_threshold,
-        'accuracy_score': accuracy_score,
-        'test_duration_seconds': data[-1]['timestamp'] - data[0]['timestamp'] if len(data) > 1 else 0
-    }
-    
-    return results
-
-def save_accuracy_data(data, results):
-    """Save accuracy data to CSV and JSON files"""
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    # Save to CSV
-    csv_filename = f"accuracy_data_{timestamp}.csv"
-    try:
-        with open(csv_filename, 'w', newline='') as csvfile:
-            fieldnames = ['timestamp', 'target_x', 'target_y', 'gaze_x', 'gaze_y', 
-                         'error_x', 'error_y', 'error_distance', 'target_index']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(data)
-        print(f"✓ Accuracy data saved to {csv_filename}")
-    except Exception as e:
-        print(f"✗ Error saving CSV: {e}")
-    
-    # Save to JSON (include both raw data and results)
-    json_filename = f"accuracy_results_{timestamp}.json"
-    try:
-        json_data = {
-            'metadata': {
-                'timestamp': timestamp,
-                'test_date': datetime.now().isoformat(),
-                'monitor_width': monitor_width,
-                'monitor_height': monitor_height,
-                'target_count': len(target_path) if target_path else 0
-            },
-            'results': results,
-            'raw_data': data
-        }
-        with open(json_filename, 'w') as jsonfile:
-            json.dump(json_data, jsonfile, indent=2)
-        print(f"✓ Accuracy results saved to {json_filename}")
-    except Exception as e:
-        print(f"✗ Error saving JSON: {e}")
-
-def print_accuracy_results(results):
-    """Print accuracy results to console"""
-    if results is None:
-        return
-    
-    print("\n" + "="*60)
-    print("ACCURACY TEST RESULTS")
-    print("="*60)
-    print(f"Total Measurements: {results['total_measurements']}")
-    print(f"Test Duration: {results['test_duration_seconds']:.2f} seconds")
-    print(f"\nError Statistics (pixels):")
-    print(f"  Mean Error:       {results['mean_error_pixels']:.2f} px")
-    print(f"  Median Error:      {results['median_error_pixels']:.2f} px")
-    print(f"  RMS Error:         {results['rms_error_pixels']:.2f} px")
-    print(f"  Std Deviation:    {results['std_error_pixels']:.2f} px")
-    print(f"  Max Error:         {results['max_error_pixels']:.2f} px")
-    print(f"  Min Error:         {results['min_error_pixels']:.2f} px")
-    print(f"\nDirectional Errors:")
-    print(f"  Mean X Error:      {results['mean_error_x_pixels']:.2f} px")
-    print(f"  Mean Y Error:      {results['mean_error_y_pixels']:.2f} px")
-    print(f"\nAccuracy Within Thresholds:")
-    for threshold, percent in results['within_threshold_percent'].items():
-        threshold_px = threshold.replace('within_', '').replace('px', '')
-        print(f"  Within {threshold_px}px: {percent:.1f}%")
-    print(f"\n{'='*60}")
-    print(f"ACCURACY SCORE: {results['accuracy_score']:.1f}/100")
-    print(f"{'='*60}\n")
 
 def process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, render_cv_window, debug_calibration_flag=False):
   
@@ -1127,11 +852,7 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
     cv2.putText(test_frame, "D      = show debug", (10,450), cv2.FONT_HERSHEY_SIMPLEX, .55, (255,90,30), 2) #debug
     cv2.putText(test_frame, "C      = calibrate", (10,470), cv2.FONT_HERSHEY_SIMPLEX, .55, (255,90,30), 2) #calibrate
     cv2.putText(test_frame, "G      = toggle overlay", (200,470), cv2.FONT_HERSHEY_SIMPLEX, .55, (255,90,30), 2) #toggle overlay
-    global accuracy_testing_active
-    if accuracy_testing_active:
-        cv2.putText(test_frame, "A      = stop accuracy test", (10,490), cv2.FONT_HERSHEY_SIMPLEX, .55, (0,255,0), 2) #accuracy test
-    else:
-        cv2.putText(test_frame, "A      = start accuracy test", (10,490), cv2.FONT_HERSHEY_SIMPLEX, .55, (255,90,30), 2) #accuracy test
+    # Note: Accuracy test controls are handled in main.py
 
     if render_cv_window:
         cv2.imshow('best_thresholded_image_contours_on_frame', test_frame)
@@ -1157,7 +878,6 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
                 pass
     
     return final_rotated_rect, pupil_center
-
 
 # Finds the pupil in an individual frame and returns the center point
 def process_frame(frame):
@@ -1188,36 +908,32 @@ def process_frame(frame):
     
     return final_rotated_rect, pupil_center
 
-# Loads a video and finds the pupil in each frame
-def process_video(video_path, input_method, debug_calibration_flag=False):
-
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for MP4 format
-    out = cv2.VideoWriter('output_video.mp4', fourcc, 30.0, (640, 480))  # Output video filename, codec, frame rate, and frame size
-
-    if input_method == 1:
-        cap = cv2.VideoCapture(video_path)
-    elif input_method == 2:
-        cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)  # Camera input UPDATED FOR MAC
-        cap.set(cv2.CAP_PROP_EXPOSURE, -5)
-    else:
-        print("Invalid video source.")
-        return
+# Run eye tracking from camera (always camera, no file selection)
+def run_eye_tracking(debug_calibration_flag=False, accuracy_test_callback=None):
+    """
+    Run eye tracking from camera input.
+    
+    Args:
+        debug_calibration_flag: Enable debug calibration mode
+        accuracy_test_callback: Optional callback function for handling accuracy testing
+    """
+    global debug_calibration
+    
+    debug_calibration = debug_calibration_flag
+    
+    # Always use camera input
+    cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)  # Camera input for macOS
+    cap.set(cv2.CAP_PROP_EXPOSURE, -5)
 
     if not cap.isOpened():
-        print("Error: Could not open video.")
+        print("Error: Could not open camera.")
         return
     
     # Initialize display dimensions and start overlay
     calculate_display_dimensions()
     start_gaze_overlay()
     
-    # Set global debug_calibration flag
-    global debug_calibration
-    debug_calibration = debug_calibration_flag
-    
     debug_mode_on = False
-    
-    temp_center = (0,0)
 
     while True:
         ret, frame = cap.read()
@@ -1258,12 +974,9 @@ def process_video(video_path, input_method, debug_calibration_flag=False):
         #take the three images thresholded at different levels and process them
         pupil_rotated_rect, pupil_center = process_frames(thresholded_image_strict, thresholded_image_medium, thresholded_image_relaxed, frame, gray_frame, darkest_point, debug_mode_on, True, debug_calibration_flag)
         
-        # Update accuracy testing target position
-        global accuracy_testing_active
-        if accuracy_testing_active:
-            update_accuracy_target()
-            # Record accuracy measurement
-            record_accuracy_measurement(current_gaze_x, current_gaze_y)
+        # Update accuracy testing if callback provided
+        if accuracy_test_callback is not None:
+            accuracy_test_callback(current_gaze_x, current_gaze_y)
         
         # Update gaze overlay if enabled - directly call update from video loop
         if overlay_running and current_gaze_x is not None and current_gaze_y is not None:
@@ -1300,19 +1013,8 @@ def process_video(video_path, input_method, debug_calibration_flag=False):
             else:
                 start_gaze_overlay()
         
-        # Start/stop accuracy testing
-        if key == ord('a'):
-            if not accuracy_testing_active:
-                if not overlay_running:
-                    print("Please enable gaze overlay (press 'g') before starting accuracy testing.")
-                else:
-                    start_accuracy_testing(grid_size=3)
-            else:
-                stop_accuracy_testing()
-        
         if key == ord('q'):  # Press 'q' to quit
             stop_gaze_overlay()
-            out.release()
             break   
         elif key == ord(' '):  # Press spacebar to start/stop
             while True:
@@ -1323,41 +1025,5 @@ def process_video(video_path, input_method, debug_calibration_flag=False):
                     break
 
     cap.release()
-    out.release()
     cv2.destroyAllWindows()
-
-#Prompts the user to select a video file if the hardcoded path is not found
-#This is just for my debugging convenience :)
-def select_video(debug_calibration_flag=False):
-    root = tk.Tk()
-    root.withdraw()  # Hide the main window
-    video_path = 'C:/Google Drive/Eye Tracking/fulleyetest.mp4'
-    if not os.path.exists(video_path):
-        print("No file found at hardcoded path. Please select a video file.")
-        video_path = filedialog.askopenfilename(title="Select Video File", filetypes=[("Video Files", "*.mp4")])
-        if not video_path:
-            print("No file selected. Exiting.")
-            return
-            
-    #second parameter is 1 for video 2 for webcam
-    process_video(video_path, 2, debug_calibration_flag)
-
-if __name__ == "__main__":
-    # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Eye Tracking Phygital Application')
-    parser.add_argument('--debug', action='store_true', 
-                       help='Enable debug calibration mode with visual ovals at key points')
-    args = parser.parse_args()
-    
-    if args.debug:
-        print("🔍 Debug calibration mode enabled")
-        print("   Visual ovals will be shown at:")
-        print("   - Pupil position (magenta on frame)")
-        print("   - Frame center (yellow on frame)")
-        print("   - Gaze position (cyan on overlay)")
-        print("   - Screen center (green on overlay)")
-        print("")
-    
-    select_video(debug_calibration_flag=args.debug)
-
 
