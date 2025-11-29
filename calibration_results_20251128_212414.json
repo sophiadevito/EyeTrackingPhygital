@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "timestamp": "20251128_212414",
+    "calibration_date": "2025-11-28T21:24:14.444352",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "num_points": 3
+  },
+  "calibration_parameters": {
+    "scale_x": 1.13147747578294,
+    "scale_y": 0.0,
+    "offset_x": -159.3652779083984,
+    "offset_y": 196.0,
+    "simple_offset_x": -53.0,
+    "simple_offset_y": 2344.0,
+    "target_mean_x": 756.0,
+    "target_mean_y": 196.0,
+    "raw_gaze_mean_x": 809.0,
+    "raw_gaze_mean_y": -2148.0,
+    "mean_error_pixels": 249.86438446346287,
+    "max_error_pixels": 374.7965766951942,
+    "num_points": 3
+  },
+  "raw_data": [
+    {
+      "target_index": 0,
+      "target_x": 302,
+      "target_y": 196,
+      "raw_gaze_x": 508,
+      "raw_gaze_y": -2111,
+      "pupil_x": 300,
+      "pupil_y": 88,
+      "timestamp": 1764383048.3097
+    },
+    {
+      "target_index": 1,
+      "target_x": 756,
+      "target_y": 196,
+      "raw_gaze_x": 1040,
+      "raw_gaze_y": -2148,
+      "pupil_x": 343,
+      "pupil_y": 86,
+      "timestamp": 1764383051.337665
+    },
+    {
+      "target_index": 2,
+      "target_x": 1210,
+      "target_y": 196,
+      "raw_gaze_x": 879,
+      "raw_gaze_y": -2185,
+      "pupil_x": 330,
+      "pupil_y": 84,
+      "timestamp": 1764383054.40022
+    }
+  ]
+}

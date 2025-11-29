@@ -8,6 +8,8 @@ from datetime import datetime
 # Saccade testing globals
 saccade_testing_active = False
 saccade_data = []  # List to store saccade measurements
+antisaccade_data = []  # List to store antisaccade measurements
+test_phase = 'normal'  # 'normal' or 'antisaccade'
 current_target_position = None  # Current target position (x, y)
 current_target_angle = None  # Target angle in degrees
 target_start_time = None  # Time when target appeared
@@ -27,7 +29,8 @@ SACCADE_DETECTION_WINDOW_MS = 500  # ms after target appearance to detect saccad
 
 # Timing parameters
 GAP_DURATION_MS = 200  # Gap duration in milliseconds
-TARGET_DURATION_MS = 1000  # How long to show each target (ms)
+TARGET_DURATION_MS = 1000  # How long to show each target (ms) - normal saccade
+ANTISACCADE_TARGET_DURATION_MS = 1000  # Same duration as normal saccade targets (ms)
 INSTRUCTION_DURATION_MS = 3000  # How long to show instruction (ms)
 
 # Store gaze samples for saccade detection
@@ -109,7 +112,7 @@ def calculate_screen_position_from_angle(angle_degrees):
         return (monitor_width // 2 if monitor_width else 960, 
                 monitor_height // 2 if monitor_height else 540)
 
-def generate_target_angles(num_targets=12, min_angle=10, max_angle=30):
+def generate_target_angles(num_targets=12, min_angle=10, max_angle=30, antisaccade=False):
     """
     Generate random horizontal target angles.
     
@@ -117,17 +120,33 @@ def generate_target_angles(num_targets=12, min_angle=10, max_angle=30):
         num_targets: Number of targets to generate
         min_angle: Minimum angle in degrees (absolute value)
         max_angle: Maximum angle in degrees (absolute value)
+        antisaccade: If True, include more angles closer to center (5-20 degrees)
     
     Returns:
         List of angles in degrees (mix of positive and negative)
     """
     targets = []
-    for _ in range(num_targets):
-        # Randomly choose left or right
-        direction = random.choice([-1, 1])
-        # Random angle between min and max
-        angle = direction * random.uniform(min_angle, max_angle)
-        targets.append(angle)
+    
+    if antisaccade:
+        # For antisaccade, use smaller angles (5-20 degrees) with more close to center
+        # Mix of close (5-12 degrees) and medium (12-20 degrees)
+        for i in range(num_targets):
+            # Randomly choose left or right
+            direction = random.choice([-1, 1])
+            # More targets closer to center (60% chance of 5-12 degrees, 40% chance of 12-20 degrees)
+            if random.random() < 0.6:
+                angle = direction * random.uniform(5, 12)
+            else:
+                angle = direction * random.uniform(12, 20)
+            targets.append(angle)
+    else:
+        # Normal saccade: use original range
+        for _ in range(num_targets):
+            # Randomly choose left or right
+            direction = random.choice([-1, 1])
+            # Random angle between min and max
+            angle = direction * random.uniform(min_angle, max_angle)
+            targets.append(angle)
     
     # Shuffle to randomize order
     random.shuffle(targets)
@@ -150,7 +169,9 @@ def start_saccade_test():
     # Initialize test
     target_index = 0
     saccade_data = []
+    antisaccade_data = []
     gaze_samples = []
+    test_phase = 'normal'  # Start with normal saccade phase
     saccade_testing_active = True
     showing_instruction = True
     showing_central_dot = False
@@ -171,34 +192,79 @@ def start_saccade_test():
     print("Saccade test started!")
     print("  Instruction will be shown first")
     print("  Then 12 targets will appear with gap paradigm")
+    print("  After normal saccade test, antisaccade test will begin")
     print("  Press 's' again to stop early")
     
     return True
 
 def stop_saccade_test():
-    """Stop saccade testing and calculate results"""
-    global saccade_testing_active, saccade_data
+    """Stop saccade testing and calculate results, or transition to antisaccade phase"""
+    global saccade_testing_active, saccade_data, antisaccade_data, test_phase, target_index, total_targets
+    global showing_instruction, instruction_start_time, showing_central_dot, showing_target, showing_gap
+    global current_target_position, current_target_angle
     
     if not saccade_testing_active:
         return None
     
+    # If we're in normal phase and just finished, transition to antisaccade
+    if test_phase == 'normal':
+        if len(saccade_data) == 0:
+            print("No saccade data collected.")
+            saccade_testing_active = False
+            return None
+        
+        # Transition to antisaccade phase
+        test_phase = 'antisaccade'
+        target_index = 0
+        antisaccade_data = []
+        showing_instruction = True
+        showing_central_dot = False
+        showing_target = False
+        showing_gap = False
+        instruction_start_time = time.time()
+        current_target_position = None
+        current_target_angle = None
+        
+        # Clear state for antisaccade phase
+        if hasattr(update_saccade_test, 'central_dot_start_time'):
+            delattr(update_saccade_test, 'central_dot_start_time')
+        if hasattr(update_saccade_test, 'recorded_for_target'):
+            delattr(update_saccade_test, 'recorded_for_target')
+        if hasattr(update_saccade_test, 'target_angles'):
+            delattr(update_saccade_test, 'target_angles')
+        
+        print("\nNormal saccade test complete!")
+        print("Starting antisaccade test...")
+        print("  Instruction will be shown first")
+        print("  Then 12 targets will appear")
+        print("  Look AWAY from the targets (opposite side)")
+        return None  # Continue with antisaccade phase
+    
+    # If we're in antisaccade phase, finish the test
     saccade_testing_active = False
     
-    if len(saccade_data) == 0:
+    if len(saccade_data) == 0 and len(antisaccade_data) == 0:
         print("No saccade data collected.")
         return None
     
     try:
-        # Calculate metrics
-        results = calculate_saccade_metrics(saccade_data)
+        # Calculate metrics for both phases
+        normal_results = calculate_saccade_metrics(saccade_data) if len(saccade_data) > 0 else None
+        antisaccade_results = calculate_antisaccade_metrics(antisaccade_data) if len(antisaccade_data) > 0 else None
+        
+        # Combine results
+        combined_results = {
+            'normal_saccade': normal_results,
+            'antisaccade': antisaccade_results
+        }
         
         # Save data
-        save_saccade_data(saccade_data, results)
+        save_saccade_data(saccade_data, antisaccade_data, combined_results)
         
         # Print results
-        print_saccade_results(results)
+        print_saccade_results(combined_results)
         
-        return results
+        return combined_results
     except Exception as e:
         print(f"Error stopping saccade test: {e}")
         import traceback
@@ -211,7 +277,7 @@ def update_saccade_test(gaze_x, gaze_y):
     global showing_central_dot, showing_target, showing_gap
     global current_target_position, current_target_angle, target_start_time, gap_start_time
     global target_index, total_targets
-    global gaze_samples, saccade_data, monitor_width, monitor_height
+    global gaze_samples, saccade_data, antisaccade_data, monitor_width, monitor_height, test_phase
     
     if not saccade_testing_active:
         return
@@ -241,10 +307,12 @@ def update_saccade_test(gaze_x, gaze_y):
                 showing_central_dot = True
                 current_target_position = (monitor_width // 2, monitor_height // 2)
                 target_index = 0
-                # Generate target angles
-                target_angles = generate_target_angles(total_targets, 10, 20)
-                # Store target angles (we'll access them by index)
+                # Generate target angles - use different angles for antisaccade (closer to center)
                 if not hasattr(update_saccade_test, 'target_angles'):
+                    if test_phase == 'normal':
+                        target_angles = generate_target_angles(total_targets, 10, 30, antisaccade=False)
+                    else:
+                        target_angles = generate_target_angles(total_targets, 5, 20, antisaccade=True)
                     update_saccade_test.target_angles = target_angles
         
         elif showing_central_dot:
@@ -312,60 +380,130 @@ def update_saccade_test(gaze_x, gaze_y):
                     update_saccade_test.recorded_for_target = {}
                 
                 if target_index not in update_saccade_test.recorded_for_target:
-                    saccade_latency = detect_saccade_initiation(target_start_time * 1000, current_target_angle)
-                    
-                    if saccade_latency is not None and saccade_latency > 0:
-                        # Saccade detected, calculate velocity and accuracy
-                        velocity = calculate_saccade_velocity(target_start_time * 1000, saccade_latency)
-                        accuracy = calculate_saccade_accuracy(current_target_position, gaze_x, gaze_y, current_target_angle)
+                    if test_phase == 'normal':
+                        # Normal saccade: detect movement towards target
+                        saccade_latency = detect_saccade_initiation(target_start_time * 1000, current_target_angle)
                         
-                        # Record measurement
-                        measurement = {
-                            'target_index': target_index,
-                            'target_angle_degrees': current_target_angle,
-                            'target_x': current_target_position[0],
-                            'target_y': current_target_position[1],
-                            'saccade_latency_ms': saccade_latency,
-                            'peak_velocity_deg_per_ms': velocity / 1000.0,  # Convert deg/s to deg/ms
-                            'peak_velocity_deg_per_s': velocity,  # Also store in deg/s for reference
-                            'accuracy_percent': accuracy
-                        }
-                        saccade_data.append(measurement)
-                        update_saccade_test.recorded_for_target[target_index] = True
-                        
-                        # Move to next target or finish
-                        target_index += 1
-                        if target_index >= total_targets:
-                            stop_saccade_test()
-                            return
-                        else:
-                            # Reset for next target: show central dot again
-                            showing_target = False
-                            showing_central_dot = True
-                            current_target_position = (monitor_width // 2, monitor_height // 2)
-                            current_target_angle = None
-                            # Clear attribute so it gets reset
-                            if hasattr(update_saccade_test, 'central_dot_start_time'):
-                                delattr(update_saccade_test, 'central_dot_start_time')
+                        if saccade_latency is not None and saccade_latency > 0:
+                            # Saccade detected, calculate velocity and accuracy
+                            velocity = calculate_saccade_velocity(target_start_time * 1000, saccade_latency)
+                            accuracy = calculate_saccade_accuracy(current_target_position, gaze_x, gaze_y, current_target_angle)
+                            
+                            # Record measurement
+                            measurement = {
+                                'target_index': target_index,
+                                'target_angle_degrees': current_target_angle,
+                                'target_x': current_target_position[0],
+                                'target_y': current_target_position[1],
+                                'saccade_latency_ms': saccade_latency,
+                                'peak_velocity_deg_per_ms': velocity / 1000.0,  # Convert deg/s to deg/ms
+                                'peak_velocity_deg_per_s': velocity,  # Also store in deg/s for reference
+                                'accuracy_percent': accuracy
+                            }
+                            saccade_data.append(measurement)
+                            update_saccade_test.recorded_for_target[target_index] = True
+                            
+                            # Move to next target or finish
+                            target_index += 1
+                            if target_index >= total_targets:
+                                stop_saccade_test()
+                                return
+                            else:
+                                # Reset for next target: show central dot again
+                                showing_target = False
+                                showing_central_dot = True
+                                current_target_position = (monitor_width // 2, monitor_height // 2)
+                                current_target_angle = None
+                                # Clear attribute so it gets reset
+                                if hasattr(update_saccade_test, 'central_dot_start_time'):
+                                    delattr(update_saccade_test, 'central_dot_start_time')
+                    else:
+                        # Antisaccade: detect if eye moves towards target (error) or away (correct)
+                        # Only record once per target (when first detected), but wait for full duration
+                        if target_index not in update_saccade_test.recorded_for_target:
+                            error = detect_antisaccade_error(target_start_time * 1000, current_target_angle)
+                            
+                            # Record measurement immediately when detected (early detection)
+                            measurement = {
+                                'target_index': target_index,
+                                'target_angle_degrees': current_target_angle,
+                                'target_x': current_target_position[0],
+                                'target_y': current_target_position[1],
+                                'error': error  # True if eye moved towards target (error), False if away (correct)
+                            }
+                            antisaccade_data.append(measurement)
+                            update_saccade_test.recorded_for_target[target_index] = True
             
-            # Check if target duration exceeded (separate from saccade detection)
-            if (target_index not in update_saccade_test.recorded_for_target and 
-                elapsed_ms >= TARGET_DURATION_MS):
-                # Mark as recorded (no saccade detected within time limit)
-                update_saccade_test.recorded_for_target[target_index] = True
-                
-                # Move to next target or finish
-                target_index += 1
-                if target_index >= total_targets:
-                    stop_saccade_test()
-                    return
-                else:
-                    showing_target = False
-                    showing_central_dot = True
-                    current_target_position = (monitor_width // 2, monitor_height // 2)
-                    current_target_angle = None
-                    if hasattr(update_saccade_test, 'central_dot_start_time'):
-                        delattr(update_saccade_test, 'central_dot_start_time')
+            # Duration check for antisaccade - needs to be outside the recorded_for_target check
+            # so it runs every frame regardless of whether we've detected movement
+            if test_phase == 'antisaccade' and showing_target:
+                target_duration = ANTISACCADE_TARGET_DURATION_MS
+                if elapsed_ms >= target_duration:
+                    # Move to next target or finish
+                    target_index += 1
+                    if target_index >= total_targets:
+                        stop_saccade_test()
+                        return
+                    else:
+                        # Reset for next target: show central dot again
+                        showing_target = False
+                        showing_central_dot = True
+                        current_target_position = (monitor_width // 2, monitor_height // 2)
+                        current_target_angle = None
+                        if hasattr(update_saccade_test, 'central_dot_start_time'):
+                            delattr(update_saccade_test, 'central_dot_start_time')
+            
+            # Check if target duration exceeded (for cases where no detection happened)
+            # Only check if we haven't already recorded and handled this target
+            if test_phase == 'normal':
+                # For normal saccade, use original timeout logic
+                target_duration = TARGET_DURATION_MS
+                if (target_index not in update_saccade_test.recorded_for_target and 
+                    elapsed_ms >= target_duration):
+                    # Mark as recorded (no saccade detected within time limit)
+                    update_saccade_test.recorded_for_target[target_index] = True
+                    
+                    # Move to next target or finish
+                    target_index += 1
+                    if target_index >= total_targets:
+                        stop_saccade_test()
+                        return
+                    else:
+                        showing_target = False
+                        showing_central_dot = True
+                        current_target_position = (monitor_width // 2, monitor_height // 2)
+                        current_target_angle = None
+                        if hasattr(update_saccade_test, 'central_dot_start_time'):
+                            delattr(update_saccade_test, 'central_dot_start_time')
+            # For antisaccade, if no error was detected by the end of duration, record as no error
+            # This handles the case where detect_antisaccade_error returned False and we never recorded
+            elif test_phase == 'antisaccade' and showing_target:
+                target_duration = ANTISACCADE_TARGET_DURATION_MS
+                if (target_index not in update_saccade_test.recorded_for_target and 
+                    elapsed_ms >= target_duration):
+                    # No movement detected at all - record as correct (no error)
+                    measurement = {
+                        'target_index': target_index,
+                        'target_angle_degrees': current_target_angle,
+                        'target_x': current_target_position[0],
+                        'target_y': current_target_position[1],
+                        'error': False  # No movement = correct (no error)
+                    }
+                    antisaccade_data.append(measurement)
+                    update_saccade_test.recorded_for_target[target_index] = True
+                    
+                    # Move to next target or finish
+                    target_index += 1
+                    if target_index >= total_targets:
+                        stop_saccade_test()
+                        return
+                    else:
+                        showing_target = False
+                        showing_central_dot = True
+                        current_target_position = (monitor_width // 2, monitor_height // 2)
+                        current_target_angle = None
+                        if hasattr(update_saccade_test, 'central_dot_start_time'):
+                            delattr(update_saccade_test, 'central_dot_start_time')
     except Exception as e:
         print(f"Error in update_saccade_test: {e}")
         import traceback
@@ -580,6 +718,70 @@ def calculate_saccade_accuracy(target_position, gaze_x, gaze_y, target_angle):
     # Cap at reasonable values
     return min(200.0, max(0.0, accuracy_percent))
 
+def detect_antisaccade_error(target_time_ms, target_angle):
+    """
+    Detect if eye moves towards target (error) or away from target (correct) in antisaccade test.
+    Any movement in the direction of the target counts as an error.
+    
+    Args:
+        target_time_ms: Time when target appeared (ms)
+        target_angle: Target angle in degrees (positive = right, negative = left)
+    
+    Returns:
+        True if error (eye moved towards target), False if correct (eye moved away or no movement)
+    """
+    global gaze_samples, display_distance_mm, monitor_width
+    
+    # Use longer detection window for antisaccade (match target duration)
+    detection_window = ANTISACCADE_TARGET_DURATION_MS
+    
+    # Find samples within detection window
+    window_start = target_time_ms
+    window_end = target_time_ms + detection_window
+    
+    relevant_samples = [(t, x, y) for t, x, y in gaze_samples 
+                       if window_start <= t <= window_end]
+    
+    if len(relevant_samples) < 2:
+        return False  # No movement detected, assume correct (no error)
+    
+    # Calculate baseline gaze position (before target appeared)
+    baseline_samples = [(t, x, y) for t, x, y in gaze_samples 
+                       if target_time_ms - BASELINE_WINDOW_MS <= t < target_time_ms]
+    
+    if len(baseline_samples) == 0:
+        return False
+    
+    baseline_x = np.mean([x for _, x, _ in baseline_samples])
+    
+    # Determine target direction (1 = right, -1 = left)
+    target_direction = 1 if target_angle > 0 else -1
+    
+    # Ensure monitor resolution is available
+    if monitor_width is None:
+        get_monitor_resolution()
+    
+    # Look for ANY movement in target direction (lower threshold for antisaccade)
+    # Any movement towards target = error
+    MIN_MOVEMENT_PIXELS = 5  # Minimum pixel movement to detect direction
+    
+    for i in range(1, len(relevant_samples)):
+        t1, x1, y1 = relevant_samples[i-1]
+        t2, x2, y2 = relevant_samples[i]
+        
+        dx_pixels = x2 - x1
+        
+        # Check if there's any movement in the direction of the target
+        if abs(dx_pixels) >= MIN_MOVEMENT_PIXELS:
+            movement_direction = 1 if dx_pixels > 0 else -1
+            
+            # Error if movement is in same direction as target (towards target)
+            if movement_direction == target_direction:
+                return True  # Error: moved towards target
+    
+    # No movement towards target detected, assume correct (no error)
+    return False
+
 def calculate_saccade_metrics(data):
     """Calculate average metrics from collected saccade data"""
     if len(data) == 0:
@@ -603,7 +805,30 @@ def calculate_saccade_metrics(data):
     
     return results
 
-def save_saccade_data(data, results):
+def calculate_antisaccade_metrics(data):
+    """Calculate antisaccade error rate from collected data"""
+    if len(data) == 0:
+        return None
+    
+    errors = [d['error'] for d in data if 'error' in d]
+    
+    if len(errors) == 0:
+        return None
+    
+    error_count = sum(errors)
+    total_trials = len(errors)
+    error_rate = (error_count / total_trials) * 100.0 if total_trials > 0 else 0.0
+    
+    results = {
+        'total_trials': total_trials,
+        'error_count': error_count,
+        'correct_count': total_trials - error_count,
+        'error_rate_percent': error_rate
+    }
+    
+    return results
+
+def save_saccade_data(normal_data, antisaccade_data, results):
     """Save saccade data to JSON file"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -620,7 +845,8 @@ def save_saccade_data(data, results):
                 'gap_duration_ms': GAP_DURATION_MS
             },
             'results': results,
-            'raw_data': data
+            'normal_saccade_data': normal_data,
+            'antisaccade_data': antisaccade_data
         }
         with open(json_filename, 'w') as jsonfile:
             json.dump(json_data, jsonfile, indent=2)
@@ -638,12 +864,26 @@ def print_saccade_results(results):
     print("\n" + "="*60)
     print("SACCADE TEST RESULTS")
     print("="*60)
-    print(f"Total Targets: {results['total_saccades']}")
-    print(f"Valid Saccades Detected: {results['valid_saccades']}")
-    print(f"\nAverage Metrics:")
-    print(f"  Latency:        {results['average_latency_ms']:.2f} ms (std: {results['std_latency_ms']:.2f})")
-    print(f"  Velocity:       {results['average_velocity_deg_per_ms']:.4f} deg/ms (std: {results['std_velocity_deg_per_ms']:.4f})")
-    print(f"  Accuracy:       {results['average_accuracy_percent']:.2f}% (std: {results['std_accuracy_percent']:.2f})")
+    
+    # Normal saccade results
+    if results.get('normal_saccade') is not None:
+        normal = results['normal_saccade']
+        print(f"\nNORMAL SACCADE TEST:")
+        print(f"  Total Targets: {normal['total_saccades']}")
+        print(f"  Valid Saccades Detected: {normal['valid_saccades']}")
+        print(f"  Average Latency: {normal['average_latency_ms']:.2f} ms (std: {normal['std_latency_ms']:.2f})")
+        print(f"  Average Velocity: {normal['average_velocity_deg_per_ms']:.4f} deg/ms (std: {normal['std_velocity_deg_per_ms']:.4f})")
+        print(f"  Average Accuracy: {normal['average_accuracy_percent']:.2f}% (std: {normal['std_accuracy_percent']:.2f})")
+    
+    # Antisaccade results
+    if results.get('antisaccade') is not None:
+        anti = results['antisaccade']
+        print(f"\nANTISACCADE TEST:")
+        print(f"  Total Trials: {anti['total_trials']}")
+        print(f"  Errors: {anti['error_count']}")
+        print(f"  Correct: {anti['correct_count']}")
+        print(f"  Average Error Rate: {anti['error_rate_percent']:.2f}%")
+    
     print(f"{'='*60}\n")
 
 def get_saccade_overlay_draw_function():
@@ -668,9 +908,14 @@ def get_saccade_overlay_draw_function():
             if showing_instruction:
                 center_x = monitor_width // 2
                 center_y = monitor_height // 2
+                global test_phase
+                if test_phase == 'normal':
+                    instruction_text = "When the dot appears, look at it as fast as you can"
+                else:
+                    instruction_text = "When the dot appears, look immediately to the opposite side"
                 canvas.create_text(
                     center_x, center_y - 50,
-                    text="When the dot appears, look at it as fast as you can",
+                    text=instruction_text,
                     fill='white', font=('Arial', 24, 'bold'),
                     justify='center'
                 )

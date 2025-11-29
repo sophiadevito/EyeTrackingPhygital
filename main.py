@@ -12,6 +12,7 @@ import accuracy_test
 import saccade_test
 import smooth_pursuit
 import fixed_point_stability
+import calibration
 
 def main():
     """Main function that coordinates eye tracking and accuracy testing"""
@@ -44,6 +45,9 @@ def main():
     stability_overlay_func = fixed_point_stability.get_stability_overlay_draw_function()
     eye_tracking.add_overlay_callback(stability_overlay_func)
     
+    calibration_overlay_func = calibration.get_calibration_overlay_draw_function()
+    eye_tracking.add_overlay_callback(calibration_overlay_func)
+    
     # Define callback function for accuracy testing updates
     def accuracy_test_update(gaze_x, gaze_y):
         """Callback to update accuracy testing with gaze coordinates"""
@@ -64,6 +68,11 @@ def main():
         """Callback to update fixed point stability testing with gaze coordinates"""
         fixed_point_stability.update_fixed_point_test(gaze_x, gaze_y)
     
+    # Define callback function for calibration updates
+    def calibration_update(gaze_x, gaze_y, raw_gaze_x, raw_gaze_y, pupil_x, pupil_y):
+        """Callback to update calibration with gaze coordinates"""
+        calibration.update_calibration(gaze_x, gaze_y, raw_gaze_x, raw_gaze_y, pupil_x, pupil_y)
+    
     print("Starting Eye Tracking with Camera...")
     print("Controls:")
     print("  SPACEBAR - Pause/resume")
@@ -74,14 +83,16 @@ def main():
     print("  S        - Start/stop saccade testing")
     print("  P        - Start/stop smooth pursuit testing")
     print("  F        - Start/stop fixed point stability testing")
+    print("  X        - Start 9-point calibration")
+    print("  B        - Show blink statistics")
     print("  Q        - Quit")
     print("")
     
     # We need to modify the eye tracking to handle test keys
     # Let's create a wrapper that handles this
-    run_with_tests(args.debug, accuracy_test_update, saccade_test_update, pursuit_test_update, stability_test_update)
+    run_with_tests(args.debug, accuracy_test_update, saccade_test_update, pursuit_test_update, stability_test_update, calibration_update)
 
-def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_update_callback, pursuit_update_callback, stability_update_callback):
+def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_update_callback, pursuit_update_callback, stability_update_callback, calibration_update_callback):
     """
     Run eye tracking with all testing modules integration
     Handles keyboard input for all tests
@@ -147,6 +158,11 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
             frame, gray_frame, darkest_point, debug_mode_on, True, debug_calibration_flag
         )
         
+        # Extract pupil position
+        pupil_x, pupil_y = None, None
+        if pupil_center is not None:
+            pupil_x, pupil_y = pupil_center
+        
         # Update accuracy testing if active
         if accuracy_test.accuracy_testing_active:
             accuracy_update_callback(et.current_gaze_x, et.current_gaze_y)
@@ -177,6 +193,39 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 stability_update_callback(et.current_gaze_x, et.current_gaze_y)
             except Exception as e:
                 print(f"Error updating fixed point stability test: {e}")
+                import traceback
+                traceback.print_exc()
+                # Don't stop the main loop, just log the error
+        
+        # Update calibration if active
+        if calibration.calibration_active:
+            try:
+                calibration_update_callback(
+                    et.current_gaze_x, et.current_gaze_y,
+                    et.raw_gaze_x, et.raw_gaze_y,
+                    pupil_x, pupil_y
+                )
+            except Exception as e:
+                print(f"Error updating calibration: {e}")
+                import traceback
+                traceback.print_exc()
+                # Don't stop the main loop, just log the error
+        
+        # Update PLR test if active
+        if calibration.plr_test_active:
+            try:
+                # Update PLR test with current pupil diameter
+                calibration.update_plr_test(et.current_pupil_diameter)
+                
+                # Keep flash window responsive
+                if calibration.plr_flash_window is not None:
+                    try:
+                        calibration.plr_flash_window.update_idletasks()
+                        calibration.plr_flash_window.update()
+                    except:
+                        pass
+            except Exception as e:
+                print(f"Error updating PLR test: {e}")
                 import traceback
                 traceback.print_exc()
                 # Don't stop the main loop, just log the error
@@ -275,6 +324,25 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     print(f"Error stopping fixed point stability test: {e}")
                     import traceback
                     traceback.print_exc()
+        
+        # Start 9-point calibration
+        if key == ord('x'):
+            if not calibration.calibration_active:
+                if not et.overlay_running:
+                    print("Please enable gaze overlay (press 'g') before starting calibration.")
+                else:
+                    calibration.start_calibration()
+            else:
+                try:
+                    calibration.stop_calibration()
+                except Exception as e:
+                    print(f"Error stopping calibration: {e}")
+                    import traceback
+                    traceback.print_exc()
+        
+        # Display blink statistics
+        if key == ord('b'):  # Press 'b' to show blink statistics
+            et.print_blink_stats()
         
         if key == ord('q'):  # Press 'q' to quit
             et.stop_gaze_overlay()

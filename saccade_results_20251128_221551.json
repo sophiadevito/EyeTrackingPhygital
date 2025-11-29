@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "timestamp": "20251128_221551",
+    "test_date": "2025-11-28T22:15:51.523930",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "total_targets": 12,
+    "gap_duration_ms": 200
+  },
+  "results": {
+    "normal_saccade": {
+      "total_saccades": 9,
+      "valid_saccades": 9,
+      "average_latency_ms": 191.14515516493054,
+      "average_velocity_deg_per_ms": 0.23448398020105823,
+      "average_accuracy_percent": 46.352605078777394,
+      "std_latency_ms": 95.39612090053002,
+      "std_velocity_deg_per_ms": 0.21842811189117553,
+      "std_accuracy_percent": 43.95771628674717
+    },
+    "antisaccade": {
+      "total_trials": 12,
+      "error_count": 2,
+      "correct_count": 10,
+      "error_rate_percent": 16.666666666666664
+    }
+  },
+  "normal_saccade_data": [
+    {
+      "target_index": 0,
+      "target_angle_degrees": -16.597144555972594,
+      "target_x": 306,
+      "target_y": 491,
+      "saccade_latency_ms": 223.853271484375,
+      "peak_velocity_deg_per_ms": 0.403157244516338,
+      "peak_velocity_deg_per_s": 403.157244516338,
+      "accuracy_percent": 112.1124659173658
+    },
+    {
+      "target_index": 1,
+      "target_angle_degrees": 24.145580420494234,
+      "target_x": 1433,
+      "target_y": 491,
+      "saccade_latency_ms": 34.897705078125,
+      "peak_velocity_deg_per_ms": 0.7182784203234251,
+      "peak_velocity_deg_per_s": 718.2784203234252,
+      "accuracy_percent": 109.90661607712342
+    },
+    {
+      "target_index": 3,
+      "target_angle_degrees": -20.962000706758058,
+      "target_x": 177,
+      "target_y": 491,
+      "saccade_latency_ms": 120.7529296875,
+      "peak_velocity_deg_per_ms": 0.04010789632366137,
+      "peak_velocity_deg_per_s": 40.10789632366137,
+      "accuracy_percent": 9.036580596108045
+    },
+    {
+      "target_index": 4,
+      "target_angle_degrees": -19.391738818517062,
+      "target_x": 224,
+      "target_y": 491,
+      "saccade_latency_ms": 274.35302734375,
+      "peak_velocity_deg_per_ms": 0.036023488883055836,
+      "peak_velocity_deg_per_s": 36.02348888305583,
+      "accuracy_percent": 12.305456209936963
+    },
+    {
+      "target_index": 7,
+      "target_angle_degrees": 11.884216905702818,
+      "target_x": 1074,
+      "target_y": 491,
+      "saccade_latency_ms": 70.040771484375,
+      "peak_velocity_deg_per_ms": 0.031539671621262595,
+      "peak_velocity_deg_per_s": 31.539671621262595,
+      "accuracy_percent": 12.115649912489665
+    },
+    {
+      "target_index": 8,
+      "target_angle_degrees": -23.58243520602209,
+      "target_x": 97,
+      "target_y": 491,
+      "saccade_latency_ms": 187.576904296875,
+      "peak_velocity_deg_per_ms": 0.26363022529544594,
+      "peak_velocity_deg_per_s": 263.63022529544594,
+      "accuracy_percent": 8.032453272422044
+    },
+    {
+      "target_index": 9,
+      "target_angle_degrees": -19.44191196597923,
+      "target_x": 223,
+      "target_y": 491,
+      "saccade_latency_ms": 343.7548828125,
+      "peak_velocity_deg_per_ms": 0.03732367322782996,
+      "peak_velocity_deg_per_s": 37.32367322782996,
+      "accuracy_percent": 4.872889678690326
+    },
+    {
+      "target_index": 10,
+      "target_angle_degrees": 24.103882274778766,
+      "target_x": 1432,
+      "target_y": 491,
+      "saccade_latency_ms": 272.202880859375,
+      "peak_velocity_deg_per_ms": 0.32631555375848414,
+      "peak_velocity_deg_per_s": 326.31555375848416,
+      "accuracy_percent": 57.94323285609728
+    },
+    {
+      "target_index": 11,
+      "target_angle_degrees": 11.872140578050345,
+      "target_x": 1073,
+      "target_y": 491,
+      "saccade_latency_ms": 192.8740234375,
+      "peak_velocity_deg_per_ms": 0.25397964786002125,
+      "peak_velocity_deg_per_s": 253.97964786002126,
+      "accuracy_percent": 90.84810118876301
+    }
+  ],
+  "antisaccade_data": [
+    {
+      "target_index": 0,
+      "target_angle_degrees": 16.711142222704396,
+      "target_x": 1209,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 1,
+      "target_angle_degrees": 11.236324002062787,
+      "target_x": 1056,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 2,
+      "target_angle_degrees": 8.119346137922701,
+      "target_x": 971,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 3,
+      "target_angle_degrees": 10.098700348823613,
+      "target_x": 1025,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 4,
+      "target_angle_degrees": -12.186006859176517,
+      "target_x": 430,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 5,
+      "target_angle_degrees": -5.659796535098704,
+      "target_x": 607,
+      "target_y": 491,
+      "error": true
+    },
+    {
+      "target_index": 6,
+      "target_angle_degrees": -15.801173685869355,
+      "target_x": 329,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 7,
+      "target_angle_degrees": -14.161278377218968,
+      "target_x": 375,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 8,
+      "target_angle_degrees": 13.48039309116711,
+      "target_x": 1118,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 9,
+      "target_angle_degrees": 9.922906886392274,
+      "target_x": 1020,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 10,
+      "target_angle_degrees": -5.824741425583372,
+      "target_x": 602,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 11,
+      "target_angle_degrees": 13.019475403661742,
+      "target_x": 1105,
+      "target_y": 491,
+      "error": true
+    }
+  ]
+}

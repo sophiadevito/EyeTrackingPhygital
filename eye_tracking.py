@@ -28,9 +28,25 @@ raw_gaze_x = None  # Raw gaze position before calibration offset
 raw_gaze_y = None
 overlay_running = False
 
+# Pupil measurement globals
+current_pupil_diameter = None  # Current pupil diameter in pixels
+
+# Blink detection globals
+blink_history = []  # List of (timestamp_ms, blink_duration_ms) tuples
+pupil_lost_start_time = None
+pupil_lost_duration_threshold_ms = 50  # Minimum duration to count as blink (not just noise)
+last_valid_pupil_diameter = None
+pupil_diameter_history = []  # Keep last N diameters for filtering
+blinks_detected = 0
+last_blink_time = None
+MIN_ELLIPSE_GOODNESS = 0.3  # Minimum ellipse goodness to accept as valid pupil (filters eyelashes)
+current_ellipse_goodness = None  # Store current ellipse goodness score
+
 # Calibration globals
 calibration_offset_x = 0.0  # Offset in pixels
 calibration_offset_y = 0.0
+calibration_scale_x = 1.0  # Scale factor for X dimension
+calibration_scale_y = 1.0  # Scale factor for Y dimension
 calibration_active = False
 
 # Debug calibration flag
@@ -308,6 +324,97 @@ def check_ellipse_goodness(binary_image, contour, debug_mode_on):
     
     return ellipse_goodness
 
+# ------------------- Blink Detection Functions -------------------
+
+def handle_pupil_loss():
+    """Handle when pupil is not detected (potentially a blink)"""
+    global pupil_lost_start_time
+    
+    import time
+    current_time_ms = time.time() * 1000
+    
+    if pupil_lost_start_time is None:
+        pupil_lost_start_time = current_time_ms
+
+def handle_pupil_detected():
+    """Handle when valid pupil is detected"""
+    global pupil_lost_start_time, blink_history, blinks_detected, last_blink_time
+    global last_valid_pupil_diameter, current_pupil_diameter
+    import time
+    
+    current_time_ms = time.time() * 1000
+    
+    # If we were tracking a lost pupil, check if it was a blink
+    if pupil_lost_start_time is not None:
+        lost_duration = current_time_ms - pupil_lost_start_time
+        
+        if lost_duration >= pupil_lost_duration_threshold_ms:
+            # This was a blink
+            blink_history.append((current_time_ms, lost_duration))
+            blinks_detected += 1
+            last_blink_time = current_time_ms
+            print(f"Blink detected! Duration: {lost_duration:.0f}ms, Total blinks: {blinks_detected}")
+        
+        pupil_lost_start_time = None
+    
+    # Update last valid diameter
+    if current_pupil_diameter is not None:
+        last_valid_pupil_diameter = current_pupil_diameter
+
+def get_blink_rate(window_seconds=60):
+    """Calculate blink rate (blinks per minute) over a time window"""
+    global blink_history
+    import time
+    
+    if len(blink_history) == 0:
+        return 0.0
+    
+    current_time_ms = time.time() * 1000
+    window_start = current_time_ms - (window_seconds * 1000)
+    
+    recent_blinks = [b for b in blink_history if b[0] >= window_start]
+    
+    if len(recent_blinks) == 0:
+        return 0.0
+    
+    # Calculate rate in blinks per minute
+    rate = (len(recent_blinks) / window_seconds) * 60
+    return rate
+
+def print_blink_stats():
+    """Print current blink statistics"""
+    global blinks_detected, blink_history, last_blink_time
+    
+    if blinks_detected == 0:
+        print("\nNo blinks detected yet.")
+        return
+    
+    rate_1min = get_blink_rate(60)
+    rate_30sec = get_blink_rate(30)
+    
+    print(f"\n{'='*60}")
+    print(f"BLINK STATISTICS")
+    print(f"{'='*60}")
+    print(f"Total Blinks: {blinks_detected}")
+    print(f"Blink Rate (last 30s): {rate_30sec:.1f} blinks/min")
+    print(f"Blink Rate (last 60s): {rate_1min:.1f} blinks/min")
+    
+    if blink_history:
+        durations = [b[1] for b in blink_history[-20:]]  # Last 20 blinks
+        if durations:
+            avg_duration = sum(durations) / len(durations)
+            max_duration = max(durations)
+            min_duration = min(durations)
+            print(f"Average Blink Duration: {avg_duration:.0f}ms")
+            print(f"Min/Max Duration: {min_duration:.0f}ms / {max_duration:.0f}ms")
+    
+    if last_blink_time:
+        import time
+        time_since_last = (time.time() * 1000) - last_blink_time
+        print(f"Time Since Last Blink: {time_since_last/1000:.1f}s")
+    
+    print(f"{'='*60}\n")
+
 # ------------------- Gaze Tracking Functions -------------------
 def get_monitor_resolution():
     """Get primary monitor resolution"""
@@ -391,14 +498,24 @@ def compute_gaze_to_screen(pupil_x, pupil_y, frame_width, frame_height, apply_ca
     raw_screen_x = int(screen_x_mm * pixels_per_mm_x)
     raw_screen_y = int(screen_y_mm * pixels_per_mm_y)
     
-    # Apply calibration offset if requested
+    # Apply calibration offset and scale if requested
     if apply_calibration:
-        screen_x = raw_screen_x + int(calibration_offset_x)
-        screen_y = raw_screen_y + int(calibration_offset_y)
+        global calibration_scale_x, calibration_scale_y
+        # Apply scale first (relative to center), then offset
+        screen_center_x = monitor_width // 2
+        screen_center_y = monitor_height // 2
+        
+        # Scale relative to center
+        scaled_x = screen_center_x + (raw_screen_x - screen_center_x) * calibration_scale_x
+        scaled_y = screen_center_y + (raw_screen_y - screen_center_y) * calibration_scale_y
+        
+        # Then apply offset
+        screen_x = scaled_x + calibration_offset_x
+        screen_y = scaled_y + calibration_offset_y
         
         # Clamp to screen bounds
-        screen_x = max(0, min(monitor_width - 1, screen_x))
-        screen_y = max(0, min(monitor_height - 1, screen_y))
+        screen_x = max(0, min(monitor_width - 1, int(screen_x)))
+        screen_y = max(0, min(monitor_height - 1, int(screen_y)))
     else:
         screen_x = raw_screen_x
         screen_y = raw_screen_y
@@ -759,88 +876,121 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
         final_contours = []
     
     # Compute and display gaze position (always try, even if pupil detection is weak)
-    global current_gaze_x, current_gaze_y
+    global current_gaze_x, current_gaze_y, current_pupil_diameter, current_ellipse_goodness
     center_x, center_y = None, None
     pupil_center = None
     
     if final_contours and len(final_contours) > 0 and not isinstance(final_contours[0], list) and len(final_contours[0]) > 5:
-        #cv2.drawContours(test_frame, final_contours, -1, (255, 255, 255), 1)
-        ellipse = cv2.fitEllipse(final_contours[0])
-        final_rotated_rect = ellipse
-        cv2.ellipse(test_frame, ellipse, (55, 255, 0), 2)
-        #cv2.circle(test_frame, darkest_point, 3, (255, 125, 125), -1)
-        center_x, center_y = map(int, ellipse[0])
-        cv2.circle(test_frame, (center_x, center_y), 3, (255, 255, 0), -1)
-        pupil_center = (center_x, center_y)
+        # Check ellipse goodness to filter out eyelashes
+        ellipse_goodness_result = check_ellipse_goodness(best_image, final_contours[0], debug_mode_on)
         
-        # Compute gaze position
-        frame_height, frame_width = frame.shape[:2]
+        # Filter out low-quality detections (likely eyelashes)
+        valid_pupil_detected = True
+        if ellipse_goodness_result and len(ellipse_goodness_result) > 0:
+            goodness_score = ellipse_goodness_result[0]  # Percentage of pixels covered
+            current_ellipse_goodness = goodness_score
+            
+            if goodness_score < MIN_ELLIPSE_GOODNESS:
+                # Likely eyelashes or noise, treat as no pupil
+                valid_pupil_detected = False
+                current_pupil_diameter = None
+                current_ellipse_goodness = None
+                handle_pupil_loss()
+        else:
+            current_ellipse_goodness = None
         
-        # Get raw gaze position (before calibration)
-        raw_screen_x, raw_screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=False)
-        
-        # Get calibrated gaze position (with offset applied)
-        screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=True)
-        
-        # Store both raw and calibrated gaze positions
-        global raw_gaze_x, raw_gaze_y
-        raw_gaze_x = raw_screen_x
-        raw_gaze_y = raw_screen_y
-        current_gaze_x = screen_x
-        current_gaze_y = screen_y
-        
-        # Debug: print occasionally to verify values are being set
-        import random
-        if random.random() < 0.05:  # Print 5% of the time
+        if valid_pupil_detected:
+            #cv2.drawContours(test_frame, final_contours, -1, (255, 255, 255), 1)
+            ellipse = cv2.fitEllipse(final_contours[0])
+            final_rotated_rect = ellipse
+            cv2.ellipse(test_frame, ellipse, (55, 255, 0), 2)
+            #cv2.circle(test_frame, darkest_point, 3, (255, 125, 125), -1)
+            center_x, center_y = map(int, ellipse[0])
+            cv2.circle(test_frame, (center_x, center_y), 3, (255, 255, 0), -1)
+            pupil_center = (center_x, center_y)
+            
+            # Calculate and store pupil diameter (average of major and minor axes)
+            axes_lengths = ellipse[1]  # (minor_axis_length, major_axis_length)
+            pupil_diameter = (axes_lengths[0] + axes_lengths[1]) / 2.0  # Average diameter
+            current_pupil_diameter = pupil_diameter
+            
+            # Track valid pupil detection
+            handle_pupil_detected()
+            
+            # Compute gaze position
+            frame_height, frame_width = frame.shape[:2]
+            
+            # Get raw gaze position (before calibration)
+            raw_screen_x, raw_screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=False)
+            
+            # Get calibrated gaze position (with offset applied)
+            screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=True)
+            
+            # Store both raw and calibrated gaze positions
+            global raw_gaze_x, raw_gaze_y
+            raw_gaze_x = raw_screen_x
+            raw_gaze_y = raw_screen_y
+            current_gaze_x = screen_x
+            current_gaze_y = screen_y
+            
+            # Debug: print occasionally to verify values are being set
+            import random
+            if random.random() < 0.05:  # Print 5% of the time
+                frame_center_x = frame_width // 2
+                frame_center_y = frame_height // 2
+                offset_x = center_x - frame_center_x
+                offset_y = center_y - frame_center_y
+                print(f"DEBUG: Pupil at ({center_x}, {center_y}), offset: ({offset_x:.1f}, {offset_y:.1f}), "
+                      f"→ Gaze: ({screen_x}, {screen_y}), screen center: ({monitor_width//2}, {monitor_height//2})")
+            
+            # Display gaze position on frame
             frame_center_x = frame_width // 2
             frame_center_y = frame_height // 2
-            offset_x = center_x - frame_center_x
-            offset_y = center_y - frame_center_y
-            print(f"DEBUG: Pupil at ({center_x}, {center_y}), offset: ({offset_x:.1f}, {offset_y:.1f}), "
-                  f"→ Gaze: ({screen_x}, {screen_y}), screen center: ({monitor_width//2}, {monitor_height//2})")
-        
-        # Display gaze position on frame
-        frame_center_x = frame_width // 2
-        frame_center_y = frame_height // 2
-        offset_from_center_x = center_x - frame_center_x
-        offset_from_center_y = center_y - frame_center_y
-        
-        cv2.putText(test_frame, f"Gaze: ({screen_x}, {screen_y})", (10, 30), 
-                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
-        cv2.putText(test_frame, f"Pupil: ({center_x}, {center_y})", (10, 50), 
-                   cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
-        cv2.putText(test_frame, f"Offset: ({offset_from_center_x}, {offset_from_center_y})", (10, 70), 
-                   cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 0), 1)
-        if calibration_offset_x != 0 or calibration_offset_y != 0:
-            cv2.putText(test_frame, f"Calib: ({int(calibration_offset_x)}, {int(calibration_offset_y)})", 
-                       (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 200, 0), 1)
-        
-        # Debug calibration: draw ovals on frame at key points
-        if debug_calibration_flag:
-            # Draw oval at pupil position (magenta)
-            pupil_radius = 25
-            cv2.circle(test_frame, (center_x, center_y), pupil_radius, (255, 0, 255), 3)
-            cv2.putText(test_frame, "Pupil", (center_x - 20, center_y - pupil_radius - 10),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+            offset_from_center_x = center_x - frame_center_x
+            offset_from_center_y = center_y - frame_center_y
             
-            # Draw oval at frame center (yellow)
-            cv2.circle(test_frame, (frame_center_x, frame_center_y), 30, (0, 255, 255), 3)
-            cv2.putText(test_frame, "Frame Center", (frame_center_x - 50, frame_center_y - 40),
+            cv2.putText(test_frame, f"Gaze: ({screen_x}, {screen_y})", (10, 30), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+            cv2.putText(test_frame, f"Pupil: ({center_x}, {center_y})", (10, 50), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
+            cv2.putText(test_frame, f"Offset: ({offset_from_center_x}, {offset_from_center_y})", (10, 70), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 0), 1)
+            if calibration_offset_x != 0 or calibration_offset_y != 0:
+                cv2.putText(test_frame, f"Calib: ({int(calibration_offset_x)}, {int(calibration_offset_y)})", 
+                           (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 200, 0), 1)
             
-            # Draw line from frame center to pupil
-            cv2.line(test_frame, (frame_center_x, frame_center_y), (center_x, center_y), (128, 128, 128), 2)
-        
-        # Debug: print occasionally to console
-        import random
-        if random.random() < 0.01:  # Print 1% of the time
-            print(f"Frame: Pupil at ({center_x}, {center_y}), Gaze at ({screen_x}, {screen_y}), "
-                  f"Offset from center: ({offset_from_center_x}, {offset_from_center_y})")
+            # Debug calibration: draw ovals on frame at key points
+            if debug_calibration_flag:
+                # Draw oval at pupil position (magenta)
+                pupil_radius = 25
+                cv2.circle(test_frame, (center_x, center_y), pupil_radius, (255, 0, 255), 3)
+                cv2.putText(test_frame, "Pupil", (center_x - 20, center_y - pupil_radius - 10),
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+                
+                # Draw oval at frame center (yellow)
+                cv2.circle(test_frame, (frame_center_x, frame_center_y), 30, (0, 255, 255), 3)
+                cv2.putText(test_frame, "Frame Center", (frame_center_x - 50, frame_center_y - 40),
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+                
+                # Draw line from frame center to pupil
+                cv2.line(test_frame, (frame_center_x, frame_center_y), (center_x, center_y), (128, 128, 128), 2)
+            
+            # Debug: print occasionally to console
+            import random
+            if random.random() < 0.01:  # Print 1% of the time
+                print(f"Frame: Pupil at ({center_x}, {center_y}), Gaze at ({screen_x}, {screen_y}), "
+                      f"Offset from center: ({offset_from_center_x}, {offset_from_center_y})")
+        else:
+            # Invalid detection (likely eyelashes), treat as no pupil
+            handle_pupil_loss()
     else:
         # No pupil detected - set gaze to None or keep last known position
         # Uncomment next lines to reset gaze when pupil not detected:
         # current_gaze_x = None
         # current_gaze_y = None
+        current_pupil_diameter = None  # No pupil diameter available
+        current_ellipse_goodness = None
+        handle_pupil_loss()
         cv2.putText(test_frame, "Pupil not detected", (10, 30), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
         if current_gaze_x is None:
