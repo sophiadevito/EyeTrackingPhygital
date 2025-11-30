@@ -13,6 +13,9 @@ import saccade_test
 import smooth_pursuit
 import fixed_point_stability
 import calibration
+import plr
+import glob
+import os
 
 def main():
     """Main function that coordinates eye tracking and accuracy testing"""
@@ -48,6 +51,10 @@ def main():
     calibration_overlay_func = calibration.get_calibration_overlay_draw_function()
     eye_tracking.add_overlay_callback(calibration_overlay_func)
     
+    # Add PLR overlay callback
+    plr_overlay_func = plr.get_plr_overlay_draw_function()
+    eye_tracking.add_overlay_callback(plr_overlay_func)
+    
     # Define callback function for accuracy testing updates
     def accuracy_test_update(gaze_x, gaze_y):
         """Callback to update accuracy testing with gaze coordinates"""
@@ -73,6 +80,11 @@ def main():
         """Callback to update calibration with gaze coordinates"""
         calibration.update_calibration(gaze_x, gaze_y, raw_gaze_x, raw_gaze_y, pupil_x, pupil_y)
     
+    # Define callback function for PLR updates
+    def plr_update(pupil_diameter):
+        """Callback to update PLR test with pupil diameter"""
+        plr.update_plr_test(pupil_diameter)
+    
     print("Starting Eye Tracking with Camera...")
     print("Controls:")
     print("  SPACEBAR - Pause/resume")
@@ -84,15 +96,64 @@ def main():
     print("  P        - Start/stop smooth pursuit testing")
     print("  F        - Start/stop fixed point stability testing")
     print("  X        - Start 9-point calibration")
+    print("  L        - Start/stop PLR (Pupillary Light Reflex) test")
+    print("  Z        - Run automated test suite (Saccade → Pursuit → Fixed Point → PLR)")
     print("  B        - Show blink statistics")
     print("  Q        - Quit")
     print("")
     
     # We need to modify the eye tracking to handle test keys
     # Let's create a wrapper that handles this
-    run_with_tests(args.debug, accuracy_test_update, saccade_test_update, pursuit_test_update, stability_test_update, calibration_update)
+    run_with_tests(args.debug, accuracy_test_update, saccade_test_update, pursuit_test_update, stability_test_update, calibration_update, plr_update)
 
-def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_update_callback, pursuit_update_callback, stability_update_callback, calibration_update_callback):
+def get_latest_test_results(test_type):
+    """
+    Find and parse the most recent JSON results file for a given test type.
+    
+    Args:
+        test_type: One of 'saccade', 'smooth_pursuit', 'fixed_point', 'plr'
+    
+    Returns:
+        Dictionary with results, or None if no file found
+    """
+    import json
+    from datetime import datetime
+    
+    # Map test types to file patterns
+    patterns = {
+        'saccade': 'saccade_results_*.json',
+        'smooth_pursuit': 'smooth_pursuit_results_*.json',
+        'fixed_point': 'fixed_point_stability_results_*.json',
+        'plr': 'plr_results_*.json'
+    }
+    
+    if test_type not in patterns:
+        return None
+    
+    # Find all matching files
+    pattern = patterns[test_type]
+    files = glob.glob(pattern)
+    
+    if not files:
+        return None
+    
+    # Sort by modification time (newest first)
+    files.sort(key=os.path.getmtime, reverse=True)
+    latest_file = files[0]
+    
+    try:
+        with open(latest_file, 'r') as f:
+            data = json.load(f)
+            # Extract results from the JSON structure
+            if 'results' in data:
+                return data['results']
+    except Exception as e:
+        print(f"Error reading {latest_file}: {e}")
+        return None
+    
+    return None
+
+def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_update_callback, pursuit_update_callback, stability_update_callback, calibration_update_callback, plr_update_callback):
     """
     Run eye tracking with all testing modules integration
     Handles keyboard input for all tests
@@ -116,6 +177,13 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
     et.start_gaze_overlay()
     
     debug_mode_on = False
+    
+    # Automated test suite state
+    automated_suite_running = False
+    automated_suite_state = None  # Will track which test we're on
+    automated_suite_results = {}
+    automated_suite_test_start_time = None
+    automated_suite_initial_blinks = 0  # Store initial blink count when suite starts
 
     while True:
         ret, frame = cap.read()
@@ -212,18 +280,10 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 # Don't stop the main loop, just log the error
         
         # Update PLR test if active
-        if calibration.plr_test_active:
+        if plr.plr_test_active:
             try:
                 # Update PLR test with current pupil diameter
-                calibration.update_plr_test(et.current_pupil_diameter)
-                
-                # Keep flash window responsive
-                if calibration.plr_flash_window is not None:
-                    try:
-                        calibration.plr_flash_window.update_idletasks()
-                        calibration.plr_flash_window.update()
-                    except:
-                        pass
+                plr_update_callback(et.current_pupil_diameter)
             except Exception as e:
                 print(f"Error updating PLR test: {e}")
                 import traceback
@@ -339,6 +399,228 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     print(f"Error stopping calibration: {e}")
                     import traceback
                     traceback.print_exc()
+        
+        # Start/stop PLR test
+        if key == ord('l'):
+            if not plr.plr_test_active:
+                if not et.overlay_running:
+                    print("Please enable gaze overlay (press 'g') before starting PLR test.")
+                else:
+                    plr.start_plr_test()
+            else:
+                try:
+                    plr.stop_plr_test()
+                except Exception as e:
+                    print(f"Error stopping PLR test: {e}")
+                    import traceback
+                    traceback.print_exc()
+        
+        # Start automated test suite
+        if key == ord('z'):
+            if automated_suite_running:
+                print("Automated test suite is already running!")
+            elif not et.overlay_running:
+                print("Please enable gaze overlay (press 'g') before starting automated test suite.")
+            else:
+                automated_suite_running = True
+                automated_suite_state = 'saccade'
+                automated_suite_results = {}
+                automated_suite_test_start_time = None
+                # Store initial blink count to calculate blinks during suite only
+                automated_suite_initial_blinks = et.blinks_detected
+                print("\n" + "="*60)
+                print("STARTING AUTOMATED TEST SUITE")
+                print("="*60)
+                print("\n1/4: Starting Saccade Test...")
+                saccade_test.start_saccade_test()
+        
+        # Handle automated test suite progression
+        if automated_suite_running:
+            import time
+            import json
+            from datetime import datetime
+            
+            # Saccade test
+            if automated_suite_state == 'saccade':
+                if not saccade_test.saccade_testing_active:
+                    # Saccade test completed - try to get results from JSON file
+                    # Wait a moment for file to be written
+                    import time
+                    time.sleep(0.5)  # Give file system time to write
+                    
+                    saccade_results = get_latest_test_results('saccade')
+                    if saccade_results:
+                        automated_suite_results['saccade'] = {}
+                        if saccade_results.get('normal_saccade'):
+                            normal = saccade_results['normal_saccade']
+                            automated_suite_results['saccade']['normal'] = {
+                                'total_saccades': normal.get('total_saccades'),
+                                'valid_saccades': normal.get('valid_saccades'),
+                                'average_latency_ms': normal.get('average_latency_ms'),
+                                'std_latency_ms': normal.get('std_latency_ms'),
+                                'average_velocity_deg_per_ms': normal.get('average_velocity_deg_per_ms'),
+                                'std_velocity_deg_per_ms': normal.get('std_velocity_deg_per_ms'),
+                                'average_accuracy_percent': normal.get('average_accuracy_percent'),
+                                'std_accuracy_percent': normal.get('std_accuracy_percent')
+                            }
+                        if saccade_results.get('antisaccade'):
+                            anti = saccade_results['antisaccade']
+                            automated_suite_results['saccade']['antisaccade'] = {
+                                'total_trials': anti.get('total_trials'),
+                                'error_count': anti.get('error_count'),
+                                'correct_count': anti.get('correct_count'),
+                                'error_rate_percent': anti.get('error_rate_percent')
+                            }
+                    else:
+                        print("Warning: Could not retrieve saccade test results from JSON file")
+                    print("\n2/4: Starting Smooth Pursuit Test...")
+                    automated_suite_state = 'pursuit'
+                    smooth_pursuit.start_smooth_pursuit_test()
+            
+            # Smooth pursuit test
+            elif automated_suite_state == 'pursuit':
+                if not smooth_pursuit.smooth_pursuit_active:
+                    # Pursuit test completed - try to get results from JSON file
+                    import time
+                    time.sleep(0.5)  # Give file system time to write
+                    
+                    pursuit_results = get_latest_test_results('smooth_pursuit')
+                    if pursuit_results:
+                        automated_suite_results['smooth_pursuit'] = {
+                            'total_measurements': pursuit_results.get('total_measurements'),
+                            'horizontal_measurements': pursuit_results.get('horizontal_measurements'),
+                            'vertical_measurements': pursuit_results.get('vertical_measurements'),
+                            'average_gain': pursuit_results.get('average_gain'),
+                            'std_gain': pursuit_results.get('std_gain'),
+                            'average_gain_horizontal': pursuit_results.get('average_gain_horizontal'),
+                            'average_gain_vertical': pursuit_results.get('average_gain_vertical'),
+                            'average_latency_ms': pursuit_results.get('average_latency_ms'),
+                            'std_latency_ms': pursuit_results.get('std_latency_ms'),
+                            'average_latency_horizontal_ms': pursuit_results.get('average_latency_horizontal_ms'),
+                            'average_latency_vertical_ms': pursuit_results.get('average_latency_vertical_ms')
+                        }
+                    else:
+                        print("Warning: Could not retrieve smooth pursuit test results from JSON file")
+                    print("\n3/4: Starting Fixed Point Stability Test...")
+                    automated_suite_state = 'fixed_point'
+                    fixed_point_stability.start_fixed_point_test()
+            
+            # Fixed point stability test
+            elif automated_suite_state == 'fixed_point':
+                if not fixed_point_stability.fixed_point_active:
+                    # Fixed point test completed - try to get results from JSON file
+                    import time
+                    time.sleep(0.5)  # Give file system time to write
+                    
+                    stability_results = get_latest_test_results('fixed_point')
+                    if stability_results:
+                        automated_suite_results['fixed_point'] = {
+                            'total_measurements': stability_results.get('total_measurements'),
+                            'average_deviation_degrees': stability_results.get('average_deviation_degrees'),
+                            'median_deviation_degrees': stability_results.get('median_deviation_degrees'),
+                            'rms_deviation_degrees': stability_results.get('rms_deviation_degrees'),
+                            'std_deviation_degrees': stability_results.get('std_deviation_degrees'),
+                            'max_deviation_degrees': stability_results.get('max_deviation_degrees'),
+                            'min_deviation_degrees': stability_results.get('min_deviation_degrees')
+                        }
+                    else:
+                        print("Warning: Could not retrieve fixed point stability test results from JSON file")
+                    print("\n4/4: Starting PLR Test...")
+                    automated_suite_state = 'plr'
+                    plr.start_plr_test()
+            
+            # PLR test
+            elif automated_suite_state == 'plr':
+                if not plr.plr_test_active:
+                    # PLR test completed - try to get results from JSON file
+                    import time
+                    time.sleep(0.5)  # Give file system time to write
+                    
+                    plr_results = get_latest_test_results('plr')
+                    if plr_results:
+                        automated_suite_results['plr'] = {
+                            'baseline_samples_count': plr_results.get('baseline_samples_count'),
+                            'response_samples_count': plr_results.get('response_samples_count'),
+                            'baseline_diameter_pixels': plr_results.get('baseline_diameter_pixels'),
+                            'min_response_diameter_pixels': plr_results.get('min_response_diameter_pixels'),
+                            'constriction_amplitude_pixels': plr_results.get('constriction_amplitude_pixels'),
+                            'constriction_amplitude_percent': plr_results.get('constriction_amplitude_percent'),
+                            'plr_latency_ms': plr_results.get('plr_latency_ms')
+                        }
+                    else:
+                        print("Warning: Could not retrieve PLR test results from JSON file")
+                    
+                    # Get blink rate statistics
+                    blink_rate_1min = et.get_blink_rate(60)
+                    blink_rate_30sec = et.get_blink_rate(30)
+                    
+                    # Calculate blinks during the automated suite only
+                    blinks_during_suite = et.blinks_detected - automated_suite_initial_blinks
+                    
+                    automated_suite_results['blink_rate'] = {
+                        'blinks_per_minute_60s': blink_rate_1min,
+                        'blinks_per_minute_30s': blink_rate_30sec,
+                        'total_blinks': blinks_during_suite
+                    }
+                    
+                    # Save combined results
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    combined_filename = f"combined_test_results_{timestamp}.json"
+                    
+                    all_results = {
+                        'metadata': {
+                            'timestamp': timestamp,
+                            'test_date': datetime.now().isoformat(),
+                            'monitor_width': et.monitor_width,
+                            'monitor_height': et.monitor_height,
+                            'tests_run': ['saccade', 'smooth_pursuit', 'fixed_point', 'plr'],
+                            'test_order': 'saccade → smooth_pursuit → fixed_point → plr'
+                        },
+                        'results': automated_suite_results
+                    }
+                    
+                    try:
+                        with open(combined_filename, 'w') as f:
+                            json.dump(all_results, f, indent=2)
+                        print("\n" + "="*60)
+                        print("AUTOMATED TEST SUITE COMPLETE")
+                        print("="*60)
+                        print(f"Combined results saved to: {combined_filename}")
+                        print("\nSummary of Results:")
+                        if 'saccade' in automated_suite_results:
+                            if 'normal' in automated_suite_results['saccade']:
+                                normal = automated_suite_results['saccade']['normal']
+                                print(f"  Saccade Latency: {normal.get('average_latency_ms', 0):.2f} ms (std: {normal.get('std_latency_ms', 0):.2f})")
+                                print(f"  Saccade Velocity: {normal.get('average_velocity_deg_per_ms', 0):.4f} deg/ms (std: {normal.get('std_velocity_deg_per_ms', 0):.4f})")
+                                print(f"  Saccade Accuracy: {normal.get('average_accuracy_percent', 0):.2f}% (std: {normal.get('std_accuracy_percent', 0):.2f})")
+                            if 'antisaccade' in automated_suite_results['saccade']:
+                                anti = automated_suite_results['saccade']['antisaccade']
+                                print(f"  Antisaccade Error Rate: {anti.get('error_rate_percent', 0):.2f}% ({anti.get('error_count', 0)}/{anti.get('total_trials', 0)})")
+                        if 'smooth_pursuit' in automated_suite_results:
+                            pursuit = automated_suite_results['smooth_pursuit']
+                            print(f"  Smooth Pursuit Gain: {pursuit.get('average_gain', 0):.3f} (std: {pursuit.get('std_gain', 0):.3f})")
+                            print(f"  Smooth Pursuit Latency: {pursuit.get('average_latency_ms', 0):.2f} ms (std: {pursuit.get('std_latency_ms', 0):.2f})")
+                        if 'fixed_point' in automated_suite_results:
+                            fixed = automated_suite_results['fixed_point']
+                            print(f"  Fixed Point Deviation: {fixed.get('average_deviation_degrees', 0):.4f}° (RMS: {fixed.get('rms_deviation_degrees', 0):.4f}°)")
+                        if 'plr' in automated_suite_results:
+                            plr_data = automated_suite_results['plr']
+                            if plr_data.get('plr_latency_ms') is not None:
+                                print(f"  PLR Latency: {plr_data.get('plr_latency_ms', 0):.2f} ms")
+                            print(f"  PLR Constriction: {plr_data.get('constriction_amplitude_percent', 0):.2f}%")
+                        if 'blink_rate' in automated_suite_results:
+                            blink = automated_suite_results['blink_rate']
+                            print(f"  Blink Rate: {blink.get('blinks_per_minute_60s', 0):.1f} blinks/min (Total: {blink.get('total_blinks', 0)})")
+                        print("="*60 + "\n")
+                    except Exception as e:
+                        print(f"Error saving combined results: {e}")
+                        import traceback
+                        traceback.print_exc()
+                    
+                    # Reset automated suite state
+                    automated_suite_running = False
+                    automated_suite_state = None
+                    automated_suite_results = {}
         
         # Display blink statistics
         if key == ord('b'):  # Press 'b' to show blink statistics

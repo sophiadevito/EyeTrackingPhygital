@@ -1,0 +1,4763 @@
+{
+  "metadata": {
+    "timestamp": "20251130_153043",
+    "test_date": "2025-11-30T15:30:43.270360",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "test_duration_seconds": 20.0
+  },
+  "results": {
+    "total_measurements": 527,
+    "average_deviation_degrees": 4.276611586851068,
+    "median_deviation_degrees": 1.947997821509523,
+    "std_deviation_degrees": 7.548304085865623,
+    "max_deviation_degrees": 30.791280231270413,
+    "min_deviation_degrees": 0.0,
+    "rms_deviation_degrees": 8.675615323277333
+  },
+  "raw_data": [
+    {
+      "timestamp": 1764534623.291565,
+      "time_from_start": 0.03577685356140137,
+      "gaze_x": 0,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.791280231270413
+    },
+    {
+      "timestamp": 1764534623.324341,
+      "time_from_start": 0.06855297088623047,
+      "gaze_x": 0,
+      "gaze_y": 858,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 29.068414275962443
+    },
+    {
+      "timestamp": 1764534623.360697,
+      "time_from_start": 0.10490894317626953,
+      "gaze_x": 0,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.791280231270413
+    },
+    {
+      "timestamp": 1764534623.3949592,
+      "time_from_start": 0.13917112350463867,
+      "gaze_x": 0,
+      "gaze_y": 758,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 27.938495033177045
+    },
+    {
+      "timestamp": 1764534623.42943,
+      "time_from_start": 0.17364192008972168,
+      "gaze_x": 0,
+      "gaze_y": 791,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 28.280084048555274
+    },
+    {
+      "timestamp": 1764534623.471736,
+      "time_from_start": 0.21594786643981934,
+      "gaze_x": 0,
+      "gaze_y": 808,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 28.468522409456238
+    },
+    {
+      "timestamp": 1764534623.512674,
+      "time_from_start": 0.25688600540161133,
+      "gaze_x": 0,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.791280231270413
+    },
+    {
+      "timestamp": 1764534623.54777,
+      "time_from_start": 0.29198193550109863,
+      "gaze_x": 0,
+      "gaze_y": 608,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.840123105697433
+    },
+    {
+      "timestamp": 1764534623.5828638,
+      "time_from_start": 0.327075719833374,
+      "gaze_x": 0,
+      "gaze_y": 957,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.431259138707986
+    },
+    {
+      "timestamp": 1764534623.619043,
+      "time_from_start": 0.36325502395629883,
+      "gaze_x": 0,
+      "gaze_y": 758,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 27.938495033177045
+    },
+    {
+      "timestamp": 1764534623.653302,
+      "time_from_start": 0.39751386642456055,
+      "gaze_x": 0,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.791280231270413
+    },
+    {
+      "timestamp": 1764534623.687895,
+      "time_from_start": 0.43210697174072266,
+      "gaze_x": 0,
+      "gaze_y": 691,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 27.350965710198608
+    },
+    {
+      "timestamp": 1764534623.7153971,
+      "time_from_start": 0.4596090316772461,
+      "gaze_x": 601,
+      "gaze_y": 575,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 6.65143721741998
+    },
+    {
+      "timestamp": 1764534623.7509341,
+      "time_from_start": 0.4951460361480713,
+      "gaze_x": 70,
+      "gaze_y": 757,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 25.951201544787295
+    },
+    {
+      "timestamp": 1764534623.7887151,
+      "time_from_start": 0.5329270362854004,
+      "gaze_x": 522,
+      "gaze_y": 625,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 10.113115737501676
+    },
+    {
+      "timestamp": 1764534623.8308039,
+      "time_from_start": 0.5750157833099365,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534623.8722172,
+      "time_from_start": 0.6164290904998779,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534623.91263,
+      "time_from_start": 0.6568419933319092,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534623.951922,
+      "time_from_start": 0.6961338520050049,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534623.9870028,
+      "time_from_start": 0.7312147617340088,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.020628,
+      "time_from_start": 0.7648398876190186,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.055647,
+      "time_from_start": 0.799858808517456,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.0909429,
+      "time_from_start": 0.8351547718048096,
+      "gaze_x": 1511,
+      "gaze_y": 525,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.560796150141663
+    },
+    {
+      "timestamp": 1764534624.126322,
+      "time_from_start": 0.8705339431762695,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.1750898,
+      "time_from_start": 0.9193017482757568,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.2109492,
+      "time_from_start": 0.9551610946655273,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.245049,
+      "time_from_start": 0.9892609119415283,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.289071,
+      "time_from_start": 1.033282995223999,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.3230898,
+      "time_from_start": 1.0673017501831055,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.358735,
+      "time_from_start": 1.1029469966888428,
+      "gaze_x": 1511,
+      "gaze_y": 525,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.560796150141663
+    },
+    {
+      "timestamp": 1764534624.399172,
+      "time_from_start": 1.1433839797973633,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.435355,
+      "time_from_start": 1.1795668601989746,
+      "gaze_x": 1511,
+      "gaze_y": 508,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.543394901827956
+    },
+    {
+      "timestamp": 1764534624.468888,
+      "time_from_start": 1.2130999565124512,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.5115361,
+      "time_from_start": 1.2557480335235596,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.546741,
+      "time_from_start": 1.2909529209136963,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.580905,
+      "time_from_start": 1.3251168727874756,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.628958,
+      "time_from_start": 1.3731698989868164,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.670018,
+      "time_from_start": 1.4142298698425293,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.707308,
+      "time_from_start": 1.4515199661254883,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.740194,
+      "time_from_start": 1.4844059944152832,
+      "gaze_x": 1511,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.53759037234568
+    },
+    {
+      "timestamp": 1764534624.774534,
+      "time_from_start": 1.5187458992004395,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534624.8102,
+      "time_from_start": 1.5544118881225586,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534624.858203,
+      "time_from_start": 1.602414846420288,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534624.893813,
+      "time_from_start": 1.6380248069763184,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534624.93569,
+      "time_from_start": 1.6799018383026123,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534624.972128,
+      "time_from_start": 1.7163398265838623,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.005737,
+      "time_from_start": 1.7499489784240723,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.04213,
+      "time_from_start": 1.786341905593872,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.083421,
+      "time_from_start": 1.8276329040527344,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.118072,
+      "time_from_start": 1.8622839450836182,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.1611252,
+      "time_from_start": 1.9053370952606201,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.195544,
+      "time_from_start": 1.939755916595459,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.229256,
+      "time_from_start": 1.9734678268432617,
+      "gaze_x": 1511,
+      "gaze_y": 475,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 26.542732204979306
+    },
+    {
+      "timestamp": 1764534625.2515142,
+      "time_from_start": 1.9957261085510254,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534625.285511,
+      "time_from_start": 2.0297229290008545,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534625.317909,
+      "time_from_start": 2.0621209144592285,
+      "gaze_x": 768,
+      "gaze_y": 474,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7885725394265272
+    },
+    {
+      "timestamp": 1764534625.355117,
+      "time_from_start": 2.0993289947509766,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.390214,
+      "time_from_start": 2.1344258785247803,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.4241269,
+      "time_from_start": 2.1683387756347656,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.461246,
+      "time_from_start": 2.205457925796509,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.494934,
+      "time_from_start": 2.2391459941864014,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.544829,
+      "time_from_start": 2.2890408039093018,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.580837,
+      "time_from_start": 2.3250489234924316,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534625.622897,
+      "time_from_start": 2.3671088218688965,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764534625.659518,
+      "time_from_start": 2.4037299156188965,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534625.6929321,
+      "time_from_start": 2.4371440410614014,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534625.729194,
+      "time_from_start": 2.4734058380126953,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534625.7752151,
+      "time_from_start": 2.5194270610809326,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534625.811229,
+      "time_from_start": 2.555440902709961,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534625.845576,
+      "time_from_start": 2.5897879600524902,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534625.883341,
+      "time_from_start": 2.6275529861450195,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534625.917778,
+      "time_from_start": 2.66198992729187,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534625.960029,
+      "time_from_start": 2.7042407989501953,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534625.999532,
+      "time_from_start": 2.743743896484375,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.036064,
+      "time_from_start": 2.780275821685791,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.069788,
+      "time_from_start": 2.813999891281128,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.1129768,
+      "time_from_start": 2.8571887016296387,
+      "gaze_x": 805,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.2377776540729686
+    },
+    {
+      "timestamp": 1764534626.14722,
+      "time_from_start": 2.8914318084716797,
+      "gaze_x": 818,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.659919695434802
+    },
+    {
+      "timestamp": 1764534626.1815739,
+      "time_from_start": 2.925785779953003,
+      "gaze_x": 818,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.015819705688625
+    },
+    {
+      "timestamp": 1764534626.230397,
+      "time_from_start": 2.974608898162842,
+      "gaze_x": 805,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6512906595228802
+    },
+    {
+      "timestamp": 1764534626.272147,
+      "time_from_start": 3.0163588523864746,
+      "gaze_x": 805,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6512906595228802
+    },
+    {
+      "timestamp": 1764534626.3147678,
+      "time_from_start": 3.0589797496795654,
+      "gaze_x": 805,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6512906595228802
+    },
+    {
+      "timestamp": 1764534626.357374,
+      "time_from_start": 3.101585865020752,
+      "gaze_x": 805,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6512906595228802
+    },
+    {
+      "timestamp": 1764534626.399206,
+      "time_from_start": 3.1434178352355957,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.441099,
+      "time_from_start": 3.1853108406066895,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.48119,
+      "time_from_start": 3.2254018783569336,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.515511,
+      "time_from_start": 3.259722948074341,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534626.5507789,
+      "time_from_start": 3.2949907779693604,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534626.594055,
+      "time_from_start": 3.3382668495178223,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.629357,
+      "time_from_start": 3.3735690116882324,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.670708,
+      "time_from_start": 3.414919853210449,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.710208,
+      "time_from_start": 3.4544198513031006,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.746721,
+      "time_from_start": 3.4909329414367676,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.780612,
+      "time_from_start": 3.5248239040374756,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.82405,
+      "time_from_start": 3.5682618618011475,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.86498,
+      "time_from_start": 3.60919189453125,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534626.9116778,
+      "time_from_start": 3.6558897495269775,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.947952,
+      "time_from_start": 3.6921639442443848,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534626.9819121,
+      "time_from_start": 3.7261240482330322,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534627.0247118,
+      "time_from_start": 3.768923759460449,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534627.059327,
+      "time_from_start": 3.8035387992858887,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534627.094731,
+      "time_from_start": 3.8389430046081543,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534627.143518,
+      "time_from_start": 3.8877298831939697,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534627.179172,
+      "time_from_start": 3.923383951187134,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534627.2133272,
+      "time_from_start": 3.9575390815734863,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534627.2557151,
+      "time_from_start": 3.999927043914795,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534627.298163,
+      "time_from_start": 4.042374849319458,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534627.3335721,
+      "time_from_start": 4.077784061431885,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.37409,
+      "time_from_start": 4.118301868438721,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.415182,
+      "time_from_start": 4.159394025802612,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.456676,
+      "time_from_start": 4.20088791847229,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.491076,
+      "time_from_start": 4.23528790473938,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.526011,
+      "time_from_start": 4.270222902297974,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.561376,
+      "time_from_start": 4.305588006973267,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.596073,
+      "time_from_start": 4.340284824371338,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534627.629979,
+      "time_from_start": 4.374190807342529,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534627.6732318,
+      "time_from_start": 4.417443752288818,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534627.7087622,
+      "time_from_start": 4.452974081039429,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534627.7513258,
+      "time_from_start": 4.495537757873535,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.78745,
+      "time_from_start": 4.5316619873046875,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.828502,
+      "time_from_start": 4.572713851928711,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.863539,
+      "time_from_start": 4.60775089263916,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.900046,
+      "time_from_start": 4.64425802230835,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.933938,
+      "time_from_start": 4.678149938583374,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534627.977018,
+      "time_from_start": 4.7212300300598145,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.01168,
+      "time_from_start": 4.755891799926758,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534628.052477,
+      "time_from_start": 4.796688795089722,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.086536,
+      "time_from_start": 4.830747842788696,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.128992,
+      "time_from_start": 4.873203992843628,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.165484,
+      "time_from_start": 4.909695863723755,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.208267,
+      "time_from_start": 4.952478885650635,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.2437499,
+      "time_from_start": 4.987961769104004,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.284672,
+      "time_from_start": 5.028883934020996,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.318582,
+      "time_from_start": 5.062793970108032,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.355459,
+      "time_from_start": 5.099670886993408,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.389995,
+      "time_from_start": 5.134207010269165,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534628.430955,
+      "time_from_start": 5.175166845321655,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.4728131,
+      "time_from_start": 5.2170250415802,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.507092,
+      "time_from_start": 5.2513039112091064,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.541611,
+      "time_from_start": 5.285822868347168,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.584406,
+      "time_from_start": 5.328617811203003,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.625412,
+      "time_from_start": 5.369623899459839,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534628.66549,
+      "time_from_start": 5.409701824188232,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.702017,
+      "time_from_start": 5.446228981018066,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534628.741505,
+      "time_from_start": 5.485716819763184,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.7835698,
+      "time_from_start": 5.52778172492981,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.8243232,
+      "time_from_start": 5.568535089492798,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.858903,
+      "time_from_start": 5.60311484336853,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.894408,
+      "time_from_start": 5.638619899749756,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.930847,
+      "time_from_start": 5.675058841705322,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534628.9769979,
+      "time_from_start": 5.721209764480591,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534629.011919,
+      "time_from_start": 5.756130933761597,
+      "gaze_x": 793,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.865171681168241
+    },
+    {
+      "timestamp": 1764534629.046005,
+      "time_from_start": 5.79021692276001,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.08199,
+      "time_from_start": 5.826201915740967,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.1163929,
+      "time_from_start": 5.860604763031006,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.151077,
+      "time_from_start": 5.895288944244385,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.199681,
+      "time_from_start": 5.943892955780029,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534629.241021,
+      "time_from_start": 5.985232830047607,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.276128,
+      "time_from_start": 6.0203399658203125,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534629.31016,
+      "time_from_start": 6.0543718338012695,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.34676,
+      "time_from_start": 6.090971946716309,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.3811042,
+      "time_from_start": 6.125316143035889,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534629.4291358,
+      "time_from_start": 6.17334771156311,
+      "gaze_x": 781,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.281598699346301
+    },
+    {
+      "timestamp": 1764534629.46351,
+      "time_from_start": 6.207721948623657,
+      "gaze_x": 781,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.281598699346301
+    },
+    {
+      "timestamp": 1764534629.504997,
+      "time_from_start": 6.249208927154541,
+      "gaze_x": 793,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4398565462951263
+    },
+    {
+      "timestamp": 1764534629.5413451,
+      "time_from_start": 6.28555703163147,
+      "gaze_x": 793,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4398565462951263
+    },
+    {
+      "timestamp": 1764534629.584152,
+      "time_from_start": 6.32836389541626,
+      "gaze_x": 793,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4398565462951263
+    },
+    {
+      "timestamp": 1764534629.619582,
+      "time_from_start": 6.363793849945068,
+      "gaze_x": 793,
+      "gaze_y": 574,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4398565462951263
+    },
+    {
+      "timestamp": 1764534629.6590989,
+      "time_from_start": 6.403310775756836,
+      "gaze_x": 793,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.865171681168241
+    },
+    {
+      "timestamp": 1764534629.694901,
+      "time_from_start": 6.439112901687622,
+      "gaze_x": 793,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.865171681168241
+    },
+    {
+      "timestamp": 1764534629.7370582,
+      "time_from_start": 6.48127007484436,
+      "gaze_x": 793,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.356023469134231
+    },
+    {
+      "timestamp": 1764534629.772622,
+      "time_from_start": 6.516834020614624,
+      "gaze_x": 793,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.356023469134231
+    },
+    {
+      "timestamp": 1764534629.8064141,
+      "time_from_start": 6.550626039505005,
+      "gaze_x": 805,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.2377776540729686
+    },
+    {
+      "timestamp": 1764534629.8431082,
+      "time_from_start": 6.58732008934021,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534629.8849869,
+      "time_from_start": 6.629198789596558,
+      "gaze_x": 793,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.8782805024208715
+    },
+    {
+      "timestamp": 1764534629.927281,
+      "time_from_start": 6.6714928150177,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534629.963587,
+      "time_from_start": 6.707798957824707,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534629.998177,
+      "time_from_start": 6.742388963699341,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534630.040598,
+      "time_from_start": 6.784809827804565,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.077448,
+      "time_from_start": 6.821659803390503,
+      "gaze_x": 793,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5273863810338273
+    },
+    {
+      "timestamp": 1764534630.1178932,
+      "time_from_start": 6.862105131149292,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.162849,
+      "time_from_start": 6.907060861587524,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.2048519,
+      "time_from_start": 6.949063777923584,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.248985,
+      "time_from_start": 6.993196964263916,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.2845771,
+      "time_from_start": 7.028789043426514,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.3194208,
+      "time_from_start": 7.0636327266693115,
+      "gaze_x": 781,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534630.359383,
+      "time_from_start": 7.103595018386841,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.395998,
+      "time_from_start": 7.140209913253784,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534630.4292731,
+      "time_from_start": 7.173485040664673,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534630.464649,
+      "time_from_start": 7.208860874176025,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534630.500001,
+      "time_from_start": 7.244212865829468,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.5346618,
+      "time_from_start": 7.278873682022095,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.575169,
+      "time_from_start": 7.31938099861145,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.611108,
+      "time_from_start": 7.355319976806641,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.645516,
+      "time_from_start": 7.389727830886841,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534630.6810749,
+      "time_from_start": 7.425286769866943,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534630.717006,
+      "time_from_start": 7.461217880249023,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534630.7512908,
+      "time_from_start": 7.495502710342407,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534630.800391,
+      "time_from_start": 7.544602870941162,
+      "gaze_x": 781,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534630.836513,
+      "time_from_start": 7.5807249546051025,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534630.869549,
+      "time_from_start": 7.613760948181152,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534630.9043012,
+      "time_from_start": 7.648513078689575,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534630.941969,
+      "time_from_start": 7.686180830001831,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534630.9832551,
+      "time_from_start": 7.727467060089111,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.031515,
+      "time_from_start": 7.775726795196533,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.072831,
+      "time_from_start": 7.817042827606201,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.108969,
+      "time_from_start": 7.853180885314941,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.151285,
+      "time_from_start": 7.895496845245361,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.187104,
+      "time_from_start": 7.931315898895264,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.221706,
+      "time_from_start": 7.9659178256988525,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.2637131,
+      "time_from_start": 8.007925033569336,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.2990022,
+      "time_from_start": 8.043214082717896,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.332417,
+      "time_from_start": 8.076628923416138,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.375277,
+      "time_from_start": 8.119488954544067,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.417645,
+      "time_from_start": 8.161856889724731,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.458411,
+      "time_from_start": 8.202622890472412,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.492682,
+      "time_from_start": 8.236893892288208,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.5349052,
+      "time_from_start": 8.279117107391357,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.571255,
+      "time_from_start": 8.31546688079834,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.60575,
+      "time_from_start": 8.349961996078491,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.647309,
+      "time_from_start": 8.391520977020264,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.683826,
+      "time_from_start": 8.428037881851196,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.719279,
+      "time_from_start": 8.463490962982178,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.756117,
+      "time_from_start": 8.50032901763916,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.789665,
+      "time_from_start": 8.533876895904541,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.8241768,
+      "time_from_start": 8.56838870048523,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534631.85952,
+      "time_from_start": 8.603731870651245,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.8935418,
+      "time_from_start": 8.63775372505188,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.942475,
+      "time_from_start": 8.686686992645264,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534631.978734,
+      "time_from_start": 8.722945928573608,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.013973,
+      "time_from_start": 8.758184909820557,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.056417,
+      "time_from_start": 8.800628900527954,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.091313,
+      "time_from_start": 8.835524797439575,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.125948,
+      "time_from_start": 8.87015986442566,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.1747048,
+      "time_from_start": 8.918916702270508,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.210231,
+      "time_from_start": 8.954442977905273,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534632.2456589,
+      "time_from_start": 8.98987078666687,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534632.2822888,
+      "time_from_start": 9.026500701904297,
+      "gaze_x": 781,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.672810715835861
+    },
+    {
+      "timestamp": 1764534632.316808,
+      "time_from_start": 9.061019897460938,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534632.351239,
+      "time_from_start": 9.09545087814331,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534632.400613,
+      "time_from_start": 9.144824981689453,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.436641,
+      "time_from_start": 9.180852890014648,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.4715579,
+      "time_from_start": 9.21576976776123,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.5092869,
+      "time_from_start": 9.253498792648315,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.5509171,
+      "time_from_start": 9.29512906074524,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.587096,
+      "time_from_start": 9.331307888031006,
+      "gaze_x": 781,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534632.632479,
+      "time_from_start": 9.376690864562988,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.668972,
+      "time_from_start": 9.41318392753601,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.7031229,
+      "time_from_start": 9.44733476638794,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534632.744673,
+      "time_from_start": 9.488884925842285,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.7802281,
+      "time_from_start": 9.524440050125122,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.814068,
+      "time_from_start": 9.558279991149902,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.855511,
+      "time_from_start": 9.599722862243652,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.891315,
+      "time_from_start": 9.635526895523071,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.9256918,
+      "time_from_start": 9.669903755187988,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534632.967809,
+      "time_from_start": 9.712020874023438,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.003553,
+      "time_from_start": 9.747764825820923,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.0385349,
+      "time_from_start": 9.7827467918396,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.08598,
+      "time_from_start": 9.830191850662231,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.119319,
+      "time_from_start": 9.86353087425232,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.161082,
+      "time_from_start": 9.905293941497803,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534633.19689,
+      "time_from_start": 9.941102027893066,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534633.2395399,
+      "time_from_start": 9.983751773834229,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534633.2747898,
+      "time_from_start": 10.019001722335815,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534633.308355,
+      "time_from_start": 10.05256700515747,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534633.342564,
+      "time_from_start": 10.0867760181427,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534633.378976,
+      "time_from_start": 10.123188018798828,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534633.414455,
+      "time_from_start": 10.158666849136353,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534633.456552,
+      "time_from_start": 10.200763940811157,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534633.4910989,
+      "time_from_start": 10.235310792922974,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534633.526966,
+      "time_from_start": 10.271178007125854,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534633.567321,
+      "time_from_start": 10.311532974243164,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534633.603242,
+      "time_from_start": 10.347453832626343,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534633.637187,
+      "time_from_start": 10.381398916244507,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.6718369,
+      "time_from_start": 10.416048765182495,
+      "gaze_x": 768,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764534633.7078688,
+      "time_from_start": 10.452080726623535,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.7426188,
+      "time_from_start": 10.486830711364746,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534633.783005,
+      "time_from_start": 10.527216911315918,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.82445,
+      "time_from_start": 10.56866192817688,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.865422,
+      "time_from_start": 10.609633922576904,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534633.900291,
+      "time_from_start": 10.644502878189087,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.9352162,
+      "time_from_start": 10.679428100585938,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534633.9777558,
+      "time_from_start": 10.721967697143555,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.01244,
+      "time_from_start": 10.756651878356934,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.046747,
+      "time_from_start": 10.790958881378174,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.0890691,
+      "time_from_start": 10.83328104019165,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.123737,
+      "time_from_start": 10.86794900894165,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534634.158377,
+      "time_from_start": 10.902588844299316,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.201045,
+      "time_from_start": 10.94525694847107,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.24133,
+      "time_from_start": 10.985541820526123,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534634.2763038,
+      "time_from_start": 11.02051568031311,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.310372,
+      "time_from_start": 11.05458402633667,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534634.352399,
+      "time_from_start": 11.096611022949219,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.393142,
+      "time_from_start": 11.137353897094727,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534634.427626,
+      "time_from_start": 11.17183780670166,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.461018,
+      "time_from_start": 11.205229997634888,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534634.4978921,
+      "time_from_start": 11.242104053497314,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.532371,
+      "time_from_start": 11.276582956314087,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534634.56669,
+      "time_from_start": 11.310901880264282,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534634.609358,
+      "time_from_start": 11.353569984436035,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534634.644732,
+      "time_from_start": 11.388943910598755,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.685344,
+      "time_from_start": 11.429555892944336,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.71931,
+      "time_from_start": 11.463521957397461,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.756324,
+      "time_from_start": 11.50053596496582,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.790179,
+      "time_from_start": 11.534390926361084,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.826783,
+      "time_from_start": 11.570994853973389,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534634.862133,
+      "time_from_start": 11.606344938278198,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.91089,
+      "time_from_start": 11.655102014541626,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534634.952814,
+      "time_from_start": 11.697026014328003,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534634.988353,
+      "time_from_start": 11.732564926147461,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534635.023574,
+      "time_from_start": 11.767786026000977,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534635.059232,
+      "time_from_start": 11.803443908691406,
+      "gaze_x": 756,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.2504608612827148
+    },
+    {
+      "timestamp": 1764534635.0936692,
+      "time_from_start": 11.837881088256836,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534635.128095,
+      "time_from_start": 11.872306823730469,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.1632168,
+      "time_from_start": 11.907428741455078,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.197974,
+      "time_from_start": 11.942185878753662,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.240555,
+      "time_from_start": 11.984766960144043,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.27546,
+      "time_from_start": 12.01967191696167,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.310478,
+      "time_from_start": 12.054689884185791,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.353013,
+      "time_from_start": 12.097224950790405,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.393235,
+      "time_from_start": 12.137446880340576,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.4290729,
+      "time_from_start": 12.173284769058228,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.471288,
+      "time_from_start": 12.215499877929688,
+      "gaze_x": 743,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9571785458611117
+    },
+    {
+      "timestamp": 1764534635.51321,
+      "time_from_start": 12.257421970367432,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.5492759,
+      "time_from_start": 12.293487787246704,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534635.597282,
+      "time_from_start": 12.341493844985962,
+      "gaze_x": 743,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9571785458611117
+    },
+    {
+      "timestamp": 1764534635.631541,
+      "time_from_start": 12.375752925872803,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.667856,
+      "time_from_start": 12.412067890167236,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534635.7028632,
+      "time_from_start": 12.447075128555298,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.745051,
+      "time_from_start": 12.489262819290161,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.780734,
+      "time_from_start": 12.524945974349976,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534635.8154309,
+      "time_from_start": 12.559642791748047,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534635.856592,
+      "time_from_start": 12.600803852081299,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534635.896856,
+      "time_from_start": 12.64106798171997,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534635.938408,
+      "time_from_start": 12.68261981010437,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534635.974404,
+      "time_from_start": 12.718616008758545,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.016685,
+      "time_from_start": 12.760896921157837,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.056013,
+      "time_from_start": 12.800225019454956,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.092263,
+      "time_from_start": 12.836474895477295,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.1340742,
+      "time_from_start": 12.878286123275757,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.17613,
+      "time_from_start": 12.920341968536377,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.211551,
+      "time_from_start": 12.95576286315918,
+      "gaze_x": 768,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.330541989926144
+    },
+    {
+      "timestamp": 1764534636.246134,
+      "time_from_start": 12.99034595489502,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.286946,
+      "time_from_start": 13.031157970428467,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.329061,
+      "time_from_start": 13.073272943496704,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.370553,
+      "time_from_start": 13.114764928817749,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.405365,
+      "time_from_start": 13.149576902389526,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.4402401,
+      "time_from_start": 13.184452056884766,
+      "gaze_x": 768,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7579312031435987
+    },
+    {
+      "timestamp": 1764534636.4759748,
+      "time_from_start": 13.220186710357666,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.516628,
+      "time_from_start": 13.260839939117432,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.550731,
+      "time_from_start": 13.294942855834961,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.593374,
+      "time_from_start": 13.337585926055908,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.630353,
+      "time_from_start": 13.37456488609314,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.6723368,
+      "time_from_start": 13.416548728942871,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.713438,
+      "time_from_start": 13.457649946212769,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534636.747349,
+      "time_from_start": 13.491560935974121,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.781219,
+      "time_from_start": 13.525430917739868,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534636.825027,
+      "time_from_start": 13.569238901138306,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534636.8597481,
+      "time_from_start": 13.603960037231445,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.893547,
+      "time_from_start": 13.63775897026062,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534636.937078,
+      "time_from_start": 13.681289911270142,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534636.97688,
+      "time_from_start": 13.721091985702515,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534637.0119889,
+      "time_from_start": 13.756200790405273,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534637.046371,
+      "time_from_start": 13.79058289527893,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534637.082914,
+      "time_from_start": 13.827126026153564,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534637.117725,
+      "time_from_start": 13.861936807632446,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764534637.160608,
+      "time_from_start": 13.904819965362549,
+      "gaze_x": 743,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764534637.200373,
+      "time_from_start": 13.944584846496582,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.2416131,
+      "time_from_start": 13.985825061798096,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.277199,
+      "time_from_start": 14.021410942077637,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.319381,
+      "time_from_start": 14.063592910766602,
+      "gaze_x": 743,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764534637.355205,
+      "time_from_start": 14.099416971206665,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.389586,
+      "time_from_start": 14.133797883987427,
+      "gaze_x": 743,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764534637.430368,
+      "time_from_start": 14.174579858779907,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.47161,
+      "time_from_start": 14.215821981430054,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.513052,
+      "time_from_start": 14.257263898849487,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.555431,
+      "time_from_start": 14.29964280128479,
+      "gaze_x": 756,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6063576950987114
+    },
+    {
+      "timestamp": 1764534637.590848,
+      "time_from_start": 14.335059881210327,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.633512,
+      "time_from_start": 14.377723932266235,
+      "gaze_x": 743,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764534637.667289,
+      "time_from_start": 14.411500930786133,
+      "gaze_x": 743,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764534637.701161,
+      "time_from_start": 14.445372819900513,
+      "gaze_x": 743,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7812547538171886
+    },
+    {
+      "timestamp": 1764534637.735894,
+      "time_from_start": 14.480105876922607,
+      "gaze_x": 731,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764534637.7720408,
+      "time_from_start": 14.516252756118774,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534637.806072,
+      "time_from_start": 14.550283908843994,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534637.842675,
+      "time_from_start": 14.586886882781982,
+      "gaze_x": 731,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5686353811694096
+    },
+    {
+      "timestamp": 1764534637.884033,
+      "time_from_start": 14.628244876861572,
+      "gaze_x": 731,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764534637.919056,
+      "time_from_start": 14.663267850875854,
+      "gaze_x": 731,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764534637.9554079,
+      "time_from_start": 14.699619770050049,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534637.9901261,
+      "time_from_start": 14.73433804512024,
+      "gaze_x": 731,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764534638.032407,
+      "time_from_start": 14.776618957519531,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.0741508,
+      "time_from_start": 14.818362712860107,
+      "gaze_x": 718,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764534638.114491,
+      "time_from_start": 14.858702898025513,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.1489658,
+      "time_from_start": 14.89317774772644,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.183991,
+      "time_from_start": 14.928202867507935,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.2254431,
+      "time_from_start": 14.96965503692627,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.261686,
+      "time_from_start": 15.005897998809814,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.304201,
+      "time_from_start": 15.048412799835205,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.343071,
+      "time_from_start": 15.08728289604187,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.3791292,
+      "time_from_start": 15.123341083526611,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.413242,
+      "time_from_start": 15.157454013824463,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.4472692,
+      "time_from_start": 15.191481113433838,
+      "gaze_x": 731,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1247533281875262
+    },
+    {
+      "timestamp": 1764534638.482541,
+      "time_from_start": 15.226752996444702,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.5169349,
+      "time_from_start": 15.261146783828735,
+      "gaze_x": 718,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9066999713147694
+    },
+    {
+      "timestamp": 1764534638.551042,
+      "time_from_start": 15.295253992080688,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.592027,
+      "time_from_start": 15.336238861083984,
+      "gaze_x": 718,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9066999713147694
+    },
+    {
+      "timestamp": 1764534638.628992,
+      "time_from_start": 15.373203992843628,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.663625,
+      "time_from_start": 15.4078369140625,
+      "gaze_x": 718,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9066999713147694
+    },
+    {
+      "timestamp": 1764534638.705119,
+      "time_from_start": 15.449330806732178,
+      "gaze_x": 718,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9066999713147694
+    },
+    {
+      "timestamp": 1764534638.73951,
+      "time_from_start": 15.48372197151184,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.7740648,
+      "time_from_start": 15.518276691436768,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.8142998,
+      "time_from_start": 15.558511734008789,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.85599,
+      "time_from_start": 15.600201845169067,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534638.8917289,
+      "time_from_start": 15.635940790176392,
+      "gaze_x": 718,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764534638.925775,
+      "time_from_start": 15.669986963272095,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534638.9680672,
+      "time_from_start": 15.712279081344604,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.015831,
+      "time_from_start": 15.760042905807495,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.057018,
+      "time_from_start": 15.80122995376587,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.0931032,
+      "time_from_start": 15.837315082550049,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.135066,
+      "time_from_start": 15.87927794456482,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.177173,
+      "time_from_start": 15.921384811401367,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.212727,
+      "time_from_start": 15.956938982009888,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.253077,
+      "time_from_start": 15.997288942337036,
+      "gaze_x": 718,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5622191045012952
+    },
+    {
+      "timestamp": 1764534639.2881331,
+      "time_from_start": 16.032345056533813,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.325479,
+      "time_from_start": 16.069690942764282,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.3680918,
+      "time_from_start": 16.112303733825684,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.403795,
+      "time_from_start": 16.148006916046143,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.439132,
+      "time_from_start": 16.1833438873291,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.4868429,
+      "time_from_start": 16.23105478286743,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.528555,
+      "time_from_start": 16.272766828536987,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.563825,
+      "time_from_start": 16.30803680419922,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.59912,
+      "time_from_start": 16.343331813812256,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.641421,
+      "time_from_start": 16.38563299179077,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.676908,
+      "time_from_start": 16.421119928359985,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.7181802,
+      "time_from_start": 16.4623920917511,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.7597,
+      "time_from_start": 16.5039119720459,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.801803,
+      "time_from_start": 16.54601502418518,
+      "gaze_x": 706,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.2692622385081354
+    },
+    {
+      "timestamp": 1764534639.83807,
+      "time_from_start": 16.582281827926636,
+      "gaze_x": 706,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9887961080493073
+    },
+    {
+      "timestamp": 1764534639.87281,
+      "time_from_start": 16.617021799087524,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534639.908683,
+      "time_from_start": 16.652894973754883,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534639.9417422,
+      "time_from_start": 16.685954093933105,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534639.978622,
+      "time_from_start": 16.72283387184143,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.0134048,
+      "time_from_start": 16.757616758346558,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.056459,
+      "time_from_start": 16.800670862197876,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.091538,
+      "time_from_start": 16.835749864578247,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.126058,
+      "time_from_start": 16.870270013809204,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.174379,
+      "time_from_start": 16.918591022491455,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.2169862,
+      "time_from_start": 16.961198091506958,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.252237,
+      "time_from_start": 16.99644899368286,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.2865741,
+      "time_from_start": 17.03078603744507,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.320729,
+      "time_from_start": 17.064940929412842,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.358571,
+      "time_from_start": 17.10278296470642,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.3993459,
+      "time_from_start": 17.14355778694153,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.441615,
+      "time_from_start": 17.185827016830444,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.482537,
+      "time_from_start": 17.226748943328857,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.517282,
+      "time_from_start": 17.261493921279907,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.551929,
+      "time_from_start": 17.296140909194946,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.593854,
+      "time_from_start": 17.33806586265564,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.634152,
+      "time_from_start": 17.378363847732544,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.675722,
+      "time_from_start": 17.419933795928955,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.71027,
+      "time_from_start": 17.454481840133667,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.753122,
+      "time_from_start": 17.497334003448486,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.789592,
+      "time_from_start": 17.533803939819336,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.8244102,
+      "time_from_start": 17.56862211227417,
+      "gaze_x": 693,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.461903864753359
+    },
+    {
+      "timestamp": 1764534640.864685,
+      "time_from_start": 17.6088969707489,
+      "gaze_x": 693,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.6933604444320984
+    },
+    {
+      "timestamp": 1764534640.9028292,
+      "time_from_start": 17.647041082382202,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534640.9363399,
+      "time_from_start": 17.680551767349243,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534640.972575,
+      "time_from_start": 17.716786861419678,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.0070982,
+      "time_from_start": 17.751310110092163,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.0430279,
+      "time_from_start": 17.78723978996277,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.0838609,
+      "time_from_start": 17.828072786331177,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.118706,
+      "time_from_start": 17.86291790008545,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.16204,
+      "time_from_start": 17.906251907348633,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.197203,
+      "time_from_start": 17.941414833068848,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.239576,
+      "time_from_start": 17.983788013458252,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.2754,
+      "time_from_start": 18.019611835479736,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.316375,
+      "time_from_start": 18.06058692932129,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.351103,
+      "time_from_start": 18.095314979553223,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.387937,
+      "time_from_start": 18.13214898109436,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.422261,
+      "time_from_start": 18.166472911834717,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.4566212,
+      "time_from_start": 18.200833082199097,
+      "gaze_x": 668,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5573017441400507
+    },
+    {
+      "timestamp": 1764534641.491591,
+      "time_from_start": 18.23580288887024,
+      "gaze_x": 668,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.385822422437862
+    },
+    {
+      "timestamp": 1764534641.5269902,
+      "time_from_start": 18.271202087402344,
+      "gaze_x": 668,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.385822422437862
+    },
+    {
+      "timestamp": 1764534641.568514,
+      "time_from_start": 18.31272602081299,
+      "gaze_x": 681,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.102352044247036
+    },
+    {
+      "timestamp": 1764534641.60948,
+      "time_from_start": 18.353691816329956,
+      "gaze_x": 668,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5573017441400507
+    },
+    {
+      "timestamp": 1764534641.6454442,
+      "time_from_start": 18.38965606689453,
+      "gaze_x": 668,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.385822422437862
+    },
+    {
+      "timestamp": 1764534641.688658,
+      "time_from_start": 18.432869911193848,
+      "gaze_x": 668,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.385822422437862
+    },
+    {
+      "timestamp": 1764534641.7290869,
+      "time_from_start": 18.47329878807068,
+      "gaze_x": 668,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5573017441400507
+    },
+    {
+      "timestamp": 1764534641.777023,
+      "time_from_start": 18.52123498916626,
+      "gaze_x": 668,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5573017441400507
+    },
+    {
+      "timestamp": 1764534641.811872,
+      "time_from_start": 18.556083917617798,
+      "gaze_x": 668,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5573017441400507
+    },
+    {
+      "timestamp": 1764534641.845827,
+      "time_from_start": 18.590039014816284,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534641.887242,
+      "time_from_start": 18.63145399093628,
+      "gaze_x": 656,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.9844687738397755
+    },
+    {
+      "timestamp": 1764534641.9286861,
+      "time_from_start": 18.672898054122925,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534641.961552,
+      "time_from_start": 18.705763816833496,
+      "gaze_x": 656,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.9844687738397755
+    },
+    {
+      "timestamp": 1764534641.995908,
+      "time_from_start": 18.74011993408203,
+      "gaze_x": 656,
+      "gaze_y": 524,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.9844687738397755
+    },
+    {
+      "timestamp": 1764534642.03018,
+      "time_from_start": 18.774391889572144,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534642.071685,
+      "time_from_start": 18.81589698791504,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534642.1073291,
+      "time_from_start": 18.85154104232788,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534642.142067,
+      "time_from_start": 18.886278867721558,
+      "gaze_x": 656,
+      "gaze_y": 507,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8323555152226705
+    },
+    {
+      "timestamp": 1764534642.1851258,
+      "time_from_start": 18.929337739944458,
+      "gaze_x": 656,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.7843643003371357
+    },
+    {
+      "timestamp": 1764534642.2324522,
+      "time_from_start": 18.976664066314697,
+      "gaze_x": 668,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.3313328074467976
+    },
+    {
+      "timestamp": 1764534642.2684102,
+      "time_from_start": 19.012622117996216,
+      "gaze_x": 668,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.3313328074467976
+    },
+    {
+      "timestamp": 1764534642.302542,
+      "time_from_start": 19.046753883361816,
+      "gaze_x": 668,
+      "gaze_y": 474,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.392782215173906
+    },
+    {
+      "timestamp": 1764534642.3452191,
+      "time_from_start": 19.089431047439575,
+      "gaze_x": 668,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.3313328074467976
+    },
+    {
+      "timestamp": 1764534642.3796968,
+      "time_from_start": 19.123908758163452,
+      "gaze_x": 681,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.8400794417825357
+    },
+    {
+      "timestamp": 1764534642.413623,
+      "time_from_start": 19.157835006713867,
+      "gaze_x": 681,
+      "gaze_y": 474,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.912001671854381
+    },
+    {
+      "timestamp": 1764534642.454531,
+      "time_from_start": 19.198742866516113,
+      "gaze_x": 681,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.8400794417825357
+    },
+    {
+      "timestamp": 1764534642.4899452,
+      "time_from_start": 19.2341570854187,
+      "gaze_x": 693,
+      "gaze_y": 474,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.4714878238703197
+    },
+    {
+      "timestamp": 1764534642.524402,
+      "time_from_start": 19.268613815307617,
+      "gaze_x": 693,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3862419286579644
+    },
+    {
+      "timestamp": 1764534642.558829,
+      "time_from_start": 19.303040981292725,
+      "gaze_x": 718,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.883846639564985
+    },
+    {
+      "timestamp": 1764534642.595614,
+      "time_from_start": 19.339825868606567,
+      "gaze_x": 731,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1176409167122423
+    },
+    {
+      "timestamp": 1764534642.62945,
+      "time_from_start": 19.373661994934082,
+      "gaze_x": 743,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9571785458611117
+    },
+    {
+      "timestamp": 1764534642.6641338,
+      "time_from_start": 19.408345699310303,
+      "gaze_x": 743,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9571785458611117
+    },
+    {
+      "timestamp": 1764534642.7053492,
+      "time_from_start": 19.44956111907959,
+      "gaze_x": 743,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5476986393189898
+    },
+    {
+      "timestamp": 1764534642.74065,
+      "time_from_start": 19.484861850738525,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534642.775754,
+      "time_from_start": 19.519965887069702,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534642.8111,
+      "time_from_start": 19.555311918258667,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534642.846357,
+      "time_from_start": 19.590569019317627,
+      "gaze_x": 756,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.89424808842293
+    },
+    {
+      "timestamp": 1764534642.8813922,
+      "time_from_start": 19.625604152679443,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534642.921835,
+      "time_from_start": 19.666046857833862,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534642.958113,
+      "time_from_start": 19.702324867248535,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534642.991971,
+      "time_from_start": 19.736182928085327,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534643.033622,
+      "time_from_start": 19.777833938598633,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534643.074661,
+      "time_from_start": 19.818872928619385,
+      "gaze_x": 756,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.499731627685852
+    },
+    {
+      "timestamp": 1764534643.110071,
+      "time_from_start": 19.85428285598755,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534643.143577,
+      "time_from_start": 19.887789011001587,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    },
+    {
+      "timestamp": 1764534643.1797628,
+      "time_from_start": 19.923974752426147,
+      "gaze_x": 768,
+      "gaze_y": 557,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5406602976119013
+    },
+    {
+      "timestamp": 1764534643.2139251,
+      "time_from_start": 19.958137035369873,
+      "gaze_x": 768,
+      "gaze_y": 541,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.947997821509523
+    }
+  ]
+}
