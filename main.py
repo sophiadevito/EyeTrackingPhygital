@@ -16,6 +16,7 @@ import calibration
 import plr
 import glob
 import os
+import report_generator
 
 def main():
     """Main function that coordinates eye tracking and accuracy testing"""
@@ -54,6 +55,10 @@ def main():
     # Add PLR overlay callback
     plr_overlay_func = plr.get_plr_overlay_draw_function()
     eye_tracking.add_overlay_callback(plr_overlay_func)
+    
+    # Add calibration overlay callback for automated suite
+    calibration_suite_overlay_func = get_calibration_overlay_draw_function_for_suite()
+    eye_tracking.add_overlay_callback(calibration_suite_overlay_func)
     
     # Define callback function for accuracy testing updates
     def accuracy_test_update(gaze_x, gaze_y):
@@ -105,6 +110,48 @@ def main():
     # We need to modify the eye tracking to handle test keys
     # Let's create a wrapper that handles this
     run_with_tests(args.debug, accuracy_test_update, saccade_test_update, pursuit_test_update, stability_test_update, calibration_update, plr_update)
+
+# Module-level variable for calibration overlay state
+automated_suite_calibration_overlay_active = False
+
+def get_calibration_overlay_draw_function_for_suite():
+    """Returns a function that draws calibration elements for automated suite"""
+    def draw_on_overlay(canvas):
+        global automated_suite_calibration_overlay_active
+        import eye_tracking as et
+        try:
+            if not automated_suite_calibration_overlay_active:
+                return
+            
+            # Ensure monitor resolution is available
+            if et.monitor_width is None or et.monitor_height is None:
+                et.get_monitor_resolution()
+            
+            if et.monitor_width is None or et.monitor_height is None:
+                return
+            
+            center_x = et.monitor_width // 2
+            center_y = et.monitor_height // 2
+            
+            # Draw instruction text
+            canvas.create_text(
+                center_x, center_y - 50,
+                text="Look at the center of the screen",
+                fill='white', font=('Arial', 24, 'bold'),
+                justify='center'
+            )
+            
+            # Draw white dot at center
+            dot_radius = 10
+            canvas.create_oval(
+                center_x - dot_radius, center_y - dot_radius,
+                center_x + dot_radius, center_y + dot_radius,
+                fill='white', outline='white'
+            )
+        except Exception as e:
+            pass
+    
+    return draw_on_overlay
 
 def get_latest_test_results(test_type):
     """
@@ -160,6 +207,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
     """
     import cv2
     import eye_tracking as et
+    global automated_suite_calibration_overlay_active  # Declare global for module-level variable
     
     # Set debug calibration flag
     et.debug_calibration = debug_calibration_flag
@@ -184,6 +232,8 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
     automated_suite_results = {}
     automated_suite_test_start_time = None
     automated_suite_initial_blinks = 0  # Store initial blink count when suite starts
+    automated_suite_calibration_active = False
+    automated_suite_calibration_start_time = None
 
     while True:
         ret, frame = cap.read()
@@ -423,16 +473,20 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 print("Please enable gaze overlay (press 'g') before starting automated test suite.")
             else:
                 automated_suite_running = True
-                automated_suite_state = 'saccade'
+                automated_suite_state = 'initial_calibration'
                 automated_suite_results = {}
                 automated_suite_test_start_time = None
                 # Store initial blink count to calculate blinks during suite only
                 automated_suite_initial_blinks = et.blinks_detected
+                automated_suite_calibration_active = True
+                import time
+                automated_suite_calibration_start_time = time.time()
+                # Enable calibration overlay
+                automated_suite_calibration_overlay_active = True
                 print("\n" + "="*60)
                 print("STARTING AUTOMATED TEST SUITE")
                 print("="*60)
-                print("\n1/4: Starting Saccade Test...")
-                saccade_test.start_saccade_test()
+                print("\nCalibration: Look at the center dot for 5 seconds...")
         
         # Handle automated test suite progression
         if automated_suite_running:
@@ -440,8 +494,53 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
             import json
             from datetime import datetime
             
+            # Initial calibration or between-test calibration
+            if automated_suite_state in ['initial_calibration', 'calibration_before_saccade', 
+                                         'calibration_before_pursuit', 'calibration_before_fixed_point', 
+                                         'calibration_before_plr']:
+                if automated_suite_calibration_start_time is None:
+                    automated_suite_calibration_start_time = time.time()
+                    automated_suite_calibration_active = True
+                    automated_suite_calibration_overlay_active = True
+                
+                elapsed = time.time() - automated_suite_calibration_start_time
+                
+                if elapsed >= 5.0:  # 5 seconds elapsed
+                    # Perform calibration
+                    if et.raw_gaze_x is not None and et.raw_gaze_y is not None:
+                        et.calibrate_gaze(et.raw_gaze_x, et.raw_gaze_y)
+                        print("Calibration complete!")
+                    else:
+                        print("Warning: No gaze data available for calibration")
+                    
+                    # Move to next state
+                    automated_suite_calibration_active = False
+                    automated_suite_calibration_overlay_active = False
+                    automated_suite_calibration_start_time = None
+                    
+                    if automated_suite_state == 'initial_calibration':
+                        print("\n1/4: Starting Saccade Test...")
+                        automated_suite_state = 'saccade'
+                        saccade_test.start_saccade_test()
+                    elif automated_suite_state == 'calibration_before_saccade':
+                        print("\n1/4: Starting Saccade Test...")
+                        automated_suite_state = 'saccade'
+                        saccade_test.start_saccade_test()
+                    elif automated_suite_state == 'calibration_before_pursuit':
+                        print("\n2/4: Starting Smooth Pursuit Test...")
+                        automated_suite_state = 'pursuit'
+                        smooth_pursuit.start_smooth_pursuit_test()
+                    elif automated_suite_state == 'calibration_before_fixed_point':
+                        print("\n3/4: Starting Fixed Point Stability Test...")
+                        automated_suite_state = 'fixed_point'
+                        fixed_point_stability.start_fixed_point_test()
+                    elif automated_suite_state == 'calibration_before_plr':
+                        print("\n4/4: Starting PLR Test...")
+                        automated_suite_state = 'plr'
+                        plr.start_plr_test()
+            
             # Saccade test
-            if automated_suite_state == 'saccade':
+            elif automated_suite_state == 'saccade':
                 if not saccade_test.saccade_testing_active:
                     # Saccade test completed - try to get results from JSON file
                     # Wait a moment for file to be written
@@ -473,9 +572,12 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                             }
                     else:
                         print("Warning: Could not retrieve saccade test results from JSON file")
-                    print("\n2/4: Starting Smooth Pursuit Test...")
-                    automated_suite_state = 'pursuit'
-                    smooth_pursuit.start_smooth_pursuit_test()
+                    # Start calibration before next test
+                    automated_suite_state = 'calibration_before_pursuit'
+                    automated_suite_calibration_start_time = time.time()
+                    automated_suite_calibration_active = True
+                    automated_suite_calibration_overlay_active = True
+                    print("\nCalibration: Look at the center dot for 5 seconds...")
             
             # Smooth pursuit test
             elif automated_suite_state == 'pursuit':
@@ -501,9 +603,12 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                         }
                     else:
                         print("Warning: Could not retrieve smooth pursuit test results from JSON file")
-                    print("\n3/4: Starting Fixed Point Stability Test...")
-                    automated_suite_state = 'fixed_point'
-                    fixed_point_stability.start_fixed_point_test()
+                    # Start calibration before next test
+                    automated_suite_state = 'calibration_before_fixed_point'
+                    automated_suite_calibration_start_time = time.time()
+                    automated_suite_calibration_active = True
+                    automated_suite_calibration_overlay_active = True
+                    print("\nCalibration: Look at the center dot for 5 seconds...")
             
             # Fixed point stability test
             elif automated_suite_state == 'fixed_point':
@@ -525,9 +630,12 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                         }
                     else:
                         print("Warning: Could not retrieve fixed point stability test results from JSON file")
-                    print("\n4/4: Starting PLR Test...")
-                    automated_suite_state = 'plr'
-                    plr.start_plr_test()
+                    # Start calibration before next test
+                    automated_suite_state = 'calibration_before_plr'
+                    automated_suite_calibration_start_time = time.time()
+                    automated_suite_calibration_active = True
+                    automated_suite_calibration_overlay_active = True
+                    print("\nCalibration: Look at the center dot for 5 seconds...")
             
             # PLR test
             elif automated_suite_state == 'plr':
@@ -582,10 +690,16 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     try:
                         with open(combined_filename, 'w') as f:
                             json.dump(all_results, f, indent=2)
+                        
+                        # Generate HTML report
+                        html_filename = combined_filename.replace('.json', '.html')
+                        report_generator.generate_html_report(all_results, html_filename)
+                        
                         print("\n" + "="*60)
                         print("AUTOMATED TEST SUITE COMPLETE")
                         print("="*60)
                         print(f"Combined results saved to: {combined_filename}")
+                        print(f"HTML report saved to: {html_filename}")
                         print("\nSummary of Results:")
                         if 'saccade' in automated_suite_results:
                             if 'normal' in automated_suite_results['saccade']:

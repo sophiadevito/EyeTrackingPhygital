@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumble Rims Test Results Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1E2D59 0%, #9E1B32 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #9E1B32;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .metadata {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .metadata-item {
+            text-align: center;
+            margin: 5px;
+        }
+        
+        .metadata-label {
+            font-size: 11px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .metadata-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #212529;
+            margin-top: 5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #495057;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .metric-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #dee2e6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .metric-card.good {
+            border-left-color: #28a745;
+        }
+        
+        .metric-card.warning {
+            border-left-color: #ffc107;
+        }
+        
+        .metric-card.poor {
+            border-left-color: #dc3545;
+        }
+        
+        .metric-card.gray {
+            border-left-color: #6c757d;
+        }
+        
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .metric-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #212529;
+        }
+        
+        .metric-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-badge.good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .metric-badge.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .metric-badge.poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .metric-badge.gray {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #212529;
+            margin: 10px 0;
+        }
+        
+        .metric-unit {
+            font-size: 14px;
+            color: #6c757d;
+            margin-left: 5px;
+        }
+        
+        .metric-scale {
+            margin-top: 15px;
+            height: 8px;
+            background: linear-gradient(to right, rgba(40, 167, 69, 0.3) 0%, rgba(40, 167, 69, 0.3) 33%, rgba(255, 193, 7, 0.3) 33%, rgba(255, 193, 7, 0.3) 66%, rgba(220, 53, 69, 0.3) 66%, rgba(220, 53, 69, 0.3) 100%);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-scale-bar {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .metric-thresholds {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 10px;
+            color: #6c757d;
+        }
+        
+        .metric-details {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .score-dial-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 30px 0;
+            gap: 30px;
+        }
+        
+        .score-dial-wrapper {
+            position: relative;
+            text-align: center;
+            flex: 0 0 auto;
+        }
+        
+        .score-dial {
+            width: 300px;
+            height: 180px;
+            max-width: 100%;
+        }
+        
+        .score-value {
+            font-size: 64px;
+            font-weight: bold;
+            color: #212529;
+            flex: 0 0 auto;
+            text-align: right;
+            min-width: 100px;
+        }
+        
+        .score-message {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex: 0 0 auto;
+            text-align: left;
+            min-width: 200px;
+        }
+        
+        .score-message.good {
+            color: #28a745;
+        }
+        
+        .score-message.warning {
+            color: #ffc107;
+        }
+        
+        .score-message.poor {
+            color: #dc3545;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 12px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rumble Rims Test Results Report</h1>
+            <div class="subtitle">Comprehensive Oculomotor Assessment</div>
+        </div>
+        
+        <div class="metadata">
+            <div class="metadata-item">
+                <div class="metadata-label">Test Date</div>
+                <div class="metadata-value">2025-12-01</div>
+            </div>
+            <div class="metadata-item">
+                <div class="metadata-label">Test Time</div>
+                <div class="metadata-value">14:45:21</div>
+            </div>
+            <div class="metadata-item">
+                <div class="metadata-label">Monitor Resolution</div>
+                <div class="metadata-value">1512 × 982</div>
+            </div>
+        </div>
+        
+        <div class="content">
+<div class="section" style="text-align: center; padding: 20px 0;"><h2 class="section-title" style="border: none; margin-bottom: 10px;">Overall Assessment</h2>
+            <div class="score-dial-container">
+                <div class="score-value">58</div>
+                <div class="score-dial-wrapper">
+                    <svg class="score-dial" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Single 180-degree arc divided into three zones:
+                             0-60° green, 60-120° yellow, 120-180° red
+                             Arc center: (100, 100), radius: 80
+                             Points: 0°(180,100-right), 60°(140,30.72), 120°(60,30.72), 180°(20,100-left) -->
+                        <!-- Green zone: 0-60° (right third) -->
+                        <path d="M 180 100 A 80 80 0 0 0 140 30.72" 
+                              fill="none" 
+                              stroke="#dc3545" 
+                              stroke-width="12" 
+                              stroke-linecap="round"
+                              opacity="0.3"/>
+                        <!-- Yellow zone: 60-120° (middle third) -->
+                        <path d="M 140 30.72 A 80 80 0 0 0 60 30.72" 
+                              fill="none" 
+                              stroke="#ffc107" 
+                              stroke-width="12" 
+                              stroke-linecap="round"
+                              opacity="0.3"/>
+                        <!-- Red zone: 120-180° (left third) -->
+                        <path d="M 60 30.72 A 80 80 0 0 0 20 100" 
+                              fill="none" 
+                              stroke="#28a745"
+                              stroke-width="12" 
+                              stroke-linecap="round"
+                              opacity="0.3"/>
+                        
+                        <!-- Needle -->
+                        <g transform="translate(100, 100) rotate(14.780263531797772)">
+                            <line x1="0" y1="0" x2="0" y2="-75" 
+                                  stroke="#ffc107" 
+                                  stroke-width="3" 
+                                  stroke-linecap="round"/>
+                            <circle cx="0" cy="0" r="4" fill="#ffc107"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="score-message warning">Potential concussion detected</div>
+            </div>
+    </div><div class="section"><h2 class="section-title">Saccade Test Results</h2><div class="metrics-grid">
+            <div class="metric-card good">
+                <div class="metric-header">
+                    <div class="metric-name">Saccade Latency</div>
+                    <div class="metric-badge good">Good</div>
+                </div>
+                <div class="metric-value">
+                    207.36<span class="metric-unit">ms</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 27.3720205078125%"></div>
+                </div>
+                <div class="metric-details">Std: 52.85 ms</div>
+            </div>
+
+            <div class="metric-card good">
+                <div class="metric-header">
+                    <div class="metric-name">Saccade Velocity</div>
+                    <div class="metric-badge good">Good</div>
+                </div>
+                <div class="metric-value">
+                    0.32<span class="metric-unit">deg/ms</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 11.376173434379218%"></div>
+                </div>
+                <div class="metric-details">Std: 0.1801 deg/ms</div>
+            </div>
+
+            <div class="metric-card warning">
+                <div class="metric-header">
+                    <div class="metric-name">Saccade Accuracy</div>
+                    <div class="metric-badge warning">Warning</div>
+                </div>
+                <div class="metric-value">
+                    67.73<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 36.738636252129346%"></div>
+                </div>
+                <div class="metric-details">Valid: 11/11</div>
+            </div>
+
+            <div class="metric-card good">
+                <div class="metric-header">
+                    <div class="metric-name">Antisaccade Error Rate</div>
+                    <div class="metric-badge good">Good</div>
+                </div>
+                <div class="metric-value">
+                    8.33<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 13.749999999999998%"></div>
+                </div>
+                <div class="metric-details">Errors: 1/12</div>
+            </div>
+</div></div><div class="section"><h2 class="section-title">Smooth Pursuit Test Results</h2><div class="metrics-grid">
+            <div class="metric-card poor">
+                <div class="metric-header">
+                    <div class="metric-name">Pursuit Gain</div>
+                    <div class="metric-badge poor">Poor</div>
+                </div>
+                <div class="metric-value">
+                    0.44<span class="metric-unit"></span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 74.99955784971982%"></div>
+                </div>
+                <div class="metric-details">H: 0.713, V: 0.133</div>
+            </div>
+
+            <div class="metric-card poor">
+                <div class="metric-header">
+                    <div class="metric-name">Pursuit Latency</div>
+                    <div class="metric-badge poor">Poor</div>
+                </div>
+                <div class="metric-value">
+                    261.06<span class="metric-unit">ms</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 67.50357810088734%"></div>
+                </div>
+                <div class="metric-details">Total measurements: 781</div>
+            </div>
+</div></div><div class="section"><h2 class="section-title">Fixed Point Stability Test Results</h2><div class="metrics-grid">
+            <div class="metric-card warning">
+                <div class="metric-header">
+                    <div class="metric-name">Gaze Deviation</div>
+                    <div class="metric-badge warning">Warning</div>
+                </div>
+                <div class="metric-value">
+                    1.02<span class="metric-unit">degrees</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 33.57557624309244%"></div>
+                </div>
+                <div class="metric-details">RMS: 2.197°, Max: 30.791°</div>
+            </div>
+</div></div><div class="section"><h2 class="section-title">Pupillary Light Reflex (PLR) Test Results</h2><div class="metrics-grid">
+            <div class="metric-card warning">
+                <div class="metric-header">
+                    <div class="metric-name">PLR Latency</div>
+                    <div class="metric-badge warning">Warning</div>
+                </div>
+                <div class="metric-value">
+                    342.16<span class="metric-unit">ms</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 46.91349609375%"></div>
+                </div>
+            </div>
+
+            <div class="metric-card good">
+                <div class="metric-header">
+                    <div class="metric-name">Constriction Amplitude</div>
+                    <div class="metric-badge good">Good</div>
+                </div>
+                <div class="metric-value">
+                    27.94<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 25.23173120675077%"></div>
+                </div>
+                <div class="metric-details">Baseline: 114.0 px</div>
+            </div>
+</div></div><div class="section"><h2 class="section-title">Blink Rate</h2><div class="metrics-grid">
+            <div class="metric-card poor">
+                <div class="metric-header">
+                    <div class="metric-name">Blink Rate</div>
+                    <div class="metric-badge poor">Poor</div>
+                </div>
+                <div class="metric-value">
+                    0.00<span class="metric-unit">blinks/min</span>
+                </div>
+                <div class="metric-scale">
+                    <div class="metric-scale-bar" style="width: 100%"></div>
+                </div>
+                <div class="metric-details">Total blinks: 0</div>
+            </div>
+</div></div>
+        </div>
+        
+        <div class="footer">
+            Report generated automatically by Eye Tracking Phygital System
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "timestamp": "20251201_153524",
+    "test_date": "2025-12-01T15:35:24.150008",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "total_targets": 12,
+    "gap_duration_ms": 200
+  },
+  "results": {
+    "normal_saccade": {
+      "total_saccades": 10,
+      "valid_saccades": 10,
+      "average_latency_ms": 225.7817138671875,
+      "average_velocity_deg_per_ms": 0.33151682300731744,
+      "average_accuracy_percent": 76.46197502870243,
+      "std_latency_ms": 31.599257811534606,
+      "std_velocity_deg_per_ms": 0.1458963794201078,
+      "std_accuracy_percent": 43.96641310005131
+    },
+    "antisaccade": {
+      "total_trials": 12,
+      "error_count": 0,
+      "correct_count": 12,
+      "error_rate_percent": 0.0
+    }
+  },
+  "normal_saccade_data": [
+    {
+      "target_index": 1,
+      "target_angle_degrees": -10.174902011179485,
+      "target_x": 485,
+      "target_y": 491,
+      "saccade_latency_ms": 231.36181640625,
+      "peak_velocity_deg_per_ms": 0.33629304533263427,
+      "peak_velocity_deg_per_s": 336.2930453326343,
+      "accuracy_percent": 131.99116041988043
+    },
+    {
+      "target_index": 2,
+      "target_angle_degrees": -19.15277986196025,
+      "target_x": 231,
+      "target_y": 491,
+      "saccade_latency_ms": 238.035888671875,
+      "peak_velocity_deg_per_ms": 0.5822848559216011,
+      "peak_velocity_deg_per_s": 582.2848559216011,
+      "accuracy_percent": 105.94877730838543
+    },
+    {
+      "target_index": 3,
+      "target_angle_degrees": -27.05121810003354,
+      "target_x": 0,
+      "target_y": 491,
+      "saccade_latency_ms": 224.62255859375,
+      "peak_velocity_deg_per_ms": 0.16150353201681658,
+      "peak_velocity_deg_per_s": 161.5035320168166,
+      "accuracy_percent": 22.609932712987824
+    },
+    {
+      "target_index": 5,
+      "target_angle_degrees": 23.38243020815468,
+      "target_x": 1409,
+      "target_y": 491,
+      "saccade_latency_ms": 273.048095703125,
+      "peak_velocity_deg_per_ms": 0.19213440594380612,
+      "peak_velocity_deg_per_s": 192.13440594380612,
+      "accuracy_percent": 34.138829002203714
+    },
+    {
+      "target_index": 6,
+      "target_angle_degrees": -10.909303771787158,
+      "target_x": 465,
+      "target_y": 491,
+      "saccade_latency_ms": 242.545166015625,
+      "peak_velocity_deg_per_ms": 0.37663026364747537,
+      "peak_velocity_deg_per_s": 376.6302636474754,
+      "accuracy_percent": 119.15475150421548
+    },
+    {
+      "target_index": 7,
+      "target_angle_degrees": 20.890461698209673,
+      "target_x": 1333,
+      "target_y": 491,
+      "saccade_latency_ms": 147.602783203125,
+      "peak_velocity_deg_per_ms": 0.08279412308563952,
+      "peak_velocity_deg_per_s": 82.79412308563953,
+      "accuracy_percent": 4.353633327024195
+    },
+    {
+      "target_index": 8,
+      "target_angle_degrees": -14.644582304383462,
+      "target_x": 361,
+      "target_y": 491,
+      "saccade_latency_ms": 232.451416015625,
+      "peak_velocity_deg_per_ms": 0.5173841565488944,
+      "peak_velocity_deg_per_s": 517.3841565488943,
+      "accuracy_percent": 121.45528860250283
+    },
+    {
+      "target_index": 9,
+      "target_angle_degrees": -26.18460541080463,
+      "target_x": 13,
+      "target_y": 491,
+      "saccade_latency_ms": 239.6259765625,
+      "peak_velocity_deg_per_ms": 0.3534984221850426,
+      "peak_velocity_deg_per_s": 353.4984221850426,
+      "accuracy_percent": 46.195939217426016
+    },
+    {
+      "target_index": 10,
+      "target_angle_degrees": -17.80418486729308,
+      "target_x": 271,
+      "target_y": 491,
+      "saccade_latency_ms": 195.90625,
+      "peak_velocity_deg_per_ms": 0.3833358082071375,
+      "peak_velocity_deg_per_s": 383.33580820713746,
+      "accuracy_percent": 75.43154228202208
+    },
+    {
+      "target_index": 11,
+      "target_angle_degrees": 13.099961021536208,
+      "target_x": 1107,
+      "target_y": 491,
+      "saccade_latency_ms": 232.6171875,
+      "peak_velocity_deg_per_ms": 0.3293096171841267,
+      "peak_velocity_deg_per_s": 329.3096171841267,
+      "accuracy_percent": 103.33989591037623
+    }
+  ],
+  "antisaccade_data": [
+    {
+      "target_index": 0,
+      "target_angle_degrees": 9.768185147139448,
+      "target_x": 1016,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 1,
+      "target_angle_degrees": 6.0941303611911035,
+      "target_x": 917,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 2,
+      "target_angle_degrees": 5.4101911751252505,
+      "target_x": 899,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 3,
+      "target_angle_degrees": 14.578073638268926,
+      "target_x": 1149,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 4,
+      "target_angle_degrees": -14.194824459992738,
+      "target_x": 374,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 5,
+      "target_angle_degrees": 15.763586029194057,
+      "target_x": 1182,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 6,
+      "target_angle_degrees": 7.070067725039659,
+      "target_x": 943,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 7,
+      "target_angle_degrees": 15.137280719362536,
+      "target_x": 1164,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 8,
+      "target_angle_degrees": 12.080709379538401,
+      "target_x": 1079,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 9,
+      "target_angle_degrees": -11.009327599261924,
+      "target_x": 462,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 10,
+      "target_angle_degrees": -10.514032446913081,
+      "target_x": 476,
+      "target_y": 491,
+      "error": false
+    },
+    {
+      "target_index": 11,
+      "target_angle_degrees": -16.238656869994074,
+      "target_x": 316,
+      "target_y": 491,
+      "error": false
+    }
+  ]
+}
