@@ -197,6 +197,41 @@ def start_saccade_test():
     
     return True
 
+def start_antisaccade_phase():
+    """Start the antisaccade phase (called after calibration in automated suite)"""
+    global saccade_testing_active, test_phase, target_index, antisaccade_data
+    global showing_instruction, instruction_start_time, showing_central_dot, showing_target, showing_gap
+    global current_target_position, current_target_angle
+    
+    # Transition to antisaccade phase
+    test_phase = 'antisaccade'
+    target_index = 0
+    antisaccade_data = []
+    showing_instruction = True
+    showing_central_dot = False
+    showing_target = False
+    showing_gap = False
+    instruction_start_time = time.time()
+    current_target_position = None
+    current_target_angle = None
+    
+    # Clear state for antisaccade phase
+    if hasattr(update_saccade_test, 'central_dot_start_time'):
+        delattr(update_saccade_test, 'central_dot_start_time')
+    if hasattr(update_saccade_test, 'recorded_for_target'):
+        delattr(update_saccade_test, 'recorded_for_target')
+    if hasattr(update_saccade_test, 'target_angles'):
+        delattr(update_saccade_test, 'target_angles')
+    
+    # Ensure test is active
+    saccade_testing_active = True
+    
+    print("\nNormal saccade test complete!")
+    print("Starting antisaccade test...")
+    print("  Instruction will be shown first")
+    print("  Then 12 targets will appear")
+    print("  Look AWAY from the targets (opposite side)")
+
 def stop_saccade_test():
     """Stop saccade testing and calculate results, or transition to antisaccade phase"""
     global saccade_testing_active, saccade_data, antisaccade_data, test_phase, target_index, total_targets
@@ -206,39 +241,18 @@ def stop_saccade_test():
     if not saccade_testing_active:
         return None
     
-    # If we're in normal phase and just finished, transition to antisaccade
+    # If we're in normal phase and just finished, stop and return 'needs_calibration'
+    # The automated suite will handle calibration and then call start_antisaccade_phase()
     if test_phase == 'normal':
         if len(saccade_data) == 0:
             print("No saccade data collected.")
             saccade_testing_active = False
             return None
         
-        # Transition to antisaccade phase
-        test_phase = 'antisaccade'
-        target_index = 0
-        antisaccade_data = []
-        showing_instruction = True
-        showing_central_dot = False
-        showing_target = False
-        showing_gap = False
-        instruction_start_time = time.time()
-        current_target_position = None
-        current_target_angle = None
-        
-        # Clear state for antisaccade phase
-        if hasattr(update_saccade_test, 'central_dot_start_time'):
-            delattr(update_saccade_test, 'central_dot_start_time')
-        if hasattr(update_saccade_test, 'recorded_for_target'):
-            delattr(update_saccade_test, 'recorded_for_target')
-        if hasattr(update_saccade_test, 'target_angles'):
-            delattr(update_saccade_test, 'target_angles')
-        
+        # Stop the test - automated suite will handle calibration and restart
+        saccade_testing_active = False
         print("\nNormal saccade test complete!")
-        print("Starting antisaccade test...")
-        print("  Instruction will be shown first")
-        print("  Then 12 targets will appear")
-        print("  Look AWAY from the targets (opposite side)")
-        return None  # Continue with antisaccade phase
+        return 'needs_calibration'  # Signal that calibration is needed before antisaccade
     
     # If we're in antisaccade phase, finish the test
     saccade_testing_active = False
@@ -258,8 +272,9 @@ def stop_saccade_test():
             'antisaccade': antisaccade_results
         }
         
-        # Save data
-        save_saccade_data(saccade_data, antisaccade_data, combined_results)
+        # Save data (include gaze_samples for visualization)
+        global gaze_samples
+        save_saccade_data(saccade_data, antisaccade_data, combined_results, gaze_samples)
         
         # Print results
         print_saccade_results(combined_results)
@@ -290,12 +305,9 @@ def update_saccade_test(gaze_x, gaze_y):
         current_time = time.time()
         current_time_ms = current_time * 1000
         
-        # Record gaze sample
+        # Record gaze sample (keep all samples for full test visualization)
         if gaze_x is not None and gaze_y is not None:
             gaze_samples.append((current_time_ms, gaze_x, gaze_y))
-            # Keep only last 2 seconds of samples
-            cutoff_time = current_time_ms - 2000
-            gaze_samples = [(t, x, y) for t, x, y in gaze_samples if t > cutoff_time]
         
         # State machine: instruction -> central dot -> gap -> target -> next target
         
@@ -345,10 +357,8 @@ def update_saccade_test(gaze_x, gaze_y):
                         target_x, target_y = calculate_screen_position_from_angle(current_target_angle)
                         if target_x is not None and target_y is not None:
                             current_target_position = (target_x, target_y)
-                            
-                            # Clear gaze samples before target appears (for baseline)
-                            baseline_cutoff = current_time_ms - BASELINE_WINDOW_MS
-                            gaze_samples = [(t, x, y) for t, x, y in gaze_samples if t >= baseline_cutoff]
+                            # Note: We keep all gaze_samples for full test visualization
+                            # Baseline calculation will filter samples as needed
                         else:
                             print(f"Warning: Could not calculate target position for angle {current_target_angle}")
                             # Skip this target and move to next
@@ -828,7 +838,7 @@ def calculate_antisaccade_metrics(data):
     
     return results
 
-def save_saccade_data(normal_data, antisaccade_data, results):
+def save_saccade_data(normal_data, antisaccade_data, results, gaze_samples=None):
     """Save saccade data to JSON file"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -848,6 +858,10 @@ def save_saccade_data(normal_data, antisaccade_data, results):
             'normal_saccade_data': normal_data,
             'antisaccade_data': antisaccade_data
         }
+        
+        # Add gaze path data if available (convert tuples to lists for JSON serialization)
+        if gaze_samples:
+            json_data['gaze_path'] = [[t, x, y] for t, x, y in gaze_samples]
         with open(json_filename, 'w') as jsonfile:
             json.dump(json_data, jsonfile, indent=2)
         print(f"✓ Saccade results saved to {json_filename}")

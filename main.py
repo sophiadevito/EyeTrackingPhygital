@@ -496,8 +496,8 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
             
             # Initial calibration or between-test calibration
             if automated_suite_state in ['initial_calibration', 'calibration_before_saccade', 
-                                         'calibration_before_pursuit', 'calibration_before_fixed_point', 
-                                         'calibration_before_plr']:
+                                         'calibration_before_antisaccade', 'calibration_before_pursuit', 
+                                         'calibration_before_fixed_point']:
                 if automated_suite_calibration_start_time is None:
                     automated_suite_calibration_start_time = time.time()
                     automated_suite_calibration_active = True
@@ -526,6 +526,10 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                         print("\n1/4: Starting Saccade Test...")
                         automated_suite_state = 'saccade'
                         saccade_test.start_saccade_test()
+                    elif automated_suite_state == 'calibration_before_antisaccade':
+                        print("Starting Antisaccade Test...")
+                        automated_suite_state = 'saccade'  # Stay in saccade state for antisaccade phase
+                        saccade_test.start_antisaccade_phase()
                     elif automated_suite_state == 'calibration_before_pursuit':
                         print("\n2/4: Starting Smooth Pursuit Test...")
                         automated_suite_state = 'pursuit'
@@ -534,50 +538,55 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                         print("\n3/4: Starting Fixed Point Stability Test...")
                         automated_suite_state = 'fixed_point'
                         fixed_point_stability.start_fixed_point_test()
-                    elif automated_suite_state == 'calibration_before_plr':
-                        print("\n4/4: Starting PLR Test...")
-                        automated_suite_state = 'plr'
-                        plr.start_plr_test()
             
             # Saccade test
             elif automated_suite_state == 'saccade':
                 if not saccade_test.saccade_testing_active:
-                    # Saccade test completed - try to get results from JSON file
-                    # Wait a moment for file to be written
-                    import time
-                    time.sleep(0.5)  # Give file system time to write
-                    
-                    saccade_results = get_latest_test_results('saccade')
-                    if saccade_results:
-                        automated_suite_results['saccade'] = {}
-                        if saccade_results.get('normal_saccade'):
-                            normal = saccade_results['normal_saccade']
-                            automated_suite_results['saccade']['normal'] = {
-                                'total_saccades': normal.get('total_saccades'),
-                                'valid_saccades': normal.get('valid_saccades'),
-                                'average_latency_ms': normal.get('average_latency_ms'),
-                                'std_latency_ms': normal.get('std_latency_ms'),
-                                'average_velocity_deg_per_ms': normal.get('average_velocity_deg_per_ms'),
-                                'std_velocity_deg_per_ms': normal.get('std_velocity_deg_per_ms'),
-                                'average_accuracy_percent': normal.get('average_accuracy_percent'),
-                                'std_accuracy_percent': normal.get('std_accuracy_percent')
-                            }
-                        if saccade_results.get('antisaccade'):
-                            anti = saccade_results['antisaccade']
-                            automated_suite_results['saccade']['antisaccade'] = {
-                                'total_trials': anti.get('total_trials'),
-                                'error_count': anti.get('error_count'),
-                                'correct_count': anti.get('correct_count'),
-                                'error_rate_percent': anti.get('error_rate_percent')
-                            }
+                    # Check if normal phase just completed and needs calibration before antisaccade
+                    if saccade_test.test_phase == 'normal':
+                        # Normal phase completed - start calibration before antisaccade
+                        automated_suite_state = 'calibration_before_antisaccade'
+                        automated_suite_calibration_start_time = time.time()
+                        automated_suite_calibration_active = True
+                        automated_suite_calibration_overlay_active = True
+                        print("\nCalibration: Look at the center dot for 5 seconds...")
                     else:
-                        print("Warning: Could not retrieve saccade test results from JSON file")
-                    # Start calibration before next test
-                    automated_suite_state = 'calibration_before_pursuit'
-                    automated_suite_calibration_start_time = time.time()
-                    automated_suite_calibration_active = True
-                    automated_suite_calibration_overlay_active = True
-                    print("\nCalibration: Look at the center dot for 5 seconds...")
+                        # Both phases completed - get results and move to next test
+                        # Wait a moment for file to be written
+                        import time
+                        time.sleep(0.5)  # Give file system time to write
+                        
+                        saccade_results = get_latest_test_results('saccade')
+                        if saccade_results:
+                            automated_suite_results['saccade'] = {}
+                            if saccade_results.get('normal_saccade'):
+                                normal = saccade_results['normal_saccade']
+                                automated_suite_results['saccade']['normal'] = {
+                                    'total_saccades': normal.get('total_saccades'),
+                                    'valid_saccades': normal.get('valid_saccades'),
+                                    'average_latency_ms': normal.get('average_latency_ms'),
+                                    'std_latency_ms': normal.get('std_latency_ms'),
+                                    'average_velocity_deg_per_ms': normal.get('average_velocity_deg_per_ms'),
+                                    'std_velocity_deg_per_ms': normal.get('std_velocity_deg_per_ms'),
+                                    'average_accuracy_percent': normal.get('average_accuracy_percent'),
+                                    'std_accuracy_percent': normal.get('std_accuracy_percent')
+                                }
+                            if saccade_results.get('antisaccade'):
+                                anti = saccade_results['antisaccade']
+                                automated_suite_results['saccade']['antisaccade'] = {
+                                    'total_trials': anti.get('total_trials'),
+                                    'error_count': anti.get('error_count'),
+                                    'correct_count': anti.get('correct_count'),
+                                    'error_rate_percent': anti.get('error_rate_percent')
+                                }
+                        else:
+                            print("Warning: Could not retrieve saccade test results from JSON file")
+                        # Start calibration before next test
+                        automated_suite_state = 'calibration_before_pursuit'
+                        automated_suite_calibration_start_time = time.time()
+                        automated_suite_calibration_active = True
+                        automated_suite_calibration_overlay_active = True
+                        print("\nCalibration: Look at the center dot for 5 seconds...")
             
             # Smooth pursuit test
             elif automated_suite_state == 'pursuit':
@@ -630,12 +639,10 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                         }
                     else:
                         print("Warning: Could not retrieve fixed point stability test results from JSON file")
-                    # Start calibration before next test
-                    automated_suite_state = 'calibration_before_plr'
-                    automated_suite_calibration_start_time = time.time()
-                    automated_suite_calibration_active = True
-                    automated_suite_calibration_overlay_active = True
-                    print("\nCalibration: Look at the center dot for 5 seconds...")
+                    # Move directly to PLR test (no calibration)
+                    print("\n4/4: Starting PLR Test...")
+                    automated_suite_state = 'plr'
+                    plr.start_plr_test()
             
             # PLR test
             elif automated_suite_state == 'plr':

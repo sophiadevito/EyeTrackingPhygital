@@ -15,11 +15,11 @@ from datetime import datetime
 THRESHOLDS = {
     'saccade_latency_ms': {'good': 250, 'warning': 350},  # Lower is better
     'saccade_velocity_deg_per_ms': {'good': 0.2, 'warning': 0.15},  # Higher is better
-    'saccade_accuracy_percent': {'good': 70, 'warning': 50},  # Higher is better
+    'saccade_accuracy_percent': {'good': 70, 'warning': 40},  # Higher is better
     'antisaccade_error_rate_percent': {'good': 20, 'warning': 40},  # Lower is better
-    'smooth_pursuit_gain': {'good': 0.8, 'warning': 0.6},  # Higher is better
+    'smooth_pursuit_gain': {'good': 0.8, 'warning': 0.5},  # Higher is better
     'smooth_pursuit_latency_ms': {'good': 150, 'warning': 250},  # Lower is better
-    'fixed_point_deviation_degrees': {'good': 1.0, 'warning': 2.0},  # Lower is better
+    'fixed_point_deviation_degrees': {'good': 2.0, 'warning': 3.0},  # Lower is better
     'plr_latency_ms': {'good': 300, 'warning': 400},  # Lower is better
     'plr_constriction_percent': {'good': 25, 'warning': 15},  # Higher is better
     'blink_rate_per_min': {'good': 20, 'warning': 10},  # Normal range
@@ -238,7 +238,12 @@ def calculate_overall_score(results):
     weighted_sum = sum(score * weight for score, weight in zip(scores, weights))
     overall_score = weighted_sum / total_weight
     
-    return overall_score, total_weight
+    # Invert the score: High normalized scores (good performance) → Low dial scores (good)
+    # Low normalized scores (poor performance) → High dial scores (poor)
+    # This makes the dial show: Low numbers = Good, High numbers = Poor
+    inverted_score = 100 - overall_score
+    
+    return inverted_score, total_weight
 
 def create_score_dial_html(score):
     """
@@ -254,22 +259,23 @@ def create_score_dial_html(score):
         score = 0
     
     # Convert score (0-100) to degrees (0-180 degrees for 180-degree arc)
-    # Dial: 0° (right) to 180° (left)
-    # Score 0 → 180° (left), Score 100 → 0° (right)
-    # Needle starts pointing up (which is -90° from horizontal), so we rotate by (angle - 90) to point along the arc
+    # Dial: 0° (right, green/good) to 180° (left, red/poor)
+    # Inverted: High scores = Poor (left), Low scores = Good (right)
+    # Score 0 (good) → 0° (right, green), Score 100 (poor) → 180° (left, red)
     angle = (score / 100) * 180
     needle_rotation = angle - 90
     
-    # Determine color and message based on score
-    if score >= 67:  # Good range
+    # Determine color and message based on score (inverted logic)
+    # High scores = Poor, Low scores = Good
+    if score <= 33:  # Good range (low score)
         color = '#28a745'
         message = 'No concussion detected'
         label_class = 'good'
-    elif score >= 33:  # Warning range
+    elif score <= 67:  # Warning range (medium score)
         color = '#ffc107'
         message = 'Potential concussion detected'
         label_class = 'warning'
-    else:  # Poor range
+    else:  # Poor range (high score)
         color = '#dc3545'
         message = 'Concussion detected'
         label_class = 'poor'
@@ -316,6 +322,419 @@ def create_score_dial_html(score):
                     </svg>
                 </div>
                 <div class="score-message {label_class}">{message}</div>
+            </div>
+    """
+    return html
+
+def create_eye_path_visualization(gaze_path, target_data, monitor_width, monitor_height):
+    """
+    Create an SVG visualization of the eye path during saccade testing.
+    
+    Args:
+        gaze_path: List of [timestamp, x, y] tuples
+        target_data: List of target data dictionaries with target_x, target_y
+        monitor_width: Screen width in pixels
+        monitor_height: Screen height in pixels
+    
+    Returns:
+        HTML string with SVG visualization
+    """
+    if not gaze_path or len(gaze_path) < 2:
+        return '<p style="color: #6c757d; font-style: italic;">No gaze path data available for visualization.</p>'
+    
+    # Filter out points outside screen bounds (with small margin to catch edge errors)
+    margin = 10  # pixels margin from screen edges
+    filtered_gaze_path = [
+        point for point in gaze_path
+        if len(point) >= 3 and 
+           margin <= point[1] <= (monitor_width - margin) and
+           margin <= point[2] <= (monitor_height - margin)
+    ]
+    
+    # Use filtered path, but fall back to original if filtering removed too many points
+    if len(filtered_gaze_path) < 2:
+        filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
+    
+    # Extract coordinates (use filtered path)
+    gaze_x = [point[1] for point in filtered_gaze_path]
+    gaze_y = [point[2] for point in filtered_gaze_path]
+    
+    # Calculate bounds with padding
+    min_x, max_x = min(gaze_x), max(gaze_x)
+    min_y, max_y = min(gaze_y), max(gaze_y)
+    
+    # Add padding (10% on each side)
+    x_range = max_x - min_x
+    y_range = max_y - min_y
+    padding_x = max(x_range * 0.1, 50)
+    padding_y = max(y_range * 0.1, 50)
+    
+    plot_min_x = max(0, min_x - padding_x)
+    plot_max_x = min(monitor_width, max_x + padding_x)
+    plot_min_y = max(0, min_y - padding_y)
+    plot_max_y = min(monitor_height, max_y + padding_y)
+    
+    plot_width = plot_max_x - plot_min_x
+    plot_height = plot_max_y - plot_min_y
+    
+    # SVG dimensions (scaled to fit nicely in report)
+    svg_width = 800
+    svg_height = 600
+    
+    # Scale factors
+    scale_x = svg_width / plot_width if plot_width > 0 else 1
+    scale_y = svg_height / plot_height if plot_height > 0 else 1
+    
+    # Normalize coordinates to SVG space
+    def normalize_x(x):
+        return (x - plot_min_x) * scale_x
+    
+    def normalize_y(y):
+        return (y - plot_min_y) * scale_y
+    
+    # Create path string for gaze trajectory
+    path_points = []
+    for i, point in enumerate(filtered_gaze_path):
+        x = normalize_x(point[1])
+        y = normalize_y(point[2])
+        if i == 0:
+            path_points.append(f"M {x:.2f} {y:.2f}")
+        else:
+            path_points.append(f"L {x:.2f} {y:.2f}")
+    
+    path_d = " ".join(path_points)
+    
+    # Get target positions
+    target_positions = []
+    if target_data:
+        for target in target_data:
+            if 'target_x' in target and 'target_y' in target:
+                target_positions.append((target['target_x'], target['target_y']))
+    
+    # Create SVG
+    html = f"""
+            <div class="eye-path-visualization">
+                <svg width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" 
+                     style="border: 1px solid #dee2e6; border-radius: 8px; background: #f8f9fa;">
+                    <!-- Background grid (optional) -->
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" opacity="0.3"/>
+                    
+                    <!-- Gaze path -->
+                    <path d="{path_d}" 
+                          fill="none" 
+                          stroke="#667eea" 
+                          stroke-width="2" 
+                          stroke-opacity="0.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <!-- Gaze points (small dots) -->
+                    {''.join([f'<circle cx="{normalize_x(x):.2f}" cy="{normalize_y(y):.2f}" r="2" fill="#667eea" opacity="0.5"/>' 
+                              for x, y in zip(gaze_x, gaze_y)])}
+                    
+                    <!-- Target positions -->
+                    {''.join([f'<circle cx="{normalize_x(tx):.2f}" cy="{normalize_y(ty):.2f}" r="8" fill="#dc3545" stroke="#fff" stroke-width="2"/>' 
+                              for tx, ty in target_positions])}
+                    
+                    <!-- Start point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[0]):.2f}" cy="{normalize_y(gaze_y[0]):.2f}" r="6" fill="#28a745" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                    
+                    <!-- End point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[-1]):.2f}" cy="{normalize_y(gaze_y[-1]):.2f}" r="6" fill="#ffc107" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                </svg>
+                <div class="eye-path-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #667eea;"></span>
+                        <span>Eye Path</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #28a745;"></span>
+                        <span>Start</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #ffc107;"></span>
+                        <span>End</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span>Targets</span>
+                    </div>
+                </div>
+            </div>
+    """
+    return html
+
+def create_pursuit_path_visualization(gaze_path, target_path, monitor_width, monitor_height):
+    """
+    Create an SVG visualization of the eye path during smooth pursuit testing.
+    Shows both the target path and the gaze path.
+    
+    Args:
+        gaze_path: List of [timestamp, x, y] tuples
+        target_path: List of target positions (if available)
+        monitor_width: Screen width in pixels
+        monitor_height: Screen height in pixels
+    
+    Returns:
+        HTML string with SVG visualization
+    """
+    if not gaze_path or len(gaze_path) < 2:
+        return '<p style="color: #6c757d; font-style: italic;">No gaze path data available for visualization.</p>'
+    
+    # Filter out points outside screen bounds (with small margin to catch edge errors)
+    margin = 10  # pixels margin from screen edges
+    filtered_gaze_path = [
+        point for point in gaze_path
+        if len(point) >= 3 and 
+           margin <= point[1] <= (monitor_width - margin) and
+           margin <= point[2] <= (monitor_height - margin)
+    ]
+    
+    # Use filtered path, but fall back to original if filtering removed too many points
+    if len(filtered_gaze_path) < 2:
+        filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
+    
+    # Extract coordinates (use filtered path)
+    gaze_x = [point[1] for point in filtered_gaze_path]
+    gaze_y = [point[2] for point in filtered_gaze_path]
+    
+    # Calculate bounds with padding
+    min_x, max_x = min(gaze_x), max(gaze_x)
+    min_y, max_y = min(gaze_y), max(gaze_y)
+    
+    # Add padding (10% on each side)
+    x_range = max_x - min_x
+    y_range = max_y - min_y
+    padding_x = max(x_range * 0.1, 50)
+    padding_y = max(y_range * 0.1, 50)
+    
+    plot_min_x = max(0, min_x - padding_x)
+    plot_max_x = min(monitor_width, max_x + padding_x)
+    plot_min_y = max(0, min_y - padding_y)
+    plot_max_y = min(monitor_height, max_y + padding_y)
+    
+    plot_width = plot_max_x - plot_min_x
+    plot_height = plot_max_y - plot_min_y
+    
+    # SVG dimensions
+    svg_width = 800
+    svg_height = 600
+    
+    # Scale factors
+    scale_x = svg_width / plot_width if plot_width > 0 else 1
+    scale_y = svg_height / plot_height if plot_height > 0 else 1
+    
+    # Normalize coordinates to SVG space
+    def normalize_x(x):
+        return (x - plot_min_x) * scale_x
+    
+    def normalize_y(y):
+        return (y - plot_min_y) * scale_y
+    
+    # Create path string for gaze trajectory
+    path_points = []
+    for i, point in enumerate(filtered_gaze_path):
+        x = normalize_x(point[1])
+        y = normalize_y(point[2])
+        if i == 0:
+            path_points.append(f"M {x:.2f} {y:.2f}")
+        else:
+            path_points.append(f"L {x:.2f} {y:.2f}")
+    
+    path_d = " ".join(path_points)
+    
+    # Create SVG
+    html = f"""
+            <div class="eye-path-visualization">
+                <svg width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" 
+                     style="border: 1px solid #dee2e6; border-radius: 8px; background: #f8f9fa;">
+                    <!-- Background grid -->
+                    <defs>
+                        <pattern id="grid-pursuit" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid-pursuit)" opacity="0.3"/>
+                    
+                    <!-- Gaze path -->
+                    <path d="{path_d}" 
+                          fill="none" 
+                          stroke="#667eea" 
+                          stroke-width="2" 
+                          stroke-opacity="0.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <!-- Gaze points -->
+                    {''.join([f'<circle cx="{normalize_x(x):.2f}" cy="{normalize_y(y):.2f}" r="2" fill="#667eea" opacity="0.5"/>' 
+                              for x, y in zip(gaze_x, gaze_y)])}
+                    
+                    <!-- Start point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[0]):.2f}" cy="{normalize_y(gaze_y[0]):.2f}" r="6" fill="#28a745" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                    
+                    <!-- End point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[-1]):.2f}" cy="{normalize_y(gaze_y[-1]):.2f}" r="6" fill="#ffc107" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                </svg>
+                <div class="eye-path-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #667eea;"></span>
+                        <span>Gaze Path</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #28a745;"></span>
+                        <span>Start</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #ffc107;"></span>
+                        <span>End</span>
+                    </div>
+                </div>
+            </div>
+    """
+    return html
+
+def create_fixed_point_path_visualization(gaze_path, center_x, center_y, monitor_width, monitor_height):
+    """
+    Create an SVG visualization of the eye path during fixed point stability testing.
+    Shows the gaze path around the center target.
+    
+    Args:
+        gaze_path: List of [timestamp, x, y] tuples
+        center_x: Center target X position
+        center_y: Center target Y position
+        monitor_width: Screen width in pixels
+        monitor_height: Screen height in pixels
+    
+    Returns:
+        HTML string with SVG visualization
+    """
+    if not gaze_path or len(gaze_path) < 2:
+        return '<p style="color: #6c757d; font-style: italic;">No gaze path data available for visualization.</p>'
+    
+    # Filter out points outside screen bounds (with small margin to catch edge errors)
+    margin = 10  # pixels margin from screen edges
+    filtered_gaze_path = [
+        point for point in gaze_path
+        if len(point) >= 3 and 
+           margin <= point[1] <= (monitor_width - margin) and
+           margin <= point[2] <= (monitor_height - margin)
+    ]
+    
+    # Use filtered path, but fall back to original if filtering removed too many points
+    if len(filtered_gaze_path) < 2:
+        filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
+    
+    # Extract coordinates (use filtered path)
+    gaze_x = [point[1] for point in filtered_gaze_path]
+    gaze_y = [point[2] for point in filtered_gaze_path]
+    
+    # Calculate bounds centered around the target
+    all_x = gaze_x + [center_x]
+    all_y = gaze_y + [center_y]
+    
+    min_x, max_x = min(all_x), max(all_x)
+    min_y, max_y = min(all_y), max(all_y)
+    
+    # Add padding (20% on each side to show deviation clearly)
+    x_range = max_x - min_x
+    y_range = max_y - min_y
+    padding_x = max(x_range * 0.2, 100)
+    padding_y = max(y_range * 0.2, 100)
+    
+    plot_min_x = max(0, min_x - padding_x)
+    plot_max_x = min(monitor_width, max_x + padding_x)
+    plot_min_y = max(0, min_y - padding_y)
+    plot_max_y = min(monitor_height, max_y + padding_y)
+    
+    plot_width = plot_max_x - plot_min_x
+    plot_height = plot_max_y - plot_min_y
+    
+    # SVG dimensions
+    svg_width = 800
+    svg_height = 600
+    
+    # Scale factors
+    scale_x = svg_width / plot_width if plot_width > 0 else 1
+    scale_y = svg_height / plot_height if plot_height > 0 else 1
+    
+    # Normalize coordinates to SVG space
+    def normalize_x(x):
+        return (x - plot_min_x) * scale_x
+    
+    def normalize_y(y):
+        return (y - plot_min_y) * scale_y
+    
+    # Create path string for gaze trajectory
+    path_points = []
+    for i, point in enumerate(filtered_gaze_path):
+        x = normalize_x(point[1])
+        y = normalize_y(point[2])
+        if i == 0:
+            path_points.append(f"M {x:.2f} {y:.2f}")
+        else:
+            path_points.append(f"L {x:.2f} {y:.2f}")
+    
+    path_d = " ".join(path_points)
+    
+    # Create SVG
+    html = f"""
+            <div class="eye-path-visualization">
+                <svg width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" 
+                     style="border: 1px solid #dee2e6; border-radius: 8px; background: #f8f9fa;">
+                    <!-- Background grid -->
+                    <defs>
+                        <pattern id="grid-fixed" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e9ecef" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid-fixed)" opacity="0.3"/>
+                    
+                    <!-- Center target -->
+                    <circle cx="{normalize_x(center_x):.2f}" cy="{normalize_y(center_y):.2f}" r="10" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+                    <circle cx="{normalize_x(center_x):.2f}" cy="{normalize_y(center_y):.2f}" r="3" fill="#fff"/>
+                    
+                    <!-- Gaze path -->
+                    <path d="{path_d}" 
+                          fill="none" 
+                          stroke="#667eea" 
+                          stroke-width="2" 
+                          stroke-opacity="0.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <!-- Gaze points -->
+                    {''.join([f'<circle cx="{normalize_x(x):.2f}" cy="{normalize_y(y):.2f}" r="2" fill="#667eea" opacity="0.5"/>' 
+                              for x, y in zip(gaze_x, gaze_y)])}
+                    
+                    <!-- Start point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[0]):.2f}" cy="{normalize_y(gaze_y[0]):.2f}" r="6" fill="#28a745" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                    
+                    <!-- End point marker -->
+                    {f'<circle cx="{normalize_x(gaze_x[-1]):.2f}" cy="{normalize_y(gaze_y[-1]):.2f}" r="6" fill="#ffc107" stroke="#fff" stroke-width="2"/>' if gaze_x else ''}
+                </svg>
+                <div class="eye-path-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #667eea;"></span>
+                        <span>Gaze Path</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span>Target Center</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #28a745;"></span>
+                        <span>Start</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #ffc107;"></span>
+                        <span>End</span>
+                    </div>
+                </div>
             </div>
     """
     return html
@@ -437,6 +856,9 @@ def generate_html_report(combined_results, output_filename=None):
     Returns:
         Filename of generated report
     """
+    import glob
+    import os
+    
     if output_filename is None:
         timestamp = combined_results['metadata'].get('timestamp', datetime.now().strftime("%Y%m%d_%H%M%S"))
         output_filename = f"test_report_{timestamp}.html"
@@ -453,6 +875,9 @@ def generate_html_report(combined_results, output_filename=None):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rumble Rims Test Results Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {{
             margin: 0;
@@ -461,7 +886,7 @@ def generate_html_report(combined_results, output_filename=None):
         }}
         
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #1E2D59 0%, #9E1B32 100%);
             padding: 20px;
             min-height: 100vh;
@@ -480,12 +905,21 @@ def generate_html_report(combined_results, output_filename=None):
             background: #9E1B32;
             color: white;
             padding: 30px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }}
+        
+        .header .logo {{
+            height: 60px;
+            width: auto;
+            object-fit: contain;
         }}
         
         .header h1 {{
             font-size: 32px;
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
         }}
         
         .header .subtitle {{
@@ -534,7 +968,7 @@ def generate_html_report(combined_results, output_filename=None):
             color: #495057;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #1E2D59;
         }}
         
         .metrics-grid {{
@@ -711,6 +1145,37 @@ def generate_html_report(combined_results, output_filename=None):
             color: #dc3545;
         }}
         
+        .eye-path-visualization {{
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        
+        .eye-path-legend {{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }}
+        
+        .legend-item {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #495057;
+        }}
+        
+        .legend-color {{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #dee2e6;
+        }}
+        
         .footer {{
             background: #f8f9fa;
             padding: 20px 30px;
@@ -733,8 +1198,11 @@ def generate_html_report(combined_results, output_filename=None):
 <body>
     <div class="container">
         <div class="header">
-            <h1>Rumble Rims Test Results Report</h1>
-            <div class="subtitle">Comprehensive Oculomotor Assessment</div>
+            <img src="ram_logo.png" alt="Rumble Rims Logo" class="logo">
+            <div>
+                <h1>Rumble Rims Test Results Report</h1>
+                <div class="subtitle">Comprehensive Oculomotor Assessment</div>
+            </div>
         </div>
         
         <div class="metadata">
@@ -768,6 +1236,52 @@ def generate_html_report(combined_results, output_filename=None):
     if 'saccade' in results:
         html_content += '<div class="section">'
         html_content += '<h2 class="section-title">Saccade Test Results</h2>'
+        
+        # Try to get gaze path data from combined_results or load from saccade file
+        gaze_path = None
+        saccade_target_data = []
+        
+        # Check if gaze_path is in combined_results
+        if 'saccade_data' in combined_results:
+            gaze_path = combined_results['saccade_data'].get('gaze_path')
+            saccade_target_data = combined_results['saccade_data'].get('normal_saccade_data', [])
+        elif 'gaze_path' in combined_results:
+            gaze_path = combined_results['gaze_path']
+        elif 'normal_saccade_data' in combined_results:
+            saccade_target_data = combined_results.get('normal_saccade_data', [])
+            gaze_path = combined_results.get('gaze_path')
+        
+        # If not found, try to load from the most recent saccade results file
+        if gaze_path is None:
+            # Find all saccade results files
+            saccade_files = glob.glob("saccade_results_*.json")
+            
+            if saccade_files:
+                # Sort by modification time, most recent first
+                saccade_files.sort(key=os.path.getmtime, reverse=True)
+                
+                # Try to load the most recent file
+                try:
+                    with open(saccade_files[0], 'r') as f:
+                        saccade_data = json.load(f)
+                        gaze_path = saccade_data.get('gaze_path')
+                        if not saccade_target_data:
+                            saccade_target_data = saccade_data.get('normal_saccade_data', [])
+                except (FileNotFoundError, json.JSONDecodeError):
+                    pass  # File not found or invalid, continue without visualization
+        
+        # Add eye path visualization if data is available
+        if gaze_path:
+            html_content += '<div style="margin-bottom: 30px;">'
+            html_content += '<h3 style="font-size: 18px; color: #495057; margin-bottom: 15px;">Eye Movement Path</h3>'
+            html_content += create_eye_path_visualization(
+                gaze_path, 
+                saccade_target_data,
+                metadata.get('monitor_width', 1920),
+                metadata.get('monitor_height', 1080)
+            )
+            html_content += '</div>'
+        
         html_content += '<div class="metrics-grid">'
         
         normal = results['saccade'].get('normal', {})
@@ -809,6 +1323,37 @@ def generate_html_report(combined_results, output_filename=None):
     if 'smooth_pursuit' in results:
         html_content += '<div class="section">'
         html_content += '<h2 class="section-title">Smooth Pursuit Test Results</h2>'
+        
+        # Try to get gaze path data from the most recent smooth pursuit results file
+        pursuit_gaze_path = None
+        
+        # Try to load from the most recent smooth pursuit results file
+        pursuit_files = glob.glob("smooth_pursuit_results_*.json")
+        
+        if pursuit_files:
+            # Sort by modification time, most recent first
+            pursuit_files.sort(key=os.path.getmtime, reverse=True)
+            
+            # Try to load the most recent file
+            try:
+                with open(pursuit_files[0], 'r') as f:
+                    pursuit_data = json.load(f)
+                    pursuit_gaze_path = pursuit_data.get('gaze_path')
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass  # File not found or invalid, continue without visualization
+        
+        # Add eye path visualization if data is available
+        if pursuit_gaze_path:
+            html_content += '<div style="margin-bottom: 30px;">'
+            html_content += '<h3 style="font-size: 18px; color: #495057; margin-bottom: 15px;">Eye Movement Path</h3>'
+            html_content += create_pursuit_path_visualization(
+                pursuit_gaze_path,
+                None,  # Target path not currently stored
+                metadata.get('monitor_width', 1920),
+                metadata.get('monitor_height', 1080)
+            )
+            html_content += '</div>'
+        
         html_content += '<div class="metrics-grid">'
         
         pursuit = results['smooth_pursuit']
@@ -833,6 +1378,41 @@ def generate_html_report(combined_results, output_filename=None):
     if 'fixed_point' in results:
         html_content += '<div class="section">'
         html_content += '<h2 class="section-title">Fixed Point Stability Test Results</h2>'
+        
+        # Try to get gaze path data from the most recent fixed point results file
+        fixed_gaze_path = None
+        
+        # Try to load from the most recent fixed point results file
+        fixed_files = glob.glob("fixed_point_stability_results_*.json")
+        
+        if fixed_files:
+            # Sort by modification time, most recent first
+            fixed_files.sort(key=os.path.getmtime, reverse=True)
+            
+            # Try to load the most recent file
+            try:
+                with open(fixed_files[0], 'r') as f:
+                    fixed_data = json.load(f)
+                    fixed_gaze_path = fixed_data.get('gaze_path')
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass  # File not found or invalid, continue without visualization
+        
+        # Add eye path visualization if data is available
+        if fixed_gaze_path:
+            html_content += '<div style="margin-bottom: 30px;">'
+            html_content += '<h3 style="font-size: 18px; color: #495057; margin-bottom: 15px;">Eye Movement Path</h3>'
+            # Center target is at screen center
+            center_x = metadata.get('monitor_width', 1920) // 2
+            center_y = metadata.get('monitor_height', 1080) // 2
+            html_content += create_fixed_point_path_visualization(
+                fixed_gaze_path,
+                center_x,
+                center_y,
+                metadata.get('monitor_width', 1920),
+                metadata.get('monitor_height', 1080)
+            )
+            html_content += '</div>'
+        
         html_content += '<div class="metrics-grid">'
         
         fixed = results['fixed_point']

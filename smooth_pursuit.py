@@ -155,7 +155,6 @@ def start_smooth_pursuit_test():
     print(f"  Amplitude: ±{target_amplitude_deg} degrees ({target_amplitude_pixels:.1f} pixels)")
     print("  Instruction will be shown first")
     print("  Then horizontal movement for 15 seconds")
-    print("  Then vertical movement for 15 seconds")
     print("  Press 'p' again to stop early")
     
     return True
@@ -177,8 +176,9 @@ def stop_smooth_pursuit_test():
         # Calculate metrics
         results = calculate_pursuit_metrics(pursuit_data)
         
-        # Save data
-        save_pursuit_data(pursuit_data, results)
+        # Save data (include gaze_samples for visualization)
+        global gaze_samples
+        save_pursuit_data(pursuit_data, results, gaze_samples)
         
         # Print results
         print_pursuit_results(results)
@@ -212,11 +212,11 @@ def update_smooth_pursuit_test(gaze_x, gaze_y):
         # Record gaze sample
         if gaze_x is not None and gaze_y is not None:
             gaze_samples.append((current_time_ms, gaze_x, gaze_y))
-            # Keep only last 35 seconds of samples (enough for both phases)
-            cutoff_time = current_time_ms - 35000
+            # Keep only last 20 seconds of samples (enough for horizontal phase)
+            cutoff_time = current_time_ms - 20000
             gaze_samples = [(t, x, y) for t, x, y in gaze_samples if t > cutoff_time]
         
-        # State machine: instruction -> horizontal phase -> vertical phase -> done
+        # State machine: instruction -> horizontal phase -> done
         
         if showing_instruction:
             elapsed_ms = (current_time - instruction_start_time) * 1000
@@ -234,15 +234,9 @@ def update_smooth_pursuit_test(gaze_x, gaze_y):
             
             # Check if phase duration exceeded
             if elapsed >= PHASE_DURATION_SEC:
-                if phase == 'horizontal':
-                    # Switch to vertical phase
-                    phase = 'vertical'
-                    phase_start_time = current_time
-                    current_target_position = (monitor_width // 2, monitor_height // 2)
-                else:
-                    # Both phases complete
-                    stop_smooth_pursuit_test()
-                    return
+                # Horizontal phase complete - stop the test
+                stop_smooth_pursuit_test()
+                return
             
             # Calculate target position based on sinusoidal motion
             time_from_phase_start = current_time - phase_start_time
@@ -250,11 +244,8 @@ def update_smooth_pursuit_test(gaze_x, gaze_y):
             # Sinusoidal motion: position = amplitude * sin(2 * pi * frequency * time)
             angle_offset_deg = target_amplitude_deg * math.sin(2 * math.pi * target_frequency * time_from_phase_start)
             
-            if phase == 'horizontal':
-                target_x, target_y = calculate_screen_position_from_angle(angle_offset_deg, is_horizontal=True)
-            else:
-                # For vertical, we need to calculate vertical angle
-                target_x, target_y = calculate_screen_position_from_angle(angle_offset_deg, is_horizontal=False)
+            # Only horizontal phase now
+            target_x, target_y = calculate_screen_position_from_angle(angle_offset_deg, is_horizontal=True)
             
             current_target_position = (target_x, target_y)
             
@@ -276,10 +267,6 @@ def update_smooth_pursuit_test(gaze_x, gaze_y):
             # Velocity in mm/s
             target_velocity_mm_per_s = (target_velocity_deg_per_s * math.pi / 180.0) * display_distance_mm
             target_velocity_pixels_per_s = target_velocity_mm_per_s * pixels_per_mm
-            
-            # For vertical movement, Y axis is inverted (up = negative Y)
-            if phase == 'vertical':
-                target_velocity_pixels_per_s = -target_velocity_pixels_per_s
             
             # Calculate eye velocity and gain
             if gaze_x is not None and gaze_y is not None and len(gaze_samples) >= 2:
@@ -476,7 +463,7 @@ def calculate_pursuit_metrics(data):
     
     return results
 
-def save_pursuit_data(data, results):
+def save_pursuit_data(data, results, gaze_samples=None):
     """Save smooth pursuit data to JSON file"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -496,6 +483,10 @@ def save_pursuit_data(data, results):
             'results': results,
             'raw_data': data
         }
+        
+        # Add gaze path data if available (convert tuples to lists for JSON serialization)
+        if gaze_samples:
+            json_data['gaze_path'] = [[t, x, y] for t, x, y in gaze_samples]
         with open(json_filename, 'w') as jsonfile:
             json.dump(json_data, jsonfile, indent=2)
         print(f"✓ Smooth pursuit results saved to {json_filename}")

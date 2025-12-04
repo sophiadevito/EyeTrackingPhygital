@@ -134,8 +134,9 @@ def stop_fixed_point_test():
         # Calculate metrics
         results = calculate_stability_metrics(stability_data)
         
-        # Save data
-        save_stability_data(stability_data, results)
+        # Save data (include gaze_samples for visualization)
+        global gaze_samples
+        save_stability_data(stability_data, results, gaze_samples)
         
         # Print results
         print_stability_results(results)
@@ -228,7 +229,7 @@ def calculate_stability_metrics(data):
     
     return results
 
-def save_stability_data(data, results):
+def save_stability_data(data, results, gaze_samples=None):
     """Save fixed point stability data to JSON file"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -246,6 +247,11 @@ def save_stability_data(data, results):
             'results': results,
             'raw_data': data
         }
+        
+        # Add gaze path data if available (convert tuples to lists for JSON serialization)
+        # Note: fixed_point stores (timestamp, x, y, deviation_deg), we only need x, y for path
+        if gaze_samples:
+            json_data['gaze_path'] = [[t, x, y] for t, x, y, _ in gaze_samples]
         with open(json_filename, 'w') as jsonfile:
             json.dump(json_data, jsonfile, indent=2)
         print(f"✓ Fixed point stability results saved to {json_filename}")

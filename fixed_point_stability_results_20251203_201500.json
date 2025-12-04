@@ -1,0 +1,7176 @@
+{
+  "metadata": {
+    "timestamp": "20251203_201500",
+    "test_date": "2025-12-03T20:15:00.514750",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "test_duration_seconds": 20.0
+  },
+  "results": {
+    "total_measurements": 511,
+    "average_deviation_degrees": 3.048165926841472,
+    "median_deviation_degrees": 2.876142457376112,
+    "std_deviation_degrees": 2.10255321512558,
+    "max_deviation_degrees": 30.767810303646485,
+    "min_deviation_degrees": 0.0,
+    "rms_deviation_degrees": 3.7029779286396303
+  },
+  "raw_data": [
+    {
+      "timestamp": 1764810880.506698,
+      "time_from_start": 0.03722691535949707,
+      "gaze_x": 657,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.998947601473415
+    },
+    {
+      "timestamp": 1764810880.5550919,
+      "time_from_start": 0.08562088012695312,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810880.595298,
+      "time_from_start": 0.12582707405090332,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810880.6293068,
+      "time_from_start": 0.1598358154296875,
+      "gaze_x": 731,
+      "gaze_y": 397,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810880.6665459,
+      "time_from_start": 0.19707489013671875,
+      "gaze_x": 744,
+      "gaze_y": 397,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5867035197552988
+    },
+    {
+      "timestamp": 1764810880.700889,
+      "time_from_start": 0.23141813278198242,
+      "gaze_x": 731,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.99343433510746
+    },
+    {
+      "timestamp": 1764810880.743707,
+      "time_from_start": 0.27423596382141113,
+      "gaze_x": 744,
+      "gaze_y": 378,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.298558139594908
+    },
+    {
+      "timestamp": 1764810880.791745,
+      "time_from_start": 0.32227396965026855,
+      "gaze_x": 744,
+      "gaze_y": 378,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.298558139594908
+    },
+    {
+      "timestamp": 1764810880.826944,
+      "time_from_start": 0.35747313499450684,
+      "gaze_x": 731,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.69184842854985
+    },
+    {
+      "timestamp": 1764810880.861071,
+      "time_from_start": 0.3916001319885254,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810880.903459,
+      "time_from_start": 0.433988094329834,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810880.939678,
+      "time_from_start": 0.47020697593688965,
+      "gaze_x": 744,
+      "gaze_y": 378,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.298558139594908
+    },
+    {
+      "timestamp": 1764810880.981954,
+      "time_from_start": 0.5124831199645996,
+      "gaze_x": 744,
+      "gaze_y": 397,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5867035197552988
+    },
+    {
+      "timestamp": 1764810881.021686,
+      "time_from_start": 0.5522150993347168,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810881.0634618,
+      "time_from_start": 0.5939908027648926,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810881.098453,
+      "time_from_start": 0.6289820671081543,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810881.133353,
+      "time_from_start": 0.6638820171356201,
+      "gaze_x": 719,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9822960500985813
+    },
+    {
+      "timestamp": 1764810881.1702662,
+      "time_from_start": 0.7007951736450195,
+      "gaze_x": 719,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5759362177469087
+    },
+    {
+      "timestamp": 1764810881.2049768,
+      "time_from_start": 0.7355058193206787,
+      "gaze_x": 719,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9822960500985813
+    },
+    {
+      "timestamp": 1764810881.245486,
+      "time_from_start": 0.776015043258667,
+      "gaze_x": 719,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.542069533146631
+    },
+    {
+      "timestamp": 1764810881.2881541,
+      "time_from_start": 0.8186831474304199,
+      "gaze_x": 719,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9822960500985813
+    },
+    {
+      "timestamp": 1764810881.324231,
+      "time_from_start": 0.854759931564331,
+      "gaze_x": 707,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3257186953646043
+    },
+    {
+      "timestamp": 1764810881.36791,
+      "time_from_start": 0.8984389305114746,
+      "gaze_x": 719,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5759362177469087
+    },
+    {
+      "timestamp": 1764810881.4026408,
+      "time_from_start": 0.9331698417663574,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810881.445759,
+      "time_from_start": 0.9762880802154541,
+      "gaze_x": 719,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.9822960500985813
+    },
+    {
+      "timestamp": 1764810881.485709,
+      "time_from_start": 1.0162379741668701,
+      "gaze_x": 719,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.542069533146631
+    },
+    {
+      "timestamp": 1764810881.528107,
+      "time_from_start": 1.058635950088501,
+      "gaze_x": 731,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.723353513575618
+    },
+    {
+      "timestamp": 1764810881.5629828,
+      "time_from_start": 1.0935118198394775,
+      "gaze_x": 719,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.542069533146631
+    },
+    {
+      "timestamp": 1764810881.6054149,
+      "time_from_start": 1.13594388961792,
+      "gaze_x": 719,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5590010438400816
+    },
+    {
+      "timestamp": 1764810881.647476,
+      "time_from_start": 1.1780049800872803,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810881.683441,
+      "time_from_start": 1.2139699459075928,
+      "gaze_x": 731,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810881.723521,
+      "time_from_start": 1.2540500164031982,
+      "gaze_x": 731,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.69184842854985
+    },
+    {
+      "timestamp": 1764810881.7661371,
+      "time_from_start": 1.296666145324707,
+      "gaze_x": 731,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810881.80592,
+      "time_from_start": 1.3364489078521729,
+      "gaze_x": 731,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.69184842854985
+    },
+    {
+      "timestamp": 1764810881.842979,
+      "time_from_start": 1.3735079765319824,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810881.877514,
+      "time_from_start": 1.4080429077148438,
+      "gaze_x": 731,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.69184842854985
+    },
+    {
+      "timestamp": 1764810881.920341,
+      "time_from_start": 1.4508700370788574,
+      "gaze_x": 731,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.69184842854985
+    },
+    {
+      "timestamp": 1764810881.954988,
+      "time_from_start": 1.4855170249938965,
+      "gaze_x": 731,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810881.997312,
+      "time_from_start": 1.5278410911560059,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.03823,
+      "time_from_start": 1.5687589645385742,
+      "gaze_x": 744,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8516062318110786
+    },
+    {
+      "timestamp": 1764810882.080203,
+      "time_from_start": 1.610732078552246,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810882.1149518,
+      "time_from_start": 1.6454808712005615,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810882.156321,
+      "time_from_start": 1.6868500709533691,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.197869,
+      "time_from_start": 1.728398084640503,
+      "gaze_x": 744,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1694738775321136
+    },
+    {
+      "timestamp": 1764810882.237988,
+      "time_from_start": 1.768517017364502,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.273888,
+      "time_from_start": 1.8044171333312988,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.308439,
+      "time_from_start": 1.83896803855896,
+      "gaze_x": 731,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.99343433510746
+    },
+    {
+      "timestamp": 1764810882.3505092,
+      "time_from_start": 1.8810381889343262,
+      "gaze_x": 731,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810882.3854551,
+      "time_from_start": 1.9159841537475586,
+      "gaze_x": 731,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.99343433510746
+    },
+    {
+      "timestamp": 1764810882.419351,
+      "time_from_start": 1.9498801231384277,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810882.453983,
+      "time_from_start": 1.9845120906829834,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810882.496267,
+      "time_from_start": 2.0267961025238037,
+      "gaze_x": 731,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810882.5319161,
+      "time_from_start": 2.0624451637268066,
+      "gaze_x": 744,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8516062318110786
+    },
+    {
+      "timestamp": 1764810882.5742478,
+      "time_from_start": 2.1047768592834473,
+      "gaze_x": 731,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810882.613566,
+      "time_from_start": 2.144094944000244,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.6559098,
+      "time_from_start": 2.186438798904419,
+      "gaze_x": 731,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.322944024492135
+    },
+    {
+      "timestamp": 1764810882.690987,
+      "time_from_start": 2.2215161323547363,
+      "gaze_x": 731,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.99343433510746
+    },
+    {
+      "timestamp": 1764810882.733292,
+      "time_from_start": 2.2638211250305176,
+      "gaze_x": 744,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8516062318110786
+    },
+    {
+      "timestamp": 1764810882.773876,
+      "time_from_start": 2.3044049739837646,
+      "gaze_x": 744,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8516062318110786
+    },
+    {
+      "timestamp": 1764810882.81604,
+      "time_from_start": 2.346569061279297,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810882.850365,
+      "time_from_start": 2.3808939456939697,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810882.884751,
+      "time_from_start": 2.4152801036834717,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810882.921834,
+      "time_from_start": 2.4523630142211914,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810882.9567611,
+      "time_from_start": 2.487290143966675,
+      "gaze_x": 744,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.876142457376112
+    },
+    {
+      "timestamp": 1764810882.9997199,
+      "time_from_start": 2.5302488803863525,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.03667,
+      "time_from_start": 2.5671989917755127,
+      "gaze_x": 744,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.45477569916371213
+    },
+    {
+      "timestamp": 1764810883.0771,
+      "time_from_start": 2.6076290607452393,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.113683,
+      "time_from_start": 2.644212007522583,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.1495512,
+      "time_from_start": 2.6800801753997803,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.191524,
+      "time_from_start": 2.722053050994873,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.2281861,
+      "time_from_start": 2.7587151527404785,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.270577,
+      "time_from_start": 2.8011059761047363,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.3101819,
+      "time_from_start": 2.8407108783721924,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.35163,
+      "time_from_start": 2.8821589946746826,
+      "gaze_x": 744,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8198198157760518
+    },
+    {
+      "timestamp": 1764810883.386848,
+      "time_from_start": 2.91737699508667,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.420979,
+      "time_from_start": 2.951508045196533,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.464222,
+      "time_from_start": 2.9947509765625,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810883.498988,
+      "time_from_start": 3.0295169353485107,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810883.532019,
+      "time_from_start": 3.0625479221343994,
+      "gaze_x": 756,
+      "gaze_y": 416,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.8400794417825357
+    },
+    {
+      "timestamp": 1764810883.576006,
+      "time_from_start": 3.106534957885742,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810883.610857,
+      "time_from_start": 3.141386032104492,
+      "gaze_x": 756,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1213612914871294
+    },
+    {
+      "timestamp": 1764810883.645358,
+      "time_from_start": 3.175887107849121,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810883.688094,
+      "time_from_start": 3.218622922897339,
+      "gaze_x": 744,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8198198157760518
+    },
+    {
+      "timestamp": 1764810883.723219,
+      "time_from_start": 3.2537479400634766,
+      "gaze_x": 744,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8198198157760518
+    },
+    {
+      "timestamp": 1764810883.76389,
+      "time_from_start": 3.294419050216675,
+      "gaze_x": 756,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6821456426659536
+    },
+    {
+      "timestamp": 1764810883.806562,
+      "time_from_start": 3.3370909690856934,
+      "gaze_x": 756,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6821456426659536
+    },
+    {
+      "timestamp": 1764810883.847428,
+      "time_from_start": 3.3779571056365967,
+      "gaze_x": 756,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6821456426659536
+    },
+    {
+      "timestamp": 1764810883.8833659,
+      "time_from_start": 3.4138948917388916,
+      "gaze_x": 744,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.473834725776357
+    },
+    {
+      "timestamp": 1764810883.92577,
+      "time_from_start": 3.456299066543579,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810883.96828,
+      "time_from_start": 3.4988090991973877,
+      "gaze_x": 756,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810884.002176,
+      "time_from_start": 3.532705068588257,
+      "gaze_x": 744,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1694738775321136
+    },
+    {
+      "timestamp": 1764810884.04564,
+      "time_from_start": 3.576169013977051,
+      "gaze_x": 744,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1694738775321136
+    },
+    {
+      "timestamp": 1764810884.088073,
+      "time_from_start": 3.6186020374298096,
+      "gaze_x": 756,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810884.124157,
+      "time_from_start": 3.6546859741210938,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810884.1665,
+      "time_from_start": 3.6970291137695312,
+      "gaze_x": 744,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1694738775321136
+    },
+    {
+      "timestamp": 1764810884.2140071,
+      "time_from_start": 3.7445361614227295,
+      "gaze_x": 756,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810884.255907,
+      "time_from_start": 3.786436080932617,
+      "gaze_x": 756,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.6821456426659536
+    },
+    {
+      "timestamp": 1764810884.29107,
+      "time_from_start": 3.821599006652832,
+      "gaze_x": 756,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810884.3334029,
+      "time_from_start": 3.863931894302368,
+      "gaze_x": 744,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1694738775321136
+    },
+    {
+      "timestamp": 1764810884.3758879,
+      "time_from_start": 3.906416893005371,
+      "gaze_x": 744,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8198198157760518
+    },
+    {
+      "timestamp": 1764810884.4105558,
+      "time_from_start": 3.941084861755371,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810884.451139,
+      "time_from_start": 3.981667995452881,
+      "gaze_x": 756,
+      "gaze_y": 435,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.1213612914871294
+    },
+    {
+      "timestamp": 1764810884.4940412,
+      "time_from_start": 4.0245702266693115,
+      "gaze_x": 756,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810884.5361779,
+      "time_from_start": 4.066706895828247,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810884.571979,
+      "time_from_start": 4.102508068084717,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.6144671,
+      "time_from_start": 4.144996166229248,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.655363,
+      "time_from_start": 4.185892105102539,
+      "gaze_x": 756,
+      "gaze_y": 454,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4019746494229834
+    },
+    {
+      "timestamp": 1764810884.689919,
+      "time_from_start": 4.220448017120361,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.7249439,
+      "time_from_start": 4.255472898483276,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810884.766748,
+      "time_from_start": 4.297276973724365,
+      "gaze_x": 756,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.0
+    },
+    {
+      "timestamp": 1764810884.803096,
+      "time_from_start": 4.333625078201294,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.8373902,
+      "time_from_start": 4.367919206619263,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.874411,
+      "time_from_start": 4.404940128326416,
+      "gaze_x": 756,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.159207201708402
+    },
+    {
+      "timestamp": 1764810884.907702,
+      "time_from_start": 4.438230991363525,
+      "gaze_x": 756,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.7200387378582043
+    },
+    {
+      "timestamp": 1764810884.951124,
+      "time_from_start": 4.4816529750823975,
+      "gaze_x": 756,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.557904234275758
+    },
+    {
+      "timestamp": 1764810884.9919791,
+      "time_from_start": 4.522508144378662,
+      "gaze_x": 756,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.557904234275758
+    },
+    {
+      "timestamp": 1764810885.028929,
+      "time_from_start": 4.559458017349243,
+      "gaze_x": 756,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.274612482675055
+    },
+    {
+      "timestamp": 1764810885.0705369,
+      "time_from_start": 4.6010658740997314,
+      "gaze_x": 756,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.274612482675055
+    },
+    {
+      "timestamp": 1764810885.1125069,
+      "time_from_start": 4.643035888671875,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.1529238,
+      "time_from_start": 4.683452844619751,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.188301,
+      "time_from_start": 4.718830108642578,
+      "gaze_x": 744,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.010455894462894
+    },
+    {
+      "timestamp": 1764810885.2316,
+      "time_from_start": 4.762129068374634,
+      "gaze_x": 744,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.010455894462894
+    },
+    {
+      "timestamp": 1764810885.2667809,
+      "time_from_start": 4.797309875488281,
+      "gaze_x": 744,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.684255363132845
+    },
+    {
+      "timestamp": 1764810885.3013902,
+      "time_from_start": 4.831919193267822,
+      "gaze_x": 756,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.666270581543776
+    },
+    {
+      "timestamp": 1764810885.344356,
+      "time_from_start": 4.874885082244873,
+      "gaze_x": 744,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.684255363132845
+    },
+    {
+      "timestamp": 1764810885.378253,
+      "time_from_start": 4.908782005310059,
+      "gaze_x": 756,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.666270581543776
+    },
+    {
+      "timestamp": 1764810885.413406,
+      "time_from_start": 4.943934917449951,
+      "gaze_x": 756,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.666270581543776
+    },
+    {
+      "timestamp": 1764810885.4566138,
+      "time_from_start": 4.98714280128479,
+      "gaze_x": 756,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.666270581543776
+    },
+    {
+      "timestamp": 1764810885.4916139,
+      "time_from_start": 5.0221428871154785,
+      "gaze_x": 744,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.010455894462894
+    },
+    {
+      "timestamp": 1764810885.5401752,
+      "time_from_start": 5.070704221725464,
+      "gaze_x": 756,
+      "gaze_y": 641,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.666270581543776
+    },
+    {
+      "timestamp": 1764810885.589796,
+      "time_from_start": 5.120325088500977,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.6318269,
+      "time_from_start": 5.162355899810791,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.667278,
+      "time_from_start": 5.19780707359314,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.701259,
+      "time_from_start": 5.231787919998169,
+      "gaze_x": 756,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.989983091265937
+    },
+    {
+      "timestamp": 1764810885.7443142,
+      "time_from_start": 5.274843215942383,
+      "gaze_x": 769,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.014001511020544
+    },
+    {
+      "timestamp": 1764810885.778665,
+      "time_from_start": 5.309194087982178,
+      "gaze_x": 769,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.014001511020544
+    },
+    {
+      "timestamp": 1764810885.820205,
+      "time_from_start": 5.350733995437622,
+      "gaze_x": 756,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.274612482675055
+    },
+    {
+      "timestamp": 1764810885.8612878,
+      "time_from_start": 5.391816854476929,
+      "gaze_x": 756,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.274612482675055
+    },
+    {
+      "timestamp": 1764810885.898059,
+      "time_from_start": 5.428587913513184,
+      "gaze_x": 769,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.302701592287369
+    },
+    {
+      "timestamp": 1764810885.932172,
+      "time_from_start": 5.462701082229614,
+      "gaze_x": 769,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5916796261454462
+    },
+    {
+      "timestamp": 1764810885.974505,
+      "time_from_start": 5.50503396987915,
+      "gaze_x": 769,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5916796261454462
+    },
+    {
+      "timestamp": 1764810886.0153768,
+      "time_from_start": 5.545905828475952,
+      "gaze_x": 769,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5916796261454462
+    },
+    {
+      "timestamp": 1764810886.050714,
+      "time_from_start": 5.58124303817749,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.083956,
+      "time_from_start": 5.614485025405884,
+      "gaze_x": 769,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5916796261454462
+    },
+    {
+      "timestamp": 1764810886.126445,
+      "time_from_start": 5.6569740772247314,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.167845,
+      "time_from_start": 5.698374032974243,
+      "gaze_x": 769,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.5916796261454462
+    },
+    {
+      "timestamp": 1764810886.2027981,
+      "time_from_start": 5.733327150344849,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.237443,
+      "time_from_start": 5.767971992492676,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.2783391,
+      "time_from_start": 5.808868169784546,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.3200681,
+      "time_from_start": 5.850597143173218,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810886.356432,
+      "time_from_start": 5.886960983276367,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.39855,
+      "time_from_start": 5.929079055786133,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.434782,
+      "time_from_start": 5.965311050415039,
+      "gaze_x": 781,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.0782303070438575
+    },
+    {
+      "timestamp": 1764810886.467529,
+      "time_from_start": 5.998058080673218,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.5017312,
+      "time_from_start": 6.032260179519653,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.543631,
+      "time_from_start": 6.074160099029541,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.579503,
+      "time_from_start": 6.110032081604004,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.6141472,
+      "time_from_start": 6.144676208496094,
+      "gaze_x": 781,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.37757970445636
+    },
+    {
+      "timestamp": 1764810886.65079,
+      "time_from_start": 6.181318998336792,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810886.684234,
+      "time_from_start": 6.214762926101685,
+      "gaze_x": 794,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.508895693603081
+    },
+    {
+      "timestamp": 1764810886.725609,
+      "time_from_start": 6.25613808631897,
+      "gaze_x": 794,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.508895693603081
+    },
+    {
+      "timestamp": 1764810886.7677271,
+      "time_from_start": 6.298256158828735,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810886.803672,
+      "time_from_start": 6.334201097488403,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810886.846473,
+      "time_from_start": 6.377002000808716,
+      "gaze_x": 794,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.508895693603081
+    },
+    {
+      "timestamp": 1764810886.888244,
+      "time_from_start": 6.41877293586731,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810886.930252,
+      "time_from_start": 6.460781097412109,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810886.963855,
+      "time_from_start": 6.494384050369263,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.005834,
+      "time_from_start": 6.536363124847412,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.048159,
+      "time_from_start": 6.578687906265259,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.083429,
+      "time_from_start": 6.613958120346069,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.1260679,
+      "time_from_start": 6.656596899032593,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.166333,
+      "time_from_start": 6.696861982345581,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.207712,
+      "time_from_start": 6.738240957260132,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.2428238,
+      "time_from_start": 6.773352861404419,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.2769878,
+      "time_from_start": 6.807516813278198,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.314883,
+      "time_from_start": 6.845412015914917,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810887.349347,
+      "time_from_start": 6.879876136779785,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810887.3974369,
+      "time_from_start": 6.927965879440308,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810887.438825,
+      "time_from_start": 6.969353914260864,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810887.480146,
+      "time_from_start": 7.010674953460693,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810887.516125,
+      "time_from_start": 7.046653985977173,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810887.5582788,
+      "time_from_start": 7.088807821273804,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810887.600238,
+      "time_from_start": 7.130767107009888,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810887.6466901,
+      "time_from_start": 7.1772191524505615,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810887.683149,
+      "time_from_start": 7.2136781215667725,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.7172108,
+      "time_from_start": 7.247739791870117,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.760174,
+      "time_from_start": 7.290703058242798,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.79649,
+      "time_from_start": 7.327018976211548,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.838631,
+      "time_from_start": 7.369159936904907,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.878169,
+      "time_from_start": 7.408698081970215,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.920359,
+      "time_from_start": 7.45088791847229,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.956075,
+      "time_from_start": 7.4866039752960205,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810887.998293,
+      "time_from_start": 7.52882194519043,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.038432,
+      "time_from_start": 7.568960905075073,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810888.080555,
+      "time_from_start": 7.611083984375,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810888.114474,
+      "time_from_start": 7.645003080368042,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810888.14905,
+      "time_from_start": 7.679579019546509,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.192539,
+      "time_from_start": 7.723067998886108,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810888.227409,
+      "time_from_start": 7.757937908172607,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810888.2705212,
+      "time_from_start": 7.801050186157227,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.311611,
+      "time_from_start": 7.842139959335327,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810888.346522,
+      "time_from_start": 7.877051115036011,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.3902762,
+      "time_from_start": 7.920805215835571,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.430462,
+      "time_from_start": 7.960990905761719,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.4726012,
+      "time_from_start": 8.003130197525024,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.509017,
+      "time_from_start": 8.039546012878418,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.557838,
+      "time_from_start": 8.088366985321045,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.598901,
+      "time_from_start": 8.129430055618286,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.6344059,
+      "time_from_start": 8.164934873580933,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810888.669149,
+      "time_from_start": 8.19967794418335,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810888.711466,
+      "time_from_start": 8.241995096206665,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810888.745782,
+      "time_from_start": 8.276310920715332,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810888.788117,
+      "time_from_start": 8.31864595413208,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810888.829634,
+      "time_from_start": 8.36016297340393,
+      "gaze_x": 843,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.38884891011442
+    },
+    {
+      "timestamp": 1764810888.870807,
+      "time_from_start": 8.401335954666138,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810888.911822,
+      "time_from_start": 8.44235110282898,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810888.946743,
+      "time_from_start": 8.477272033691406,
+      "gaze_x": 843,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.969785825497379
+    },
+    {
+      "timestamp": 1764810888.981359,
+      "time_from_start": 8.511888027191162,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.0231738,
+      "time_from_start": 8.55370283126831,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.064244,
+      "time_from_start": 8.594773054122925,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.099575,
+      "time_from_start": 8.630104064941406,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.1415749,
+      "time_from_start": 8.672103881835938,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.184084,
+      "time_from_start": 8.71461296081543,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.2189062,
+      "time_from_start": 8.749435186386108,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810889.259671,
+      "time_from_start": 8.790199995040894,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810889.293098,
+      "time_from_start": 8.82362699508667,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.335861,
+      "time_from_start": 8.866389989852905,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.371225,
+      "time_from_start": 8.901754140853882,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.413603,
+      "time_from_start": 8.944132089614868,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.456116,
+      "time_from_start": 8.986644983291626,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.490585,
+      "time_from_start": 9.021114110946655,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810889.524597,
+      "time_from_start": 9.055125951766968,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.568286,
+      "time_from_start": 9.098814964294434,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.6039271,
+      "time_from_start": 9.134456157684326,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810889.646443,
+      "time_from_start": 9.176971912384033,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810889.688013,
+      "time_from_start": 9.218542098999023,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810889.721351,
+      "time_from_start": 9.251879930496216,
+      "gaze_x": 769,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 17.964178610080193
+    },
+    {
+      "timestamp": 1764810889.756931,
+      "time_from_start": 9.287460088729858,
+      "gaze_x": 1511,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 30.767810303646485
+    },
+    {
+      "timestamp": 1764810889.7993548,
+      "time_from_start": 9.329883813858032,
+      "gaze_x": 669,
+      "gaze_y": 981,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 18.220702090010665
+    },
+    {
+      "timestamp": 1764810889.836756,
+      "time_from_start": 9.367285013198853,
+      "gaze_x": 818,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.509938704003663
+    },
+    {
+      "timestamp": 1764810889.880693,
+      "time_from_start": 9.411221981048584,
+      "gaze_x": 818,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.4560771137009594
+    },
+    {
+      "timestamp": 1764810889.9283352,
+      "time_from_start": 9.458864212036133,
+      "gaze_x": 818,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.7119699555840135
+    },
+    {
+      "timestamp": 1764810889.964063,
+      "time_from_start": 9.49459195137024,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810889.997856,
+      "time_from_start": 9.528384923934937,
+      "gaze_x": 818,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.7538244341727744
+    },
+    {
+      "timestamp": 1764810890.0398378,
+      "time_from_start": 9.570366859436035,
+      "gaze_x": 818,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.7538244341727744
+    },
+    {
+      "timestamp": 1764810890.076997,
+      "time_from_start": 9.607526063919067,
+      "gaze_x": 818,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.1885369002348836
+    },
+    {
+      "timestamp": 1764810890.118619,
+      "time_from_start": 9.649147987365723,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810890.158271,
+      "time_from_start": 9.68880009651184,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810890.198907,
+      "time_from_start": 9.729435920715332,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810890.2352278,
+      "time_from_start": 9.765756845474243,
+      "gaze_x": 831,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.547899412457171
+    },
+    {
+      "timestamp": 1764810890.2694058,
+      "time_from_start": 9.79993486404419,
+      "gaze_x": 831,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.547899412457171
+    },
+    {
+      "timestamp": 1764810890.31231,
+      "time_from_start": 9.842839002609253,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810890.347758,
+      "time_from_start": 9.878287076950073,
+      "gaze_x": 831,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.1262786525867705
+    },
+    {
+      "timestamp": 1764810890.3893042,
+      "time_from_start": 9.919833183288574,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.431788,
+      "time_from_start": 9.962316989898682,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.468777,
+      "time_from_start": 9.999305963516235,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.510025,
+      "time_from_start": 10.04055404663086,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.552438,
+      "time_from_start": 10.082967042922974,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.587869,
+      "time_from_start": 10.118397951126099,
+      "gaze_x": 831,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.7345272282243505
+    },
+    {
+      "timestamp": 1764810890.6281412,
+      "time_from_start": 10.15867018699646,
+      "gaze_x": 818,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.509938704003663
+    },
+    {
+      "timestamp": 1764810890.6714501,
+      "time_from_start": 10.201979160308838,
+      "gaze_x": 818,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.509938704003663
+    },
+    {
+      "timestamp": 1764810890.7123368,
+      "time_from_start": 10.242865800857544,
+      "gaze_x": 818,
+      "gaze_y": 623,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 5.509938704003663
+    },
+    {
+      "timestamp": 1764810890.748082,
+      "time_from_start": 10.278610944747925,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810890.796115,
+      "time_from_start": 10.326643943786621,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810890.844722,
+      "time_from_start": 10.375251054763794,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810890.8860328,
+      "time_from_start": 10.416561841964722,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810890.9277031,
+      "time_from_start": 10.458232164382935,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810890.962834,
+      "time_from_start": 10.49336290359497,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810890.9980009,
+      "time_from_start": 10.52852988243103,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.0396218,
+      "time_from_start": 10.57015085220337,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.079873,
+      "time_from_start": 10.61040210723877,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.116374,
+      "time_from_start": 10.646903038024902,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.1589189,
+      "time_from_start": 10.68944787979126,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.200045,
+      "time_from_start": 10.730574131011963,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.234941,
+      "time_from_start": 10.765470027923584,
+      "gaze_x": 818,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.87304266358203
+    },
+    {
+      "timestamp": 1764810891.2694778,
+      "time_from_start": 10.800006866455078,
+      "gaze_x": 806,
+      "gaze_y": 604,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.672680583214878
+    },
+    {
+      "timestamp": 1764810891.3097768,
+      "time_from_start": 10.840305805206299,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810891.345734,
+      "time_from_start": 10.876262903213501,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.3806431,
+      "time_from_start": 10.911172151565552,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.423716,
+      "time_from_start": 10.95424509048462,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.465089,
+      "time_from_start": 10.995618104934692,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.499976,
+      "time_from_start": 11.030504941940308,
+      "gaze_x": 818,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.259744423072862
+    },
+    {
+      "timestamp": 1764810891.5406442,
+      "time_from_start": 11.071173191070557,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.574791,
+      "time_from_start": 11.10531997680664,
+      "gaze_x": 818,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.7119699555840135
+    },
+    {
+      "timestamp": 1764810891.610093,
+      "time_from_start": 11.14062213897705,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.645229,
+      "time_from_start": 11.175758123397827,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.6874611,
+      "time_from_start": 11.217990159988403,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.72965,
+      "time_from_start": 11.260179042816162,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.776649,
+      "time_from_start": 11.307178020477295,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.81313,
+      "time_from_start": 11.343658924102783,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.856086,
+      "time_from_start": 11.38661503791809,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810891.899571,
+      "time_from_start": 11.430099964141846,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810891.9336052,
+      "time_from_start": 11.464134216308594,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810891.981429,
+      "time_from_start": 11.511958122253418,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.0223172,
+      "time_from_start": 11.552846193313599,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.06405,
+      "time_from_start": 11.594578981399536,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.100478,
+      "time_from_start": 11.631006956100464,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.1422238,
+      "time_from_start": 11.672752857208252,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.184601,
+      "time_from_start": 11.715130090713501,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.232047,
+      "time_from_start": 11.76257610321045,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.266908,
+      "time_from_start": 11.797436952590942,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.301406,
+      "time_from_start": 11.831934928894043,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.344265,
+      "time_from_start": 11.874794006347656,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.3800802,
+      "time_from_start": 11.910609245300293,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.423061,
+      "time_from_start": 11.953589916229248,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.462222,
+      "time_from_start": 11.992751121520996,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.5041301,
+      "time_from_start": 12.034659147262573,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.539329,
+      "time_from_start": 12.069858074188232,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810892.573715,
+      "time_from_start": 12.104243993759155,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.6163242,
+      "time_from_start": 12.14685320854187,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.6515899,
+      "time_from_start": 12.182118892669678,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.692537,
+      "time_from_start": 12.223066091537476,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810892.733692,
+      "time_from_start": 12.264220952987671,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.775999,
+      "time_from_start": 12.306528091430664,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.8133671,
+      "time_from_start": 12.34389615058899,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810892.855201,
+      "time_from_start": 12.385730028152466,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.90304,
+      "time_from_start": 12.433568954467773,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.9443789,
+      "time_from_start": 12.474907875061035,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810892.980011,
+      "time_from_start": 12.510540008544922,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.02212,
+      "time_from_start": 12.552649021148682,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.062928,
+      "time_from_start": 12.593456983566284,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.098523,
+      "time_from_start": 12.629051923751831,
+      "gaze_x": 781,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.681251356549544
+    },
+    {
+      "timestamp": 1764810893.1392581,
+      "time_from_start": 12.669787168502808,
+      "gaze_x": 769,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.9196105901338107
+    },
+    {
+      "timestamp": 1764810893.172663,
+      "time_from_start": 12.703191995620728,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.216115,
+      "time_from_start": 12.746644020080566,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.2507799,
+      "time_from_start": 12.781308889389038,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.285315,
+      "time_from_start": 12.815844058990479,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.328476,
+      "time_from_start": 12.859004974365234,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810893.362657,
+      "time_from_start": 12.893186092376709,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.3964942,
+      "time_from_start": 12.92702317237854,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.438823,
+      "time_from_start": 12.969352006912231,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810893.4804869,
+      "time_from_start": 13.011015892028809,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810893.515289,
+      "time_from_start": 13.045818090438843,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810893.556679,
+      "time_from_start": 13.087208032608032,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810893.5974112,
+      "time_from_start": 13.12794017791748,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810893.6391098,
+      "time_from_start": 13.169638872146606,
+      "gaze_x": 794,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.8368235526716257
+    },
+    {
+      "timestamp": 1764810893.680201,
+      "time_from_start": 13.210730075836182,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.7158139,
+      "time_from_start": 13.246342897415161,
+      "gaze_x": 781,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.0293126572999
+    },
+    {
+      "timestamp": 1764810893.758646,
+      "time_from_start": 13.289175033569336,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810893.794125,
+      "time_from_start": 13.32465410232544,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.834709,
+      "time_from_start": 13.365237951278687,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810893.868777,
+      "time_from_start": 13.399306058883667,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810893.912534,
+      "time_from_start": 13.443063020706177,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810893.947871,
+      "time_from_start": 13.478399991989136,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810893.990429,
+      "time_from_start": 13.520957946777344,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810894.0314791,
+      "time_from_start": 13.562008142471313,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.066592,
+      "time_from_start": 13.597121000289917,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.1010182,
+      "time_from_start": 13.631547212600708,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.138013,
+      "time_from_start": 13.66854190826416,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.172118,
+      "time_from_start": 13.702646970748901,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.2142138,
+      "time_from_start": 13.74474287033081,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810894.255681,
+      "time_from_start": 13.786210060119629,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.2962592,
+      "time_from_start": 13.826788187026978,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810894.3319502,
+      "time_from_start": 13.862479209899902,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.3756359,
+      "time_from_start": 13.90616488456726,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.410256,
+      "time_from_start": 13.940784931182861,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.4517848,
+      "time_from_start": 13.982313871383667,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.501894,
+      "time_from_start": 14.03242301940918,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810894.543835,
+      "time_from_start": 14.074363946914673,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.57844,
+      "time_from_start": 14.10896897315979,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.613716,
+      "time_from_start": 14.144244909286499,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.6566799,
+      "time_from_start": 14.187208890914917,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810894.6925912,
+      "time_from_start": 14.223120212554932,
+      "gaze_x": 806,
+      "gaze_y": 585,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 4.02845555096133
+    },
+    {
+      "timestamp": 1764810894.732928,
+      "time_from_start": 14.26345705986023,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.7747,
+      "time_from_start": 14.30522894859314,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.8153222,
+      "time_from_start": 14.345851182937622,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810894.8514218,
+      "time_from_start": 14.381950855255127,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810894.885866,
+      "time_from_start": 14.41639494895935,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810894.928189,
+      "time_from_start": 14.458718061447144,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810894.9756758,
+      "time_from_start": 14.506204843521118,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810895.0110579,
+      "time_from_start": 14.541586875915527,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810895.0531468,
+      "time_from_start": 14.583675861358643,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810895.0961301,
+      "time_from_start": 14.626659154891968,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.131726,
+      "time_from_start": 14.662255048751831,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810895.166083,
+      "time_from_start": 14.696612119674683,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810895.2064629,
+      "time_from_start": 14.736991882324219,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.2484531,
+      "time_from_start": 14.778982162475586,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810895.2834508,
+      "time_from_start": 14.813979864120483,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810895.3262239,
+      "time_from_start": 14.856752872467041,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.362077,
+      "time_from_start": 14.892606019973755,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.396794,
+      "time_from_start": 14.92732310295105,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810895.4373639,
+      "time_from_start": 14.96789288520813,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.4790678,
+      "time_from_start": 15.009596824645996,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.520148,
+      "time_from_start": 15.050677061080933,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.555684,
+      "time_from_start": 15.086213111877441,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810895.598345,
+      "time_from_start": 15.128874063491821,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.645616,
+      "time_from_start": 15.176145076751709,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.681686,
+      "time_from_start": 15.212214946746826,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.71565,
+      "time_from_start": 15.246179103851318,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.75015,
+      "time_from_start": 15.280678987503052,
+      "gaze_x": 781,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3575436333358577
+    },
+    {
+      "timestamp": 1764810895.785311,
+      "time_from_start": 15.315840005874634,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.819145,
+      "time_from_start": 15.349673986434937,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.869218,
+      "time_from_start": 15.399747133255005,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.910858,
+      "time_from_start": 15.441386938095093,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.952378,
+      "time_from_start": 15.482907056808472,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810895.988657,
+      "time_from_start": 15.519186019897461,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810896.031158,
+      "time_from_start": 15.561686992645264,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.0784872,
+      "time_from_start": 15.609016180038452,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810896.120558,
+      "time_from_start": 15.651087045669556,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810896.156728,
+      "time_from_start": 15.687257051467896,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810896.19888,
+      "time_from_start": 15.729408979415894,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810896.235704,
+      "time_from_start": 15.766232967376709,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.270764,
+      "time_from_start": 15.801293134689331,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810896.304424,
+      "time_from_start": 15.83495306968689,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.340299,
+      "time_from_start": 15.870827913284302,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810896.381949,
+      "time_from_start": 15.912477970123291,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.418439,
+      "time_from_start": 15.948967933654785,
+      "gaze_x": 781,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810896.4526951,
+      "time_from_start": 15.983224153518677,
+      "gaze_x": 781,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810896.4872289,
+      "time_from_start": 16.017757892608643,
+      "gaze_x": 781,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.723353513575618
+    },
+    {
+      "timestamp": 1764810896.52915,
+      "time_from_start": 16.05967903137207,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.575934,
+      "time_from_start": 16.106462955474854,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.610904,
+      "time_from_start": 16.141433000564575,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.6455948,
+      "time_from_start": 16.17612385749817,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810896.68864,
+      "time_from_start": 16.21916913986206,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810896.72359,
+      "time_from_start": 16.25411891937256,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.758048,
+      "time_from_start": 16.28857707977295,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810896.798896,
+      "time_from_start": 16.32942509651184,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.840364,
+      "time_from_start": 16.370893001556396,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.875819,
+      "time_from_start": 16.40634799003601,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.909627,
+      "time_from_start": 16.44015598297119,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810896.951995,
+      "time_from_start": 16.482523918151855,
+      "gaze_x": 781,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810896.987482,
+      "time_from_start": 16.51801109313965,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.0280168,
+      "time_from_start": 16.5585458278656,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.0692039,
+      "time_from_start": 16.599732875823975,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.112096,
+      "time_from_start": 16.642625093460083,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810897.147434,
+      "time_from_start": 16.67796301841736,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.1811452,
+      "time_from_start": 16.711674213409424,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810897.2250502,
+      "time_from_start": 16.755579233169556,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.258977,
+      "time_from_start": 16.78950595855713,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810897.294076,
+      "time_from_start": 16.824604988098145,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.335864,
+      "time_from_start": 16.866393089294434,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.372473,
+      "time_from_start": 16.9030020236969,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.414211,
+      "time_from_start": 16.944740056991577,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.455952,
+      "time_from_start": 16.986480951309204,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.496237,
+      "time_from_start": 17.026766061782837,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.531876,
+      "time_from_start": 17.062405109405518,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810897.566397,
+      "time_from_start": 17.096925973892212,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.608432,
+      "time_from_start": 17.13896107673645,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810897.644168,
+      "time_from_start": 17.174696922302246,
+      "gaze_x": 794,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.216896172492059
+    },
+    {
+      "timestamp": 1764810897.6858659,
+      "time_from_start": 17.216394901275635,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810897.725058,
+      "time_from_start": 17.255587100982666,
+      "gaze_x": 794,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.5944984654044667
+    },
+    {
+      "timestamp": 1764810897.76882,
+      "time_from_start": 17.299349069595337,
+      "gaze_x": 806,
+      "gaze_y": 567,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 3.4435944293087855
+    },
+    {
+      "timestamp": 1764810897.8047411,
+      "time_from_start": 17.335270166397095,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810897.846543,
+      "time_from_start": 17.37707209587097,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810897.8886888,
+      "time_from_start": 17.419217824935913,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810897.923435,
+      "time_from_start": 17.45396399497986,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810897.9645061,
+      "time_from_start": 17.49503517150879,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810898.005855,
+      "time_from_start": 17.536384105682373,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810898.049761,
+      "time_from_start": 17.58029007911682,
+      "gaze_x": 806,
+      "gaze_y": 548,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.871160972386263
+    },
+    {
+      "timestamp": 1764810898.083889,
+      "time_from_start": 17.614418029785156,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810898.118403,
+      "time_from_start": 17.648931980133057,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810898.15837,
+      "time_from_start": 17.688899040222168,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.1999931,
+      "time_from_start": 17.73052215576172,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.2359831,
+      "time_from_start": 17.766512155532837,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.278856,
+      "time_from_start": 17.809385061264038,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.320862,
+      "time_from_start": 17.851391077041626,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.355128,
+      "time_from_start": 17.88565707206726,
+      "gaze_x": 794,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.035827129505988
+    },
+    {
+      "timestamp": 1764810898.3887758,
+      "time_from_start": 17.919304847717285,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810898.432205,
+      "time_from_start": 17.96273398399353,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.4670641,
+      "time_from_start": 17.99759316444397,
+      "gaze_x": 806,
+      "gaze_y": 529,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.3787234676986837
+    },
+    {
+      "timestamp": 1764810898.5015512,
+      "time_from_start": 18.03208017349243,
+      "gaze_x": 818,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.4560771137009594
+    },
+    {
+      "timestamp": 1764810898.538226,
+      "time_from_start": 18.06875491142273,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.572665,
+      "time_from_start": 18.103193998336792,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.613546,
+      "time_from_start": 18.1440749168396,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.656372,
+      "time_from_start": 18.186901092529297,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.6911628,
+      "time_from_start": 18.221691846847534,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810898.725863,
+      "time_from_start": 18.256392002105713,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810898.768224,
+      "time_from_start": 18.298753023147583,
+      "gaze_x": 806,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 2.026296247797695
+    },
+    {
+      "timestamp": 1764810898.8038132,
+      "time_from_start": 18.33434224128723,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810898.844393,
+      "time_from_start": 18.374922037124634,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810898.88644,
+      "time_from_start": 18.416969060897827,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810898.9279418,
+      "time_from_start": 18.458470821380615,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810898.964169,
+      "time_from_start": 18.49469804763794,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810899.0066502,
+      "time_from_start": 18.537179231643677,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.048481,
+      "time_from_start": 18.579010009765625,
+      "gaze_x": 794,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5931413503436294
+    },
+    {
+      "timestamp": 1764810899.082515,
+      "time_from_start": 18.613044023513794,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.117125,
+      "time_from_start": 18.647654056549072,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.160494,
+      "time_from_start": 18.691023111343384,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810899.1961741,
+      "time_from_start": 18.72670316696167,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.2381618,
+      "time_from_start": 18.768690824508667,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.280729,
+      "time_from_start": 18.81125807762146,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.3153899,
+      "time_from_start": 18.845918893814087,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.357525,
+      "time_from_start": 18.888054132461548,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.400897,
+      "time_from_start": 18.93142604827881,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.435699,
+      "time_from_start": 18.966228008270264,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.478317,
+      "time_from_start": 19.008846044540405,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.526276,
+      "time_from_start": 19.05680513381958,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.56763,
+      "time_from_start": 19.098159074783325,
+      "gaze_x": 794,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.5931413503436294
+    },
+    {
+      "timestamp": 1764810899.6063092,
+      "time_from_start": 19.13683819770813,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.6415129,
+      "time_from_start": 19.17204189300537,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.674967,
+      "time_from_start": 19.205496072769165,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.71023,
+      "time_from_start": 19.240759134292603,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.7581902,
+      "time_from_start": 19.288719177246094,
+      "gaze_x": 781,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810899.798675,
+      "time_from_start": 19.329204082489014,
+      "gaze_x": 794,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.4398501151358654
+    },
+    {
+      "timestamp": 1764810899.840179,
+      "time_from_start": 19.370707988739014,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.8758368,
+      "time_from_start": 19.406365871429443,
+      "gaze_x": 781,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810899.9097059,
+      "time_from_start": 19.440234899520874,
+      "gaze_x": 781,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810899.952371,
+      "time_from_start": 19.4828999042511,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810899.986122,
+      "time_from_start": 19.516650915145874,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.0205429,
+      "time_from_start": 19.551071882247925,
+      "gaze_x": 769,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8414287778572314
+    },
+    {
+      "timestamp": 1764810900.062989,
+      "time_from_start": 19.593518018722534,
+      "gaze_x": 781,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1673420592767623
+    },
+    {
+      "timestamp": 1764810900.099582,
+      "time_from_start": 19.6301109790802,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.141928,
+      "time_from_start": 19.672456979751587,
+      "gaze_x": 769,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764810900.1828969,
+      "time_from_start": 19.713425874710083,
+      "gaze_x": 769,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.4926718778864129
+    },
+    {
+      "timestamp": 1764810900.222157,
+      "time_from_start": 19.752686023712158,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.264191,
+      "time_from_start": 19.7947199344635,
+      "gaze_x": 781,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.1898744580051968
+    },
+    {
+      "timestamp": 1764810900.305728,
+      "time_from_start": 19.836256980895996,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.341373,
+      "time_from_start": 19.871901988983154,
+      "gaze_x": 794,
+      "gaze_y": 510,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 1.6097166672405248
+    },
+    {
+      "timestamp": 1764810900.3762188,
+      "time_from_start": 19.906747817993164,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.411697,
+      "time_from_start": 19.94222593307495,
+      "gaze_x": 781,
+      "gaze_y": 491,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.9473829215302614
+    },
+    {
+      "timestamp": 1764810900.451972,
+      "time_from_start": 19.98250102996826,
+      "gaze_x": 769,
+      "gaze_y": 473,
+      "target_x": 756,
+      "target_y": 491,
+      "deviation_degrees": 0.8414287778572314
+    }
+  ],
+  "gaze_path": [
+    [
+      1764810880506.698,
+      657,
+      454
+    ],
+    [
+      1764810880555.0918,
+      744,
+      416
+    ],
+    [
+      1764810880595.298,
+      731,
+      473
+    ],
+    [
+      1764810880629.307,
+      731,
+      397
+    ],
+    [
+      1764810880666.546,
+      744,
+      397
+    ],
+    [
+      1764810880700.8892,
+      731,
+      416
+    ],
+    [
+      1764810880743.707,
+      744,
+      378
+    ],
+    [
+      1764810880791.7449,
+      744,
+      378
+    ],
+    [
+      1764810880826.944,
+      731,
+      454
+    ],
+    [
+      1764810880861.071,
+      744,
+      416
+    ],
+    [
+      1764810880903.459,
+      744,
+      416
+    ],
+    [
+      1764810880939.678,
+      744,
+      378
+    ],
+    [
+      1764810880981.954,
+      744,
+      397
+    ],
+    [
+      1764810881021.686,
+      744,
+      454
+    ],
+    [
+      1764810881063.4617,
+      744,
+      416
+    ],
+    [
+      1764810881098.4531,
+      731,
+      473
+    ],
+    [
+      1764810881133.353,
+      719,
+      454
+    ],
+    [
+      1764810881170.266,
+      719,
+      510
+    ],
+    [
+      1764810881204.9768,
+      719,
+      454
+    ],
+    [
+      1764810881245.486,
+      719,
+      435
+    ],
+    [
+      1764810881288.154,
+      719,
+      454
+    ],
+    [
+      1764810881324.231,
+      707,
+      454
+    ],
+    [
+      1764810881367.91,
+      719,
+      510
+    ],
+    [
+      1764810881402.6409,
+      731,
+      473
+    ],
+    [
+      1764810881445.759,
+      719,
+      454
+    ],
+    [
+      1764810881485.709,
+      719,
+      435
+    ],
+    [
+      1764810881528.107,
+      731,
+      529
+    ],
+    [
+      1764810881562.983,
+      719,
+      435
+    ],
+    [
+      1764810881605.4148,
+      719,
+      473
+    ],
+    [
+      1764810881647.476,
+      731,
+      473
+    ],
+    [
+      1764810881683.441,
+      731,
+      510
+    ],
+    [
+      1764810881723.521,
+      731,
+      454
+    ],
+    [
+      1764810881766.1372,
+      731,
+      510
+    ],
+    [
+      1764810881805.92,
+      731,
+      454
+    ],
+    [
+      1764810881842.979,
+      731,
+      473
+    ],
+    [
+      1764810881877.514,
+      731,
+      454
+    ],
+    [
+      1764810881920.341,
+      731,
+      454
+    ],
+    [
+      1764810881954.988,
+      731,
+      510
+    ],
+    [
+      1764810881997.312,
+      731,
+      435
+    ],
+    [
+      1764810882038.23,
+      744,
+      510
+    ],
+    [
+      1764810882080.2031,
+      731,
+      473
+    ],
+    [
+      1764810882114.952,
+      744,
+      454
+    ],
+    [
+      1764810882156.321,
+      731,
+      435
+    ],
+    [
+      1764810882197.8691,
+      744,
+      435
+    ],
+    [
+      1764810882237.988,
+      731,
+      435
+    ],
+    [
+      1764810882273.8882,
+      731,
+      435
+    ],
+    [
+      1764810882308.439,
+      731,
+      416
+    ],
+    [
+      1764810882350.5093,
+      731,
+      510
+    ],
+    [
+      1764810882385.455,
+      731,
+      416
+    ],
+    [
+      1764810882419.351,
+      744,
+      416
+    ],
+    [
+      1764810882453.9832,
+      744,
+      454
+    ],
+    [
+      1764810882496.267,
+      731,
+      510
+    ],
+    [
+      1764810882531.9163,
+      744,
+      510
+    ],
+    [
+      1764810882574.2478,
+      731,
+      473
+    ],
+    [
+      1764810882613.566,
+      731,
+      435
+    ],
+    [
+      1764810882655.9097,
+      731,
+      435
+    ],
+    [
+      1764810882690.987,
+      731,
+      416
+    ],
+    [
+      1764810882733.292,
+      744,
+      510
+    ],
+    [
+      1764810882773.876,
+      744,
+      510
+    ],
+    [
+      1764810882816.04,
+      744,
+      454
+    ],
+    [
+      1764810882850.365,
+      744,
+      454
+    ],
+    [
+      1764810882884.751,
+      756,
+      454
+    ],
+    [
+      1764810882921.834,
+      744,
+      416
+    ],
+    [
+      1764810882956.7612,
+      744,
+      416
+    ],
+    [
+      1764810882999.72,
+      756,
+      454
+    ],
+    [
+      1764810883036.67,
+      744,
+      491
+    ],
+    [
+      1764810883077.1,
+      744,
+      454
+    ],
+    [
+      1764810883113.683,
+      744,
+      454
+    ],
+    [
+      1764810883149.5513,
+      756,
+      454
+    ],
+    [
+      1764810883191.524,
+      756,
+      454
+    ],
+    [
+      1764810883228.186,
+      756,
+      454
+    ],
+    [
+      1764810883270.577,
+      744,
+      454
+    ],
+    [
+      1764810883310.182,
+      744,
+      454
+    ],
+    [
+      1764810883351.63,
+      744,
+      473
+    ],
+    [
+      1764810883386.848,
+      744,
+      454
+    ],
+    [
+      1764810883420.979,
+      756,
+      454
+    ],
+    [
+      1764810883464.222,
+      756,
+      454
+    ],
+    [
+      1764810883498.9878,
+      756,
+      510
+    ],
+    [
+      1764810883532.0188,
+      756,
+      416
+    ],
+    [
+      1764810883576.0059,
+      756,
+      510
+    ],
+    [
+      1764810883610.857,
+      756,
+      435
+    ],
+    [
+      1764810883645.3582,
+      756,
+      510
+    ],
+    [
+      1764810883688.094,
+      744,
+      473
+    ],
+    [
+      1764810883723.219,
+      744,
+      473
+    ],
+    [
+      1764810883763.8901,
+      756,
+      473
+    ],
+    [
+      1764810883806.562,
+      756,
+      473
+    ],
+    [
+      1764810883847.428,
+      756,
+      473
+    ],
+    [
+      1764810883883.366,
+      744,
+      454
+    ],
+    [
+      1764810883925.77,
+      756,
+      491
+    ],
+    [
+      1764810883968.28,
+      756,
+      529
+    ],
+    [
+      1764810884002.176,
+      744,
+      435
+    ],
+    [
+      1764810884045.64,
+      744,
+      435
+    ],
+    [
+      1764810884088.073,
+      756,
+      529
+    ],
+    [
+      1764810884124.157,
+      756,
+      491
+    ],
+    [
+      1764810884166.5,
+      744,
+      435
+    ],
+    [
+      1764810884214.007,
+      756,
+      529
+    ],
+    [
+      1764810884255.907,
+      756,
+      473
+    ],
+    [
+      1764810884291.07,
+      756,
+      529
+    ],
+    [
+      1764810884333.4028,
+      744,
+      435
+    ],
+    [
+      1764810884375.888,
+      744,
+      473
+    ],
+    [
+      1764810884410.556,
+      756,
+      491
+    ],
+    [
+      1764810884451.139,
+      756,
+      435
+    ],
+    [
+      1764810884494.0413,
+      756,
+      529
+    ],
+    [
+      1764810884536.178,
+      756,
+      491
+    ],
+    [
+      1764810884571.979,
+      756,
+      510
+    ],
+    [
+      1764810884614.467,
+      756,
+      510
+    ],
+    [
+      1764810884655.363,
+      756,
+      454
+    ],
+    [
+      1764810884689.919,
+      756,
+      510
+    ],
+    [
+      1764810884724.9438,
+      756,
+      491
+    ],
+    [
+      1764810884766.748,
+      756,
+      491
+    ],
+    [
+      1764810884803.096,
+      756,
+      510
+    ],
+    [
+      1764810884837.3901,
+      756,
+      510
+    ],
+    [
+      1764810884874.4111,
+      756,
+      548
+    ],
+    [
+      1764810884907.702,
+      756,
+      510
+    ],
+    [
+      1764810884951.124,
+      756,
+      585
+    ],
+    [
+      1764810884991.979,
+      756,
+      585
+    ],
+    [
+      1764810885028.929,
+      756,
+      604
+    ],
+    [
+      1764810885070.5369,
+      756,
+      604
+    ],
+    [
+      1764810885112.5068,
+      756,
+      623
+    ],
+    [
+      1764810885152.9238,
+      756,
+      623
+    ],
+    [
+      1764810885188.301,
+      744,
+      623
+    ],
+    [
+      1764810885231.6,
+      744,
+      623
+    ],
+    [
+      1764810885266.7808,
+      744,
+      641
+    ],
+    [
+      1764810885301.3901,
+      756,
+      641
+    ],
+    [
+      1764810885344.356,
+      744,
+      641
+    ],
+    [
+      1764810885378.253,
+      756,
+      641
+    ],
+    [
+      1764810885413.406,
+      756,
+      641
+    ],
+    [
+      1764810885456.6138,
+      756,
+      641
+    ],
+    [
+      1764810885491.6138,
+      744,
+      623
+    ],
+    [
+      1764810885540.1753,
+      756,
+      641
+    ],
+    [
+      1764810885589.7961,
+      756,
+      623
+    ],
+    [
+      1764810885631.827,
+      756,
+      623
+    ],
+    [
+      1764810885667.278,
+      756,
+      623
+    ],
+    [
+      1764810885701.2588,
+      756,
+      623
+    ],
+    [
+      1764810885744.3142,
+      769,
+      623
+    ],
+    [
+      1764810885778.665,
+      769,
+      623
+    ],
+    [
+      1764810885820.205,
+      756,
+      604
+    ],
+    [
+      1764810885861.2878,
+      756,
+      604
+    ],
+    [
+      1764810885898.0588,
+      769,
+      604
+    ],
+    [
+      1764810885932.172,
+      769,
+      585
+    ],
+    [
+      1764810885974.505,
+      769,
+      585
+    ],
+    [
+      1764810886015.3767,
+      769,
+      585
+    ],
+    [
+      1764810886050.714,
+      781,
+      585
+    ],
+    [
+      1764810886083.956,
+      769,
+      585
+    ],
+    [
+      1764810886126.445,
+      781,
+      585
+    ],
+    [
+      1764810886167.845,
+      769,
+      585
+    ],
+    [
+      1764810886202.798,
+      781,
+      585
+    ],
+    [
+      1764810886237.4429,
+      781,
+      585
+    ],
+    [
+      1764810886278.339,
+      781,
+      585
+    ],
+    [
+      1764810886320.068,
+      781,
+      585
+    ],
+    [
+      1764810886356.432,
+      781,
+      604
+    ],
+    [
+      1764810886398.55,
+      781,
+      604
+    ],
+    [
+      1764810886434.782,
+      781,
+      623
+    ],
+    [
+      1764810886467.529,
+      781,
+      604
+    ],
+    [
+      1764810886501.7312,
+      781,
+      604
+    ],
+    [
+      1764810886543.631,
+      781,
+      604
+    ],
+    [
+      1764810886579.5032,
+      781,
+      604
+    ],
+    [
+      1764810886614.1472,
+      781,
+      604
+    ],
+    [
+      1764810886650.79,
+      794,
+      585
+    ],
+    [
+      1764810886684.234,
+      794,
+      604
+    ],
+    [
+      1764810886725.6091,
+      794,
+      604
+    ],
+    [
+      1764810886767.727,
+      794,
+      585
+    ],
+    [
+      1764810886803.672,
+      794,
+      585
+    ],
+    [
+      1764810886846.473,
+      794,
+      604
+    ],
+    [
+      1764810886888.244,
+      794,
+      585
+    ],
+    [
+      1764810886930.252,
+      794,
+      585
+    ],
+    [
+      1764810886963.855,
+      794,
+      585
+    ],
+    [
+      1764810887005.834,
+      794,
+      585
+    ],
+    [
+      1764810887048.159,
+      794,
+      585
+    ],
+    [
+      1764810887083.4292,
+      794,
+      585
+    ],
+    [
+      1764810887126.0679,
+      794,
+      585
+    ],
+    [
+      1764810887166.333,
+      794,
+      585
+    ],
+    [
+      1764810887207.712,
+      794,
+      585
+    ],
+    [
+      1764810887242.8237,
+      794,
+      585
+    ],
+    [
+      1764810887276.9878,
+      794,
+      585
+    ],
+    [
+      1764810887314.883,
+      794,
+      585
+    ],
+    [
+      1764810887349.3472,
+      806,
+      604
+    ],
+    [
+      1764810887397.4368,
+      806,
+      604
+    ],
+    [
+      1764810887438.825,
+      806,
+      585
+    ],
+    [
+      1764810887480.146,
+      806,
+      604
+    ],
+    [
+      1764810887516.125,
+      806,
+      585
+    ],
+    [
+      1764810887558.2788,
+      806,
+      585
+    ],
+    [
+      1764810887600.238,
+      806,
+      585
+    ],
+    [
+      1764810887646.6902,
+      818,
+      585
+    ],
+    [
+      1764810887683.1492,
+      818,
+      604
+    ],
+    [
+      1764810887717.2107,
+      818,
+      604
+    ],
+    [
+      1764810887760.174,
+      818,
+      604
+    ],
+    [
+      1764810887796.49,
+      818,
+      604
+    ],
+    [
+      1764810887838.6309,
+      818,
+      604
+    ],
+    [
+      1764810887878.169,
+      818,
+      604
+    ],
+    [
+      1764810887920.359,
+      818,
+      604
+    ],
+    [
+      1764810887956.075,
+      818,
+      604
+    ],
+    [
+      1764810887998.293,
+      818,
+      604
+    ],
+    [
+      1764810888038.432,
+      806,
+      604
+    ],
+    [
+      1764810888080.555,
+      806,
+      604
+    ],
+    [
+      1764810888114.474,
+      806,
+      604
+    ],
+    [
+      1764810888149.05,
+      818,
+      604
+    ],
+    [
+      1764810888192.539,
+      806,
+      604
+    ],
+    [
+      1764810888227.409,
+      806,
+      604
+    ],
+    [
+      1764810888270.5212,
+      818,
+      604
+    ],
+    [
+      1764810888311.6108,
+      806,
+      585
+    ],
+    [
+      1764810888346.522,
+      818,
+      604
+    ],
+    [
+      1764810888390.2761,
+      818,
+      604
+    ],
+    [
+      1764810888430.462,
+      818,
+      604
+    ],
+    [
+      1764810888472.601,
+      818,
+      604
+    ],
+    [
+      1764810888509.017,
+      818,
+      604
+    ],
+    [
+      1764810888557.838,
+      818,
+      604
+    ],
+    [
+      1764810888598.9011,
+      818,
+      604
+    ],
+    [
+      1764810888634.4058,
+      818,
+      585
+    ],
+    [
+      1764810888669.149,
+      818,
+      585
+    ],
+    [
+      1764810888711.466,
+      818,
+      585
+    ],
+    [
+      1764810888745.782,
+      818,
+      585
+    ],
+    [
+      1764810888788.117,
+      818,
+      604
+    ],
+    [
+      1764810888829.634,
+      843,
+      604
+    ],
+    [
+      1764810888870.807,
+      831,
+      604
+    ],
+    [
+      1764810888911.822,
+      831,
+      604
+    ],
+    [
+      1764810888946.743,
+      843,
+      623
+    ],
+    [
+      1764810888981.359,
+      831,
+      604
+    ],
+    [
+      1764810889023.1738,
+      831,
+      604
+    ],
+    [
+      1764810889064.2441,
+      831,
+      604
+    ],
+    [
+      1764810889099.575,
+      831,
+      604
+    ],
+    [
+      1764810889141.575,
+      831,
+      604
+    ],
+    [
+      1764810889184.084,
+      831,
+      604
+    ],
+    [
+      1764810889218.9062,
+      831,
+      623
+    ],
+    [
+      1764810889259.671,
+      831,
+      604
+    ],
+    [
+      1764810889293.098,
+      818,
+      604
+    ],
+    [
+      1764810889335.861,
+      818,
+      604
+    ],
+    [
+      1764810889371.225,
+      818,
+      604
+    ],
+    [
+      1764810889413.603,
+      818,
+      604
+    ],
+    [
+      1764810889456.116,
+      818,
+      604
+    ],
+    [
+      1764810889490.5852,
+      806,
+      585
+    ],
+    [
+      1764810889524.597,
+      818,
+      604
+    ],
+    [
+      1764810889568.286,
+      818,
+      604
+    ],
+    [
+      1764810889603.9272,
+      818,
+      604
+    ],
+    [
+      1764810889646.4429,
+      806,
+      604
+    ],
+    [
+      1764810889688.0132,
+      818,
+      585
+    ],
+    [
+      1764810889721.3508,
+      769,
+      981
+    ],
+    [
+      1764810889756.9312,
+      1511,
+      981
+    ],
+    [
+      1764810889799.3547,
+      669,
+      981
+    ],
+    [
+      1764810889836.756,
+      818,
+      623
+    ],
+    [
+      1764810889880.6929,
+      818,
+      510
+    ],
+    [
+      1764810889928.3352,
+      818,
+      567
+    ],
+    [
+      1764810889964.063,
+      818,
+      585
+    ],
+    [
+      1764810889997.856,
+      818,
+      529
+    ],
+    [
+      1764810890039.838,
+      818,
+      529
+    ],
+    [
+      1764810890076.997,
+      818,
+      548
+    ],
+    [
+      1764810890118.619,
+      818,
+      585
+    ],
+    [
+      1764810890158.271,
+      831,
+      604
+    ],
+    [
+      1764810890198.907,
+      831,
+      604
+    ],
+    [
+      1764810890235.2278,
+      831,
+      585
+    ],
+    [
+      1764810890269.4058,
+      831,
+      585
+    ],
+    [
+      1764810890312.31,
+      831,
+      604
+    ],
+    [
+      1764810890347.758,
+      831,
+      604
+    ],
+    [
+      1764810890389.3042,
+      831,
+      623
+    ],
+    [
+      1764810890431.788,
+      831,
+      623
+    ],
+    [
+      1764810890468.7769,
+      831,
+      623
+    ],
+    [
+      1764810890510.025,
+      831,
+      623
+    ],
+    [
+      1764810890552.438,
+      831,
+      623
+    ],
+    [
+      1764810890587.869,
+      831,
+      623
+    ],
+    [
+      1764810890628.141,
+      818,
+      623
+    ],
+    [
+      1764810890671.4502,
+      818,
+      623
+    ],
+    [
+      1764810890712.3367,
+      818,
+      623
+    ],
+    [
+      1764810890748.082,
+      818,
+      604
+    ],
+    [
+      1764810890796.115,
+      818,
+      604
+    ],
+    [
+      1764810890844.722,
+      818,
+      585
+    ],
+    [
+      1764810890886.0327,
+      818,
+      604
+    ],
+    [
+      1764810890927.7031,
+      806,
+      585
+    ],
+    [
+      1764810890962.834,
+      818,
+      585
+    ],
+    [
+      1764810890998.001,
+      818,
+      585
+    ],
+    [
+      1764810891039.6218,
+      818,
+      585
+    ],
+    [
+      1764810891079.873,
+      818,
+      585
+    ],
+    [
+      1764810891116.374,
+      818,
+      585
+    ],
+    [
+      1764810891158.919,
+      818,
+      585
+    ],
+    [
+      1764810891200.0452,
+      818,
+      585
+    ],
+    [
+      1764810891234.941,
+      818,
+      604
+    ],
+    [
+      1764810891269.4778,
+      806,
+      604
+    ],
+    [
+      1764810891309.7769,
+      806,
+      585
+    ],
+    [
+      1764810891345.734,
+      818,
+      585
+    ],
+    [
+      1764810891380.643,
+      818,
+      585
+    ],
+    [
+      1764810891423.716,
+      818,
+      585
+    ],
+    [
+      1764810891465.089,
+      818,
+      585
+    ],
+    [
+      1764810891499.9758,
+      818,
+      585
+    ],
+    [
+      1764810891540.6443,
+      806,
+      567
+    ],
+    [
+      1764810891574.791,
+      818,
+      567
+    ],
+    [
+      1764810891610.093,
+      806,
+      567
+    ],
+    [
+      1764810891645.229,
+      806,
+      567
+    ],
+    [
+      1764810891687.4612,
+      806,
+      567
+    ],
+    [
+      1764810891729.65,
+      806,
+      567
+    ],
+    [
+      1764810891776.649,
+      806,
+      567
+    ],
+    [
+      1764810891813.13,
+      806,
+      567
+    ],
+    [
+      1764810891856.086,
+      806,
+      567
+    ],
+    [
+      1764810891899.571,
+      806,
+      585
+    ],
+    [
+      1764810891933.6052,
+      794,
+      585
+    ],
+    [
+      1764810891981.4292,
+      794,
+      567
+    ],
+    [
+      1764810892022.3171,
+      794,
+      567
+    ],
+    [
+      1764810892064.05,
+      794,
+      567
+    ],
+    [
+      1764810892100.478,
+      794,
+      567
+    ],
+    [
+      1764810892142.2239,
+      781,
+      567
+    ],
+    [
+      1764810892184.601,
+      781,
+      567
+    ],
+    [
+      1764810892232.047,
+      794,
+      567
+    ],
+    [
+      1764810892266.908,
+      781,
+      567
+    ],
+    [
+      1764810892301.406,
+      781,
+      567
+    ],
+    [
+      1764810892344.265,
+      794,
+      567
+    ],
+    [
+      1764810892380.0803,
+      794,
+      567
+    ],
+    [
+      1764810892423.0608,
+      794,
+      567
+    ],
+    [
+      1764810892462.2222,
+      781,
+      567
+    ],
+    [
+      1764810892504.1301,
+      794,
+      567
+    ],
+    [
+      1764810892539.329,
+      794,
+      585
+    ],
+    [
+      1764810892573.715,
+      794,
+      567
+    ],
+    [
+      1764810892616.3242,
+      794,
+      567
+    ],
+    [
+      1764810892651.5898,
+      794,
+      567
+    ],
+    [
+      1764810892692.537,
+      794,
+      567
+    ],
+    [
+      1764810892733.692,
+      781,
+      567
+    ],
+    [
+      1764810892775.999,
+      781,
+      567
+    ],
+    [
+      1764810892813.3672,
+      794,
+      585
+    ],
+    [
+      1764810892855.201,
+      781,
+      567
+    ],
+    [
+      1764810892903.04,
+      781,
+      567
+    ],
+    [
+      1764810892944.379,
+      781,
+      567
+    ],
+    [
+      1764810892980.011,
+      781,
+      567
+    ],
+    [
+      1764810893022.12,
+      781,
+      567
+    ],
+    [
+      1764810893062.928,
+      781,
+      567
+    ],
+    [
+      1764810893098.523,
+      781,
+      585
+    ],
+    [
+      1764810893139.258,
+      769,
+      567
+    ],
+    [
+      1764810893172.663,
+      781,
+      567
+    ],
+    [
+      1764810893216.115,
+      781,
+      567
+    ],
+    [
+      1764810893250.7798,
+      781,
+      548
+    ],
+    [
+      1764810893285.315,
+      781,
+      548
+    ],
+    [
+      1764810893328.476,
+      794,
+      567
+    ],
+    [
+      1764810893362.657,
+      781,
+      548
+    ],
+    [
+      1764810893396.4941,
+      781,
+      548
+    ],
+    [
+      1764810893438.823,
+      794,
+      548
+    ],
+    [
+      1764810893480.4868,
+      794,
+      585
+    ],
+    [
+      1764810893515.289,
+      794,
+      567
+    ],
+    [
+      1764810893556.679,
+      794,
+      585
+    ],
+    [
+      1764810893597.4111,
+      794,
+      567
+    ],
+    [
+      1764810893639.1099,
+      794,
+      585
+    ],
+    [
+      1764810893680.2012,
+      781,
+      567
+    ],
+    [
+      1764810893715.814,
+      781,
+      567
+    ],
+    [
+      1764810893758.646,
+      794,
+      567
+    ],
+    [
+      1764810893794.125,
+      781,
+      548
+    ],
+    [
+      1764810893834.709,
+      781,
+      548
+    ],
+    [
+      1764810893868.777,
+      794,
+      548
+    ],
+    [
+      1764810893912.534,
+      794,
+      567
+    ],
+    [
+      1764810893947.8708,
+      794,
+      548
+    ],
+    [
+      1764810893990.429,
+      794,
+      567
+    ],
+    [
+      1764810894031.479,
+      794,
+      548
+    ],
+    [
+      1764810894066.592,
+      794,
+      548
+    ],
+    [
+      1764810894101.0183,
+      794,
+      548
+    ],
+    [
+      1764810894138.013,
+      794,
+      548
+    ],
+    [
+      1764810894172.118,
+      794,
+      548
+    ],
+    [
+      1764810894214.2139,
+      794,
+      567
+    ],
+    [
+      1764810894255.6812,
+      794,
+      548
+    ],
+    [
+      1764810894296.2593,
+      794,
+      567
+    ],
+    [
+      1764810894331.9502,
+      794,
+      548
+    ],
+    [
+      1764810894375.6357,
+      794,
+      548
+    ],
+    [
+      1764810894410.2559,
+      794,
+      548
+    ],
+    [
+      1764810894451.785,
+      794,
+      548
+    ],
+    [
+      1764810894501.894,
+      794,
+      529
+    ],
+    [
+      1764810894543.835,
+      794,
+      548
+    ],
+    [
+      1764810894578.44,
+      794,
+      548
+    ],
+    [
+      1764810894613.7158,
+      794,
+      548
+    ],
+    [
+      1764810894656.68,
+      806,
+      585
+    ],
+    [
+      1764810894692.5913,
+      806,
+      585
+    ],
+    [
+      1764810894732.928,
+      794,
+      548
+    ],
+    [
+      1764810894774.7,
+      794,
+      548
+    ],
+    [
+      1764810894815.3223,
+      794,
+      548
+    ],
+    [
+      1764810894851.4219,
+      794,
+      567
+    ],
+    [
+      1764810894885.866,
+      806,
+      567
+    ],
+    [
+      1764810894928.189,
+      806,
+      567
+    ],
+    [
+      1764810894975.6758,
+      806,
+      567
+    ],
+    [
+      1764810895011.0579,
+      806,
+      548
+    ],
+    [
+      1764810895053.1467,
+      806,
+      567
+    ],
+    [
+      1764810895096.1301,
+      794,
+      548
+    ],
+    [
+      1764810895131.726,
+      794,
+      567
+    ],
+    [
+      1764810895166.083,
+      806,
+      567
+    ],
+    [
+      1764810895206.463,
+      794,
+      548
+    ],
+    [
+      1764810895248.4531,
+      806,
+      548
+    ],
+    [
+      1764810895283.451,
+      794,
+      567
+    ],
+    [
+      1764810895326.2239,
+      794,
+      548
+    ],
+    [
+      1764810895362.077,
+      794,
+      548
+    ],
+    [
+      1764810895396.7942,
+      794,
+      567
+    ],
+    [
+      1764810895437.3638,
+      794,
+      548
+    ],
+    [
+      1764810895479.0679,
+      781,
+      548
+    ],
+    [
+      1764810895520.148,
+      781,
+      548
+    ],
+    [
+      1764810895555.684,
+      794,
+      567
+    ],
+    [
+      1764810895598.345,
+      794,
+      548
+    ],
+    [
+      1764810895645.616,
+      781,
+      548
+    ],
+    [
+      1764810895681.686,
+      781,
+      548
+    ],
+    [
+      1764810895715.6501,
+      781,
+      548
+    ],
+    [
+      1764810895750.15,
+      781,
+      548
+    ],
+    [
+      1764810895785.311,
+      794,
+      548
+    ],
+    [
+      1764810895819.145,
+      794,
+      548
+    ],
+    [
+      1764810895869.218,
+      794,
+      548
+    ],
+    [
+      1764810895910.858,
+      794,
+      548
+    ],
+    [
+      1764810895952.378,
+      794,
+      548
+    ],
+    [
+      1764810895988.657,
+      806,
+      548
+    ],
+    [
+      1764810896031.158,
+      794,
+      529
+    ],
+    [
+      1764810896078.487,
+      806,
+      529
+    ],
+    [
+      1764810896120.558,
+      806,
+      529
+    ],
+    [
+      1764810896156.728,
+      806,
+      529
+    ],
+    [
+      1764810896198.88,
+      806,
+      529
+    ],
+    [
+      1764810896235.7039,
+      794,
+      529
+    ],
+    [
+      1764810896270.7642,
+      806,
+      548
+    ],
+    [
+      1764810896304.424,
+      794,
+      529
+    ],
+    [
+      1764810896340.2988,
+      794,
+      548
+    ],
+    [
+      1764810896381.949,
+      794,
+      529
+    ],
+    [
+      1764810896418.439,
+      781,
+      510
+    ],
+    [
+      1764810896452.695,
+      781,
+      510
+    ],
+    [
+      1764810896487.2288,
+      781,
+      529
+    ],
+    [
+      1764810896529.15,
+      794,
+      529
+    ],
+    [
+      1764810896575.9338,
+      794,
+      510
+    ],
+    [
+      1764810896610.904,
+      794,
+      510
+    ],
+    [
+      1764810896645.5947,
+      794,
+      529
+    ],
+    [
+      1764810896688.6401,
+      794,
+      491
+    ],
+    [
+      1764810896723.5898,
+      794,
+      510
+    ],
+    [
+      1764810896758.048,
+      781,
+      491
+    ],
+    [
+      1764810896798.896,
+      794,
+      510
+    ],
+    [
+      1764810896840.364,
+      794,
+      510
+    ],
+    [
+      1764810896875.8188,
+      794,
+      510
+    ],
+    [
+      1764810896909.627,
+      794,
+      510
+    ],
+    [
+      1764810896951.9949,
+      781,
+      510
+    ],
+    [
+      1764810896987.4822,
+      794,
+      529
+    ],
+    [
+      1764810897028.0168,
+      794,
+      529
+    ],
+    [
+      1764810897069.2039,
+      794,
+      529
+    ],
+    [
+      1764810897112.0962,
+      806,
+      529
+    ],
+    [
+      1764810897147.434,
+      794,
+      548
+    ],
+    [
+      1764810897181.1453,
+      794,
+      510
+    ],
+    [
+      1764810897225.0503,
+      794,
+      529
+    ],
+    [
+      1764810897258.977,
+      794,
+      510
+    ],
+    [
+      1764810897294.076,
+      794,
+      548
+    ],
+    [
+      1764810897335.864,
+      794,
+      529
+    ],
+    [
+      1764810897372.473,
+      794,
+      529
+    ],
+    [
+      1764810897414.211,
+      794,
+      548
+    ],
+    [
+      1764810897455.952,
+      794,
+      548
+    ],
+    [
+      1764810897496.237,
+      794,
+      548
+    ],
+    [
+      1764810897531.876,
+      794,
+      567
+    ],
+    [
+      1764810897566.397,
+      794,
+      548
+    ],
+    [
+      1764810897608.4321,
+      794,
+      567
+    ],
+    [
+      1764810897644.168,
+      794,
+      567
+    ],
+    [
+      1764810897685.866,
+      806,
+      567
+    ],
+    [
+      1764810897725.058,
+      794,
+      548
+    ],
+    [
+      1764810897768.82,
+      806,
+      567
+    ],
+    [
+      1764810897804.7412,
+      806,
+      548
+    ],
+    [
+      1764810897846.543,
+      806,
+      529
+    ],
+    [
+      1764810897888.6887,
+      794,
+      529
+    ],
+    [
+      1764810897923.435,
+      806,
+      548
+    ],
+    [
+      1764810897964.506,
+      806,
+      548
+    ],
+    [
+      1764810898005.855,
+      806,
+      548
+    ],
+    [
+      1764810898049.761,
+      806,
+      548
+    ],
+    [
+      1764810898083.889,
+      806,
+      529
+    ],
+    [
+      1764810898118.403,
+      806,
+      529
+    ],
+    [
+      1764810898158.37,
+      794,
+      529
+    ],
+    [
+      1764810898199.9932,
+      794,
+      529
+    ],
+    [
+      1764810898235.9832,
+      794,
+      529
+    ],
+    [
+      1764810898278.856,
+      794,
+      529
+    ],
+    [
+      1764810898320.862,
+      794,
+      529
+    ],
+    [
+      1764810898355.128,
+      794,
+      529
+    ],
+    [
+      1764810898388.776,
+      806,
+      529
+    ],
+    [
+      1764810898432.205,
+      806,
+      510
+    ],
+    [
+      1764810898467.0642,
+      806,
+      529
+    ],
+    [
+      1764810898501.5513,
+      818,
+      510
+    ],
+    [
+      1764810898538.2258,
+      806,
+      510
+    ],
+    [
+      1764810898572.665,
+      806,
+      510
+    ],
+    [
+      1764810898613.546,
+      806,
+      510
+    ],
+    [
+      1764810898656.372,
+      806,
+      510
+    ],
+    [
+      1764810898691.1628,
+      794,
+      510
+    ],
+    [
+      1764810898725.863,
+      794,
+      491
+    ],
+    [
+      1764810898768.224,
+      806,
+      510
+    ],
+    [
+      1764810898803.8132,
+      794,
+      491
+    ],
+    [
+      1764810898844.393,
+      794,
+      491
+    ],
+    [
+      1764810898886.44,
+      794,
+      491
+    ],
+    [
+      1764810898927.942,
+      794,
+      491
+    ],
+    [
+      1764810898964.169,
+      794,
+      510
+    ],
+    [
+      1764810899006.6501,
+      781,
+      491
+    ],
+    [
+      1764810899048.481,
+      794,
+      473
+    ],
+    [
+      1764810899082.515,
+      781,
+      491
+    ],
+    [
+      1764810899117.125,
+      781,
+      491
+    ],
+    [
+      1764810899160.4941,
+      794,
+      491
+    ],
+    [
+      1764810899196.174,
+      781,
+      491
+    ],
+    [
+      1764810899238.1619,
+      781,
+      491
+    ],
+    [
+      1764810899280.729,
+      781,
+      491
+    ],
+    [
+      1764810899315.39,
+      781,
+      491
+    ],
+    [
+      1764810899357.5251,
+      781,
+      491
+    ],
+    [
+      1764810899400.897,
+      781,
+      491
+    ],
+    [
+      1764810899435.699,
+      781,
+      491
+    ],
+    [
+      1764810899478.3171,
+      781,
+      491
+    ],
+    [
+      1764810899526.2761,
+      781,
+      491
+    ],
+    [
+      1764810899567.6301,
+      794,
+      473
+    ],
+    [
+      1764810899606.309,
+      781,
+      491
+    ],
+    [
+      1764810899641.513,
+      781,
+      491
+    ],
+    [
+      1764810899674.967,
+      781,
+      491
+    ],
+    [
+      1764810899710.2302,
+      781,
+      491
+    ],
+    [
+      1764810899758.1902,
+      781,
+      473
+    ],
+    [
+      1764810899798.675,
+      794,
+      491
+    ],
+    [
+      1764810899840.179,
+      781,
+      491
+    ],
+    [
+      1764810899875.837,
+      781,
+      473
+    ],
+    [
+      1764810899909.7058,
+      781,
+      473
+    ],
+    [
+      1764810899952.3708,
+      781,
+      491
+    ],
+    [
+      1764810899986.1218,
+      781,
+      491
+    ],
+    [
+      1764810900020.543,
+      769,
+      473
+    ],
+    [
+      1764810900062.989,
+      781,
+      473
+    ],
+    [
+      1764810900099.582,
+      781,
+      491
+    ],
+    [
+      1764810900141.928,
+      769,
+      491
+    ],
+    [
+      1764810900182.897,
+      769,
+      491
+    ],
+    [
+      1764810900222.157,
+      781,
+      491
+    ],
+    [
+      1764810900264.191,
+      781,
+      510
+    ],
+    [
+      1764810900305.728,
+      781,
+      491
+    ],
+    [
+      1764810900341.373,
+      794,
+      510
+    ],
+    [
+      1764810900376.2188,
+      781,
+      491
+    ],
+    [
+      1764810900411.697,
+      781,
+      491
+    ],
+    [
+      1764810900451.972,
+      769,
+      473
+    ]
+  ]
+}
