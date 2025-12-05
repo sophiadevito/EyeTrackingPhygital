@@ -17,6 +17,8 @@ import plr
 import glob
 import os
 import report_generator
+import dashboard_server
+import threading
 
 def main():
     """Main function that coordinates eye tracking and accuracy testing"""
@@ -105,6 +107,12 @@ def main():
     print("  Z        - Run automated test suite (Saccade → Pursuit → Fixed Point → PLR)")
     print("  B        - Show blink statistics")
     print("  Q        - Quit")
+    print("")
+    
+    # Start dashboard server in a separate thread
+    dashboard_thread = threading.Thread(target=dashboard_server.start_dashboard, daemon=True)
+    dashboard_thread.start()
+    print("📊 Live Dashboard started - Open http://localhost:5000 in a browser on your second display")
     print("")
     
     # We need to modify the eye tracking to handle test keys
@@ -281,6 +289,13 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
         if pupil_center is not None:
             pupil_x, pupil_y = pupil_center
         
+        # Update dashboard with camera frame
+        dashboard_server.update_camera_frame(frame)
+        
+        # Update dashboard with gaze position
+        if et.current_gaze_x is not None and et.current_gaze_y is not None:
+            dashboard_server.update_gaze(et.current_gaze_x, et.current_gaze_y)
+        
         # Update accuracy testing if active
         if accuracy_test.accuracy_testing_active:
             accuracy_update_callback(et.current_gaze_x, et.current_gaze_y)
@@ -353,6 +368,78 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 # Silently fail to avoid interrupting video processing
                 pass
         
+        # Update dashboard with test metrics and status
+        try:
+            metrics = {}
+            targets = []
+            test_name = None
+            test_active = False
+            
+            if saccade_test.saccade_testing_active:
+                test_active = True
+                test_name = "Saccade Test"
+                # Get current metrics from saccade test
+                if hasattr(saccade_test, 'saccade_data') and len(saccade_test.saccade_data) > 0:
+                    # Calculate running metrics
+                    latencies = [d.get('latency_ms') for d in saccade_test.saccade_data if d.get('latency_ms') is not None]
+                    velocities = [d.get('velocity_deg_per_ms') for d in saccade_test.saccade_data if d.get('velocity_deg_per_ms') is not None]
+                    accuracies = [d.get('accuracy_percent') for d in saccade_test.saccade_data if d.get('accuracy_percent') is not None]
+                    if latencies:
+                        metrics['average_latency_ms'] = sum(latencies) / len(latencies)
+                    if velocities:
+                        metrics['average_velocity_deg_per_ms'] = sum(velocities) / len(velocities)
+                    if accuracies:
+                        metrics['average_accuracy_percent'] = sum(accuracies) / len(accuracies)
+                    metrics['total_saccades'] = len(saccade_test.saccade_data)
+                # Get current target if available
+                if hasattr(saccade_test, 'current_target_position') and saccade_test.current_target_position:
+                    targets.append({'x': saccade_test.current_target_position[0], 'y': saccade_test.current_target_position[1]})
+            elif smooth_pursuit.smooth_pursuit_active:
+                test_active = True
+                test_name = "Smooth Pursuit Test"
+                # Get current metrics from pursuit test
+                if hasattr(smooth_pursuit, 'pursuit_data') and len(smooth_pursuit.pursuit_data) > 0:
+                    gains = [d.get('gain') for d in smooth_pursuit.pursuit_data if d.get('gain') is not None]
+                    if gains:
+                        metrics['average_gain'] = sum(gains) / len(gains)
+                    metrics['total_measurements'] = len(smooth_pursuit.pursuit_data)
+                # Get current target if available
+                if hasattr(smooth_pursuit, 'current_target_position') and smooth_pursuit.current_target_position:
+                    targets.append({'x': smooth_pursuit.current_target_position[0], 'y': smooth_pursuit.current_target_position[1]})
+            elif fixed_point_stability.fixed_point_active:
+                test_active = True
+                test_name = "Fixed Point Stability Test"
+                # Get current metrics from fixed point test
+                if hasattr(fixed_point_stability, 'stability_data') and len(fixed_point_stability.stability_data) > 0:
+                    deviations = [d.get('deviation_degrees') for d in fixed_point_stability.stability_data if d.get('deviation_degrees') is not None]
+                    if deviations:
+                        metrics['average_deviation_degrees'] = sum(deviations) / len(deviations)
+                    metrics['total_measurements'] = len(fixed_point_stability.stability_data)
+                # Center target
+                if et.monitor_width and et.monitor_height:
+                    targets.append({'x': et.monitor_width // 2, 'y': et.monitor_height // 2})
+            elif plr.plr_test_active:
+                test_active = True
+                test_name = "PLR Test"
+                # Get current metrics from PLR test
+                if hasattr(plr, 'plr_data') and len(plr.plr_data) > 0:
+                    diameters = [d.get('diameter_pixels') for d in plr.plr_data if d.get('diameter_pixels') is not None]
+                    if diameters:
+                        metrics['current_diameter_pixels'] = diameters[-1] if diameters else 0
+                    metrics['total_samples'] = len(plr.plr_data)
+            
+            dashboard_server.update_test_status(
+                test_name, 
+                test_active, 
+                metrics if metrics else None,
+                targets if targets else None,
+                et.monitor_width,
+                et.monitor_height
+            )
+        except Exception as e:
+            # Silently fail to avoid interrupting video processing
+            pass
+        
         key = cv2.waitKey(1) & 0xFF
         
         if key == ord('d') and debug_mode_on == False:  # Press 'd' to start debug mode
@@ -396,6 +483,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 if not et.overlay_running:
                     print("Please enable gaze overlay (press 'g') before starting saccade testing.")
                 else:
+                    dashboard_server.reset_gaze_path()
                     saccade_test.start_saccade_test()
             else:
                 try:
@@ -411,6 +499,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 if not et.overlay_running:
                     print("Please enable gaze overlay (press 'g') before starting smooth pursuit testing.")
                 else:
+                    dashboard_server.reset_gaze_path()
                     smooth_pursuit.start_smooth_pursuit_test()
             else:
                 try:
@@ -426,6 +515,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 if not et.overlay_running:
                     print("Please enable gaze overlay (press 'g') before starting fixed point stability testing.")
                 else:
+                    dashboard_server.reset_gaze_path()
                     fixed_point_stability.start_fixed_point_test()
             else:
                 try:
@@ -456,6 +546,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 if not et.overlay_running:
                     print("Please enable gaze overlay (press 'g') before starting PLR test.")
                 else:
+                    dashboard_server.reset_gaze_path()
                     plr.start_plr_test()
             else:
                 try:
@@ -521,10 +612,12 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     if automated_suite_state == 'initial_calibration':
                         print("\n1/4: Starting Saccade Test...")
                         automated_suite_state = 'saccade'
+                        dashboard_server.reset_gaze_path()
                         saccade_test.start_saccade_test()
                     elif automated_suite_state == 'calibration_before_saccade':
                         print("\n1/4: Starting Saccade Test...")
                         automated_suite_state = 'saccade'
+                        dashboard_server.reset_gaze_path()
                         saccade_test.start_saccade_test()
                     elif automated_suite_state == 'calibration_before_antisaccade':
                         print("Starting Antisaccade Test...")
@@ -533,10 +626,12 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     elif automated_suite_state == 'calibration_before_pursuit':
                         print("\n2/4: Starting Smooth Pursuit Test...")
                         automated_suite_state = 'pursuit'
+                        dashboard_server.reset_gaze_path()
                         smooth_pursuit.start_smooth_pursuit_test()
                     elif automated_suite_state == 'calibration_before_fixed_point':
                         print("\n3/4: Starting Fixed Point Stability Test...")
                         automated_suite_state = 'fixed_point'
+                        dashboard_server.reset_gaze_path()
                         fixed_point_stability.start_fixed_point_test()
             
             # Saccade test
@@ -642,6 +737,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     # Move directly to PLR test (no calibration)
                     print("\n4/4: Starting PLR Test...")
                     automated_suite_state = 'plr'
+                    dashboard_server.reset_gaze_path()
                     plr.start_plr_test()
             
             # PLR test
