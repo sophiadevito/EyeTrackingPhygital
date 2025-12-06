@@ -19,6 +19,7 @@ import os
 import report_generator
 import dashboard_server
 import threading
+import mask
 
 def main():
     """Main function that coordinates eye tracking and accuracy testing"""
@@ -261,10 +262,24 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
         if debug_mode_on:
             darkest_image = frame.copy()
             cv2.circle(darkest_image, darkest_point, 10, (0, 0, 255), -1)
+            # Draw mask visualization on debug image
+            darkest_image = mask.draw_mask_visualization(darkest_image)
             cv2.imshow('Darkest image patch', darkest_image)
+        
+        # Always show mask visualization on main frame if enabled
+        if mask.USE_CENTER_SQUARE_MASK:
+            frame_with_mask = mask.draw_mask_visualization(frame.copy())
+            cv2.imshow('Camera Feed with Mask', frame_with_mask)
 
         # Convert to grayscale to handle pixel value operations
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        
+        # Apply center square mask if enabled (must be before finding darkest point)
+        gray_frame = mask.apply_mask_if_enabled(gray_frame)
+        
+        # Apply enhancement to masked region if enabled
+        gray_frame = mask.enhance_mask_region(gray_frame)
+        
         darkest_pixel_value = gray_frame[darkest_point[1], darkest_point[0]]
         
         # apply thresholding operations at different levels
