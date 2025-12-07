@@ -39,7 +39,7 @@ last_valid_pupil_diameter = None
 pupil_diameter_history = []  # Keep last N diameters for filtering
 blinks_detected = 0
 last_blink_time = None
-MIN_ELLIPSE_GOODNESS = 0.3  # Minimum ellipse goodness to accept as valid pupil (filters eyelashes)
+MIN_ELLIPSE_GOODNESS = 0.6  # Minimum ellipse goodness to accept as valid pupil (filters eyelashes)
 current_ellipse_goodness = None  # Store current ellipse goodness score
 
 # Calibration globals
@@ -912,82 +912,104 @@ def process_frames(thresholded_image_strict, thresholded_image_medium, threshold
             # Calculate and store pupil diameter (average of major and minor axes)
             axes_lengths = ellipse[1]  # (minor_axis_length, major_axis_length)
             pupil_diameter = (axes_lengths[0] + axes_lengths[1]) / 2.0  # Average diameter
-            current_pupil_diameter = pupil_diameter
             
-            # Track valid pupil detection
-            handle_pupil_detected()
-            
-            # Compute gaze position
+            # Get frame dimensions for validation
             frame_height, frame_width = frame.shape[:2]
-            
-            # Get raw gaze position (before calibration)
-            raw_screen_x, raw_screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=False)
-            
-            # Get calibrated gaze position (with offset applied)
-            screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=True)
-            
-            # Store both raw and calibrated gaze positions
-            global raw_gaze_x, raw_gaze_y
-            raw_gaze_x = raw_screen_x
-            raw_gaze_y = raw_screen_y
-            current_gaze_x = screen_x
-            current_gaze_y = screen_y
-            
-            # Debug: print occasionally to verify values are being set
-            import random
-            if random.random() < 0.05:  # Print 5% of the time
-                frame_center_x = frame_width // 2
-                frame_center_y = frame_height // 2
-                offset_x = center_x - frame_center_x
-                offset_y = center_y - frame_center_y
-                print(f"DEBUG: Pupil at ({center_x}, {center_y}), offset: ({offset_x:.1f}, {offset_y:.1f}), "
-                      f"→ Gaze: ({screen_x}, {screen_y}), screen center: ({monitor_width//2}, {monitor_height//2})")
-            
-            # Display gaze position on frame
             frame_center_x = frame_width // 2
             frame_center_y = frame_height // 2
-            offset_from_center_x = center_x - frame_center_x
-            offset_from_center_y = center_y - frame_center_y
             
-            cv2.putText(test_frame, f"Gaze: ({screen_x}, {screen_y})", (10, 30), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
-            cv2.putText(test_frame, f"Pupil: ({center_x}, {center_y})", (10, 50), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
-            cv2.putText(test_frame, f"Offset: ({offset_from_center_x}, {offset_from_center_y})", (10, 70), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 0), 1)
-            if calibration_offset_x != 0 or calibration_offset_y != 0:
-                cv2.putText(test_frame, f"Calib: ({int(calibration_offset_x)}, {int(calibration_offset_y)})", 
-                           (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 200, 0), 1)
+            # Validate pupil position and size to filter out eyelashes and blink artifacts
+            distance_from_center = np.sqrt((center_x - frame_center_x)**2 + (center_y - frame_center_y)**2)
+            max_reasonable_distance = min(frame_width, frame_height) * 0.35  # 35% of frame size
             
-            # Debug calibration: draw ovals on frame at key points
-            if debug_calibration_flag:
-                # Draw oval at pupil position (magenta)
-                pupil_radius = 25
-                cv2.circle(test_frame, (center_x, center_y), pupil_radius, (255, 0, 255), 3)
-                cv2.putText(test_frame, "Pupil", (center_x - 20, center_y - pupil_radius - 10),
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+            # Check if diameter is reasonable (not too small like an eyelash, not too large)
+            min_reasonable_diameter = 20  # pixels
+            max_reasonable_diameter = min(frame_width, frame_height) * 0.8
+            
+            # Only update gaze if detection seems valid
+            if (distance_from_center < max_reasonable_distance and 
+                min_reasonable_diameter < pupil_diameter < max_reasonable_diameter):
                 
-                # Draw oval at frame center (yellow)
-                cv2.circle(test_frame, (frame_center_x, frame_center_y), 30, (0, 255, 255), 3)
-                cv2.putText(test_frame, "Frame Center", (frame_center_x - 50, frame_center_y - 40),
+                current_pupil_diameter = pupil_diameter
+                
+                # Track valid pupil detection
+                handle_pupil_detected()
+                
+                # Compute gaze position
+                # Get raw gaze position (before calibration)
+                raw_screen_x, raw_screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=False)
+                
+                # Get calibrated gaze position (with offset applied)
+                screen_x, screen_y = compute_gaze_to_screen(center_x, center_y, frame_width, frame_height, apply_calibration=True)
+                
+                # Store both raw and calibrated gaze positions
+                global raw_gaze_x, raw_gaze_y
+                raw_gaze_x = raw_screen_x
+                raw_gaze_y = raw_screen_y
+                current_gaze_x = screen_x
+                current_gaze_y = screen_y
+                
+                # Debug: print occasionally to verify values are being set
+                import random
+                if random.random() < 0.05:  # Print 5% of the time
+                    offset_x = center_x - frame_center_x
+                    offset_y = center_y - frame_center_y
+                    print(f"DEBUG: Pupil at ({center_x}, {center_y}), offset: ({offset_x:.1f}, {offset_y:.1f}), "
+                          f"→ Gaze: ({screen_x}, {screen_y}), screen center: ({monitor_width//2}, {monitor_height//2})")
+                
+                # Display gaze position on frame
+                offset_from_center_x = center_x - frame_center_x
+                offset_from_center_y = center_y - frame_center_y
+                
+                cv2.putText(test_frame, f"Gaze: ({screen_x}, {screen_y})", (10, 30), 
                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+                cv2.putText(test_frame, f"Pupil: ({center_x}, {center_y})", (10, 50), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
+                cv2.putText(test_frame, f"Offset: ({offset_from_center_x}, {offset_from_center_y})", (10, 70), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 0), 1)
+                if calibration_offset_x != 0 or calibration_offset_y != 0:
+                    cv2.putText(test_frame, f"Calib: ({int(calibration_offset_x)}, {int(calibration_offset_y)})", 
+                               (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 200, 0), 1)
                 
-                # Draw line from frame center to pupil
-                cv2.line(test_frame, (frame_center_x, frame_center_y), (center_x, center_y), (128, 128, 128), 2)
-            
-            # Debug: print occasionally to console
-            import random
-            if random.random() < 0.01:  # Print 1% of the time
-                print(f"Frame: Pupil at ({center_x}, {center_y}), Gaze at ({screen_x}, {screen_y}), "
-                      f"Offset from center: ({offset_from_center_x}, {offset_from_center_y})")
+                # Debug calibration: draw ovals on frame at key points
+                if debug_calibration_flag:
+                    # Draw oval at pupil position (magenta)
+                    pupil_radius = 25
+                    cv2.circle(test_frame, (center_x, center_y), pupil_radius, (255, 0, 255), 3)
+                    cv2.putText(test_frame, "Pupil", (center_x - 20, center_y - pupil_radius - 10),
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+                    
+                    # Draw oval at frame center (yellow)
+                    cv2.circle(test_frame, (frame_center_x, frame_center_y), 30, (0, 255, 255), 3)
+                    cv2.putText(test_frame, "Frame Center", (frame_center_x - 50, frame_center_y - 40),
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 2)
+                    
+                    # Draw line from frame center to pupil
+                    cv2.line(test_frame, (frame_center_x, frame_center_y), (center_x, center_y), (128, 128, 128), 2)
+                
+                # Debug: print occasionally to console
+                import random
+                if random.random() < 0.01:  # Print 1% of the time
+                    print(f"Frame: Pupil at ({center_x}, {center_y}), Gaze at ({screen_x}, {screen_y}), "
+                          f"Offset from center: ({offset_from_center_x}, {offset_from_center_y})")
+            else:
+                # Unrealistic pupil position or size - treat as no pupil (likely eyelash or blink)
+                handle_pupil_loss()
+                current_pupil_diameter = None
+                current_ellipse_goodness = None
+                cv2.putText(test_frame, "Rejected: unrealistic position/size", (10, 30), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 165, 255), 2)
+                cv2.putText(test_frame, f"Distance: {distance_from_center:.1f}, Diameter: {pupil_diameter:.1f}", (10, 50), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 165, 255), 1)
         else:
             # Invalid detection (likely eyelashes), treat as no pupil
             handle_pupil_loss()
+            current_pupil_diameter = None
+            current_ellipse_goodness = None
     else:
-        # No pupil detected - set gaze to None or keep last known position
-        # Uncomment next lines to reset gaze when pupil not detected:
-        # current_gaze_x = None
-        # current_gaze_y = None
+        # No pupil detected - reset gaze to prevent stale values during blinks
+        current_gaze_x = None
+        current_gaze_y = None
         current_pupil_diameter = None  # No pupil diameter available
         current_ellipse_goodness = None
         handle_pupil_loss()
