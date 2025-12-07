@@ -5,13 +5,14 @@ Provides a web-based dashboard that can be opened in a browser on a separate dis
 Shows live camera feed, gaze path, and real-time test metrics.
 """
 
-from flask import Flask, Response, render_template_string
+from flask import Flask, Response, render_template_string, send_from_directory
 from flask_socketio import SocketIO, emit
 import cv2
 import base64
 import threading
 import time
 import json
+import os
 from datetime import datetime
 
 app = Flask(__name__)
@@ -54,22 +55,32 @@ DASHBOARD_HTML = """
             overflow-x: hidden;
         }
         
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
         .header {
             background: #9E1B32;
             padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             border-radius: 8px;
+        }
+        
+        .header .logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
         }
         
         .header h1 {
             font-size: 28px;
-            margin-bottom: 5px;
-        }
-        
-        .header .status {
-            font-size: 14px;
-            opacity: 0.9;
+            margin: 0;
         }
         
         .main-container {
@@ -77,6 +88,12 @@ DASHBOARD_HTML = """
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 20px;
+        }
+        
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
         .panel {
@@ -89,7 +106,7 @@ DASHBOARD_HTML = """
         .panel h2 {
             font-size: 18px;
             margin-bottom: 15px;
-            color: #ffc107;
+            color: white;
             border-bottom: 2px solid #9E1B32;
             padding-bottom: 8px;
         }
@@ -122,8 +139,57 @@ DASHBOARD_HTML = """
             height: 100%;
         }
         
+        .test-status-panel {
+            background: #2a3d6b;
+            border-radius: 8px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .test-status-panel.active {
+            background: #28a745;
+        }
+        
+        .test-status-panel.inactive {
+            background: #6c757d;
+        }
+        
+        .test-status-panel.calibrating {
+            background: #ffc107;
+        }
+        
+        .test-status-large {
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .test-status-indicator-large {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        
+        .test-status-indicator-large.active {
+            background: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .test-status-indicator-large.inactive {
+            background: #adb5bd;
+        }
+        
         .metrics-container {
-            grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
@@ -163,14 +229,6 @@ DASHBOARD_HTML = """
             padding: 40px;
         }
         
-        .test-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-        
         .test-active {
             background: #28a745;
             animation: pulse 2s infinite;
@@ -187,11 +245,19 @@ DASHBOARD_HTML = """
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Rumble Rims Live Dashboard</h1>
-        <div class="status">
-            <span class="test-indicator" id="testIndicator"></span>
-            <span id="testStatus">No test active</span>
+    <div class="header-container">
+        <div class="header">
+            <img src="/ram_logo.png" alt="Rumble Rims Logo" class="logo">
+            <div>
+                <h1>Rumble Rims Live Dashboard</h1>
+            </div>
+        </div>
+        
+        <div class="test-status-panel inactive" id="testStatusPanel">
+            <p class="test-status-large">
+                <span class="test-status-indicator-large inactive" id="testIndicatorLarge"></span>
+                <span id="testStatusLarge">No test active</span>
+            </p>
         </div>
     </div>
     
@@ -203,15 +269,20 @@ DASHBOARD_HTML = """
             </div>
         </div>
         
-        <div class="panel">
-            <h2>Live Gaze Path</h2>
-            <div class="gaze-view-container">
-                <canvas id="gazeCanvas" class="gaze-canvas"></canvas>
+        <div class="right-column">
+            <div class="panel">
+                <h2>Live Gaze Path</h2>
+                <div class="gaze-view-container">
+                    <canvas id="gazeCanvas" class="gaze-canvas"></canvas>
+                </div>
             </div>
-        </div>
-        
-        <div class="metrics-container" id="metricsContainer">
-            <div class="no-data">Waiting for test data...</div>
+            
+            <div class="panel">
+                <h2>Test Metrics</h2>
+                <div class="metrics-container" id="metricsContainer">
+                    <div class="no-data">Waiting for test data...</div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -219,8 +290,9 @@ DASHBOARD_HTML = """
         const socket = io();
         const canvas = document.getElementById('gazeCanvas');
         const ctx = canvas.getContext('2d');
-        const testIndicator = document.getElementById('testIndicator');
-        const testStatus = document.getElementById('testStatus');
+        const testStatusPanel = document.getElementById('testStatusPanel');
+        const testIndicatorLarge = document.getElementById('testIndicatorLarge');
+        const testStatusLarge = document.getElementById('testStatusLarge');
         const metricsContainer = document.getElementById('metricsContainer');
         
         // Set canvas size
@@ -334,12 +406,18 @@ DASHBOARD_HTML = """
         });
         
         socket.on('test_update', (data) => {
-            if (data.test_active) {
-                testIndicator.className = 'test-indicator test-active';
-                testStatus.textContent = `Test Active: ${data.test_name || 'Unknown'}`;
+            if (data.is_calibrating) {
+                testStatusPanel.className = 'test-status-panel calibrating';
+                testIndicatorLarge.className = 'test-status-indicator-large inactive';
+                testStatusLarge.textContent = 'Recalibrating...';
+            } else if (data.test_active) {
+                testStatusPanel.className = 'test-status-panel active';
+                testIndicatorLarge.className = 'test-status-indicator-large active';
+                testStatusLarge.textContent = data.test_name || 'Unknown Test';
             } else {
-                testIndicator.className = 'test-indicator test-inactive';
-                testStatus.textContent = 'No test active';
+                testStatusPanel.className = 'test-status-panel inactive';
+                testIndicatorLarge.className = 'test-status-indicator-large inactive';
+                testStatusLarge.textContent = 'No test active';
             }
             
             if (data.metrics) {
@@ -419,7 +497,7 @@ def update_gaze(gaze_x, gaze_y):
             'timestamp': time.time()
         })
 
-def update_test_status(test_name, test_active, metrics=None, targets=None, monitor_width=None, monitor_height=None):
+def update_test_status(test_name, test_active, metrics=None, targets=None, monitor_width=None, monitor_height=None, is_calibrating=False):
     """Update test status and metrics"""
     global current_test_data
     current_test_data['test_name'] = test_name
@@ -436,7 +514,8 @@ def update_test_status(test_name, test_active, metrics=None, targets=None, monit
             'metrics': metrics or {},
             'targets': targets or [],
             'monitor_width': monitor_width,
-            'monitor_height': monitor_height
+            'monitor_height': monitor_height,
+            'is_calibrating': is_calibrating
         })
 
 def reset_gaze_path():
@@ -477,6 +556,11 @@ def video_feed():
     """Video streaming route"""
     return Response(generate_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/ram_logo.png')
+def ram_logo():
+    """Serve the ram logo image"""
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), 'ram_logo.png')
 
 def start_dashboard(port=5000, debug=False):
     """Start the dashboard server"""

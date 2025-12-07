@@ -1,0 +1,7255 @@
+{
+  "metadata": {
+    "timestamp": "20251206_133821",
+    "test_date": "2025-12-06T13:38:21.094440",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "target_frequency_hz": 0.2778483725415448,
+    "target_amplitude_degrees": 15.0,
+    "phase_duration_seconds": 15.0
+  },
+  "results": {
+    "total_measurements": 401,
+    "horizontal_measurements": 401,
+    "vertical_measurements": 0,
+    "average_gain": 0.7314468159960175,
+    "average_gain_horizontal": 0.7314468159960175,
+    "average_gain_vertical": 0.0,
+    "std_gain": 0.7102147142194402,
+    "average_latency_ms": 326.51806640625,
+    "average_latency_horizontal_ms": 326.51806640625,
+    "average_latency_vertical_ms": 0.0,
+    "std_latency_ms": 0.0
+  },
+  "raw_data": [
+    {
+      "timestamp": 1765046286.1082728,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.03679060935974121,
+      "target_x": 781,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 689.5368151617771,
+      "target_velocity_deg_per_s": 26.132597732359873,
+      "eye_velocity_pixels_per_s": -273.325779505638,
+      "gain": -0.39639040801833203,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.1452339,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.07375168800354004,
+      "target_x": 806,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 685.2422126957753,
+      "target_velocity_deg_per_s": 25.96983757772173,
+      "eye_velocity_pixels_per_s": -201.1200467128487,
+      "gain": -0.2935021266737683,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.180077,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.10859489440917969,
+      "target_x": 830,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 678.581621429021,
+      "target_velocity_deg_per_s": 25.717409355752284,
+      "eye_velocity_pixels_per_s": -199.89289944418505,
+      "gain": -0.2945745848866814,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.212963,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.1414809226989746,
+      "target_x": 852,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 669.9921130541408,
+      "target_velocity_deg_per_s": 25.391877546363958,
+      "eye_velocity_pixels_per_s": -74.09427650657064,
+      "gain": -0.11058977421213796,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.24943,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.1779477596282959,
+      "target_x": 877,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 657.8873561864356,
+      "target_velocity_deg_per_s": 24.933122139957494,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.284835,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.21335291862487793,
+      "target_x": 900,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 643.5842675875764,
+      "target_velocity_deg_per_s": 24.391052663077424,
+      "eye_velocity_pixels_per_s": 67.96460176991151,
+      "gain": 0.10560326781242078,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.327202,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.2557199001312256,
+      "target_x": 927,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 623.2436157408587,
+      "target_velocity_deg_per_s": 23.620166960332835,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.363471,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.2919888496398926,
+      "target_x": 950,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 603.1184608652147,
+      "target_velocity_deg_per_s": 22.85744832790817,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.3980002,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.32651805877685547,
+      "target_x": 971,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 581.7113498790225,
+      "target_velocity_deg_per_s": 22.046145134643734,
+      "eye_velocity_pixels_per_s": -199.95988980251005,
+      "gain": -0.34374417800872437,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.445324,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.3738417625427246,
+      "target_x": 998,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 548.9562411068935,
+      "target_velocity_deg_per_s": 20.804766773981562,
+      "eye_velocity_pixels_per_s": -61.257605479684244,
+      "gain": -0.11158923224220359,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.487085,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.4156029224395752,
+      "target_x": 1021,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 516.9329946661032,
+      "target_velocity_deg_per_s": 19.591125096089346,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.522284,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.4508018493652344,
+      "target_x": 1039,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 487.80148514713,
+      "target_velocity_deg_per_s": 18.487076693079665,
+      "eye_velocity_pixels_per_s": 128.15137881622667,
+      "gain": 0.2627121538540905,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.557015,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.4855327606201172,
+      "target_x": 1056,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 457.25201017126653,
+      "target_velocity_deg_per_s": 17.329289142183296,
+      "eye_velocity_pixels_per_s": 2242.3847943124997,
+      "gain": 4.904045787513544,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046286.5995,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.5280177593231201,
+      "target_x": 1075,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 417.60874646800914,
+      "target_velocity_deg_per_s": 15.826858176387757,
+      "eye_velocity_pixels_per_s": 2899.283457771514,
+      "gain": 6.94258317693931,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.635317,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.5638349056243896,
+      "target_x": 1090,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 382.3941621490629,
+      "target_velocity_deg_per_s": 14.49226871563013,
+      "eye_velocity_pixels_per_s": 2415.8763935791276,
+      "gain": 6.317764842438634,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.669097,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.5976147651672363,
+      "target_x": 1103,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 347.81061844813024,
+      "target_velocity_deg_per_s": 13.181594918635076,
+      "eye_velocity_pixels_per_s": 2521.815645455521,
+      "gain": 7.25054242652918,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.711343,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.6398608684539795,
+      "target_x": 1118,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 302.8721385071833,
+      "target_velocity_deg_per_s": 11.478481766185103,
+      "eye_velocity_pixels_per_s": 2364.3402644159373,
+      "gain": 7.8063973664578645,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.747157,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.6756749153137207,
+      "target_x": 1129,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 263.4759551278712,
+      "target_velocity_deg_per_s": 9.985414840961825,
+      "eye_velocity_pixels_per_s": 131.4806207323368,
+      "gain": 0.49902322459947474,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.7819,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.7104177474975586,
+      "target_x": 1138,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 224.27273685825242,
+      "target_velocity_deg_per_s": 8.499661056207797,
+      "eye_velocity_pixels_per_s": 137.06147689095314,
+      "gain": 0.6111374873780597,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.818031,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.7465488910675049,
+      "target_x": 1146,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 182.63014473055165,
+      "target_velocity_deg_per_s": 6.921458000652854,
+      "eye_velocity_pixels_per_s": 744.3332139669373,
+      "gain": 4.075631736836816,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.852063,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.7805807590484619,
+      "target_x": 1151,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 142.73977322618177,
+      "target_velocity_deg_per_s": 5.40966195293419,
+      "eye_velocity_pixels_per_s": 1218.8052503973026,
+      "gain": 8.538652001821632,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.901082,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.8295998573303223,
+      "target_x": 1157,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 84.43361614692027,
+      "target_velocity_deg_per_s": 3.199930268173248,
+      "eye_velocity_pixels_per_s": 1106.7834492022992,
+      "gain": 13.108326987635117,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.936311,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.8648288249969482,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 42.12367486569708,
+      "target_velocity_deg_per_s": 1.596435499989531,
+      "eye_velocity_pixels_per_s": 1178.933238682198,
+      "gain": 27.98742613129056,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046286.984878,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.913395881652832,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -16.433225711907884,
+      "target_velocity_deg_per_s": -0.6227990551506772,
+      "eye_velocity_pixels_per_s": 743.1951138854503,
+      "gain": -45.22515097853944,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.02921,
+      "phase": "horizontal",
+      "time_from_phase_start": 0.9577279090881348,
+      "target_x": 1158,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -69.7915871685095,
+      "target_velocity_deg_per_s": -2.6450153675256414,
+      "eye_velocity_pixels_per_s": 276.6060956869879,
+      "gain": -3.963315736309758,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.074621,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.003138780593872,
+      "target_x": 1154,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -124.01257713453904,
+      "target_velocity_deg_per_s": -4.699924240085454,
+      "eye_velocity_pixels_per_s": 213.20878146915865,
+      "gain": -1.71925127592383,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.114053,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.0425708293914795,
+      "target_x": 1148,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -170.47491086206347,
+      "target_velocity_deg_per_s": -6.460789577961844,
+      "eye_velocity_pixels_per_s": 348.8203112230111,
+      "gain": -2.0461680223739926,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.1571488,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.0856666564941406,
+      "target_x": 1139,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -220.3229654704408,
+      "target_velocity_deg_per_s": -8.349969575574889,
+      "eye_velocity_pixels_per_s": 69.65779079704261,
+      "gain": -0.3161621878513981,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.211286,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.1398038864135742,
+      "target_x": 1124,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -281.1424359740873,
+      "target_velocity_deg_per_s": -10.65495274981487,
+      "eye_velocity_pixels_per_s": 137.3053555793039,
+      "gain": -0.48838360208260856,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.2472498,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.1757676601409912,
+      "target_x": 1113,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -320.19076818588024,
+      "target_velocity_deg_per_s": -12.134836543359562,
+      "eye_velocity_pixels_per_s": 144.81931527617496,
+      "gain": -0.45229072685850535,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.293643,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.222160816192627,
+      "target_x": 1096,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -368.67794340615336,
+      "target_velocity_deg_per_s": -13.972440884924072,
+      "eye_velocity_pixels_per_s": -72.38706853307704,
+      "gain": 0.19634228146198582,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.3349261,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.263443946838379,
+      "target_x": 1079,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -409.80151187424457,
+      "target_velocity_deg_per_s": -15.530973581751363,
+      "eye_velocity_pixels_per_s": -67.5002574930477,
+      "gain": 0.16471451553297695,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.3722088,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.3007266521453857,
+      "target_x": 1062,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -445.1174216254251,
+      "target_velocity_deg_per_s": -16.86940315184386,
+      "eye_velocity_pixels_per_s": -304.49419621657955,
+      "gain": 0.6840761143535229,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.409893,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.3384108543395996,
+      "target_x": 1044,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -478.8975643965604,
+      "target_velocity_deg_per_s": -18.14962904112093,
+      "eye_velocity_pixels_per_s": -372.59524962691796,
+      "gain": 0.7780270298438671,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.4536488,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.3821666240692139,
+      "target_x": 1022,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -515.5113010444297,
+      "target_velocity_deg_per_s": -19.53724465533994,
+      "eye_velocity_pixels_per_s": -2006.1765316211563,
+      "gain": 3.8916247375307345,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.491586,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.4201037883758545,
+      "target_x": 1001,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -544.8299442849425,
+      "target_velocity_deg_per_s": -20.64838519637564,
+      "eye_velocity_pixels_per_s": -1687.3555392748165,
+      "gain": 3.097031572832092,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.52729,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.4558079242706299,
+      "target_x": 981,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -570.2428580568967,
+      "target_velocity_deg_per_s": -21.61150339138285,
+      "eye_velocity_pixels_per_s": -1798.6732206065822,
+      "gain": 3.1542231440400035,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.563435,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.491952896118164,
+      "target_x": 959,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -593.7131827305021,
+      "target_velocity_deg_per_s": -22.500999847347007,
+      "eye_velocity_pixels_per_s": -1746.621505164932,
+      "gain": 2.9418607434858948,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.5983229,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.5268406867980957,
+      "target_x": 938,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -614.1267695908851,
+      "target_velocity_deg_per_s": -23.27464969745953,
+      "eye_velocity_pixels_per_s": -1639.8689829594925,
+      "gain": 2.6702450766833197,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.6363058,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.5648236274719238,
+      "target_x": 914,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -633.7595967117624,
+      "target_velocity_deg_per_s": -24.018709713136104,
+      "eye_velocity_pixels_per_s": -339.4340538091298,
+      "gain": 0.5355880298622231,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.676983,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.6055009365081787,
+      "target_x": 887,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -651.6940824643054,
+      "target_velocity_deg_per_s": -24.698404678513683,
+      "eye_velocity_pixels_per_s": -399.14299296669554,
+      "gain": 0.6124698746034071,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.716946,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.6454637050628662,
+      "target_x": 861,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -666.1149827007661,
+      "target_velocity_deg_per_s": -25.244939071647575,
+      "eye_velocity_pixels_per_s": -395.4533166844741,
+      "gain": 0.5936712533939815,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.7541602,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.682677984237671,
+      "target_x": 836,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -676.6310972863708,
+      "target_velocity_deg_per_s": -25.643486888283785,
+      "eye_velocity_pixels_per_s": -456.1539150804521,
+      "gain": 0.6741545236538159,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.7893388,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.7178566455841064,
+      "target_x": 812,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -683.947632082902,
+      "target_velocity_deg_per_s": -25.92077456376157,
+      "eye_velocity_pixels_per_s": -523.5160441818912,
+      "gain": 0.765432936126366,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.8310971,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.7596149444580078,
+      "target_x": 783,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -689.2835923848036,
+      "target_velocity_deg_per_s": -26.123000900368005,
+      "eye_velocity_pixels_per_s": -508.2363557744731,
+      "gain": 0.7373399880534833,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.870771,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.7992887496948242,
+      "target_x": 756,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.9614490852202,
+      "target_velocity_deg_per_s": -26.186589606932202,
+      "eye_velocity_pixels_per_s": -448.9445735774893,
+      "gain": 0.6497389603600278,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.905757,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.8342747688293457,
+      "target_x": 733,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -689.6917368998043,
+      "target_velocity_deg_per_s": -26.138469075804984,
+      "eye_velocity_pixels_per_s": -460.7781527599985,
+      "gain": 0.6680929002154169,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.9396129,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.8681306838989258,
+      "target_x": 709,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -686.0141181888393,
+      "target_velocity_deg_per_s": -25.999091847100967,
+      "eye_velocity_pixels_per_s": -539.2212360488353,
+      "gain": 0.7860206105851654,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046287.981647,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.9101648330688477,
+      "target_x": 680,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -678.1165358440279,
+      "target_velocity_deg_per_s": -25.6997831837532,
+      "eye_velocity_pixels_per_s": -1549.5966707884027,
+      "gain": 2.285148037069578,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046288.0168252,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.945343017578125,
+      "target_x": 657,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -668.6991945363219,
+      "target_velocity_deg_per_s": -25.342877523763345,
+      "eye_velocity_pixels_per_s": -1545.2702755993491,
+      "gain": 2.3108600821193517,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046288.050733,
+      "phase": "horizontal",
+      "time_from_phase_start": 1.9792509078979492,
+      "target_x": 634,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -657.2350980720463,
+      "target_velocity_deg_per_s": -24.908402359162313,
+      "eye_velocity_pixels_per_s": -1728.141088689164,
+      "gain": 2.6294108360289132,
+      "latency_ms": 326.51806640625
+    },
+    {
+      "timestamp": 1765046288.084882,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.013399839401245,
+      "target_x": 612,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -643.3626615166612,
+      "target_velocity_deg_per_s": -24.382654065382663,
+      "eye_velocity_pixels_per_s": -1596.6482076388481,
+      "gain": 2.4817234557487597,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.12131,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.049827814102173,
+      "target_x": 588,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -626.0459389364436,
+      "target_velocity_deg_per_s": -23.726371564896404,
+      "eye_velocity_pixels_per_s": -1568.543142460953,
+      "gain": 2.505476107912573,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.156422,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.08493971824646,
+      "target_x": 566,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -606.9583858007804,
+      "target_velocity_deg_per_s": -23.00297676302161,
+      "eye_velocity_pixels_per_s": -492.0614965119755,
+      "gain": 0.8107005488733505,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.198661,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.127178907394409,
+      "target_x": 541,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -580.9823425126225,
+      "target_velocity_deg_per_s": -22.01851665153571,
+      "eye_velocity_pixels_per_s": -610.4403866809882,
+      "gain": 1.0507038545112508,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.234966,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.1634838581085205,
+      "target_x": 520,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -556.1265296160705,
+      "target_velocity_deg_per_s": -21.076511894931084,
+      "eye_velocity_pixels_per_s": -607.9261295118855,
+      "gain": 1.093143551219496,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.2750132,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.20353102684021,
+      "target_x": 497,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -526.122504471625,
+      "target_velocity_deg_per_s": -19.939396222191483,
+      "eye_velocity_pixels_per_s": -1314.8821806499166,
+      "gain": 2.4991939509799685,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.317216,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.2457337379455566,
+      "target_x": 475,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -491.72471169695643,
+      "target_velocity_deg_per_s": -18.63576215698122,
+      "eye_velocity_pixels_per_s": -1281.2282691325101,
+      "gain": 2.6055803962159105,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.353205,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.2817227840423584,
+      "target_x": 457,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -460.27612458864587,
+      "target_velocity_deg_per_s": -17.44389936143238,
+      "eye_velocity_pixels_per_s": -1341.5779182753863,
+      "gain": 2.91472411147628,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.387458,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.3159759044647217,
+      "target_x": 442,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -428.65550591388495,
+      "target_velocity_deg_per_s": -16.245516780972185,
+      "eye_velocity_pixels_per_s": -1197.0537118265331,
+      "gain": 2.7925774784449313,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.428289,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.356806755065918,
+      "target_x": 424,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -388.9705258411681,
+      "target_velocity_deg_per_s": -14.741504816050904,
+      "eye_velocity_pixels_per_s": -1101.7844288691042,
+      "gain": 2.832565337660072,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.463014,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.3915317058563232,
+      "target_x": 411,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -353.657408491217,
+      "target_velocity_deg_per_s": -13.403181074532649,
+      "eye_velocity_pixels_per_s": -468.08328279555514,
+      "gain": 1.3235500559496405,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.499066,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.427583932876587,
+      "target_x": 398,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -315.62159252314143,
+      "target_velocity_deg_per_s": -11.961670402063934,
+      "eye_velocity_pixels_per_s": -417.9260772844257,
+      "gain": 1.3241365203927968,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.532985,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.46150279045105,
+      "target_x": 387,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -278.69263109015264,
+      "target_velocity_deg_per_s": -10.562108155955709,
+      "eye_velocity_pixels_per_s": -283.68039240716047,
+      "gain": 1.0178969974824859,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.5690181,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.4975359439849854,
+      "target_x": 377,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -238.39459507075168,
+      "target_velocity_deg_per_s": -9.034862124208905,
+      "eye_velocity_pixels_per_s": -903.2823698683557,
+      "gain": 3.789022018726037,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.603433,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.5319507122039795,
+      "target_x": 369,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -199.02376410922457,
+      "target_velocity_deg_per_s": -7.5427560244570895,
+      "eye_velocity_pixels_per_s": -867.8570930735026,
+      "gain": 4.360570190990967,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.645488,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.5740058422088623,
+      "target_x": 362,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -149.95171967040676,
+      "target_velocity_deg_per_s": -5.682985858417086,
+      "eye_velocity_pixels_per_s": -761.751853724977,
+      "gain": 5.079980779142142,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.6874418,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.615959644317627,
+      "target_x": 356,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -100.19269031295035,
+      "target_velocity_deg_per_s": -3.797179808386221,
+      "eye_velocity_pixels_per_s": -737.8869783964738,
+      "gain": 7.364678761411586,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.7345002,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.663017988204956,
+      "target_x": 352,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -43.7531930616207,
+      "target_velocity_deg_per_s": -1.6581922366499828,
+      "eye_velocity_pixels_per_s": -235.6749260491432,
+      "gain": 5.386462325554746,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.769776,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.698293924331665,
+      "target_x": 351,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -1.2304695366594136,
+      "target_velocity_deg_per_s": -0.046633282975470286,
+      "eye_velocity_pixels_per_s": -228.4432781187715,
+      "gain": 185.65537082613952,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.803906,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.732423782348633,
+      "target_x": 352,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 39.91683851975464,
+      "target_velocity_deg_per_s": 1.51279911506912,
+      "eye_velocity_pixels_per_s": -239.87177906546663,
+      "gain": -6.009288008787452,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.8387358,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.7672536373138428,
+      "target_x": 354,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 81.76098665404739,
+      "target_velocity_deg_per_s": 3.0986408955260436,
+      "eye_velocity_pixels_per_s": -196.63871703748248,
+      "gain": -2.4050433475015844,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.875763,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.8042807579040527,
+      "target_x": 359,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 125.90995776862317,
+      "target_velocity_deg_per_s": 4.7718326339020445,
+      "eye_velocity_pixels_per_s": -132.75202466283707,
+      "gain": -1.0543409513867612,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.9110742,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.8395919799804688,
+      "target_x": 364,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 167.52569218918129,
+      "target_velocity_deg_per_s": 6.349017815369136,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.95298,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.881497859954834,
+      "target_x": 373,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 216.0750766405075,
+      "target_velocity_deg_per_s": 8.188979810324447,
+      "eye_velocity_pixels_per_s": 65.50080423452465,
+      "gain": 0.30313909985787435,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046288.9873018,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.9158196449279785,
+      "target_x": 381,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 254.98844457170284,
+      "target_velocity_deg_per_s": 9.663748623529377,
+      "eye_velocity_pixels_per_s": 65.43226804439361,
+      "gain": 0.25660875791567106,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.022581,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.951098918914795,
+      "target_x": 391,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 294.03223343139985,
+      "target_velocity_deg_per_s": 11.143460229614215,
+      "eye_velocity_pixels_per_s": 65.27229990837019,
+      "gain": 0.22199028707374274,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.0610292,
+      "phase": "horizontal",
+      "time_from_phase_start": 2.98954701423645,
+      "target_x": 404,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 335.30832074178034,
+      "target_velocity_deg_per_s": 12.707773203091731,
+      "eye_velocity_pixels_per_s": 134.94085136607845,
+      "gain": 0.402438123418941,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.1032052,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.0317230224609375,
+      "target_x": 420,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 378.8429742877619,
+      "target_velocity_deg_per_s": 14.35768306072257,
+      "eye_velocity_pixels_per_s": 67.66213154520699,
+      "gain": 0.17860204923270434,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.139582,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.0680997371673584,
+      "target_x": 435,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 414.75102097707475,
+      "target_velocity_deg_per_s": 15.718553892929624,
+      "eye_velocity_pixels_per_s": 69.66697282035582,
+      "gain": 0.167972998972332,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.17453,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.1030478477478027,
+      "target_x": 451,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 447.67569961915234,
+      "target_velocity_deg_per_s": 16.966358743231588,
+      "eye_velocity_pixels_per_s": 138.86791665525692,
+      "gain": 0.31019757555166594,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.21521,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.1437277793884277,
+      "target_x": 471,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 483.89408099381757,
+      "target_velocity_deg_per_s": 18.33899087855748,
+      "eye_velocity_pixels_per_s": 264.7577717843165,
+      "gain": 0.5471399262428654,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.251601,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.1801187992095947,
+      "target_x": 489,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 514.2318370378489,
+      "target_velocity_deg_per_s": 19.488754542177286,
+      "eye_velocity_pixels_per_s": 3227.1305256846813,
+      "gain": 6.275633465780835,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.285938,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.2144558429718018,
+      "target_x": 508,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 540.9568320383379,
+      "target_velocity_deg_per_s": 20.50159900296689,
+      "eye_velocity_pixels_per_s": 4454.594888526372,
+      "gain": 8.234658709718769,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.327499,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.256016731262207,
+      "target_x": 532,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 570.6962429182705,
+      "target_velocity_deg_per_s": 21.62868612033902,
+      "eye_velocity_pixels_per_s": 4459.415778451049,
+      "gain": 7.813991828030455,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.363104,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.2916219234466553,
+      "target_x": 553,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 593.7911428155552,
+      "target_velocity_deg_per_s": 22.503954438743833,
+      "eye_velocity_pixels_per_s": 4443.8793939401785,
+      "gain": 7.483909869165136,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.3981519,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.326669692993164,
+      "target_x": 574,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 614.2849905672193,
+      "target_velocity_deg_per_s": 23.28064607798113,
+      "eye_velocity_pixels_per_s": 4444.034003709981,
+      "gain": 7.234482482807277,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.43255,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.361067771911621,
+      "target_x": 596,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 632.1639342411835,
+      "target_velocity_deg_per_s": 23.958236066851565,
+      "eye_velocity_pixels_per_s": 1304.2350779244082,
+      "gain": 2.0631279440038663,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.467532,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.396049737930298,
+      "target_x": 619,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 648.0086758146826,
+      "target_velocity_deg_per_s": 24.558732296507273,
+      "eye_velocity_pixels_per_s": 203.75123183505443,
+      "gain": 0.31442670359142405,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.503291,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.4318087100982666,
+      "target_x": 642,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 661.7077901564111,
+      "target_velocity_deg_per_s": 25.077911891432894,
+      "eye_velocity_pixels_per_s": 142.21372890230165,
+      "gain": 0.21491923023708986,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.5385962,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.467113971710205,
+      "target_x": 666,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 672.7042084415053,
+      "target_velocity_deg_per_s": 25.494662627901857,
+      "eye_velocity_pixels_per_s": 142.4564839959044,
+      "gain": 0.21176689874728444,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.573059,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.5015769004821777,
+      "target_x": 689,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 680.9745271459568,
+      "target_velocity_deg_per_s": 25.8080975411213,
+      "eye_velocity_pixels_per_s": 142.93291644566037,
+      "gain": 0.20989465941510146,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.615697,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.5442147254943848,
+      "target_x": 719,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 687.7937983419648,
+      "target_velocity_deg_per_s": 26.06653953736386,
+      "eye_velocity_pixels_per_s": 202.02354133063173,
+      "gain": 0.2937269016057447,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.651233,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.5797507762908936,
+      "target_x": 743,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.5679432138229,
+      "target_velocity_deg_per_s": 26.171676218094312,
+      "eye_velocity_pixels_per_s": 266.73790167707944,
+      "gain": 0.38625873717177234,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.685329,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.613846778869629,
+      "target_x": 766,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.7320957473274,
+      "target_velocity_deg_per_s": 26.177897397341734,
+      "eye_velocity_pixels_per_s": 274.66779681020563,
+      "gain": 0.3976473635744881,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.727937,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.6564548015594482,
+      "target_x": 795,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 687.4989511120532,
+      "target_velocity_deg_per_s": 26.055365189769415,
+      "eye_velocity_pixels_per_s": 327.45184000825236,
+      "gain": 0.4762943121274407,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.76301,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.691527843475342,
+      "target_x": 819,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 681.9830938823344,
+      "target_velocity_deg_per_s": 25.84632098072374,
+      "eye_velocity_pixels_per_s": 389.57430154529527,
+      "gain": 0.571237476471096,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.797642,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.7261598110198975,
+      "target_x": 843,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 674.0285062056436,
+      "target_velocity_deg_per_s": 25.544851885367347,
+      "eye_velocity_pixels_per_s": 340.76219025370114,
+      "gain": 0.505560502436281,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.834313,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.7628307342529297,
+      "target_x": 867,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 662.9215096250638,
+      "target_velocity_deg_per_s": 25.123910367419693,
+      "eye_velocity_pixels_per_s": 338.6496260814833,
+      "gain": 0.5108442269025443,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.875432,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.8039498329162598,
+      "target_x": 894,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 647.2396639802093,
+      "target_velocity_deg_per_s": 24.529587693231814,
+      "eye_velocity_pixels_per_s": 389.26210697053796,
+      "gain": 0.6014188076434704,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.908671,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.837188720703125,
+      "target_x": 916,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 632.1221269954289,
+      "target_velocity_deg_per_s": 23.956651623625937,
+      "eye_velocity_pixels_per_s": 271.1168386272332,
+      "gain": 0.4288994595330686,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.94662,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.8751378059387207,
+      "target_x": 940,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 612.2640358618861,
+      "target_velocity_deg_per_s": 23.204054378758507,
+      "eye_velocity_pixels_per_s": 201.51422880438685,
+      "gain": 0.32912961892448017,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046289.981526,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.910043716430664,
+      "target_x": 961,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 591.6242932744733,
+      "target_velocity_deg_per_s": 22.4218335045768,
+      "eye_velocity_pixels_per_s": 337.16947163258044,
+      "gain": 0.5699047105832026,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.0170162,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.9455339908599854,
+      "target_x": 982,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 568.3877661650084,
+      "target_velocity_deg_per_s": 21.54119768891516,
+      "eye_velocity_pixels_per_s": 339.3483280595228,
+      "gain": 0.597036650435236,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.0508978,
+      "phase": "horizontal",
+      "time_from_phase_start": 3.9794156551361084,
+      "target_x": 1002,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 544.1679326151145,
+      "target_velocity_deg_per_s": 20.623295767818185,
+      "eye_velocity_pixels_per_s": 210.86727850531787,
+      "gain": 0.3875040513540561,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.084564,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.013081789016724,
+      "target_x": 1020,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 518.2167847341105,
+      "target_velocity_deg_per_s": 19.639779161662567,
+      "eye_velocity_pixels_per_s": 284.2636211965167,
+      "gain": 0.5485419028686386,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.1250958,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.053613662719727,
+      "target_x": 1041,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 484.6075743452669,
+      "target_velocity_deg_per_s": 18.36603139956833,
+      "eye_velocity_pixels_per_s": 280.1495955066631,
+      "gain": 0.5780957837589755,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.159328,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.087845802307129,
+      "target_x": 1058,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 454.3257754634847,
+      "target_velocity_deg_per_s": 17.21838844361655,
+      "eye_velocity_pixels_per_s": 275.58744818249096,
+      "gain": 0.6065855451440056,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.19648,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.124997854232788,
+      "target_x": 1075,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 419.629082782768,
+      "target_velocity_deg_per_s": 15.90342643936772,
+      "eye_velocity_pixels_per_s": 278.60761491203726,
+      "gain": 0.6639378116131808,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.2385652,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.167083024978638,
+      "target_x": 1092,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 378.20175893332987,
+      "target_velocity_deg_per_s": 14.333381786956275,
+      "eye_velocity_pixels_per_s": 266.4290313977767,
+      "gain": 0.7044626977653569,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.273823,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.202340841293335,
+      "target_x": 1105,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 341.91452501715094,
+      "target_velocity_deg_per_s": 12.95814022493893,
+      "eye_velocity_pixels_per_s": 586.4977651072942,
+      "gain": 1.7153344540653095,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.3076348,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.236152648925781,
+      "target_x": 1117,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 305.89729230794575,
+      "target_velocity_deg_per_s": 11.593131376786816,
+      "eye_velocity_pixels_per_s": 1418.8762824688135,
+      "gain": 4.638407459456802,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.3479779,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.276495695114136,
+      "target_x": 1129,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 261.5395051136989,
+      "target_velocity_deg_per_s": 9.912025765663046,
+      "eye_velocity_pixels_per_s": 1245.6937272715506,
+      "gain": 4.7629275995227225,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.382968,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.311485767364502,
+      "target_x": 1138,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 222.00923657933743,
+      "target_velocity_deg_per_s": 8.413877177877685,
+      "eye_velocity_pixels_per_s": 1061.7303022170438,
+      "gain": 4.782369952601602,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.4195688,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.348086595535278,
+      "target_x": 1146,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 179.77547020856574,
+      "target_velocity_deg_per_s": 6.813269345167691,
+      "eye_velocity_pixels_per_s": 955.7817669758603,
+      "gain": 5.316530480309767,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.462759,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.391276836395264,
+      "target_x": 1153,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 129.0078902158207,
+      "target_velocity_deg_per_s": 4.889240465745866,
+      "eye_velocity_pixels_per_s": 391.6669466404439,
+      "gain": 3.035992186099733,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.49754,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.426057815551758,
+      "target_x": 1157,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 87.57825716969865,
+      "target_velocity_deg_per_s": 3.3191082976185124,
+      "eye_velocity_pixels_per_s": -258.02337719771884,
+      "gain": -2.9462036073377447,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.53248,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.460997819900513,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 45.63442731250761,
+      "target_velocity_deg_per_s": 1.7294887023901493,
+      "eye_velocity_pixels_per_s": -330.6193687882168,
+      "gain": -7.244954922390352,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.5660338,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.494551658630371,
+      "target_x": 1161,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 5.1929043950146045,
+      "target_velocity_deg_per_s": 0.19680469357634195,
+      "eye_velocity_pixels_per_s": -202.11298973911698,
+      "gain": -38.92099186982019,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.602488,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.531005859375,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -38.760000904966375,
+      "target_velocity_deg_per_s": -1.4689563914259567,
+      "eye_velocity_pixels_per_s": -65.60273985401147,
+      "gain": 1.6925371084190481,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.644453,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.572970867156982,
+      "target_x": 1157,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -89.151911054183,
+      "target_velocity_deg_per_s": -3.378747845542501,
+      "eye_velocity_pixels_per_s": 71.54883172829503,
+      "gain": -0.8025496131519881,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.686651,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.615168809890747,
+      "target_x": 1152,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -139.34075587659595,
+      "target_velocity_deg_per_s": -5.280843373376261,
+      "eye_velocity_pixels_per_s": -63.454850128711925,
+      "gain": 0.4553933250147524,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.723076,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.651593923568726,
+      "target_x": 1146,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -182.06564809133604,
+      "target_velocity_deg_per_s": -6.9000642718924405,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": -0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.757992,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.686509847640991,
+      "target_x": 1138,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -222.33168593150907,
+      "target_velocity_deg_per_s": -8.426097611977909,
+      "eye_velocity_pixels_per_s": -130.2368173377763,
+      "gain": 0.5857771320004146,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.794352,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.722869873046875,
+      "target_x": 1129,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -263.3831763395427,
+      "target_velocity_deg_per_s": -9.981898638925657,
+      "eye_velocity_pixels_per_s": -130.30062032766023,
+      "gain": 0.4947188432403217,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.828209,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.7567267417907715,
+      "target_x": 1119,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -300.65804048913134,
+      "target_velocity_deg_per_s": -11.394570172817613,
+      "eye_velocity_pixels_per_s": -70.74604338722192,
+      "gain": 0.23530401273196402,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.870999,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.799516916275024,
+      "target_x": 1104,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -346.2498430640446,
+      "target_velocity_deg_per_s": -13.122443450046251,
+      "eye_velocity_pixels_per_s": -135.61297328795243,
+      "gain": 0.39166219423489695,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.906773,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.835290908813477,
+      "target_x": 1090,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -382.8941832814599,
+      "target_velocity_deg_per_s": -14.511218901933876,
+      "eye_velocity_pixels_per_s": -272.18732016432244,
+      "gain": 0.7108682556408582,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.9417658,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.870283603668213,
+      "target_x": 1076,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -417.2947878659782,
+      "target_velocity_deg_per_s": -15.814959531281241,
+      "eye_velocity_pixels_per_s": -201.3343288102899,
+      "gain": 0.4824750623891139,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046290.9775429,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.906060695648193,
+      "target_x": 1059,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -450.8560025175791,
+      "target_velocity_deg_per_s": -17.086888313929197,
+      "eye_velocity_pixels_per_s": -201.97507829679483,
+      "gain": 0.44798134475079926,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.018294,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.94681191444397,
+      "target_x": 1040,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -486.93425117836625,
+      "target_velocity_deg_per_s": -18.454209591646908,
+      "eye_velocity_pixels_per_s": -326.1695194768999,
+      "gain": 0.6698430407957121,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.051983,
+      "phase": "horizontal",
+      "time_from_phase_start": 4.980500936508179,
+      "target_x": 1022,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -514.9076457477603,
+      "target_velocity_deg_per_s": -19.51436686159492,
+      "eye_velocity_pixels_per_s": -480.705129156319,
+      "gain": 0.933575434597069,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.095745,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.02426290512085,
+      "target_x": 998,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -548.5726556333806,
+      "target_velocity_deg_per_s": -20.790229356029574,
+      "eye_velocity_pixels_per_s": -460.38585117611876,
+      "gain": 0.8392431639607674,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.130194,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.058711767196655,
+      "target_x": 978,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -572.8313013784631,
+      "target_velocity_deg_per_s": -21.70960221161718,
+      "eye_velocity_pixels_per_s": -594.3915594823018,
+      "gain": 1.0376380586255605,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.164822,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.093339920043945,
+      "target_x": 958,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -595.1286660080349,
+      "target_velocity_deg_per_s": -22.55464492368708,
+      "eye_velocity_pixels_per_s": -726.1890639360183,
+      "gain": 1.220221954366779,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.1996381,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.128155946731567,
+      "target_x": 936,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -615.354873730559,
+      "target_velocity_deg_per_s": -23.321193334796735,
+      "eye_velocity_pixels_per_s": -887.815451308252,
+      "gain": 1.4427698377131783,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.2425458,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.171063661575317,
+      "target_x": 909,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -637.1483985502738,
+      "target_velocity_deg_per_s": -24.147141137380974,
+      "eye_velocity_pixels_per_s": -844.8660871570505,
+      "gain": 1.3260114740606805,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.276705,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.205222845077515,
+      "target_x": 887,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -651.9488573633201,
+      "target_velocity_deg_per_s": -24.708060334023084,
+      "eye_velocity_pixels_per_s": -956.0125847935543,
+      "gain": 1.46639199378301,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.311795,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.240312814712524,
+      "target_x": 864,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -664.7387761688565,
+      "target_velocity_deg_per_s": -25.192782535688576,
+      "eye_velocity_pixels_per_s": -1018.7164409454748,
+      "gain": 1.5325064182606087,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.346669,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.275186777114868,
+      "target_x": 840,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -674.9792541873557,
+      "target_velocity_deg_per_s": -25.580884065237402,
+      "eye_velocity_pixels_per_s": -1160.3165759319054,
+      "gain": 1.719040353808909,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.381964,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.310481786727905,
+      "target_x": 816,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -682.7966460453592,
+      "target_velocity_deg_per_s": -25.877153607703384,
+      "eye_velocity_pixels_per_s": -1085.9687790403398,
+      "gain": 1.5904717536767121,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.418147,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.346664905548096,
+      "target_x": 791,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -688.120386020232,
+      "target_velocity_deg_per_s": -26.07891680893637,
+      "eye_velocity_pixels_per_s": -1127.5557446382543,
+      "gain": 1.6386024415865832,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.452267,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.380784749984741,
+      "target_x": 768,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.6263112182345,
+      "target_velocity_deg_per_s": -26.173888293716942,
+      "eye_velocity_pixels_per_s": -1127.8081938420332,
+      "gain": 1.6330223385967284,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.492239,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.420756816864014,
+      "target_x": 741,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.4459771410501,
+      "target_velocity_deg_per_s": -26.16705385385402,
+      "eye_velocity_pixels_per_s": -1036.3320745935255,
+      "gain": 1.5009604066123987,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.526339,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.454856872558594,
+      "target_x": 718,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -687.6351549650382,
+      "target_velocity_deg_per_s": -26.060527148379013,
+      "eye_velocity_pixels_per_s": -901.652197426654,
+      "gain": 1.3112363306563306,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.5639522,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.492470026016235,
+      "target_x": 692,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -681.7097937902518,
+      "target_velocity_deg_per_s": -25.835963243167786,
+      "eye_velocity_pixels_per_s": -884.6723475498508,
+      "gain": 1.2977257413761705,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.613282,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.541799783706665,
+      "target_x": 658,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -669.4905240969211,
+      "target_velocity_deg_per_s": -25.372867941426563,
+      "eye_velocity_pixels_per_s": -830.1944391966199,
+      "gain": 1.2400391182779966,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.6538749,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.582392692565918,
+      "target_x": 631,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -655.7085619787402,
+      "target_velocity_deg_per_s": -24.850548517607915,
+      "eye_velocity_pixels_per_s": -1379.6453493641059,
+      "gain": 2.1040526681560054,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.701078,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.629595756530762,
+      "target_x": 601,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -635.5487331336227,
+      "target_velocity_deg_per_s": -24.086515784360632,
+      "eye_velocity_pixels_per_s": -1276.190742319031,
+      "gain": 2.008013981912406,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.7352672,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.663784980773926,
+      "target_x": 579,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -618.2444181294794,
+      "target_velocity_deg_per_s": -23.43070351575649,
+      "eye_velocity_pixels_per_s": -1307.5333544247876,
+      "gain": 2.114913319202746,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.77137,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.699887752532959,
+      "target_x": 557,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -597.5828236230592,
+      "target_velocity_deg_per_s": -22.64765448070427,
+      "eye_velocity_pixels_per_s": -1258.7934421368652,
+      "gain": 2.1064752740130324,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.81303,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.7415478229522705,
+      "target_x": 532,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -570.797382740648,
+      "target_velocity_deg_per_s": -21.632519195288452,
+      "eye_velocity_pixels_per_s": -1121.412717192557,
+      "gain": 1.9646423601456682,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.8490062,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.777523994445801,
+      "target_x": 511,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -545.2324396214335,
+      "target_velocity_deg_per_s": -20.663639274890944,
+      "eye_velocity_pixels_per_s": -579.0971125719104,
+      "gain": 1.0621105247772673,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.883113,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.811630725860596,
+      "target_x": 493,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -519.0088739274767,
+      "target_velocity_deg_per_s": -19.669798368473927,
+      "eye_velocity_pixels_per_s": -549.3451714356605,
+      "gain": 1.0584504408925055,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.932556,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.861073732376099,
+      "target_x": 467,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -477.75378808566506,
+      "target_velocity_deg_per_s": -18.106281324840662,
+      "eye_velocity_pixels_per_s": -446.0465663071792,
+      "gain": 0.9336327150737306,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046291.967124,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.895641803741455,
+      "target_x": 451,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -446.7779511133535,
+      "target_velocity_deg_per_s": -16.93233517835295,
+      "eye_velocity_pixels_per_s": -444.4350213080671,
+      "gain": 0.9947559412915344,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.003623,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.932140827178955,
+      "target_x": 434,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -412.3087448841243,
+      "target_velocity_deg_per_s": -15.625994630994555,
+      "eye_velocity_pixels_per_s": -393.50864450874826,
+      "gain": 0.9544028580314017,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.038811,
+      "phase": "horizontal",
+      "time_from_phase_start": 5.967328786849976,
+      "target_x": 420,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -377.49168057629026,
+      "target_velocity_deg_per_s": -14.306470690035923,
+      "eye_velocity_pixels_per_s": -263.4283501899179,
+      "gain": 0.6978388233291929,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.0747662,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.003283977508545,
+      "target_x": 406,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -340.44549513913165,
+      "target_velocity_deg_per_s": -12.902465798258623,
+      "eye_velocity_pixels_per_s": -198.27467605590743,
+      "gain": 0.5823977079646111,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.1090372,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.037554979324341,
+      "target_x": 394,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -303.88424592648477,
+      "target_velocity_deg_per_s": -11.516839393318234,
+      "eye_velocity_pixels_per_s": -209.65405807707367,
+      "gain": 0.6899142054497714,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.143944,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.072461843490601,
+      "target_x": 384,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -265.5275944164457,
+      "target_velocity_deg_per_s": -10.063169448172529,
+      "eye_velocity_pixels_per_s": -141.38666629847222,
+      "gain": 0.532474474486164,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.179065,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.1075828075408936,
+      "target_x": 375,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -225.94113309728328,
+      "target_velocity_deg_per_s": -8.562891222914047,
+      "eye_velocity_pixels_per_s": -142.49732121735016,
+      "gain": 0.6306833964402365,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.212896,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.141413927078247,
+      "target_x": 367,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -187.00385165441534,
+      "target_velocity_deg_per_s": -7.087216117010646,
+      "eye_velocity_pixels_per_s": -68.9318591070497,
+      "gain": 0.36861197508614074,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.24956,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.178077936172485,
+      "target_x": 361,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -144.0741229868035,
+      "target_velocity_deg_per_s": -5.460232168710729,
+      "eye_velocity_pixels_per_s": -68.65226354692187,
+      "gain": 0.4765065517921639,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.2837791,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.212296962738037,
+      "target_x": 356,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -103.47130498844679,
+      "target_velocity_deg_per_s": -3.9214352745922683,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": -0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.326623,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.255140781402588,
+      "target_x": 353,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -52.13153519555793,
+      "target_velocity_deg_per_s": -1.9757211050671017,
+      "eye_velocity_pixels_per_s": 65.68901160436376,
+      "gain": -1.2600628651726535,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.362477,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.290994882583618,
+      "target_x": 351,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -8.931438548877304,
+      "target_velocity_deg_per_s": -0.3384905426903748,
+      "eye_velocity_pixels_per_s": 70.87863524550886,
+      "gain": -7.935858804561603,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.4028878,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.3314056396484375,
+      "target_x": 352,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 39.79223799402817,
+      "target_velocity_deg_per_s": 1.5080769083000924,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.437891,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.366408824920654,
+      "target_x": 354,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 81.84466739350049,
+      "target_velocity_deg_per_s": 3.1018122926929386,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.479218,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.407735824584961,
+      "target_x": 359,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 131.0890439803489,
+      "target_velocity_deg_per_s": 4.96811363531672,
+      "eye_velocity_pixels_per_s": 61.40024334243577,
+      "gain": 0.4683857741127479,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.5169878,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.445505619049072,
+      "target_x": 365,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 175.50457737603202,
+      "target_velocity_deg_per_s": 6.651407756494667,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.558984,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.487501859664917,
+      "target_x": 374,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 223.9862889485217,
+      "target_velocity_deg_per_s": 8.488805032523967,
+      "eye_velocity_pixels_per_s": 61.06650200709908,
+      "gain": 0.2726350005340455,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.5950458,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.523563623428345,
+      "target_x": 384,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 264.6663237951023,
+      "target_velocity_deg_per_s": 10.030528350276997,
+      "eye_velocity_pixels_per_s": 130.10129859899706,
+      "gain": 0.49156725620943775,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.635343,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.563860893249512,
+      "target_x": 396,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 308.87635362629624,
+      "target_velocity_deg_per_s": 11.706034138960902,
+      "eye_velocity_pixels_per_s": 126.61311162849934,
+      "gain": 0.40991519791665953,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.677689,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.606206893920898,
+      "target_x": 411,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 353.6836146345505,
+      "target_velocity_deg_per_s": 13.404174255153022,
+      "eye_velocity_pixels_per_s": 65.50077066242525,
+      "gain": 0.18519594335775214,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.7123241,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.640841960906982,
+      "target_x": 424,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 388.90612414255185,
+      "target_velocity_deg_per_s": 14.739064070834385,
+      "eye_velocity_pixels_per_s": 127.98432192056472,
+      "gain": 0.3290879571586603,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.746767,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.6752848625183105,
+      "target_x": 439,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 422.52383380521366,
+      "target_velocity_deg_per_s": 16.013133944959225,
+      "eye_velocity_pixels_per_s": 202.3612803074527,
+      "gain": 0.4789345928370578,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.788995,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.717512845993042,
+      "target_x": 458,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 461.64407308811275,
+      "target_velocity_deg_per_s": 17.495742928112374,
+      "eye_velocity_pixels_per_s": 190.77158566796237,
+      "gain": 0.4132438750741858,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.823113,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.751630783081055,
+      "target_x": 475,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 491.42904329794993,
+      "target_velocity_deg_per_s": 18.62455668808744,
+      "eye_velocity_pixels_per_s": 197.04956143886537,
+      "gain": 0.4009725597748109,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.8572302,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.78574800491333,
+      "target_x": 493,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 519.4705408647228,
+      "target_velocity_deg_per_s": 19.687294977925525,
+      "eye_velocity_pixels_per_s": 278.4875190542303,
+      "gain": 0.5360987720124677,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.8919911,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.82050895690918,
+      "target_x": 512,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 546.1457717811388,
+      "target_velocity_deg_per_s": 20.698253441097584,
+      "eye_velocity_pixels_per_s": -1257.8826931334554,
+      "gain": -2.303199545116201,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.934585,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.863102912902832,
+      "target_x": 536,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 576.0812266061471,
+      "target_velocity_deg_per_s": 21.83277038301552,
+      "eye_velocity_pixels_per_s": -1075.5086097415451,
+      "gain": -1.8669391746675414,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046292.9757051,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.9042229652404785,
+      "target_x": 561,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 601.9619624391485,
+      "target_velocity_deg_per_s": 22.813618459100653,
+      "eye_velocity_pixels_per_s": -942.6385133191416,
+      "gain": -1.56594365115625,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.010738,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.939255714416504,
+      "target_x": 583,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 621.5699552110589,
+      "target_velocity_deg_per_s": 23.55673728347718,
+      "eye_velocity_pixels_per_s": -799.4680622658622,
+      "gain": -1.2862076996536884,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.0450602,
+      "phase": "horizontal",
+      "time_from_phase_start": 6.973577976226807,
+      "target_x": 605,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 638.5267237669686,
+      "target_velocity_deg_per_s": 24.19937796888911,
+      "eye_velocity_pixels_per_s": -670.8199508416834,
+      "gain": -1.0505745897120826,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.0782158,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.006733655929565,
+      "target_x": 626,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 652.7314589320104,
+      "target_velocity_deg_per_s": 24.737719971521187,
+      "eye_velocity_pixels_per_s": 810.8487944035995,
+      "gain": 1.242239489621503,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.1167161,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.045233964920044,
+      "target_x": 652,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 666.4798365235102,
+      "target_velocity_deg_per_s": 25.25876658305993,
+      "eye_velocity_pixels_per_s": 763.1875261391299,
+      "gain": 1.1451021986202403,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.153184,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.081701755523682,
+      "target_x": 677,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 676.7276643119225,
+      "target_velocity_deg_per_s": 25.6471466598543,
+      "eye_velocity_pixels_per_s": 783.1923109196881,
+      "gain": 1.1573227344208188,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.187632,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.11614990234375,
+      "target_x": 700,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 683.8901303186824,
+      "target_velocity_deg_per_s": 25.918595317577445,
+      "eye_velocity_pixels_per_s": 780.1269461838166,
+      "gain": 1.1407197027690534,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.22401,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.152527809143066,
+      "target_x": 725,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 688.7691420427774,
+      "target_velocity_deg_per_s": 26.103503864755346,
+      "eye_velocity_pixels_per_s": 843.8113506662538,
+      "gain": 1.2251003988994722,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.2608309,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.1893486976623535,
+      "target_x": 750,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.879572431161,
+      "target_velocity_deg_per_s": 26.183486582384194,
+      "eye_velocity_pixels_per_s": 1029.4883227204605,
+      "gain": 1.4901125518847762,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.301517,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.230034828186035,
+      "target_x": 778,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 689.892725932984,
+      "target_velocity_deg_per_s": 26.146086313111557,
+      "eye_velocity_pixels_per_s": 1017.3103726162402,
+      "gain": 1.4745921132020479,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.3429492,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.271466970443726,
+      "target_x": 806,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 685.3125241474627,
+      "target_velocity_deg_per_s": 25.972502295315515,
+      "eye_velocity_pixels_per_s": 1048.6633499682866,
+      "gain": 1.5301972647776092,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.378263,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.306780815124512,
+      "target_x": 830,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 678.5781495674714,
+      "target_velocity_deg_per_s": 25.71727777646709,
+      "eye_velocity_pixels_per_s": 1694.3741483356046,
+      "gain": 2.4969476977936966,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.4209778,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.3494956493377686,
+      "target_x": 859,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 666.9901164127353,
+      "target_velocity_deg_per_s": 25.278105563637645,
+      "eye_velocity_pixels_per_s": 1578.9384962443294,
+      "gain": 2.367259210280828,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.4553652,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.383882999420166,
+      "target_x": 882,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 654.9639306964882,
+      "target_velocity_deg_per_s": 24.82232790729364,
+      "eye_velocity_pixels_per_s": 1593.548298032286,
+      "gain": 2.4330321462705706,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.4904351,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.418952941894531,
+      "target_x": 905,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 640.2689209031181,
+      "target_velocity_deg_per_s": 24.26540509888184,
+      "eye_velocity_pixels_per_s": 1709.7367822508943,
+      "gain": 2.6703416743065715,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.531223,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.459740877151489,
+      "target_x": 931,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 620.1643114307271,
+      "target_velocity_deg_per_s": 23.503465111986543,
+      "eye_velocity_pixels_per_s": 1651.8484899568189,
+      "gain": 2.6635658639336772,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.564914,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.493431806564331,
+      "target_x": 952,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 601.1825415790292,
+      "target_velocity_deg_per_s": 22.784079366547736,
+      "eye_velocity_pixels_per_s": 1135.8088638275108,
+      "gain": 1.8892911641184136,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.599654,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.52817177772522,
+      "target_x": 973,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 579.43325526547,
+      "target_velocity_deg_per_s": 21.959808148969866,
+      "eye_velocity_pixels_per_s": 1108.1493951012355,
+      "gain": 1.9124711690797445,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.636085,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.564602851867676,
+      "target_x": 994,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 554.3380252304612,
+      "target_velocity_deg_per_s": 21.00872977710359,
+      "eye_velocity_pixels_per_s": 962.81686183176,
+      "gain": 1.7368768116375874,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.67196,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.600477933883667,
+      "target_x": 1014,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 527.4347539626086,
+      "target_velocity_deg_per_s": 19.989128864913866,
+      "eye_velocity_pixels_per_s": 953.0360027275406,
+      "gain": 1.806926819985594,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.706769,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.635286808013916,
+      "target_x": 1032,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 499.35309911151586,
+      "target_velocity_deg_per_s": 18.924868663360442,
+      "eye_velocity_pixels_per_s": 917.1390584059769,
+      "gain": 1.8366543835170248,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.741796,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.670313835144043,
+      "target_x": 1050,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 469.2348733350952,
+      "target_velocity_deg_per_s": 17.783424927041686,
+      "eye_velocity_pixels_per_s": 768.8748778481397,
+      "gain": 1.6385714735636503,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.783385,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.711902856826782,
+      "target_x": 1069,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 431.2061177873986,
+      "target_velocity_deg_per_s": 16.342181835826835,
+      "eye_velocity_pixels_per_s": 674.8998753591067,
+      "gain": 1.565144480839343,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.819703,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.748220920562744,
+      "target_x": 1085,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 396.13146762942563,
+      "target_velocity_deg_per_s": 15.012895707766344,
+      "eye_velocity_pixels_per_s": 675.3144528653105,
+      "gain": 1.7047735614305095,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.8553689,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.783886671066284,
+      "target_x": 1099,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 360.1366836569488,
+      "target_velocity_deg_per_s": 13.648737639142782,
+      "eye_velocity_pixels_per_s": 1215.8638627765754,
+      "gain": 3.376117785142812,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.890291,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.8188087940216064,
+      "target_x": 1112,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 323.5390264192722,
+      "target_velocity_deg_per_s": 12.261731414805645,
+      "eye_velocity_pixels_per_s": 1351.336825833504,
+      "gain": 4.176735155536739,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.933837,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.862354755401611,
+      "target_x": 1125,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 276.235731628091,
+      "target_velocity_deg_per_s": 10.468994686306022,
+      "eye_velocity_pixels_per_s": 1223.6969234680905,
+      "gain": 4.429900926486985,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046293.969651,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.8981688022613525,
+      "target_x": 1135,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 236.1232390186387,
+      "target_velocity_deg_per_s": 8.94878052173072,
+      "eye_velocity_pixels_per_s": 1261.6374705909338,
+      "gain": 5.343131306492643,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.010329,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.938846826553345,
+      "target_x": 1144,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 189.45252674578632,
+      "target_velocity_deg_per_s": 7.1800178931203575,
+      "eye_velocity_pixels_per_s": 1169.8300725918411,
+      "gain": 6.174792665402441,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.044797,
+      "phase": "horizontal",
+      "time_from_phase_start": 7.9733147621154785,
+      "target_x": 1151,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 149.14980562096238,
+      "target_velocity_deg_per_s": 5.652594301636842,
+      "eye_velocity_pixels_per_s": 459.2774556416638,
+      "gain": 3.0793030787370617,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.0814972,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.01001501083374,
+      "target_x": 1156,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 105.64692047410452,
+      "target_velocity_deg_per_s": 4.003888427283829,
+      "eye_velocity_pixels_per_s": 256.2680354452361,
+      "gain": 2.425702843918208,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.1161852,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.044703006744385,
+      "target_x": 1159,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 64.12772072287919,
+      "target_velocity_deg_per_s": 2.430361791126328,
+      "eye_velocity_pixels_per_s": 202.90829148251638,
+      "gain": 3.164127606520774,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.158148,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.086665868759155,
+      "target_x": 1161,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 13.60106375625171,
+      "target_velocity_deg_per_s": 0.5154635982574989,
+      "eye_velocity_pixels_per_s": 196.28952290165319,
+      "gain": 14.431924327347483,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.194022,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.122539758682251,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -29.66224358995057,
+      "target_velocity_deg_per_s": -1.1241625719340087,
+      "eye_velocity_pixels_per_s": 201.42316781099564,
+      "gain": -6.790557403393345,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.2338262,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.162343978881836,
+      "target_x": 1158,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -77.52210878963591,
+      "target_velocity_deg_per_s": -2.9379926347928143,
+      "eye_velocity_pixels_per_s": 523.7283407209944,
+      "gain": -6.755857766230074,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.2769558,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.20547366142273,
+      "target_x": 1153,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -128.9508446425293,
+      "target_velocity_deg_per_s": -4.887078508637185,
+      "eye_velocity_pixels_per_s": 634.4049892642884,
+      "gain": -4.919742798296144,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.310791,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.239308834075928,
+      "target_x": 1148,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -168.79965870376566,
+      "target_velocity_deg_per_s": -6.39729958034251,
+      "eye_velocity_pixels_per_s": 570.384077380019,
+      "gain": -3.3790594232243825,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.347237,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.275754928588867,
+      "target_x": 1140,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -211.06079613252726,
+      "target_velocity_deg_per_s": -7.9989447425064695,
+      "eye_velocity_pixels_per_s": 460.1005282056115,
+      "gain": -2.1799431094570005,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.381747,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.310264825820923,
+      "target_x": 1132,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -250.2922659258261,
+      "target_velocity_deg_per_s": -9.485769225281869,
+      "eye_velocity_pixels_per_s": 394.1934292424979,
+      "gain": -1.5749325205250921,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.41796,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.346477746963501,
+      "target_x": 1122,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -290.48076125906664,
+      "target_velocity_deg_per_s": -11.008863799668005,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": -0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.458272,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.386789798736572,
+      "target_x": 1108,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -333.84635938840285,
+      "target_velocity_deg_per_s": -12.652366664806888,
+      "eye_velocity_pixels_per_s": -275.7614071372115,
+      "gain": 0.8260129229577302,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.49294,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.421457767486572,
+      "target_x": 1095,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -369.8262854069699,
+      "target_velocity_deg_per_s": -14.015961635240311,
+      "eye_velocity_pixels_per_s": -269.010644942513,
+      "gain": 0.7273973093786025,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.535258,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.463775873184204,
+      "target_x": 1078,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -411.89763602868334,
+      "target_velocity_deg_per_s": -15.610414110698581,
+      "eye_velocity_pixels_per_s": -329.750407072016,
+      "gain": 0.8005639708236956,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.5710678,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.499585628509521,
+      "target_x": 1062,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -445.75216357349973,
+      "target_velocity_deg_per_s": -16.893459091466166,
+      "eye_velocity_pixels_per_s": -1177.8948698704507,
+      "gain": 2.642488284134214,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.612863,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.541380882263184,
+      "target_x": 1042,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -483.05394255963284,
+      "target_velocity_deg_per_s": -18.30715066458008,
+      "eye_velocity_pixels_per_s": -1082.5893779835983,
+      "gain": 2.241135580525674,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.6478028,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.57632064819336,
+      "target_x": 1024,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -512.2725028030846,
+      "target_velocity_deg_per_s": -19.414498183046817,
+      "eye_velocity_pixels_per_s": -1239.9042660353102,
+      "gain": 2.4203998052808315,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.68171,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.610227823257446,
+      "target_x": 1006,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -538.8067810260719,
+      "target_velocity_deg_per_s": -20.42011471239363,
+      "eye_velocity_pixels_per_s": -1313.767941624569,
+      "gain": 2.4382914022030433,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.7170959,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.645613670349121,
+      "target_x": 986,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -564.4841783028071,
+      "target_velocity_deg_per_s": -21.393256507135195,
+      "eye_velocity_pixels_per_s": -1358.3527566836017,
+      "gain": 2.406361079539307,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.759134,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.687651872634888,
+      "target_x": 961,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -592.1824973070283,
+      "target_velocity_deg_per_s": -22.442988751279497,
+      "eye_velocity_pixels_per_s": -654.0251506194187,
+      "gain": 1.1044317479723265,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.793566,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.722083806991577,
+      "target_x": 940,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -612.500349520037,
+      "target_velocity_deg_per_s": -23.213010375931294,
+      "eye_velocity_pixels_per_s": -890.9653196137587,
+      "gain": 1.4546364264313159,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.828631,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.757148742675781,
+      "target_x": 917,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -630.9174664610003,
+      "target_velocity_deg_per_s": -23.910996470111208,
+      "eye_velocity_pixels_per_s": -752.0953944526052,
+      "gain": 1.1920662121962278,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.870023,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.798540830612183,
+      "target_x": 891,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -649.6112834995039,
+      "target_velocity_deg_per_s": -24.619469157874708,
+      "eye_velocity_pixels_per_s": -722.2019109849222,
+      "gain": 1.1117447146151267,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.909466,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.837983846664429,
+      "target_x": 865,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -664.2712203321544,
+      "target_velocity_deg_per_s": -25.175062744186086,
+      "eye_velocity_pixels_per_s": -644.5907597963318,
+      "gain": 0.9703728538382533,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.945434,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.87395191192627,
+      "target_x": 840,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -674.8965582801146,
+      "target_velocity_deg_per_s": -25.57774999200081,
+      "eye_velocity_pixels_per_s": -665.5929549132796,
+      "gain": 0.9862147713561557,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046294.9796338,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.908151626586914,
+      "target_x": 817,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -682.5328501988733,
+      "target_velocity_deg_per_s": -25.86715606937316,
+      "eye_velocity_pixels_per_s": -661.0491068499765,
+      "gain": 0.9685235027989686,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.014833,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.943350791931152,
+      "target_x": 793,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -687.8521465400682,
+      "target_velocity_deg_per_s": -26.06875086235176,
+      "eye_velocity_pixels_per_s": -730.3889946557158,
+      "gain": 1.0618401037630107,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.051306,
+      "phase": "horizontal",
+      "time_from_phase_start": 8.97982382774353,
+      "target_x": 768,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.6245715181047,
+      "target_velocity_deg_per_s": -26.173822361220427,
+      "eye_velocity_pixels_per_s": -816.4032671860587,
+      "gain": 1.1821231112462043,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.08596,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.014477729797363,
+      "target_x": 745,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.6656167208845,
+      "target_velocity_deg_per_s": -26.175377923953985,
+      "eye_velocity_pixels_per_s": -1053.860805982413,
+      "gain": 1.5258625599257316,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.135438,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.063955783843994,
+      "target_x": 711,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -686.3463403024894,
+      "target_velocity_deg_per_s": -26.01168265684877,
+      "eye_velocity_pixels_per_s": -852.6140498756192,
+      "gain": 1.2422504496780031,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.170611,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.099128723144531,
+      "target_x": 687,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -680.1603050238703,
+      "target_velocity_deg_per_s": -25.777239523516705,
+      "eye_velocity_pixels_per_s": -848.2694613687324,
+      "gain": 1.2471610811497775,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.2048159,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.133333683013916,
+      "target_x": 664,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -671.6854031558104,
+      "target_velocity_deg_per_s": -25.45605115986527,
+      "eye_velocity_pixels_per_s": -1900.1709138106069,
+      "gain": 2.828959666062336,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.247672,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.17618989944458,
+      "target_x": 635,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -657.6920783352912,
+      "target_velocity_deg_per_s": -24.925721349430013,
+      "eye_velocity_pixels_per_s": -1705.9961507666142,
+      "gain": 2.5939131805946705,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.2821472,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.210664987564087,
+      "target_x": 612,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -643.7602446611775,
+      "target_velocity_deg_per_s": -24.39772197786007,
+      "eye_velocity_pixels_per_s": -1646.3862475935903,
+      "gain": 2.5574525007522215,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.316111,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.24462890625,
+      "target_x": 590,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -627.7550997166172,
+      "target_velocity_deg_per_s": -23.791146657605157,
+      "eye_velocity_pixels_per_s": -1854.1775613922007,
+      "gain": 2.953663876612421,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.356852,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.285369873046875,
+      "target_x": 565,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -605.6511814989498,
+      "target_velocity_deg_per_s": -22.9534353267667,
+      "eye_velocity_pixels_per_s": -1669.8774585629565,
+      "gain": 2.7571604077946508,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.39093,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.319447755813599,
+      "target_x": 544,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -584.8049910521062,
+      "target_velocity_deg_per_s": -22.16339033247337,
+      "eye_velocity_pixels_per_s": -666.2582658531883,
+      "gain": 1.1392827969107135,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.426838,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.355355739593506,
+      "target_x": 523,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -560.6019505248019,
+      "target_velocity_deg_per_s": -21.24612484629095,
+      "eye_velocity_pixels_per_s": -703.2593276946787,
+      "gain": 1.254471781691679,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.469609,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.39812684059143,
+      "target_x": 499,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -528.9075764538476,
+      "target_velocity_deg_per_s": -20.044947026973407,
+      "eye_velocity_pixels_per_s": -602.7891082042706,
+      "gain": 1.1396870361467963,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.505346,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.433863878250122,
+      "target_x": 480,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -500.1574330794487,
+      "target_velocity_deg_per_s": -18.95535193207689,
+      "eye_velocity_pixels_per_s": -597.1415522522082,
+      "gain": 1.1939071835354564,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.540004,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.4685218334198,
+      "target_x": 463,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -470.41537225682737,
+      "target_velocity_deg_per_s": -17.828164385134105,
+      "eye_velocity_pixels_per_s": -1162.9693810901238,
+      "gain": 2.472218064453877,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.589073,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.517590761184692,
+      "target_x": 440,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -425.38928993429766,
+      "target_velocity_deg_per_s": -16.12173121010091,
+      "eye_velocity_pixels_per_s": -1014.4185393189205,
+      "gain": 2.3846828383375605,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.6307268,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.559244632720947,
+      "target_x": 422,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -384.7054643733757,
+      "target_velocity_deg_per_s": -14.5798642289338,
+      "eye_velocity_pixels_per_s": -1011.6829156678356,
+      "gain": 2.629759671637903,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.6669729,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.59549069404602,
+      "target_x": 408,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -347.64110850258857,
+      "target_velocity_deg_per_s": -13.175170700056647,
+      "eye_velocity_pixels_per_s": -891.7543499397576,
+      "gain": 2.565157940557877,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.709677,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.638194799423218,
+      "target_x": 394,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -302.1990828492112,
+      "target_velocity_deg_per_s": -11.452973784051984,
+      "eye_velocity_pixels_per_s": -223.96007948418733,
+      "gain": 0.741101122388042,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.749654,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.678171873092651,
+      "target_x": 382,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -258.1324818956305,
+      "target_velocity_deg_per_s": -9.78290377353025,
+      "eye_velocity_pixels_per_s": -161.91200170280052,
+      "gain": 0.6272438110608088,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.7854211,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.71393895149231,
+      "target_x": 373,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -217.6347924858407,
+      "target_velocity_deg_per_s": -8.248091123696915,
+      "eye_velocity_pixels_per_s": -193.5337870939344,
+      "gain": 0.8892594096898624,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.818837,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.747354745864868,
+      "target_x": 366,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -179.02974785345705,
+      "target_velocity_deg_per_s": -6.785007384533273,
+      "eye_velocity_pixels_per_s": -202.009347189289,
+      "gain": 1.1283563184965308,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.853239,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.78175687789917,
+      "target_x": 360,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -138.65023814493327,
+      "target_velocity_deg_per_s": -5.254673600114236,
+      "eye_velocity_pixels_per_s": -134.21657627145302,
+      "gain": 0.9680226883646196,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.88955,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.818067789077759,
+      "target_x": 355,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -95.49090816975097,
+      "target_velocity_deg_per_s": -3.618988044477872,
+      "eye_velocity_pixels_per_s": -489.2339432108149,
+      "gain": 5.123356271165839,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.924154,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.85267186164856,
+      "target_x": 353,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -54.00082257980643,
+      "target_velocity_deg_per_s": -2.046564799246477,
+      "eye_velocity_pixels_per_s": -1157.5931232091689,
+      "gain": 21.436583146458403,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.9586601,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.88717794418335,
+      "target_x": 351,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -12.431905186256817,
+      "target_velocity_deg_per_s": -0.4711539255566303,
+      "eye_velocity_pixels_per_s": -1171.7914787052187,
+      "gain": 94.25679018213613,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046295.994334,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.922851800918579,
+      "target_x": 352,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 30.589434809698616,
+      "target_velocity_deg_per_s": 1.1593019794810402,
+      "eye_velocity_pixels_per_s": -1230.789776805836,
+      "gain": -40.23578024447855,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.043326,
+      "phase": "horizontal",
+      "time_from_phase_start": 9.971843719482422,
+      "target_x": 355,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 89.44480627551124,
+      "target_velocity_deg_per_s": 3.3898482144109936,
+      "eye_velocity_pixels_per_s": -1152.1045574341506,
+      "gain": -12.880619964510796,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.077125,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.005642890930176,
+      "target_x": 359,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 129.6932930386617,
+      "target_velocity_deg_per_s": 4.915216390250674,
+      "eye_velocity_pixels_per_s": -746.3683137079319,
+      "gain": -5.754872100328571,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.1194649,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.047982692718506,
+      "target_x": 366,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 179.45863620076804,
+      "target_velocity_deg_per_s": 6.801261725716993,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.154183,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.082700729370117,
+      "target_x": 373,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 219.54624115256132,
+      "target_velocity_deg_per_s": 8.320532678658335,
+      "eye_velocity_pixels_per_s": 66.48844181449715,
+      "gain": 0.302844819685593,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.1886961,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.11721396446228,
+      "target_x": 382,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 258.5985055882712,
+      "target_velocity_deg_per_s": 9.800565498656084,
+      "eye_velocity_pixels_per_s": 195.51140738619307,
+      "gain": 0.7560422939855556,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.231185,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.159702777862549,
+      "target_x": 395,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 305.3716594168233,
+      "target_velocity_deg_per_s": 11.57321053630874,
+      "eye_velocity_pixels_per_s": 287.44942954315366,
+      "gain": 0.9413101074674177,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.265005,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.193522930145264,
+      "target_x": 406,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 341.41385259427864,
+      "target_velocity_deg_per_s": 12.939165355526717,
+      "eye_velocity_pixels_per_s": 1213.5397377972001,
+      "gain": 3.554453718195547,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.2983522,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.226870059967041,
+      "target_x": 419,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 375.7875293166212,
+      "target_velocity_deg_per_s": 14.241885451996707,
+      "eye_velocity_pixels_per_s": 3029.838015184456,
+      "gain": 8.062635874836747,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.341897,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.27041482925415,
+      "target_x": 437,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 418.73861229205374,
+      "target_velocity_deg_per_s": 15.869678702314822,
+      "eye_velocity_pixels_per_s": 1347.79425057584,
+      "gain": 3.218700666743879,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.377981,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.306498765945435,
+      "target_x": 453,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 452.50832134764215,
+      "target_velocity_deg_per_s": 17.14950916659754,
+      "eye_velocity_pixels_per_s": 2335.104235590621,
+      "gain": 5.1603564518687906,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.4201071,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.34862494468689,
+      "target_x": 474,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 489.65255163999603,
+      "target_velocity_deg_per_s": 18.55722983787233,
+      "eye_velocity_pixels_per_s": 936.8940005815268,
+      "gain": 1.9133853125927405,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.462894,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.391411781311035,
+      "target_x": 496,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 524.6685851199449,
+      "target_velocity_deg_per_s": 19.884294465885933,
+      "eye_velocity_pixels_per_s": 65.69342165163783,
+      "gain": 0.12520936742690553,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.496186,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.42470383644104,
+      "target_x": 515,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 549.8995627027359,
+      "target_velocity_deg_per_s": 20.840517502955496,
+      "eye_velocity_pixels_per_s": -1526.5343497131405,
+      "gain": -2.776023938281167,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.53234,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.46085786819458,
+      "target_x": 536,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 575.193582842924,
+      "target_velocity_deg_per_s": 21.799129775459996,
+      "eye_velocity_pixels_per_s": 68.26185333085488,
+      "gain": 0.11867631240506395,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.5664482,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.49496603012085,
+      "target_x": 556,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 596.9580177609174,
+      "target_velocity_deg_per_s": 22.623975106525613,
+      "eye_velocity_pixels_per_s": -864.8715869433987,
+      "gain": -1.4487980079191785,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.602189,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.530706882476807,
+      "target_x": 578,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 617.4927347728118,
+      "target_velocity_deg_per_s": 23.402215640490116,
+      "eye_velocity_pixels_per_s": 626.0922732020483,
+      "gain": 1.0139265418764813,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.644782,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.573299884796143,
+      "target_x": 605,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 638.8197534064012,
+      "target_velocity_deg_per_s": 24.210483432038526,
+      "eye_velocity_pixels_per_s": 549.7890640834455,
+      "gain": 0.8606325354715251,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.6818151,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.61033296585083,
+      "target_x": 629,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 654.4972509460108,
+      "target_velocity_deg_per_s": 24.80464131838221,
+      "eye_velocity_pixels_per_s": 614.1276828564177,
+      "gain": 0.9383197285683891,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.715026,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.643543720245361,
+      "target_x": 651,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 666.2324005990171,
+      "target_velocity_deg_per_s": 25.249389065663998,
+      "eye_velocity_pixels_per_s": 684.2349331334084,
+      "gain": 1.0270214005176048,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.74853,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.677047729492188,
+      "target_x": 674,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 675.8024181468885,
+      "target_velocity_deg_per_s": 25.61208096749012,
+      "eye_velocity_pixels_per_s": 620.6002357178197,
+      "gain": 0.9183160921790748,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.7844028,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.712920665740967,
+      "target_x": 698,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 683.4861325922062,
+      "target_velocity_deg_per_s": 25.903284300328405,
+      "eye_velocity_pixels_per_s": 548.8056509831874,
+      "gain": 0.8029506742174471,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.819424,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.747941732406616,
+      "target_x": 722,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 688.4024847262011,
+      "target_velocity_deg_per_s": 26.08960800314357,
+      "eye_velocity_pixels_per_s": 647.0385121335098,
+      "gain": 0.9399130980633473,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.863152,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.791669845581055,
+      "target_x": 753,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.9286607534182,
+      "target_velocity_deg_per_s": 26.18534696945954,
+      "eye_velocity_pixels_per_s": 689.3246234294977,
+      "gain": 0.9976784327890359,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.8991868,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.827704668045044,
+      "target_x": 777,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 689.9855515689469,
+      "target_velocity_deg_per_s": 26.149604290615482,
+      "eye_velocity_pixels_per_s": 1558.419934166133,
+      "gain": 2.258626909827992,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.933425,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.861942768096924,
+      "target_x": 800,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 686.5603383351169,
+      "target_velocity_deg_per_s": 26.019792919244054,
+      "eye_velocity_pixels_per_s": 1682.035572339667,
+      "gain": 2.4499457344398023,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046296.973114,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.901631832122803,
+      "target_x": 827,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 679.5222694285528,
+      "target_velocity_deg_per_s": 25.75305875871237,
+      "eye_velocity_pixels_per_s": 1780.498628003224,
+      "gain": 2.620221158462609,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.009803,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.938320875167847,
+      "target_x": 852,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 670.1146285953569,
+      "target_velocity_deg_per_s": 25.396520734782854,
+      "eye_velocity_pixels_per_s": 1764.899146311906,
+      "gain": 2.6337272326248913,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.0451908,
+      "phase": "horizontal",
+      "time_from_phase_start": 10.973708629608154,
+      "target_x": 876,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 658.4364106430908,
+      "target_velocity_deg_per_s": 24.95393062898003,
+      "eye_velocity_pixels_per_s": 1708.4268223826532,
+      "gain": 2.5946724615578947,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.086808,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.015325784683228,
+      "target_x": 903,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 641.4918744637903,
+      "target_velocity_deg_per_s": 24.311753535605853,
+      "eye_velocity_pixels_per_s": 927.40105348629,
+      "gain": 1.4456941551465252,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.122517,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.051034927368164,
+      "target_x": 926,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 624.2508805976393,
+      "target_velocity_deg_per_s": 23.65834106029879,
+      "eye_velocity_pixels_per_s": 856.7256407508642,
+      "gain": 1.3724059787158978,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.157165,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.08568286895752,
+      "target_x": 947,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 605.2033610272935,
+      "target_velocity_deg_per_s": 22.936463481341214,
+      "eye_velocity_pixels_per_s": 744.3587978346485,
+      "gain": 1.2299316986130873,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.197008,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.125525712966919,
+      "target_x": 972,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 580.5683497417058,
+      "target_velocity_deg_per_s": 22.00282683438804,
+      "eye_velocity_pixels_per_s": 598.2751492910063,
+      "gain": 1.030499078286266,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.23339,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.16190791130066,
+      "target_x": 993,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 555.6172984817755,
+      "target_velocity_deg_per_s": 21.057212660876115,
+      "eye_velocity_pixels_per_s": 791.7142323418916,
+      "gain": 1.424927255694254,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.2672,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.195717811584473,
+      "target_x": 1012,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 530.4194078863281,
+      "target_velocity_deg_per_s": 20.10224357995714,
+      "eye_velocity_pixels_per_s": 615.3263155615344,
+      "gain": 1.1600750395117563,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.311237,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.239754915237427,
+      "target_x": 1035,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 494.84332496553344,
+      "target_velocity_deg_per_s": 18.753953766534945,
+      "eye_velocity_pixels_per_s": 524.5867707119174,
+      "gain": 1.0601067938997777,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.346,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.27451777458191,
+      "target_x": 1052,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 464.68393848873745,
+      "target_velocity_deg_per_s": 17.61095009026572,
+      "eye_velocity_pixels_per_s": 593.1105100663506,
+      "gain": 1.2763740274632405,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.38012,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.308637857437134,
+      "target_x": 1068,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 433.4177512511078,
+      "target_velocity_deg_per_s": 16.426000025614105,
+      "eye_velocity_pixels_per_s": 1217.831867610276,
+      "gain": 2.809833847586701,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.413146,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.341663837432861,
+      "target_x": 1082,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 401.6887836854432,
+      "target_velocity_deg_per_s": 15.223511155368543,
+      "eye_velocity_pixels_per_s": 1168.2512087792686,
+      "gain": 2.9083490907082674,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.450718,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.379235744476318,
+      "target_x": 1098,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 363.9753069508124,
+      "target_velocity_deg_per_s": 13.794216743635657,
+      "eye_velocity_pixels_per_s": 1285.9769319799386,
+      "gain": 3.533143340830331,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.4856992,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.414216995239258,
+      "target_x": 1110,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 327.45160065940695,
+      "target_velocity_deg_per_s": 12.410013169263449,
+      "eye_velocity_pixels_per_s": 1203.6994277893693,
+      "gain": 3.6759613492968577,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.522927,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.451444864273071,
+      "target_x": 1122,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 287.24453374987047,
+      "target_velocity_deg_per_s": 10.886214754963438,
+      "eye_velocity_pixels_per_s": 1186.9301897493144,
+      "gain": 4.132124549958819,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.556462,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.48497986793518,
+      "target_x": 1132,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 249.98258266097315,
+      "target_velocity_deg_per_s": 9.474032610199256,
+      "eye_velocity_pixels_per_s": 629.4585191410181,
+      "gain": 2.5180095046649345,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.593317,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.52183485031128,
+      "target_x": 1141,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 208.04867473255422,
+      "target_velocity_deg_per_s": 7.884789043875556,
+      "eye_velocity_pixels_per_s": 410.7206012078902,
+      "gain": 1.9741562965295019,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.627265,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.555782794952393,
+      "target_x": 1148,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 168.6565460269455,
+      "target_velocity_deg_per_s": 6.391875785801728,
+      "eye_velocity_pixels_per_s": 135.9412337374989,
+      "gain": 0.8060240585964578,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.661136,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.589653730392456,
+      "target_x": 1153,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 128.76347072950367,
+      "target_velocity_deg_per_s": 4.8799772676490765,
+      "eye_velocity_pixels_per_s": 142.50148555015454,
+      "gain": 1.1066918648807675,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.703562,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.632079839706421,
+      "target_x": 1158,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 78.17589307292833,
+      "target_velocity_deg_per_s": 2.962770255513488,
+      "eye_velocity_pixels_per_s": 1024.164696755289,
+      "gain": 13.100773863879898,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.738372,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.666889905929565,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 36.336823393758436,
+      "target_velocity_deg_per_s": 1.3771209422634039,
+      "eye_velocity_pixels_per_s": 1022.4841397766485,
+      "gain": 28.139062369229563,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.772915,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.701432704925537,
+      "target_x": 1161,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -5.314014555999823,
+      "target_velocity_deg_per_s": -0.20139461981194917,
+      "eye_velocity_pixels_per_s": 1035.6482589120649,
+      "gain": -194.8899928666472,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.809491,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.738008737564087,
+      "target_x": 1160,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -49.392177521642346,
+      "target_velocity_deg_per_s": -1.8719028163790736,
+      "eye_velocity_pixels_per_s": 1086.5623970053512,
+      "gain": -21.998673707577446,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.8437471,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.772264957427979,
+      "target_x": 1157,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -90.4955759758823,
+      "target_velocity_deg_per_s": -3.4296710944739046,
+      "eye_velocity_pixels_per_s": 1149.9849593903539,
+      "gain": -12.707637329109136,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.877863,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.80638074874878,
+      "target_x": 1153,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -131.10910414041618,
+      "target_velocity_deg_per_s": -4.968873890725798,
+      "eye_velocity_pixels_per_s": 74.58361171924133,
+      "gain": -0.5688667633588834,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.915051,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.843568801879883,
+      "target_x": 1147,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -174.84553497911617,
+      "target_velocity_deg_per_s": -6.626430859730812,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": -0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.9502761,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.878793954849243,
+      "target_x": 1139,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -215.59698858121445,
+      "target_velocity_deg_per_s": -8.170860860531725,
+      "eye_velocity_pixels_per_s": 67.65849199969166,
+      "gain": -0.3138192812660971,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046297.987215,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.915732860565186,
+      "target_x": 1130,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -257.45291271584153,
+      "target_velocity_deg_per_s": -9.75714893692654,
+      "eye_velocity_pixels_per_s": 140.6674560894997,
+      "gain": -0.5463812959255915,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.0219772,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.95049500465393,
+      "target_x": 1120,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -295.86786857283346,
+      "target_velocity_deg_per_s": -11.21302854515544,
+      "eye_velocity_pixels_per_s": 72.93936832819428,
+      "gain": -0.24652683199439374,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.058362,
+      "phase": "horizontal",
+      "time_from_phase_start": 11.986879825592041,
+      "target_x": 1108,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -334.90693133609767,
+      "target_velocity_deg_per_s": -12.69256103799468,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": -0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.099165,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.027682781219482,
+      "target_x": 1093,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -377.07224038754885,
+      "target_velocity_deg_per_s": -14.290574422448538,
+      "eye_velocity_pixels_per_s": -70.60842214416328,
+      "gain": 0.1872543629082668,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.141026,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.069543838500977,
+      "target_x": 1075,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -418.3415959558898,
+      "target_velocity_deg_per_s": -15.854632271177255,
+      "eye_velocity_pixels_per_s": -519.0039318479686,
+      "gain": 1.2406223451485152,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.1766112,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.10512900352478,
+      "target_x": 1059,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -451.67598647658616,
+      "target_velocity_deg_per_s": -17.117964698070764,
+      "eye_velocity_pixels_per_s": -1304.1458377912927,
+      "gain": 2.8873481806385484,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.210366,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.138883829116821,
+      "target_x": 1043,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -481.6872984262179,
+      "target_velocity_deg_per_s": -18.255356531770154,
+      "eye_velocity_pixels_per_s": -1380.1254470996837,
+      "gain": 2.865189619092859,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.2445161,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.173033952713013,
+      "target_x": 1025,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -510.34798882837697,
+      "target_velocity_deg_per_s": -19.34156146897225,
+      "eye_velocity_pixels_per_s": -1396.6926649241234,
+      "gain": 2.7367457019485033,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.287234,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.215751886367798,
+      "target_x": 1002,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -543.6349527812844,
+      "target_velocity_deg_per_s": -20.603096487242166,
+      "eye_velocity_pixels_per_s": -1446.2769900211727,
+      "gain": 2.6603826384265616,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.321516,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.250033855438232,
+      "target_x": 982,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -568.1708582445307,
+      "target_velocity_deg_per_s": -21.53297714534712,
+      "eye_velocity_pixels_per_s": -1302.0112622026359,
+      "gain": 2.2915840249629156,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.3554418,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.28395962715149,
+      "target_x": 962,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -590.4492163211601,
+      "target_velocity_deg_per_s": -22.37729953242291,
+      "eye_velocity_pixels_per_s": -833.1897593281009,
+      "gain": 1.4111116355092395,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.3903701,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.318887948989868,
+      "target_x": 941,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -611.2219215985832,
+      "target_velocity_deg_per_s": -23.164559529121423,
+      "eye_velocity_pixels_per_s": -894.4238210653238,
+      "gain": 1.4633372748249234,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.425802,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.35431981086731,
+      "target_x": 919,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -629.9724488865131,
+      "target_velocity_deg_per_s": -23.875181465631293,
+      "eye_velocity_pixels_per_s": -954.2938022778355,
+      "gain": 1.5148183130303012,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.459287,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.387804746627808,
+      "target_x": 897,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -645.4791176428431,
+      "target_velocity_deg_per_s": -24.462865151067366,
+      "eye_velocity_pixels_per_s": -1075.2517283263899,
+      "gain": 1.6658195423160829,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.5022662,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.430783987045288,
+      "target_x": 869,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -662.144433869737,
+      "target_velocity_deg_per_s": -25.094460151455863,
+      "eye_velocity_pixels_per_s": -1095.435684647303,
+      "gain": 1.654375735283772,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.543628,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.472145795822144,
+      "target_x": 841,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -674.6652136518595,
+      "target_velocity_deg_per_s": -25.568982314953264,
+      "eye_velocity_pixels_per_s": -988.3836483698966,
+      "gain": 1.4649986813755036,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.5828428,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.51136064529419,
+      "target_x": 814,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -683.2897385123263,
+      "target_velocity_deg_per_s": -25.89584120610389,
+      "eye_velocity_pixels_per_s": -904.024516469466,
+      "gain": 1.3230471138608468,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.61761,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.546127796173096,
+      "target_x": 790,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -688.2598470583936,
+      "target_velocity_deg_per_s": -26.084202210860497,
+      "eye_velocity_pixels_per_s": -907.1578130071471,
+      "gain": 1.3180455272588083,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.652092,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.580609798431396,
+      "target_x": 767,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.6855852087939,
+      "target_velocity_deg_per_s": -26.176134705100964,
+      "eye_velocity_pixels_per_s": -840.2264064933585,
+      "gain": 1.2165107025353055,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.694462,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.622979879379272,
+      "target_x": 738,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -690.2399040945381,
+      "target_velocity_deg_per_s": -26.159243938691304,
+      "eye_velocity_pixels_per_s": -775.250084155303,
+      "gain": 1.1231603382483109,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.729623,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.658140897750854,
+      "target_x": 714,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -687.0032615917136,
+      "target_velocity_deg_per_s": -26.03657916623833,
+      "eye_velocity_pixels_per_s": -801.0962989409794,
+      "gain": 1.1660735017253403,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.7639391,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.6924569606781,
+      "target_x": 691,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -681.3490397985262,
+      "target_velocity_deg_per_s": -25.822291110311625,
+      "eye_velocity_pixels_per_s": -750.9810979399302,
+      "gain": 1.1021973380368955,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.803869,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.732386827468872,
+      "target_x": 664,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -671.6945069571142,
+      "target_velocity_deg_per_s": -25.45639618274451,
+      "eye_velocity_pixels_per_s": -665.7395234343973,
+      "gain": 0.991134387044947,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.8399842,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.768501996994019,
+      "target_x": 639,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -660.1507448131207,
+      "target_velocity_deg_per_s": -25.018901786805333,
+      "eye_velocity_pixels_per_s": -729.1419245691951,
+      "gain": 1.104508220733137,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.874336,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.80285382270813,
+      "target_x": 617,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -646.735469362717,
+      "target_velocity_deg_per_s": -24.510479336972903,
+      "eye_velocity_pixels_per_s": -1451.0174913778244,
+      "gain": 2.243602771327254,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.908818,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.83733582496643,
+      "target_x": 595,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -630.9309313037676,
+      "target_velocity_deg_per_s": -23.911506771101422,
+      "eye_velocity_pixels_per_s": -1317.000529985027,
+      "gain": 2.0873925570007357,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.9445639,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.873081684112549,
+      "target_x": 572,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -612.1350794749413,
+      "target_velocity_deg_per_s": -23.19916709020343,
+      "eye_velocity_pixels_per_s": -1450.5209917292816,
+      "gain": 2.3696093237679916,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046298.9786172,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.907135009765625,
+      "target_x": 551,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -592.011549520913,
+      "target_velocity_deg_per_s": -22.43651004031069,
+      "eye_velocity_pixels_per_s": -1499.299354959491,
+      "gain": 2.532550853396024,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.011905,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.940422773361206,
+      "target_x": 531,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -570.3181866920885,
+      "target_velocity_deg_per_s": -21.61435825406445,
+      "eye_velocity_pixels_per_s": -1372.724329298426,
+      "gain": 2.4069446868955486,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.0482628,
+      "phase": "horizontal",
+      "time_from_phase_start": 12.976780652999878,
+      "target_x": 511,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -544.4267528902818,
+      "target_velocity_deg_per_s": -20.633104738111285,
+      "eye_velocity_pixels_per_s": -505.95939107670495,
+      "gain": 0.9293433660095517,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.083298,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.011815786361694,
+      "target_x": 492,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -517.4015813458359,
+      "target_velocity_deg_per_s": -19.608883955275598,
+      "eye_velocity_pixels_per_s": -573.1324571235076,
+      "gain": 1.107712998543042,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.117835,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.046352863311768,
+      "target_x": 474,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -488.8661938276691,
+      "target_velocity_deg_per_s": -18.527427843357483,
+      "eye_velocity_pixels_per_s": -432.84797623844963,
+      "gain": 0.8854119628305357,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.154679,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.083196878433228,
+      "target_x": 455,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -456.4687879889453,
+      "target_velocity_deg_per_s": -17.29960598419142,
+      "eye_velocity_pixels_per_s": -1357.4781355864045,
+      "gain": 2.9738684687884502,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.189641,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.11815881729126,
+      "target_x": 439,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -423.97844128381485,
+      "target_velocity_deg_per_s": -16.068261780429257,
+      "eye_velocity_pixels_per_s": -1490.974674694062,
+      "gain": 3.5166285110614637,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.225184,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.153701782226562,
+      "target_x": 424,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -389.3303014214858,
+      "target_velocity_deg_per_s": -14.755139868317347,
+      "eye_velocity_pixels_per_s": -1424.3633990138947,
+      "gain": 3.65849612479017,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.259056,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.187573909759521,
+      "target_x": 411,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -354.9144192505715,
+      "target_velocity_deg_per_s": -13.450820237224422,
+      "eye_velocity_pixels_per_s": -1507.7524010079094,
+      "gain": 4.24821398970389,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.301505,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.23002290725708,
+      "target_x": 396,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -310.04706484560444,
+      "target_velocity_deg_per_s": -11.750402655162267,
+      "eye_velocity_pixels_per_s": -1372.0246758995258,
+      "gain": 4.425214206052101,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.336952,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.265469789505005,
+      "target_x": 385,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -271.26611052725025,
+      "target_velocity_deg_per_s": -10.280652155124347,
+      "eye_velocity_pixels_per_s": -416.95709827348344,
+      "gain": 1.537077733237885,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.3720288,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.300546646118164,
+      "target_x": 376,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -231.86721380006966,
+      "target_velocity_deg_per_s": -8.78748239735204,
+      "eye_velocity_pixels_per_s": -274.141300564881,
+      "gain": 1.1823202430045272,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.408718,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.337235927581787,
+      "target_x": 368,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -189.7296254096448,
+      "target_velocity_deg_per_s": -7.190519591877501,
+      "eye_velocity_pixels_per_s": -343.2607697986711,
+      "gain": 1.8092101803160028,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.443619,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.37213683128357,
+      "target_x": 361,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -148.92120184498748,
+      "target_velocity_deg_per_s": -5.6439304995217245,
+      "eye_velocity_pixels_per_s": -205.89204054663617,
+      "gain": 1.3825569361235064,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.476361,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.404878854751587,
+      "target_x": 357,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -110.13176054339152,
+      "target_velocity_deg_per_s": -4.1738583532509415,
+      "eye_velocity_pixels_per_s": -291.66864467125566,
+      "gain": 2.6483608654956465,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.518291,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.446808815002441,
+      "target_x": 353,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -59.94950752651677,
+      "target_velocity_deg_per_s": -2.272012646744589,
+      "eye_velocity_pixels_per_s": -700.3453312959011,
+      "gain": 11.682253286002817,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.5637062,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.492223978042603,
+      "target_x": 351,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": -5.242349326573901,
+      "target_velocity_deg_per_s": -0.19867859570590418,
+      "eye_velocity_pixels_per_s": -532.1445402555056,
+      "gain": 101.50879064049033,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.5983858,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.526903629302979,
+      "target_x": 352,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 36.573240641641085,
+      "target_velocity_deg_per_s": 1.3860808653596917,
+      "eye_velocity_pixels_per_s": -537.7825890518343,
+      "gain": -14.704264090820892,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.634766,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.563283920288086,
+      "target_x": 354,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 80.29268491388078,
+      "target_velocity_deg_per_s": 3.0429940643753444,
+      "eye_velocity_pixels_per_s": -549.3148252929028,
+      "gain": -6.841405613501147,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.677938,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.60645580291748,
+      "target_x": 359,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 131.73958444831217,
+      "target_velocity_deg_per_s": 4.99276831942364,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.716383,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.644900798797607,
+      "target_x": 366,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 176.932837386274,
+      "target_velocity_deg_per_s": 6.705537055299565,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.753014,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.68153190612793,
+      "target_x": 373,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 219.25553809991277,
+      "target_velocity_deg_per_s": 8.309515390288242,
+      "eye_velocity_pixels_per_s": -84.51830395947412,
+      "gain": -0.38547853656020264,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.787183,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.71570086479187,
+      "target_x": 382,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 257.9289700002693,
+      "target_velocity_deg_per_s": 9.775190922848049,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.829781,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.758298873901367,
+      "target_x": 395,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 304.8421719481518,
+      "target_velocity_deg_per_s": 11.553143612079506,
+      "eye_velocity_pixels_per_s": 15.383440517488523,
+      "gain": 0.050463623255200304,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.864355,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.792872905731201,
+      "target_x": 406,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 341.6913613466009,
+      "target_velocity_deg_per_s": 12.949682596132563,
+      "eye_velocity_pixels_per_s": 0.0,
+      "gain": 0.0,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.8991628,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.827680587768555,
+      "target_x": 420,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 377.53218466815946,
+      "target_velocity_deg_per_s": 14.308005745331098,
+      "eye_velocity_pixels_per_s": 142.24767786970423,
+      "gain": 0.37678291718290474,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.931517,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.860034704208374,
+      "target_x": 433,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 409.59959275387104,
+      "target_velocity_deg_per_s": 15.52332109528339,
+      "eye_velocity_pixels_per_s": 162.46254173237392,
+      "gain": 0.3966374591343842,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046299.9685261,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.897043943405151,
+      "target_x": 449,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 444.67316807107295,
+      "target_velocity_deg_per_s": 16.852566488199827,
+      "eye_velocity_pixels_per_s": 209.5476324784829,
+      "gain": 0.4712396598775452,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.003632,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.932149887084961,
+      "target_x": 466,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 476.23030892246544,
+      "target_velocity_deg_per_s": 18.04854333717979,
+      "eye_velocity_pixels_per_s": 1461.0205955955253,
+      "gain": 3.0678866259085424,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.046151,
+      "phase": "horizontal",
+      "time_from_phase_start": 13.974668741226196,
+      "target_x": 488,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 512.0458706003233,
+      "target_velocity_deg_per_s": 19.40590910113308,
+      "eye_velocity_pixels_per_s": 1606.196853227617,
+      "gain": 3.1368221978716666,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.08063,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.009147882461548,
+      "target_x": 507,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 539.0272742049908,
+      "target_velocity_deg_per_s": 20.428471132849683,
+      "eye_velocity_pixels_per_s": 1669.722450187679,
+      "gain": 3.097658560321175,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.114658,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.04317593574524,
+      "target_x": 526,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 563.7418290230943,
+      "target_velocity_deg_per_s": 21.36512238191218,
+      "eye_velocity_pixels_per_s": 1790.9663039377615,
+      "gain": 3.1769264080356057,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.156277,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.084794759750366,
+      "target_x": 550,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 591.2574834328666,
+      "target_velocity_deg_per_s": 22.407931862453847,
+      "eye_velocity_pixels_per_s": 1821.5641323386565,
+      "gain": 3.0808305744606836,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.1974242,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.12594199180603,
+      "target_x": 576,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 615.3947741108711,
+      "target_velocity_deg_per_s": 23.322705510165967,
+      "eye_velocity_pixels_per_s": 908.190261183312,
+      "gain": 1.4757848122702617,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.230399,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.158916711807251,
+      "target_x": 597,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 632.4523298236783,
+      "target_velocity_deg_per_s": 23.96916590493912,
+      "eye_velocity_pixels_per_s": 814.1198918747019,
+      "gain": 1.2872430908771746,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.267303,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.195820808410645,
+      "target_x": 620,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 649.05541525297,
+      "target_velocity_deg_per_s": 24.59840243459112,
+      "eye_velocity_pixels_per_s": 873.1853541404007,
+      "gain": 1.345317107939198,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.31127,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.239787817001343,
+      "target_x": 649,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 665.3155119001908,
+      "target_velocity_deg_per_s": 25.214640110996285,
+      "eye_velocity_pixels_per_s": 895.1649154002995,
+      "gain": 1.345474289098779,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.346168,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.274685859680176,
+      "target_x": 673,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 675.4365996550555,
+      "target_velocity_deg_per_s": 25.59821689630504,
+      "eye_velocity_pixels_per_s": 990.04106485779,
+      "gain": 1.4657794164002995,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.387551,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.316068887710571,
+      "target_x": 701,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 684.1878934010327,
+      "target_velocity_deg_per_s": 25.92988017239522,
+      "eye_velocity_pixels_per_s": 915.1779752426935,
+      "gain": 1.337612056672665,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.423341,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.351858854293823,
+      "target_x": 726,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 688.879144969676,
+      "target_velocity_deg_per_s": 26.107672840471825,
+      "eye_velocity_pixels_per_s": 1031.3972954266212,
+      "gain": 1.4972107995402049,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.458696,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.387213706970215,
+      "target_x": 750,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.8737962057457,
+      "target_velocity_deg_per_s": 26.183267670540953,
+      "eye_velocity_pixels_per_s": 715.8053179751131,
+      "gain": 1.0360869407788953,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.493067,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.421584844589233,
+      "target_x": 773,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 690.2906602191559,
+      "target_velocity_deg_per_s": 26.1611675334261,
+      "eye_velocity_pixels_per_s": 748.0866618947922,
+      "gain": 1.0837270515253488,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.535767,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.464284896850586,
+      "target_x": 802,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 686.1065399987746,
+      "target_velocity_deg_per_s": 26.002594520094817,
+      "eye_velocity_pixels_per_s": 648.7371844892724,
+      "gain": 0.9455341797068879,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.569031,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.497548818588257,
+      "target_x": 825,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 680.204427212644,
+      "target_velocity_deg_per_s": 25.778911700237284,
+      "eye_velocity_pixels_per_s": 754.9042029106388,
+      "gain": 1.109819596447058,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.615422,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.54393982887268,
+      "target_x": 857,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 668.1497398120435,
+      "target_velocity_deg_per_s": 25.32205386508989,
+      "eye_velocity_pixels_per_s": 583.0871773492432,
+      "gain": 0.8726893727643609,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.649513,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.578030824661255,
+      "target_x": 879,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 656.4936108995156,
+      "target_velocity_deg_per_s": 24.88030090674182,
+      "eye_velocity_pixels_per_s": 848.9803438388817,
+      "gain": 1.2932042745635015,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.683087,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.611604928970337,
+      "target_x": 901,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 642.7419341660662,
+      "target_velocity_deg_per_s": 24.359129261778424,
+      "eye_velocity_pixels_per_s": 852.541750072592,
+      "gain": 1.3264137669479015,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.718282,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.646799802780151,
+      "target_x": 924,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 625.9574213104454,
+      "target_velocity_deg_per_s": 23.723016855674835,
+      "eye_velocity_pixels_per_s": 887.5988020027261,
+      "gain": 1.4179859073234293,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.754613,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.683130741119385,
+      "target_x": 946,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 606.1539556147078,
+      "target_velocity_deg_per_s": 22.972489847755927,
+      "eye_velocity_pixels_per_s": 802.8794544191626,
+      "gain": 1.3245470840901354,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.7885828,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.717100620269775,
+      "target_x": 967,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 585.4306211065086,
+      "target_velocity_deg_per_s": 22.18710094252562,
+      "eye_velocity_pixels_per_s": 935.5474532826894,
+      "gain": 1.5980500840807288,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.8257658,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.754283666610718,
+      "target_x": 989,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 560.3903686075337,
+      "target_velocity_deg_per_s": 21.238106151697952,
+      "eye_velocity_pixels_per_s": 845.3760187940138,
+      "gain": 1.5085484443542754,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.872073,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.800590753555298,
+      "target_x": 1015,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 525.9182897065119,
+      "target_velocity_deg_per_s": 19.93165673360964,
+      "eye_velocity_pixels_per_s": 788.4188578530034,
+      "gain": 1.4991280457140588,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.9070342,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.835551977157593,
+      "target_x": 1033,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 497.6034982474295,
+      "target_velocity_deg_per_s": 18.858560941179384,
+      "eye_velocity_pixels_per_s": 789.3947840528554,
+      "gain": 1.5863931560632536,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.948948,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.877465724945068,
+      "target_x": 1054,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 461.2251122553031,
+      "target_velocity_deg_per_s": 17.479864827525596,
+      "eye_velocity_pixels_per_s": 704.9683666752095,
+      "gain": 1.528469174690095,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046300.984851,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.913368701934814,
+      "target_x": 1071,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 428.093151931558,
+      "target_velocity_deg_per_s": 16.22420425627415,
+      "eye_velocity_pixels_per_s": 631.7889724522772,
+      "gain": 1.475821254326641,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046301.0191538,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.94767165184021,
+      "target_x": 1085,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 394.86532099140004,
+      "target_velocity_deg_per_s": 14.96491030650254,
+      "eye_velocity_pixels_per_s": 1023.8487496165338,
+      "gain": 2.5929062269786733,
+      "latency_ms": null
+    },
+    {
+      "timestamp": 1765046301.054105,
+      "phase": "horizontal",
+      "time_from_phase_start": 14.982622861862183,
+      "target_x": 1099,
+      "target_y": 491,
+      "target_velocity_pixels_per_s": 359.5543066059797,
+      "target_velocity_deg_per_s": 13.626666264755091,
+      "eye_velocity_pixels_per_s": 1290.9819300619768,
+      "gain": 3.5905060969738543,
+      "latency_ms": null
+    }
+  ],
+  "gaze_path": [
+    [
+      1765046283084.372,
+      756,
+      474
+    ],
+    [
+      1765046283127.1748,
+      744,
+      457
+    ],
+    [
+      1765046283161.758,
+      756,
+      457
+    ],
+    [
+      1765046283196.1018,
+      756,
+      457
+    ],
+    [
+      1765046283231.9832,
+      756,
+      474
+    ],
+    [
+      1765046283265.998,
+      744,
+      457
+    ],
+    [
+      1765046283300.19,
+      732,
+      474
+    ],
+    [
+      1765046283344.044,
+      732,
+      474
+    ],
+    [
+      1765046283378.5212,
+      732,
+      457
+    ],
+    [
+      1765046283421.6619,
+      707,
+      457
+    ],
+    [
+      1765046283469.147,
+      732,
+      474
+    ],
+    [
+      1765046283510.143,
+      558,
+      491
+    ],
+    [
+      1765046283545.2559,
+      470,
+      508
+    ],
+    [
+      1765046283579.783,
+      458,
+      508
+    ],
+    [
+      1765046283615.5461,
+      458,
+      508
+    ],
+    [
+      1765046283649.829,
+      470,
+      474
+    ],
+    [
+      1765046283684.538,
+      483,
+      474
+    ],
+    [
+      1765046283718.656,
+      483,
+      457
+    ],
+    [
+      1765046283755.06,
+      483,
+      474
+    ],
+    [
+      1765046283797.3398,
+      307,
+      508
+    ],
+    [
+      1765046283833.858,
+      332,
+      508
+    ],
+    [
+      1765046283868.816,
+      320,
+      491
+    ],
+    [
+      1765046283906.433,
+      320,
+      508
+    ],
+    [
+      1765046283947.563,
+      332,
+      508
+    ],
+    [
+      1765046283990.258,
+      694,
+      423
+    ],
+    [
+      1765046284025.239,
+      682,
+      440
+    ],
+    [
+      1765046284058.4841,
+      682,
+      440
+    ],
+    [
+      1765046284101.9468,
+      682,
+      423
+    ],
+    [
+      1765046284143.5352,
+      682,
+      423
+    ],
+    [
+      1765046284177.9521,
+      930,
+      339
+    ],
+    [
+      1765046284212.566,
+      968,
+      305
+    ],
+    [
+      1765046284250.203,
+      968,
+      305
+    ],
+    [
+      1765046284290.6658,
+      980,
+      288
+    ],
+    [
+      1765046284325.632,
+      980,
+      288
+    ],
+    [
+      1765046284362.302,
+      992,
+      288
+    ],
+    [
+      1765046284408.74,
+      992,
+      288
+    ],
+    [
+      1765046284444.162,
+      918,
+      305
+    ],
+    [
+      1765046284487.295,
+      856,
+      322
+    ],
+    [
+      1765046284522.3958,
+      843,
+      339
+    ],
+    [
+      1765046284557.545,
+      843,
+      356
+    ],
+    [
+      1765046284593.182,
+      856,
+      356
+    ],
+    [
+      1765046284633.759,
+      856,
+      339
+    ],
+    [
+      1765046284668.3408,
+      756,
+      423
+    ],
+    [
+      1765046284711.274,
+      669,
+      508
+    ],
+    [
+      1765046284747.251,
+      669,
+      491
+    ],
+    [
+      1765046284789.979,
+      657,
+      474
+    ],
+    [
+      1765046284825.028,
+      682,
+      491
+    ],
+    [
+      1765046284871.729,
+      682,
+      474
+    ],
+    [
+      1765046284908.4968,
+      657,
+      457
+    ],
+    [
+      1765046284943.249,
+      669,
+      474
+    ],
+    [
+      1765046284978.626,
+      546,
+      508
+    ],
+    [
+      1765046285012.9822,
+      571,
+      525
+    ],
+    [
+      1765046285049.591,
+      558,
+      508
+    ],
+    [
+      1765046285082.6978,
+      571,
+      508
+    ],
+    [
+      1765046285118.371,
+      669,
+      491
+    ],
+    [
+      1765046285154.946,
+      918,
+      474
+    ],
+    [
+      1765046285188.978,
+      893,
+      474
+    ],
+    [
+      1765046285226.1792,
+      943,
+      491
+    ],
+    [
+      1765046285259.968,
+      943,
+      457
+    ],
+    [
+      1765046285301.388,
+      955,
+      457
+    ],
+    [
+      1765046285334.783,
+      943,
+      457
+    ],
+    [
+      1765046285372.485,
+      955,
+      491
+    ],
+    [
+      1765046285406.73,
+      955,
+      508
+    ],
+    [
+      1765046285442.994,
+      732,
+      525
+    ],
+    [
+      1765046285477.101,
+      744,
+      541
+    ],
+    [
+      1765046285519.644,
+      756,
+      541
+    ],
+    [
+      1765046285553.3618,
+      756,
+      541
+    ],
+    [
+      1765046285588.646,
+      744,
+      541
+    ],
+    [
+      1765046285624.768,
+      744,
+      541
+    ],
+    [
+      1765046285659.631,
+      744,
+      541
+    ],
+    [
+      1765046285702.168,
+      719,
+      525
+    ],
+    [
+      1765046285737.257,
+      732,
+      541
+    ],
+    [
+      1765046285778.1438,
+      744,
+      541
+    ],
+    [
+      1765046285812.5469,
+      744,
+      525
+    ],
+    [
+      1765046285855.7087,
+      732,
+      525
+    ],
+    [
+      1765046285890.483,
+      732,
+      525
+    ],
+    [
+      1765046285925.3408,
+      707,
+      525
+    ],
+    [
+      1765046285961.2642,
+      694,
+      525
+    ],
+    [
+      1765046285994.978,
+      694,
+      525
+    ],
+    [
+      1765046286037.511,
+      682,
+      491
+    ],
+    [
+      1765046286071.4822,
+      669,
+      457
+    ],
+    [
+      1765046286108.2727,
+      657,
+      457
+    ],
+    [
+      1765046286145.234,
+      657,
+      474
+    ],
+    [
+      1765046286180.0771,
+      657,
+      474
+    ],
+    [
+      1765046286212.9631,
+      669,
+      474
+    ],
+    [
+      1765046286249.43,
+      669,
+      491
+    ],
+    [
+      1765046286284.8352,
+      669,
+      491
+    ],
+    [
+      1765046286327.2021,
+      657,
+      491
+    ],
+    [
+      1765046286363.471,
+      657,
+      508
+    ],
+    [
+      1765046286398.0002,
+      632,
+      491
+    ],
+    [
+      1765046286445.324,
+      657,
+      474
+    ],
+    [
+      1765046286487.0852,
+      657,
+      457
+    ],
+    [
+      1765046286522.284,
+      682,
+      457
+    ],
+    [
+      1765046286557.015,
+      1091,
+      339
+    ],
+    [
+      1765046286599.5,
+      1104,
+      339
+    ],
+    [
+      1765046286635.3171,
+      1116,
+      322
+    ],
+    [
+      1765046286669.097,
+      1116,
+      322
+    ],
+    [
+      1765046286711.343,
+      1129,
+      356
+    ],
+    [
+      1765046286747.157,
+      1116,
+      389
+    ],
+    [
+      1765046286781.9,
+      1129,
+      389
+    ],
+    [
+      1765046286818.031,
+      1252,
+      373
+    ],
+    [
+      1765046286852.063,
+      1339,
+      356
+    ],
+    [
+      1765046286901.082,
+      1339,
+      322
+    ],
+    [
+      1765046286936.311,
+      1339,
+      339
+    ],
+    [
+      1765046286984.8782,
+      1376,
+      373
+    ],
+    [
+      1765046287029.2102,
+      1388,
+      373
+    ],
+    [
+      1765046287074.6208,
+      1376,
+      322
+    ],
+    [
+      1765046287114.053,
+      1401,
+      373
+    ],
+    [
+      1765046287157.149,
+      1388,
+      322
+    ],
+    [
+      1765046287211.2861,
+      1413,
+      322
+    ],
+    [
+      1765046287247.2498,
+      1401,
+      305
+    ],
+    [
+      1765046287293.643,
+      1388,
+      238
+    ],
+    [
+      1765046287334.926,
+      1376,
+      221
+    ],
+    [
+      1765046287372.2087,
+      1364,
+      238
+    ],
+    [
+      1765046287409.893,
+      1339,
+      288
+    ],
+    [
+      1765046287453.649,
+      1067,
+      305
+    ],
+    [
+      1765046287491.586,
+      1054,
+      339
+    ],
+    [
+      1765046287527.29,
+      1030,
+      356
+    ],
+    [
+      1765046287563.435,
+      1030,
+      356
+    ],
+    [
+      1765046287598.3228,
+      1030,
+      356
+    ],
+    [
+      1765046287636.306,
+      1005,
+      339
+    ],
+    [
+      1765046287676.9832,
+      980,
+      339
+    ],
+    [
+      1765046287716.9458,
+      955,
+      339
+    ],
+    [
+      1765046287754.1602,
+      943,
+      339
+    ],
+    [
+      1765046287789.3389,
+      930,
+      322
+    ],
+    [
+      1765046287831.0972,
+      906,
+      339
+    ],
+    [
+      1765046287870.771,
+      893,
+      322
+    ],
+    [
+      1765046287905.7568,
+      868,
+      339
+    ],
+    [
+      1765046287939.6128,
+      843,
+      339
+    ],
+    [
+      1765046287981.647,
+      632,
+      423
+    ],
+    [
+      1765046288016.8252,
+      619,
+      423
+    ],
+    [
+      1765046288050.7332,
+      582,
+      406
+    ],
+    [
+      1765046288084.882,
+      582,
+      423
+    ],
+    [
+      1765046288121.31,
+      558,
+      423
+    ],
+    [
+      1765046288156.4219,
+      546,
+      423
+    ],
+    [
+      1765046288198.6611,
+      508,
+      423
+    ],
+    [
+      1765046288234.966,
+      470,
+      440
+    ],
+    [
+      1765046288275.0132,
+      332,
+      541
+    ],
+    [
+      1765046288317.2158,
+      307,
+      541
+    ],
+    [
+      1765046288353.205,
+      282,
+      541
+    ],
+    [
+      1765046288387.458,
+      282,
+      541
+    ],
+    [
+      1765046288428.2888,
+      257,
+      525
+    ],
+    [
+      1765046288463.014,
+      244,
+      541
+    ],
+    [
+      1765046288499.0662,
+      231,
+      558
+    ],
+    [
+      1765046288532.9849,
+      231,
+      558
+    ],
+    [
+      1765046288569.018,
+      118,
+      592
+    ],
+    [
+      1765046288603.4329,
+      105,
+      609
+    ],
+    [
+      1765046288645.488,
+      105,
+      609
+    ],
+    [
+      1765046288687.442,
+      92,
+      609
+    ],
+    [
+      1765046288734.5002,
+      79,
+      626
+    ],
+    [
+      1765046288769.7761,
+      67,
+      626
+    ],
+    [
+      1765046288803.906,
+      67,
+      626
+    ],
+    [
+      1765046288838.7358,
+      67,
+      626
+    ],
+    [
+      1765046288875.763,
+      67,
+      626
+    ],
+    [
+      1765046288911.0742,
+      79,
+      626
+    ],
+    [
+      1765046288952.98,
+      79,
+      626
+    ],
+    [
+      1765046288987.3018,
+      79,
+      609
+    ],
+    [
+      1765046289022.581,
+      79,
+      609
+    ],
+    [
+      1765046289061.0293,
+      92,
+      609
+    ],
+    [
+      1765046289103.2053,
+      92,
+      609
+    ],
+    [
+      1765046289139.582,
+      92,
+      609
+    ],
+    [
+      1765046289174.53,
+      105,
+      592
+    ],
+    [
+      1765046289215.21,
+      130,
+      575
+    ],
+    [
+      1765046289251.601,
+      707,
+      406
+    ],
+    [
+      1765046289285.938,
+      906,
+      406
+    ],
+    [
+      1765046289327.499,
+      930,
+      406
+    ],
+    [
+      1765046289363.104,
+      943,
+      389
+    ],
+    [
+      1765046289398.1519,
+      943,
+      373
+    ],
+    [
+      1765046289432.55,
+      943,
+      373
+    ],
+    [
+      1765046289467.532,
+      943,
+      356
+    ],
+    [
+      1765046289503.2908,
+      955,
+      356
+    ],
+    [
+      1765046289538.5962,
+      968,
+      373
+    ],
+    [
+      1765046289573.059,
+      968,
+      389
+    ],
+    [
+      1765046289615.697,
+      980,
+      389
+    ],
+    [
+      1765046289651.233,
+      992,
+      373
+    ],
+    [
+      1765046289685.3289,
+      1005,
+      356
+    ],
+    [
+      1765046289727.937,
+      1030,
+      356
+    ],
+    [
+      1765046289763.01,
+      1042,
+      356
+    ],
+    [
+      1765046289797.642,
+      1042,
+      339
+    ],
+    [
+      1765046289834.313,
+      1054,
+      339
+    ],
+    [
+      1765046289875.4321,
+      1079,
+      322
+    ],
+    [
+      1765046289908.671,
+      1079,
+      322
+    ],
+    [
+      1765046289946.6199,
+      1079,
+      322
+    ],
+    [
+      1765046289981.526,
+      1104,
+      305
+    ],
+    [
+      1765046290017.016,
+      1116,
+      272
+    ],
+    [
+      1765046290050.898,
+      1116,
+      255
+    ],
+    [
+      1765046290084.564,
+      1129,
+      272
+    ],
+    [
+      1765046290125.096,
+      1129,
+      288
+    ],
+    [
+      1765046290159.328,
+      1153,
+      305
+    ],
+    [
+      1765046290196.48,
+      1166,
+      288
+    ],
+    [
+      1765046290238.5652,
+      1166,
+      272
+    ],
+    [
+      1765046290273.823,
+      1240,
+      288
+    ],
+    [
+      1765046290307.6348,
+      1388,
+      322
+    ],
+    [
+      1765046290347.9778,
+      1388,
+      322
+    ],
+    [
+      1765046290382.968,
+      1364,
+      339
+    ],
+    [
+      1765046290419.5688,
+      1339,
+      356
+    ],
+    [
+      1765046290462.759,
+      1314,
+      339
+    ],
+    [
+      1765046290497.54,
+      1339,
+      373
+    ],
+    [
+      1765046290532.48,
+      1327,
+      339
+    ],
+    [
+      1765046290566.034,
+      1327,
+      339
+    ],
+    [
+      1765046290602.488,
+      1327,
+      339
+    ],
+    [
+      1765046290644.4531,
+      1327,
+      356
+    ],
+    [
+      1765046290686.651,
+      1327,
+      356
+    ],
+    [
+      1765046290723.0762,
+      1327,
+      373
+    ],
+    [
+      1765046290757.992,
+      1302,
+      373
+    ],
+    [
+      1765046290794.352,
+      1302,
+      373
+    ],
+    [
+      1765046290828.209,
+      1314,
+      339
+    ],
+    [
+      1765046290870.999,
+      1302,
+      339
+    ],
+    [
+      1765046290906.7732,
+      1277,
+      322
+    ],
+    [
+      1765046290941.7659,
+      1265,
+      339
+    ],
+    [
+      1765046290977.543,
+      1265,
+      322
+    ],
+    [
+      1765046291018.2942,
+      1252,
+      322
+    ],
+    [
+      1765046291051.9832,
+      1215,
+      305
+    ],
+    [
+      1765046291095.745,
+      1190,
+      305
+    ],
+    [
+      1765046291130.1938,
+      1153,
+      322
+    ],
+    [
+      1765046291164.822,
+      1129,
+      339
+    ],
+    [
+      1765046291199.6382,
+      1091,
+      356
+    ],
+    [
+      1765046291242.546,
+      1054,
+      389
+    ],
+    [
+      1765046291276.705,
+      1017,
+      406
+    ],
+    [
+      1765046291311.795,
+      968,
+      474
+    ],
+    [
+      1765046291346.669,
+      918,
+      508
+    ],
+    [
+      1765046291381.9639,
+      893,
+      491
+    ],
+    [
+      1765046291418.147,
+      856,
+      491
+    ],
+    [
+      1765046291452.2668,
+      819,
+      474
+    ],
+    [
+      1765046291492.239,
+      781,
+      474
+    ],
+    [
+      1765046291526.339,
+      756,
+      491
+    ],
+    [
+      1765046291563.9521,
+      732,
+      508
+    ],
+    [
+      1765046291613.282,
+      694,
+      457
+    ],
+    [
+      1765046291653.8748,
+      558,
+      491
+    ],
+    [
+      1765046291701.078,
+      533,
+      508
+    ],
+    [
+      1765046291735.267,
+      508,
+      525
+    ],
+    [
+      1765046291771.3699,
+      495,
+      541
+    ],
+    [
+      1765046291813.03,
+      470,
+      541
+    ],
+    [
+      1765046291849.006,
+      445,
+      541
+    ],
+    [
+      1765046291883.1128,
+      433,
+      558
+    ],
+    [
+      1765046291932.556,
+      420,
+      558
+    ],
+    [
+      1765046291967.124,
+      408,
+      558
+    ],
+    [
+      1765046292003.623,
+      395,
+      558
+    ],
+    [
+      1765046292038.811,
+      395,
+      558
+    ],
+    [
+      1765046292074.766,
+      395,
+      558
+    ],
+    [
+      1765046292109.037,
+      383,
+      575
+    ],
+    [
+      1765046292143.944,
+      383,
+      575
+    ],
+    [
+      1765046292179.065,
+      370,
+      558
+    ],
+    [
+      1765046292212.896,
+      383,
+      558
+    ],
+    [
+      1765046292249.56,
+      383,
+      541
+    ],
+    [
+      1765046292283.779,
+      383,
+      541
+    ],
+    [
+      1765046292326.623,
+      395,
+      558
+    ],
+    [
+      1765046292362.477,
+      383,
+      575
+    ],
+    [
+      1765046292402.888,
+      383,
+      575
+    ],
+    [
+      1765046292437.891,
+      383,
+      558
+    ],
+    [
+      1765046292479.218,
+      395,
+      541
+    ],
+    [
+      1765046292516.9878,
+      395,
+      575
+    ],
+    [
+      1765046292558.9841,
+      395,
+      609
+    ],
+    [
+      1765046292595.046,
+      408,
+      609
+    ],
+    [
+      1765046292635.343,
+      408,
+      592
+    ],
+    [
+      1765046292677.689,
+      408,
+      592
+    ],
+    [
+      1765046292712.3242,
+      420,
+      592
+    ],
+    [
+      1765046292746.767,
+      433,
+      558
+    ],
+    [
+      1765046292788.995,
+      445,
+      558
+    ],
+    [
+      1765046292823.113,
+      445,
+      558
+    ],
+    [
+      1765046292857.2302,
+      458,
+      558
+    ],
+    [
+      1765046292891.9912,
+      194,
+      677
+    ],
+    [
+      1765046292934.5852,
+      231,
+      660
+    ],
+    [
+      1765046292975.705,
+      269,
+      660
+    ],
+    [
+      1765046293010.7378,
+      295,
+      643
+    ],
+    [
+      1765046293045.06,
+      332,
+      626
+    ],
+    [
+      1765046293078.2158,
+      345,
+      626
+    ],
+    [
+      1765046293116.716,
+      370,
+      626
+    ],
+    [
+      1765046293153.1838,
+      408,
+      660
+    ],
+    [
+      1765046293187.632,
+      433,
+      695
+    ],
+    [
+      1765046293224.01,
+      483,
+      695
+    ],
+    [
+      1765046293260.8308,
+      533,
+      660
+    ],
+    [
+      1765046293301.517,
+      558,
+      626
+    ],
+    [
+      1765046293342.9492,
+      607,
+      626
+    ],
+    [
+      1765046293378.263,
+      756,
+      592
+    ],
+    [
+      1765046293420.9778,
+      794,
+      575
+    ],
+    [
+      1765046293455.3652,
+      843,
+      558
+    ],
+    [
+      1765046293490.435,
+      881,
+      541
+    ],
+    [
+      1765046293531.2231,
+      918,
+      508
+    ],
+    [
+      1765046293564.914,
+      968,
+      491
+    ],
+    [
+      1765046293599.654,
+      992,
+      474
+    ],
+    [
+      1765046293636.085,
+      1017,
+      474
+    ],
+    [
+      1765046293671.9602,
+      1054,
+      474
+    ],
+    [
+      1765046293706.769,
+      1079,
+      457
+    ],
+    [
+      1765046293741.796,
+      1104,
+      440
+    ],
+    [
+      1765046293783.385,
+      1116,
+      423
+    ],
+    [
+      1765046293819.7031,
+      1141,
+      423
+    ],
+    [
+      1765046293855.369,
+      1277,
+      440
+    ],
+    [
+      1765046293890.291,
+      1327,
+      423
+    ],
+    [
+      1765046293933.837,
+      1339,
+      423
+    ],
+    [
+      1765046293969.651,
+      1351,
+      423
+    ],
+    [
+      1765046294010.329,
+      1364,
+      440
+    ],
+    [
+      1765046294044.7969,
+      1364,
+      440
+    ],
+    [
+      1765046294081.497,
+      1376,
+      440
+    ],
+    [
+      1765046294116.1853,
+      1376,
+      440
+    ],
+    [
+      1765046294158.148,
+      1388,
+      440
+    ],
+    [
+      1765046294194.022,
+      1401,
+      440
+    ],
+    [
+      1765046294233.8262,
+      1463,
+      457
+    ],
+    [
+      1765046294276.9558,
+      1500,
+      457
+    ],
+    [
+      1765046294310.791,
+      1487,
+      440
+    ],
+    [
+      1765046294347.237,
+      1475,
+      440
+    ],
+    [
+      1765046294381.747,
+      1475,
+      440
+    ],
+    [
+      1765046294417.96,
+      1463,
+      423
+    ],
+    [
+      1765046294458.272,
+      1450,
+      423
+    ],
+    [
+      1765046294492.94,
+      1438,
+      406
+    ],
+    [
+      1765046294535.258,
+      1413,
+      389
+    ],
+    [
+      1765046294571.0679,
+      1252,
+      389
+    ],
+    [
+      1765046294612.863,
+      1252,
+      423
+    ],
+    [
+      1765046294647.8027,
+      1215,
+      389
+    ],
+    [
+      1765046294681.71,
+      1190,
+      373
+    ],
+    [
+      1765046294717.096,
+      1166,
+      373
+    ],
+    [
+      1765046294759.134,
+      1129,
+      389
+    ],
+    [
+      1765046294793.566,
+      1091,
+      440
+    ],
+    [
+      1765046294828.6309,
+      1079,
+      457
+    ],
+    [
+      1765046294870.023,
+      1054,
+      406
+    ],
+    [
+      1765046294909.466,
+      1042,
+      373
+    ],
+    [
+      1765046294945.434,
+      1005,
+      389
+    ],
+    [
+      1765046294979.6338,
+      968,
+      406
+    ],
+    [
+      1765046295014.833,
+      943,
+      423
+    ],
+    [
+      1765046295051.306,
+      906,
+      440
+    ],
+    [
+      1765046295085.96,
+      856,
+      423
+    ],
+    [
+      1765046295135.438,
+      843,
+      440
+    ],
+    [
+      1765046295170.6108,
+      806,
+      457
+    ],
+    [
+      1765046295204.816,
+      582,
+      525
+    ],
+    [
+      1765046295247.672,
+      571,
+      541
+    ],
+    [
+      1765046295282.1472,
+      533,
+      541
+    ],
+    [
+      1765046295316.111,
+      508,
+      541
+    ],
+    [
+      1765046295356.852,
+      495,
+      541
+    ],
+    [
+      1765046295390.93,
+      458,
+      541
+    ],
+    [
+      1765046295426.838,
+      445,
+      525
+    ],
+    [
+      1765046295469.6091,
+      420,
+      525
+    ],
+    [
+      1765046295505.346,
+      395,
+      525
+    ],
+    [
+      1765046295540.004,
+      282,
+      592
+    ],
+    [
+      1765046295589.073,
+      257,
+      592
+    ],
+    [
+      1765046295630.7268,
+      257,
+      592
+    ],
+    [
+      1765046295666.973,
+      244,
+      558
+    ],
+    [
+      1765046295709.677,
+      244,
+      575
+    ],
+    [
+      1765046295749.654,
+      231,
+      609
+    ],
+    [
+      1765046295785.4211,
+      219,
+      592
+    ],
+    [
+      1765046295818.837,
+      219,
+      592
+    ],
+    [
+      1765046295853.239,
+      219,
+      592
+    ],
+    [
+      1765046295889.55,
+      156,
+      592
+    ],
+    [
+      1765046295924.154,
+      29,
+      660
+    ],
+    [
+      1765046295958.6602,
+      16,
+      643
+    ],
+    [
+      1765046295994.334,
+      3,
+      660
+    ],
+    [
+      1765046296043.326,
+      0,
+      660
+    ],
+    [
+      1765046296077.125,
+      16,
+      677
+    ],
+    [
+      1765046296119.4648,
+      29,
+      660
+    ],
+    [
+      1765046296154.1829,
+      29,
+      643
+    ],
+    [
+      1765046296188.696,
+      41,
+      660
+    ],
+    [
+      1765046296231.185,
+      54,
+      643
+    ],
+    [
+      1765046296265.0051,
+      244,
+      866
+    ],
+    [
+      1765046296298.3523,
+      571,
+      981
+    ],
+    [
+      1765046296341.897,
+      282,
+      981
+    ],
+    [
+      1765046296377.981,
+      483,
+      952
+    ],
+    [
+      1765046296420.1072,
+      231,
+      677
+    ],
+    [
+      1765046296462.894,
+      257,
+      626
+    ],
+    [
+      1765046296496.186,
+      269,
+      626
+    ],
+    [
+      1765046296532.34,
+      295,
+      643
+    ],
+    [
+      1765046296566.4482,
+      320,
+      626
+    ],
+    [
+      1765046296602.189,
+      345,
+      609
+    ],
+    [
+      1765046296644.782,
+      357,
+      592
+    ],
+    [
+      1765046296681.8152,
+      383,
+      575
+    ],
+    [
+      1765046296715.026,
+      420,
+      575
+    ],
+    [
+      1765046296748.53,
+      433,
+      575
+    ],
+    [
+      1765046296784.4028,
+      445,
+      575
+    ],
+    [
+      1765046296819.4238,
+      470,
+      558
+    ],
+    [
+      1765046296863.152,
+      508,
+      558
+    ],
+    [
+      1765046296899.1868,
+      707,
+      525
+    ],
+    [
+      1765046296933.425,
+      744,
+      525
+    ],
+    [
+      1765046296973.114,
+      781,
+      525
+    ],
+    [
+      1765046297009.803,
+      806,
+      508
+    ],
+    [
+      1765046297045.191,
+      819,
+      491
+    ],
+    [
+      1765046297086.8079,
+      881,
+      491
+    ],
+    [
+      1765046297122.517,
+      906,
+      474
+    ],
+    [
+      1765046297157.165,
+      918,
+      474
+    ],
+    [
+      1765046297197.0078,
+      918,
+      440
+    ],
+    [
+      1765046297233.3901,
+      968,
+      406
+    ],
+    [
+      1765046297267.2,
+      992,
+      406
+    ],
+    [
+      1765046297311.237,
+      1005,
+      406
+    ],
+    [
+      1765046297346.0,
+      1030,
+      406
+    ],
+    [
+      1765046297380.12,
+      1141,
+      406
+    ],
+    [
+      1765046297413.146,
+      1178,
+      389
+    ],
+    [
+      1765046297450.718,
+      1228,
+      406
+    ],
+    [
+      1765046297485.6992,
+      1215,
+      373
+    ],
+    [
+      1765046297522.927,
+      1240,
+      406
+    ],
+    [
+      1765046297556.4622,
+      1252,
+      406
+    ],
+    [
+      1765046297593.3171,
+      1252,
+      406
+    ],
+    [
+      1765046297627.265,
+      1252,
+      373
+    ],
+    [
+      1765046297661.136,
+      1240,
+      373
+    ],
+    [
+      1765046297703.562,
+      1425,
+      406
+    ],
+    [
+      1765046297738.372,
+      1438,
+      406
+    ],
+    [
+      1765046297772.9148,
+      1438,
+      423
+    ],
+    [
+      1765046297809.491,
+      1450,
+      423
+    ],
+    [
+      1765046297843.747,
+      1450,
+      406
+    ],
+    [
+      1765046297877.863,
+      1438,
+      406
+    ],
+    [
+      1765046297915.051,
+      1438,
+      406
+    ],
+    [
+      1765046297950.2761,
+      1450,
+      389
+    ],
+    [
+      1765046297987.215,
+      1475,
+      389
+    ],
+    [
+      1765046298021.9773,
+      1463,
+      356
+    ],
+    [
+      1765046298058.362,
+      1438,
+      339
+    ],
+    [
+      1765046298099.165,
+      1425,
+      322
+    ],
+    [
+      1765046298141.0261,
+      1351,
+      339
+    ],
+    [
+      1765046298176.611,
+      1228,
+      356
+    ],
+    [
+      1765046298210.366,
+      1203,
+      339
+    ],
+    [
+      1765046298244.516,
+      1178,
+      322
+    ],
+    [
+      1765046298287.2341,
+      1153,
+      322
+    ],
+    [
+      1765046298321.516,
+      1116,
+      339
+    ],
+    [
+      1765046298355.442,
+      1079,
+      356
+    ],
+    [
+      1765046298390.37,
+      1042,
+      373
+    ],
+    [
+      1765046298425.802,
+      1005,
+      389
+    ],
+    [
+      1765046298459.2869,
+      968,
+      389
+    ],
+    [
+      1765046298502.266,
+      918,
+      406
+    ],
+    [
+      1765046298543.628,
+      893,
+      440
+    ],
+    [
+      1765046298582.8428,
+      868,
+      440
+    ],
+    [
+      1765046298617.6099,
+      831,
+      457
+    ],
+    [
+      1765046298652.092,
+      806,
+      457
+    ],
+    [
+      1765046298694.4622,
+      769,
+      474
+    ],
+    [
+      1765046298729.623,
+      744,
+      491
+    ],
+    [
+      1765046298763.9392,
+      732,
+      491
+    ],
+    [
+      1765046298803.869,
+      707,
+      474
+    ],
+    [
+      1765046298839.9841,
+      669,
+      508
+    ],
+    [
+      1765046298874.336,
+      508,
+      592
+    ],
+    [
+      1765046298908.818,
+      508,
+      592
+    ],
+    [
+      1765046298944.564,
+      470,
+      592
+    ],
+    [
+      1765046298978.6172,
+      445,
+      609
+    ],
+    [
+      1765046299011.905,
+      433,
+      609
+    ],
+    [
+      1765046299048.263,
+      420,
+      609
+    ],
+    [
+      1765046299083.2979,
+      408,
+      609
+    ],
+    [
+      1765046299117.835,
+      395,
+      609
+    ],
+    [
+      1765046299154.679,
+      206,
+      695
+    ],
+    [
+      1765046299189.641,
+      168,
+      695
+    ],
+    [
+      1765046299225.184,
+      168,
+      677
+    ],
+    [
+      1765046299259.0562,
+      143,
+      677
+    ],
+    [
+      1765046299301.5051,
+      143,
+      660
+    ],
+    [
+      1765046299336.952,
+      130,
+      643
+    ],
+    [
+      1765046299372.0288,
+      118,
+      643
+    ],
+    [
+      1765046299408.718,
+      105,
+      660
+    ],
+    [
+      1765046299443.619,
+      105,
+      695
+    ],
+    [
+      1765046299476.361,
+      92,
+      712
+    ],
+    [
+      1765046299518.291,
+      3,
+      729
+    ],
+    [
+      1765046299563.706,
+      16,
+      695
+    ],
+    [
+      1765046299598.3857,
+      3,
+      712
+    ],
+    [
+      1765046299634.766,
+      0,
+      729
+    ],
+    [
+      1765046299677.938,
+      3,
+      729
+    ],
+    [
+      1765046299716.383,
+      3,
+      712
+    ],
+    [
+      1765046299753.0142,
+      0,
+      695
+    ],
+    [
+      1765046299787.183,
+      3,
+      695
+    ],
+    [
+      1765046299829.781,
+      3,
+      695
+    ],
+    [
+      1765046299864.355,
+      3,
+      695
+    ],
+    [
+      1765046299899.1628,
+      29,
+      695
+    ],
+    [
+      1765046299931.5168,
+      29,
+      677
+    ],
+    [
+      1765046299968.5261,
+      41,
+      695
+    ],
+    [
+      1765046300003.632,
+      257,
+      643
+    ],
+    [
+      1765046300046.151,
+      295,
+      643
+    ],
+    [
+      1765046300080.6301,
+      332,
+      626
+    ],
+    [
+      1765046300114.6582,
+      357,
+      609
+    ],
+    [
+      1765046300156.2769,
+      383,
+      592
+    ],
+    [
+      1765046300197.424,
+      433,
+      592
+    ],
+    [
+      1765046300230.399,
+      445,
+      575
+    ],
+    [
+      1765046300267.303,
+      495,
+      575
+    ],
+    [
+      1765046300311.27,
+      533,
+      525
+    ],
+    [
+      1765046300346.168,
+      571,
+      491
+    ],
+    [
+      1765046300387.551,
+      607,
+      474
+    ],
+    [
+      1765046300423.341,
+      644,
+      474
+    ],
+    [
+      1765046300458.6958,
+      632,
+      457
+    ],
+    [
+      1765046300493.0671,
+      669,
+      457
+    ],
+    [
+      1765046300535.767,
+      694,
+      440
+    ],
+    [
+      1765046300569.031,
+      744,
+      406
+    ],
+    [
+      1765046300615.422,
+      756,
+      389
+    ],
+    [
+      1765046300649.513,
+      794,
+      389
+    ],
+    [
+      1765046300683.0872,
+      831,
+      389
+    ],
+    [
+      1765046300718.282,
+      856,
+      373
+    ],
+    [
+      1765046300754.613,
+      893,
+      356
+    ],
+    [
+      1765046300788.5828,
+      918,
+      339
+    ],
+    [
+      1765046300825.7659,
+      943,
+      339
+    ],
+    [
+      1765046300872.073,
+      980,
+      322
+    ],
+    [
+      1765046300907.0342,
+      1005,
+      305
+    ],
+    [
+      1765046300948.948,
+      1030,
+      272
+    ],
+    [
+      1765046300984.8508,
+      1042,
+      272
+    ],
+    [
+      1765046301019.1538,
+      1141,
+      288
+    ],
+    [
+      1765046301054.105,
+      1215,
+      322
+    ],
+    [
+      1765046301094.1702,
+      1228,
+      305
+    ]
+  ]
+}

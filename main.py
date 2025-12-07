@@ -289,8 +289,16 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
         if pupil_center is not None:
             pupil_x, pupil_y = pupil_center
         
-        # Update dashboard with camera frame
-        dashboard_server.update_camera_frame(frame)
+        # Draw pupil visualization on frame for dashboard (green ellipse and yellow center dot)
+        dashboard_frame = frame.copy()
+        if pupil_rotated_rect is not None and pupil_center is not None:
+            # Draw green ellipse outline (matching local view)
+            cv2.ellipse(dashboard_frame, pupil_rotated_rect, (55, 255, 0), 2)
+            # Draw yellow center dot (matching local view)
+            cv2.circle(dashboard_frame, pupil_center, 3, (255, 255, 0), -1)
+        
+        # Update dashboard with camera frame (with pupil visualization)
+        dashboard_server.update_camera_frame(dashboard_frame)
         
         # Update dashboard with gaze position
         if et.current_gaze_x is not None and et.current_gaze_y is not None:
@@ -374,15 +382,25 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
             targets = []
             test_name = None
             test_active = False
+            is_calibrating = False
             
-            if saccade_test.saccade_testing_active:
+            # Check for calibration first (highest priority)
+            if calibration.calibration_active or automated_suite_calibration_active:
                 test_active = True
-                test_name = "Saccade Test"
+                test_name = "Recalibrating..."
+                is_calibrating = True
+            elif saccade_test.saccade_testing_active:
+                test_active = True
+                # Check if antisaccade phase
+                if hasattr(saccade_test, 'test_phase') and saccade_test.test_phase == 'antisaccade':
+                    test_name = "Antisaccade Test"
+                else:
+                    test_name = "Saccade Test"
                 # Get current metrics from saccade test
                 if hasattr(saccade_test, 'saccade_data') and len(saccade_test.saccade_data) > 0:
                     # Calculate running metrics
-                    latencies = [d.get('latency_ms') for d in saccade_test.saccade_data if d.get('latency_ms') is not None]
-                    velocities = [d.get('velocity_deg_per_ms') for d in saccade_test.saccade_data if d.get('velocity_deg_per_ms') is not None]
+                    latencies = [d.get('saccade_latency_ms') for d in saccade_test.saccade_data if d.get('saccade_latency_ms') is not None]
+                    velocities = [d.get('peak_velocity_deg_per_ms') for d in saccade_test.saccade_data if d.get('peak_velocity_deg_per_ms') is not None]
                     accuracies = [d.get('accuracy_percent') for d in saccade_test.saccade_data if d.get('accuracy_percent') is not None]
                     if latencies:
                         metrics['average_latency_ms'] = sum(latencies) / len(latencies)
@@ -391,6 +409,15 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     if accuracies:
                         metrics['average_accuracy_percent'] = sum(accuracies) / len(accuracies)
                     metrics['total_saccades'] = len(saccade_test.saccade_data)
+                # For antisaccade phase, add error rate
+                if hasattr(saccade_test, 'test_phase') and saccade_test.test_phase == 'antisaccade':
+                    if hasattr(saccade_test, 'antisaccade_data') and len(saccade_test.antisaccade_data) > 0:
+                        errors = [d.get('error') for d in saccade_test.antisaccade_data if d.get('error') is not None]
+                        if errors:
+                            error_count = sum(1 for e in errors if e is True)
+                            error_rate = (error_count / len(errors)) * 100
+                            metrics['antisaccade_error_rate_percent'] = error_rate
+                            metrics['total_antisaccade_trials'] = len(saccade_test.antisaccade_data)
                 # Get current target if available
                 if hasattr(saccade_test, 'current_target_position') and saccade_test.current_target_position:
                     targets.append({'x': saccade_test.current_target_position[0], 'y': saccade_test.current_target_position[1]})
@@ -400,9 +427,11 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 # Get current metrics from pursuit test
                 if hasattr(smooth_pursuit, 'pursuit_data') and len(smooth_pursuit.pursuit_data) > 0:
                     gains = [d.get('gain') for d in smooth_pursuit.pursuit_data if d.get('gain') is not None]
+                    latencies = [d.get('latency_ms') for d in smooth_pursuit.pursuit_data if d.get('latency_ms') is not None]
                     if gains:
                         metrics['average_gain'] = sum(gains) / len(gains)
-                    metrics['total_measurements'] = len(smooth_pursuit.pursuit_data)
+                    if latencies:
+                        metrics['average_latency_ms'] = sum(latencies) / len(latencies)
                 # Get current target if available
                 if hasattr(smooth_pursuit, 'current_target_position') and smooth_pursuit.current_target_position:
                     targets.append({'x': smooth_pursuit.current_target_position[0], 'y': smooth_pursuit.current_target_position[1]})
@@ -414,7 +443,6 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     deviations = [d.get('deviation_degrees') for d in fixed_point_stability.stability_data if d.get('deviation_degrees') is not None]
                     if deviations:
                         metrics['average_deviation_degrees'] = sum(deviations) / len(deviations)
-                    metrics['total_measurements'] = len(fixed_point_stability.stability_data)
                 # Center target
                 if et.monitor_width and et.monitor_height:
                     targets.append({'x': et.monitor_width // 2, 'y': et.monitor_height // 2})
@@ -422,11 +450,43 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 test_active = True
                 test_name = "PLR Test"
                 # Get current metrics from PLR test
-                if hasattr(plr, 'plr_data') and len(plr.plr_data) > 0:
-                    diameters = [d.get('diameter_pixels') for d in plr.plr_data if d.get('diameter_pixels') is not None]
+                # Show baseline diameter during baseline collection
+                if hasattr(plr, 'plr_baseline_samples') and len(plr.plr_baseline_samples) > 0:
+                    diameters = [d[1] for d in plr.plr_baseline_samples]
                     if diameters:
-                        metrics['current_diameter_pixels'] = diameters[-1] if diameters else 0
-                    metrics['total_samples'] = len(plr.plr_data)
+                        metrics['baseline_diameter_pixels'] = sum(diameters) / len(diameters)
+                
+                # Show response data if available
+                if hasattr(plr, 'plr_response_samples') and len(plr.plr_response_samples) > 0:
+                    response_diameters = [d[1] for d in plr.plr_response_samples]
+                    if response_diameters:
+                        metrics['current_diameter_pixels'] = response_diameters[-1]
+                
+                # Show final metrics if test completed
+                if hasattr(plr, 'plr_current_result') and plr.plr_current_result is not None:
+                    result = plr.plr_current_result
+                    if result.get('plr_latency_ms') is not None:
+                        metrics['plr_latency_ms'] = result['plr_latency_ms']
+                    if result.get('constriction_amplitude_percent') is not None:
+                        metrics['constriction_amplitude_percent'] = result['constriction_amplitude_percent']
+            # Show "Testing Complete" after PLR test finishes
+            elif (hasattr(plr, 'plr_current_result') and plr.plr_current_result is not None and 
+                  not plr.plr_test_active):
+                test_active = True
+                test_name = "Testing Complete"
+                # Keep showing all final metrics
+                result = plr.plr_current_result
+                # Show baseline diameter from result
+                if result.get('baseline_diameter_pixels') is not None:
+                    metrics['baseline_diameter_pixels'] = result['baseline_diameter_pixels']
+                # Show minimum response diameter (current diameter at constriction)
+                if result.get('min_response_diameter_pixels') is not None:
+                    metrics['current_diameter_pixels'] = result['min_response_diameter_pixels']
+                # Show latency and constriction amplitude
+                if result.get('plr_latency_ms') is not None:
+                    metrics['plr_latency_ms'] = result['plr_latency_ms']
+                if result.get('constriction_amplitude_percent') is not None:
+                    metrics['constriction_amplitude_percent'] = result['constriction_amplitude_percent']
             
             dashboard_server.update_test_status(
                 test_name, 
@@ -434,7 +494,8 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                 metrics if metrics else None,
                 targets if targets else None,
                 et.monitor_width,
-                et.monitor_height
+                et.monitor_height,
+                is_calibrating=is_calibrating
             )
         except Exception as e:
             # Silently fail to avoid interrupting video processing
@@ -622,6 +683,7 @@ def run_with_tests(debug_calibration_flag, accuracy_update_callback, saccade_upd
                     elif automated_suite_state == 'calibration_before_antisaccade':
                         print("Starting Antisaccade Test...")
                         automated_suite_state = 'saccade'  # Stay in saccade state for antisaccade phase
+                        dashboard_server.reset_gaze_path()
                         saccade_test.start_antisaccade_phase()
                     elif automated_suite_state == 'calibration_before_pursuit':
                         print("\n2/4: Starting Smooth Pursuit Test...")

@@ -11,6 +11,7 @@ plr_flash_start_time = None
 plr_baseline_start_time = None
 plr_baseline_duration_sec = 1.0  # Collect baseline for 1 second before flash
 showing_plr_flash = False
+plr_current_result = None  # Store latest PLR metrics for dashboard access
 
 # Timing parameters
 PLR_FLASH_DURATION_SEC = 2.5  # Duration of white flash for PLR test
@@ -57,7 +58,7 @@ def start_plr_test():
     """Start PLR (Pupillary Light Reflex) test"""
     global plr_test_active, plr_baseline_samples, plr_response_samples
     global plr_flash_start_time, plr_baseline_start_time, showing_plr_flash
-    global monitor_width, monitor_height
+    global monitor_width, monitor_height, plr_current_result
     
     if monitor_width is None or monitor_height is None:
         get_monitor_resolution()
@@ -69,6 +70,7 @@ def start_plr_test():
     plr_baseline_start_time = time.time()
     plr_flash_start_time = None
     showing_plr_flash = False
+    plr_current_result = None  # Clear previous results
     
     print("PLR (Pupillary Light Reflex) test started!")
     print("  Collecting baseline pupil diameter (1 second)...")
@@ -79,7 +81,7 @@ def start_plr_test():
 def stop_plr_test():
     """Stop PLR test and calculate results"""
     global plr_test_active, plr_baseline_samples, plr_response_samples
-    global showing_plr_flash
+    global showing_plr_flash, plr_current_result
     
     if not plr_test_active:
         return None
@@ -94,6 +96,9 @@ def stop_plr_test():
     try:
         # Calculate PLR metrics
         result = calculate_plr_metrics(plr_baseline_samples, plr_response_samples)
+        
+        # Store result globally for dashboard access
+        plr_current_result = result
         
         # Save PLR data
         save_plr_data(plr_baseline_samples, plr_response_samples, result)
