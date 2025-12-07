@@ -13,16 +13,16 @@ from datetime import datetime
 # For "lower is better" metrics (latency, deviation, error rate), values below 'good' are green
 # For "higher is better" metrics (gain, accuracy), values above 'good' are green
 THRESHOLDS = {
-    'saccade_latency_ms': {'good': 250, 'warning': 350},  # Lower is better
+    'saccade_latency_ms': {'good': 300, 'warning': 450},  # Lower is better
     'saccade_velocity_deg_per_ms': {'good': 0.2, 'warning': 0.15},  # Higher is better
-    'saccade_accuracy_percent': {'good': 70, 'warning': 40},  # Higher is better
+    'saccade_accuracy_percent': {'good': 50, 'warning': 30},  # Higher is better
     'antisaccade_error_rate_percent': {'good': 20, 'warning': 40},  # Lower is better
-    'smooth_pursuit_gain': {'good': 0.8, 'warning': 0.5},  # Higher is better
-    'smooth_pursuit_latency_ms': {'good': 150, 'warning': 250},  # Lower is better
+    'smooth_pursuit_gain': {'good': 0.4, 'warning': 0.3},  # Higher is better
+    'smooth_pursuit_latency_ms': {'good': 300, 'warning': 400},  # Lower is better
     'fixed_point_deviation_degrees': {'good': 2.0, 'warning': 3.0},  # Lower is better
-    'plr_latency_ms': {'good': 300, 'warning': 400},  # Lower is better
-    'plr_constriction_percent': {'good': 25, 'warning': 15},  # Higher is better
-    'blink_rate_per_min': {'good': 20, 'warning': 10},  # Normal range
+    'plr_latency_ms': {'good': 500, 'warning': 600},  # Lower is better
+    'plr_constriction_percent': {'good': 15, 'warning': 10},  # Higher is better
+    'blink_rate_per_min': {'good_min': 0, 'good_max': 10, 'warning_max': 20},  # Range: 0-15 good, 15-30 warning, 30+ poor
 }
 
 def get_color_for_value(value, thresholds, lower_is_better=False):
@@ -31,7 +31,7 @@ def get_color_for_value(value, thresholds, lower_is_better=False):
     
     Args:
         value: The metric value to evaluate
-        thresholds: Dictionary with 'good' and 'warning' keys
+        thresholds: Dictionary with 'good' and 'warning' keys, or range keys for blink rate
         lower_is_better: If True, lower values are better (e.g., latency, error rate)
     
     Returns:
@@ -39,6 +39,19 @@ def get_color_for_value(value, thresholds, lower_is_better=False):
     """
     if value is None:
         return 'gray'
+    
+    # Special handling for blink rate (range-based)
+    if 'good_min' in thresholds and 'good_max' in thresholds:
+        good_min = thresholds['good_min']
+        good_max = thresholds['good_max']
+        warning_max = thresholds.get('warning_max', good_max * 2)
+        
+        if good_min <= value <= good_max:
+            return 'good'
+        elif value <= warning_max:
+            return 'warning'
+        else:
+            return 'poor'
     
     if lower_is_better:
         if value <= thresholds['good']:
@@ -61,7 +74,7 @@ def calculate_normalized_score(value, thresholds, lower_is_better=False):
     
     Args:
         value: The metric value
-        thresholds: Dictionary with 'good' and 'warning' keys
+        thresholds: Dictionary with 'good' and 'warning' keys, or range keys for blink rate
         lower_is_better: Whether lower values are better
     
     Returns:
@@ -69,6 +82,30 @@ def calculate_normalized_score(value, thresholds, lower_is_better=False):
     """
     if value is None:
         return None
+    
+    # Special handling for blink rate (range-based)
+    if 'good_min' in thresholds and 'good_max' in thresholds:
+        good_min = thresholds['good_min']
+        good_max = thresholds['good_max']
+        warning_max = thresholds.get('warning_max', good_max * 2)
+        
+        if good_min <= value <= good_max:
+            # Good range: map to 100-67
+            # Linear interpolation within the good range
+            if good_max == good_min:
+                return 100
+            return 100 - ((value - good_min) / (good_max - good_min)) * 33
+        elif value <= warning_max:
+            # Warning range: map to 67-33
+            if warning_max == good_max:
+                return 50
+            return 67 - ((value - good_max) / (warning_max - good_max)) * 34
+        else:
+            # Poor range: map to 33-0
+            poor_max = max(warning_max * 1.5, value * 1.2)
+            if poor_max == warning_max:
+                return 0
+            return max(0, 33 - ((value - warning_max) / (poor_max - warning_max)) * 33)
     
     good_val = thresholds['good']
     warning_val = thresholds['warning']
@@ -272,7 +309,7 @@ def create_score_dial_html(score):
         message = 'No concussion detected'
         label_class = 'good'
     elif score <= 67:  # Warning range (medium score)
-        color = '#ffc107'
+        color = '#CC5500'
         message = 'Potential concussion detected'
         label_class = 'warning'
     else:  # Poor range (high score)
@@ -760,47 +797,64 @@ def create_metric_html(name, value, unit, thresholds, color, lower_is_better=Fal
     # The scale background shows: green (0-33%), yellow (33-66%), red (66-100%)
     # The bar position indicates where the value falls on this scale
     
-    good_val = thresholds['good']
-    warning_val = thresholds['warning']
-    
-    if lower_is_better:
-        # For lower is better: good (low) = left, poor (high) = right
-        # Define a reasonable maximum for poor values to establish scale range
-        poor_max = max(warning_val * 2, value * 1.5, good_val * 3)
+    # Special handling for range-based thresholds (blink rate)
+    if 'good_min' in thresholds and 'good_max' in thresholds:
+        good_min = thresholds['good_min']
+        good_max = thresholds['good_max']
+        warning_max = thresholds.get('warning_max', good_max * 2)
+        poor_max = max(warning_max * 1.5, value * 1.2)
         
-        if value <= good_val:
-            # Good: map to 0-33% (left side)
-            # Best case: value = 0 or very low → 0%
-            # Worst good case: value = good_val → 33%
-            scale_percent = (value / good_val) * 33 if good_val > 0 else 0
-        elif value <= warning_val:
-            # Warning: map to 33-66% (middle)
-            # value = good_val → 33%, value = warning_val → 66%
-            scale_percent = 33 + ((value - good_val) / (warning_val - good_val)) * 33 if warning_val > good_val else 50
+        if good_min <= value <= good_max:
+            # Good: map to 0-33%
+            scale_percent = ((value - good_min) / (good_max - good_min)) * 33 if good_max > good_min else 0
+        elif value <= warning_max:
+            # Warning: map to 33-66%
+            scale_percent = 33 + ((value - good_max) / (warning_max - good_max)) * 33 if warning_max > good_max else 50
         else:
-            # Poor: map to 66-100% (right side)
-            # value = warning_val → 66%, value = poor_max → 100%
-            scale_percent = 66 + min(34, ((value - warning_val) / (poor_max - warning_val)) * 34) if poor_max > warning_val else 100
+            # Poor: map to 66-100%
+            scale_percent = 66 + min(34, ((value - warning_max) / (poor_max - warning_max)) * 34) if poor_max > warning_max else 100
     else:
-        # For higher is better: good (high) = left, poor (low) = right
-        # Define a reasonable minimum for poor values to establish scale range
-        poor_min = min(0, warning_val * 0.5) if warning_val > 0 else 0
-        # Define a reasonable maximum for good values
-        good_max = max(good_val * 1.5, value * 1.2) if value > good_val else good_val * 1.5
+        good_val = thresholds['good']
+        warning_val = thresholds['warning']
         
-        if value >= good_val:
-            # Good: map to 0-33% (left side)
-            # Best case: value = good_max or very high → 0%
-            # Worst good case: value = good_val → 33%
-            scale_percent = ((good_max - value) / (good_max - good_val)) * 33 if good_max > good_val else 0
-        elif value >= warning_val:
-            # Warning: map to 33-66% (middle)
-            # value = good_val → 33%, value = warning_val → 66%
-            scale_percent = 33 + ((good_val - value) / (good_val - warning_val)) * 33 if good_val > warning_val else 50
+        if lower_is_better:
+            # For lower is better: good (low) = left, poor (high) = right
+            # Define a reasonable maximum for poor values to establish scale range
+            poor_max = max(warning_val * 2, value * 1.5, good_val * 3)
+            
+            if value <= good_val:
+                # Good: map to 0-33% (left side)
+                # Best case: value = 0 or very low → 0%
+                # Worst good case: value = good_val → 33%
+                scale_percent = (value / good_val) * 33 if good_val > 0 else 0
+            elif value <= warning_val:
+                # Warning: map to 33-66% (middle)
+                # value = good_val → 33%, value = warning_val → 66%
+                scale_percent = 33 + ((value - good_val) / (warning_val - good_val)) * 33 if warning_val > good_val else 50
+            else:
+                # Poor: map to 66-100% (right side)
+                # value = warning_val → 66%, value = poor_max → 100%
+                scale_percent = 66 + min(34, ((value - warning_val) / (poor_max - warning_val)) * 34) if poor_max > warning_val else 100
         else:
-            # Poor: map to 66-100% (right side)
-            # value = warning_val → 66%, value = poor_min → 100%
-            scale_percent = 66 + min(34, ((warning_val - value) / (warning_val - poor_min)) * 34) if warning_val > poor_min else 100
+            # For higher is better: good (high) = left, poor (low) = right
+            # Define a reasonable minimum for poor values to establish scale range
+            poor_min = min(0, warning_val * 0.5) if warning_val > 0 else 0
+            # Define a reasonable maximum for good values
+            good_max = max(good_val * 1.5, value * 1.2) if value > good_val else good_val * 1.5
+            
+            if value >= good_val:
+                # Good: map to 0-33% (left side)
+                # Best case: value = good_max or very high → 0%
+                # Worst good case: value = good_val → 33%
+                scale_percent = ((good_max - value) / (good_max - good_val)) * 33 if good_max > good_val else 0
+            elif value >= warning_val:
+                # Warning: map to 33-66% (middle)
+                # value = good_val → 33%, value = warning_val → 66%
+                scale_percent = 33 + ((good_val - value) / (good_val - warning_val)) * 33 if good_val > warning_val else 50
+            else:
+                # Poor: map to 66-100% (right side)
+                # value = warning_val → 66%, value = poor_min → 100%
+                scale_percent = 66 + min(34, ((warning_val - value) / (warning_val - poor_min)) * 34) if warning_val > poor_min else 100
     
     # Clamp to 0-100%
     scale_percent = max(0, min(100, scale_percent))

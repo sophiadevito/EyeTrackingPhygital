@@ -39,7 +39,7 @@ last_valid_pupil_diameter = None
 pupil_diameter_history = []  # Keep last N diameters for filtering
 blinks_detected = 0
 last_blink_time = None
-MIN_ELLIPSE_GOODNESS = 0.6  # Minimum ellipse goodness to accept as valid pupil (filters eyelashes)
+MIN_ELLIPSE_GOODNESS = 0.5  # Minimum ellipse goodness to accept as valid pupil (filters eyelashes)
 current_ellipse_goodness = None  # Store current ellipse goodness score
 
 # Calibration globals
