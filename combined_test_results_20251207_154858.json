@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "timestamp": "20251207_154858",
+    "test_date": "2025-12-07T15:48:58.074332",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "tests_run": [
+      "saccade",
+      "smooth_pursuit",
+      "fixed_point",
+      "plr"
+    ],
+    "test_order": "saccade \u2192 smooth_pursuit \u2192 fixed_point \u2192 plr"
+  },
+  "results": {
+    "saccade": {
+      "antisaccade": {
+        "total_trials": 12,
+        "error_count": 0,
+        "correct_count": 12,
+        "error_rate_percent": 0.0
+      }
+    },
+    "smooth_pursuit": {
+      "total_measurements": 391,
+      "horizontal_measurements": 391,
+      "vertical_measurements": 0,
+      "average_gain": 0.0,
+      "std_gain": 0.0,
+      "average_gain_horizontal": 0.0,
+      "average_gain_vertical": 0.0,
+      "average_latency_ms": 0.0,
+      "std_latency_ms": 0.0,
+      "average_latency_horizontal_ms": 0.0,
+      "average_latency_vertical_ms": 0.0
+    },
+    "fixed_point": {
+      "total_measurements": 496,
+      "average_deviation_degrees": 21.660772171336934,
+      "median_deviation_degrees": 21.660772171336934,
+      "rms_deviation_degrees": 21.660772171336934,
+      "std_deviation_degrees": 0.0,
+      "max_deviation_degrees": 21.660772171336934,
+      "min_deviation_degrees": 21.660772171336934
+    },
+    "plr": {
+      "baseline_samples_count": 26,
+      "response_samples_count": 66,
+      "baseline_diameter_pixels": 113.87378093174526,
+      "min_response_diameter_pixels": 68.7952823638916,
+      "constriction_amplitude_pixels": 45.07849856785366,
+      "constriction_amplitude_percent": 39.58637203314891,
+      "plr_latency_ms": 312.318115234375
+    },
+    "blink_rate": {
+      "blinks_per_minute_60s": 0.0,
+      "blinks_per_minute_30s": 0.0,
+      "total_blinks": 1
+    }
+  }
+}

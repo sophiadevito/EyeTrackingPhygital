@@ -13,7 +13,7 @@ from datetime import datetime
 # For "lower is better" metrics (latency, deviation, error rate), values below 'good' are green
 # For "higher is better" metrics (gain, accuracy), values above 'good' are green
 THRESHOLDS = {
-    'saccade_latency_ms': {'good': 300, 'warning': 450},  # Lower is better
+    'saccade_latency_ms': {'good': 350, 'warning': 500},  # Lower is better
     'saccade_velocity_deg_per_ms': {'good': 0.2, 'warning': 0.15},  # Higher is better
     'saccade_accuracy_percent': {'good': 50, 'warning': 30},  # Higher is better
     'antisaccade_error_rate_percent': {'good': 20, 'warning': 40},  # Lower is better
