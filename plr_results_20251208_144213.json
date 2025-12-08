@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "timestamp": "20251208_144213",
+    "test_date": "2025-12-08T14:42:13.995460",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "flash_duration_seconds": 2.5,
+    "baseline_duration_seconds": 1.0
+  },
+  "results": {
+    "baseline_diameter_pixels": 187.2892133272611,
+    "min_response_diameter_pixels": 124.89566040039062,
+    "constriction_amplitude_pixels": 62.393552926870484,
+    "constriction_amplitude_percent": 33.31401302745966,
+    "plr_latency_ms": 226.37109375,
+    "baseline_samples_count": 24,
+    "response_samples_count": 68
+  },
+  "baseline_data": [
+    {
+      "timestamp_ms": 1765222930469.3242,
+      "pupil_diameter_pixels": 184.29183197021484
+    },
+    {
+      "timestamp_ms": 1765222930516.97,
+      "pupil_diameter_pixels": 187.8487319946289
+    },
+    {
+      "timestamp_ms": 1765222930558.233,
+      "pupil_diameter_pixels": 187.92385864257812
+    },
+    {
+      "timestamp_ms": 1765222930605.533,
+      "pupil_diameter_pixels": 185.62723541259766
+    },
+    {
+      "timestamp_ms": 1765222930647.944,
+      "pupil_diameter_pixels": 186.87718200683594
+    },
+    {
+      "timestamp_ms": 1765222930688.1987,
+      "pupil_diameter_pixels": 185.4605941772461
+    },
+    {
+      "timestamp_ms": 1765222930723.8828,
+      "pupil_diameter_pixels": 185.7198944091797
+    },
+    {
+      "timestamp_ms": 1765222930759.4858,
+      "pupil_diameter_pixels": 187.20526885986328
+    },
+    {
+      "timestamp_ms": 1765222930797.157,
+      "pupil_diameter_pixels": 187.31136322021484
+    },
+    {
+      "timestamp_ms": 1765222930830.555,
+      "pupil_diameter_pixels": 187.27648162841797
+    },
+    {
+      "timestamp_ms": 1765222930866.8599,
+      "pupil_diameter_pixels": 186.9790496826172
+    },
+    {
+      "timestamp_ms": 1765222930899.4932,
+      "pupil_diameter_pixels": 187.49956512451172
+    },
+    {
+      "timestamp_ms": 1765222930934.908,
+      "pupil_diameter_pixels": 185.90057373046875
+    },
+    {
+      "timestamp_ms": 1765222930976.692,
+      "pupil_diameter_pixels": 188.45946502685547
+    },
+    {
+      "timestamp_ms": 1765222931012.5388,
+      "pupil_diameter_pixels": 184.80958557128906
+    },
+    {
+      "timestamp_ms": 1765222931046.0942,
+      "pupil_diameter_pixels": 188.0434341430664
+    },
+    {
+      "timestamp_ms": 1765222931082.368,
+      "pupil_diameter_pixels": 188.01908111572266
+    },
+    {
+      "timestamp_ms": 1765222931127.9758,
+      "pupil_diameter_pixels": 188.06544494628906
+    },
+    {
+      "timestamp_ms": 1765222931163.553,
+      "pupil_diameter_pixels": 188.06847381591797
+    },
+    {
+      "timestamp_ms": 1765222931197.402,
+      "pupil_diameter_pixels": 188.74415588378906
+    },
+    {
+      "timestamp_ms": 1765222931240.25,
+      "pupil_diameter_pixels": 184.71707153320312
+    },
+    {
+      "timestamp_ms": 1765222931277.8618,
+      "pupil_diameter_pixels": 188.37876892089844
+    },
+    {
+      "timestamp_ms": 1765222931356.0571,
+      "pupil_diameter_pixels": 186.7718734741211
+    },
+    {
+      "timestamp_ms": 1765222931392.2341,
+      "pupil_diameter_pixels": 187.28227996826172
+    }
+  ],
+  "response_data": [
+    {
+      "timestamp_ms": 1765222931505.0051,
+      "pupil_diameter_pixels": 187.85897827148438
+    },
+    {
+      "timestamp_ms": 1765222931545.8188,
+      "pupil_diameter_pixels": 186.47956085205078
+    },
+    {
+      "timestamp_ms": 1765222931580.184,
+      "pupil_diameter_pixels": 187.8261947631836
+    },
+    {
+      "timestamp_ms": 1765222931615.751,
+      "pupil_diameter_pixels": 188.02789306640625
+    },
+    {
+      "timestamp_ms": 1765222931652.722,
+      "pupil_diameter_pixels": 186.14603424072266
+    },
+    {
+      "timestamp_ms": 1765222931695.6228,
+      "pupil_diameter_pixels": 186.67111206054688
+    },
+    {
+      "timestamp_ms": 1765222931731.3762,
+      "pupil_diameter_pixels": 159.52530670166016
+    },
+    {
+      "timestamp_ms": 1765222931779.9329,
+      "pupil_diameter_pixels": 187.0247344970703
+    },
+    {
+      "timestamp_ms": 1765222931815.0288,
+      "pupil_diameter_pixels": 179.83070373535156
+    },
+    {
+      "timestamp_ms": 1765222931851.899,
+      "pupil_diameter_pixels": 176.94566345214844
+    },
+    {
+      "timestamp_ms": 1765222931885.174,
+      "pupil_diameter_pixels": 169.23657989501953
+    },
+    {
+      "timestamp_ms": 1765222931922.498,
+      "pupil_diameter_pixels": 166.47711944580078
+    },
+    {
+      "timestamp_ms": 1765222931955.755,
+      "pupil_diameter_pixels": 156.36878204345703
+    },
+    {
+      "timestamp_ms": 1765222931991.509,
+      "pupil_diameter_pixels": 158.3768768310547
+    },
+    {
+      "timestamp_ms": 1765222932040.327,
+      "pupil_diameter_pixels": 153.90170288085938
+    },
+    {
+      "timestamp_ms": 1765222932076.164,
+      "pupil_diameter_pixels": 149.63866424560547
+    },
+    {
+      "timestamp_ms": 1765222932111.494,
+      "pupil_diameter_pixels": 146.79759979248047
+    },
+    {
+      "timestamp_ms": 1765222932147.433,
+      "pupil_diameter_pixels": 138.73026275634766
+    },
+    {
+      "timestamp_ms": 1765222932182.477,
+      "pupil_diameter_pixels": 135.9781951904297
+    },
+    {
+      "timestamp_ms": 1765222932219.579,
+      "pupil_diameter_pixels": 139.13184356689453
+    },
+    {
+      "timestamp_ms": 1765222932260.6677,
+      "pupil_diameter_pixels": 137.566162109375
+    },
+    {
+      "timestamp_ms": 1765222932294.456,
+      "pupil_diameter_pixels": 136.33940887451172
+    },
+    {
+      "timestamp_ms": 1765222932336.537,
+      "pupil_diameter_pixels": 133.43812561035156
+    },
+    {
+      "timestamp_ms": 1765222932378.844,
+      "pupil_diameter_pixels": 133.94754028320312
+    },
+    {
+      "timestamp_ms": 1765222932414.7651,
+      "pupil_diameter_pixels": 133.08145141601562
+    },
+    {
+      "timestamp_ms": 1765222932450.941,
+      "pupil_diameter_pixels": 131.2079620361328
+    },
+    {
+      "timestamp_ms": 1765222932492.0671,
+      "pupil_diameter_pixels": 132.14350509643555
+    },
+    {
+      "timestamp_ms": 1765222932525.87,
+      "pupil_diameter_pixels": 130.70385360717773
+    },
+    {
+      "timestamp_ms": 1765222932562.784,
+      "pupil_diameter_pixels": 131.5957260131836
+    },
+    {
+      "timestamp_ms": 1765222932596.6458,
+      "pupil_diameter_pixels": 127.05274200439453
+    },
+    {
+      "timestamp_ms": 1765222932632.967,
+      "pupil_diameter_pixels": 131.96309280395508
+    },
+    {
+      "timestamp_ms": 1765222932668.621,
+      "pupil_diameter_pixels": 131.31361389160156
+    },
+    {
+      "timestamp_ms": 1765222932703.846,
+      "pupil_diameter_pixels": 132.67695999145508
+    },
+    {
+      "timestamp_ms": 1765222932744.494,
+      "pupil_diameter_pixels": 129.6885643005371
+    },
+    {
+      "timestamp_ms": 1765222932779.171,
+      "pupil_diameter_pixels": 131.75735473632812
+    },
+    {
+      "timestamp_ms": 1765222932814.616,
+      "pupil_diameter_pixels": 133.70528411865234
+    },
+    {
+      "timestamp_ms": 1765222932847.9,
+      "pupil_diameter_pixels": 132.4993667602539
+    },
+    {
+      "timestamp_ms": 1765222932884.1,
+      "pupil_diameter_pixels": 128.49752807617188
+    },
+    {
+      "timestamp_ms": 1765222932926.624,
+      "pupil_diameter_pixels": 133.3240966796875
+    },
+    {
+      "timestamp_ms": 1765222932966.485,
+      "pupil_diameter_pixels": 128.66054153442383
+    },
+    {
+      "timestamp_ms": 1765222933000.4749,
+      "pupil_diameter_pixels": 128.3461570739746
+    },
+    {
+      "timestamp_ms": 1765222933044.4958,
+      "pupil_diameter_pixels": 133.28820037841797
+    },
+    {
+      "timestamp_ms": 1765222933086.8909,
+      "pupil_diameter_pixels": 132.89563369750977
+    },
+    {
+      "timestamp_ms": 1765222933123.509,
+      "pupil_diameter_pixels": 131.4898452758789
+    },
+    {
+      "timestamp_ms": 1765222933158.2761,
+      "pupil_diameter_pixels": 126.40020370483398
+    },
+    {
+      "timestamp_ms": 1765222933193.1409,
+      "pupil_diameter_pixels": 128.7233123779297
+    },
+    {
+      "timestamp_ms": 1765222933228.508,
+      "pupil_diameter_pixels": 126.96456909179688
+    },
+    {
+      "timestamp_ms": 1765222933265.3398,
+      "pupil_diameter_pixels": 126.20454025268555
+    },
+    {
+      "timestamp_ms": 1765222933299.641,
+      "pupil_diameter_pixels": 124.89566040039062
+    },
+    {
+      "timestamp_ms": 1765222933341.438,
+      "pupil_diameter_pixels": 125.4705581665039
+    },
+    {
+      "timestamp_ms": 1765222933375.804,
+      "pupil_diameter_pixels": 125.42000961303711
+    },
+    {
+      "timestamp_ms": 1765222933410.381,
+      "pupil_diameter_pixels": 125.76245880126953
+    },
+    {
+      "timestamp_ms": 1765222933444.5598,
+      "pupil_diameter_pixels": 125.51916885375977
+    },
+    {
+      "timestamp_ms": 1765222933481.277,
+      "pupil_diameter_pixels": 127.1956901550293
+    },
+    {
+      "timestamp_ms": 1765222933515.978,
+      "pupil_diameter_pixels": 127.52642440795898
+    },
+    {
+      "timestamp_ms": 1765222933551.7222,
+      "pupil_diameter_pixels": 126.52348327636719
+    },
+    {
+      "timestamp_ms": 1765222933588.655,
+      "pupil_diameter_pixels": 127.73872375488281
+    },
+    {
+      "timestamp_ms": 1765222933622.591,
+      "pupil_diameter_pixels": 131.14529418945312
+    },
+    {
+      "timestamp_ms": 1765222933657.1519,
+      "pupil_diameter_pixels": 132.04834747314453
+    },
+    {
+      "timestamp_ms": 1765222933691.212,
+      "pupil_diameter_pixels": 129.65723419189453
+    },
+    {
+      "timestamp_ms": 1765222933734.061,
+      "pupil_diameter_pixels": 128.66178131103516
+    },
+    {
+      "timestamp_ms": 1765222933768.274,
+      "pupil_diameter_pixels": 129.27306747436523
+    },
+    {
+      "timestamp_ms": 1765222933805.4458,
+      "pupil_diameter_pixels": 133.3787841796875
+    },
+    {
+      "timestamp_ms": 1765222933839.563,
+      "pupil_diameter_pixels": 134.12308502197266
+    },
+    {
+      "timestamp_ms": 1765222933880.27,
+      "pupil_diameter_pixels": 135.65291595458984
+    },
+    {
+      "timestamp_ms": 1765222933916.9531,
+      "pupil_diameter_pixels": 135.8767547607422
+    },
+    {
+      "timestamp_ms": 1765222933959.8247,
+      "pupil_diameter_pixels": 136.32400512695312
+    },
+    {
+      "timestamp_ms": 1765222933995.394,
+      "pupil_diameter_pixels": 136.89053344726562
+    }
+  ]
+}

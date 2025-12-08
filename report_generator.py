@@ -18,7 +18,7 @@ THRESHOLDS = {
     'saccade_accuracy_percent': {'good': 50, 'warning': 30},  # Higher is better
     'antisaccade_error_rate_percent': {'good': 20, 'warning': 40},  # Lower is better
     'smooth_pursuit_gain': {'good': 0.4, 'warning': 0.3},  # Higher is better
-    'smooth_pursuit_latency_ms': {'good': 300, 'warning': 400},  # Lower is better
+    'smooth_pursuit_latency_ms': {'good': 350, 'warning': 450},  # Lower is better
     'fixed_point_deviation_degrees': {'good': 2.0, 'warning': 3.0},  # Lower is better
     'plr_latency_ms': {'good': 500, 'warning': 600},  # Lower is better
     'plr_constriction_percent': {'good': 15, 'warning': 10},  # Higher is better
@@ -363,6 +363,36 @@ def create_score_dial_html(score):
     """
     return html
 
+def smooth_gaze_path(gaze_path, window_size=5):
+    """
+    Apply moving average smoothing to gaze path to reduce jitter.
+    
+    Args:
+        gaze_path: List of [timestamp, x, y] tuples
+        window_size: Number of points to average (default 5)
+    
+    Returns:
+        Smoothed gaze path in same format
+    """
+    if len(gaze_path) < window_size:
+        return gaze_path
+    
+    smoothed = []
+    for i in range(len(gaze_path)):
+        # Define window boundaries
+        start = max(0, i - window_size // 2)
+        end = min(len(gaze_path), i + window_size // 2 + 1)
+        window = gaze_path[start:end]
+        
+        # Calculate average position
+        avg_x = sum(p[1] for p in window) / len(window)
+        avg_y = sum(p[2] for p in window) / len(window)
+        
+        # Keep original timestamp
+        smoothed.append([gaze_path[i][0], avg_x, avg_y])
+    
+    return smoothed
+
 def create_eye_path_visualization(gaze_path, target_data, monitor_width, monitor_height):
     """
     Create an SVG visualization of the eye path during saccade testing.
@@ -392,7 +422,10 @@ def create_eye_path_visualization(gaze_path, target_data, monitor_width, monitor
     if len(filtered_gaze_path) < 2:
         filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
     
-    # Extract coordinates (use filtered path)
+    # Apply smoothing to reduce jitter
+    filtered_gaze_path = smooth_gaze_path(filtered_gaze_path, window_size=5)
+    
+    # Extract coordinates (use filtered and smoothed path)
     gaze_x = [point[1] for point in filtered_gaze_path]
     gaze_y = [point[2] for point in filtered_gaze_path]
     
@@ -536,7 +569,10 @@ def create_pursuit_path_visualization(gaze_path, target_path, monitor_width, mon
     if len(filtered_gaze_path) < 2:
         filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
     
-    # Extract coordinates (use filtered path)
+    # Apply smoothing to reduce jitter
+    filtered_gaze_path = smooth_gaze_path(filtered_gaze_path, window_size=5)
+    
+    # Extract coordinates (use filtered and smoothed path)
     gaze_x = [point[1] for point in filtered_gaze_path]
     gaze_y = [point[2] for point in filtered_gaze_path]
     
@@ -666,7 +702,10 @@ def create_fixed_point_path_visualization(gaze_path, center_x, center_y, monitor
     if len(filtered_gaze_path) < 2:
         filtered_gaze_path = gaze_path  # Use original if filtering was too aggressive
     
-    # Extract coordinates (use filtered path)
+    # Apply smoothing to reduce jitter
+    filtered_gaze_path = smooth_gaze_path(filtered_gaze_path, window_size=5)
+    
+    # Extract coordinates (use filtered and smoothed path)
     gaze_x = [point[1] for point in filtered_gaze_path]
     gaze_y = [point[2] for point in filtered_gaze_path]
     

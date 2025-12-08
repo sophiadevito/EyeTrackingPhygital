@@ -57,7 +57,7 @@ DASHBOARD_HTML = """
         
         .header-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 20px;
             margin-bottom: 20px;
         }
@@ -85,15 +85,9 @@ DASHBOARD_HTML = """
         
         .main-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 20px;
             margin-bottom: 20px;
-        }
-        
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
         
         .panel {
@@ -269,20 +263,18 @@ DASHBOARD_HTML = """
             </div>
         </div>
         
-        <div class="right-column">
-            <div class="panel">
-                <h2>Live Gaze Path</h2>
-                <div class="gaze-view-container">
-                    <canvas id="gazeCanvas" class="gaze-canvas"></canvas>
-                </div>
+        <div class="panel">
+            <h2>Live Gaze Path</h2>
+            <div class="gaze-view-container">
+                <canvas id="gazeCanvas" class="gaze-canvas"></canvas>
             </div>
-            
-            <div class="panel">
-                <h2>Test Metrics</h2>
-                <div class="metrics-container" id="metricsContainer">
-                    <div class="no-data">Waiting for test data...</div>
-                </div>
-            </div>
+        </div>
+    </div>
+    
+    <div class="panel" style="margin-top: 20px;">
+        <h2>Test Metrics</h2>
+        <div class="metrics-container" id="metricsContainer">
+            <div class="no-data">Waiting for test data...</div>
         </div>
     </div>
     

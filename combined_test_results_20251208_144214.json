@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "timestamp": "20251208_144214",
+    "test_date": "2025-12-08T14:42:14.514192",
+    "monitor_width": 1512,
+    "monitor_height": 982,
+    "tests_run": [
+      "saccade",
+      "smooth_pursuit",
+      "fixed_point",
+      "plr"
+    ],
+    "test_order": "saccade \u2192 smooth_pursuit \u2192 fixed_point \u2192 plr"
+  },
+  "results": {
+    "saccade": {
+      "normal": {
+        "total_saccades": 11,
+        "valid_saccades": 11,
+        "average_latency_ms": 252.67820046164772,
+        "std_latency_ms": 80.63868528898323,
+        "average_velocity_deg_per_ms": 0.1892057547708004,
+        "std_velocity_deg_per_ms": 0.17553544716196803,
+        "average_accuracy_percent": 46.64942043405469,
+        "std_accuracy_percent": 39.600728456701404
+      },
+      "antisaccade": {
+        "total_trials": 12,
+        "error_count": 5,
+        "correct_count": 7,
+        "error_rate_percent": 41.66666666666667
+      }
+    },
+    "smooth_pursuit": {
+      "total_measurements": 404,
+      "horizontal_measurements": 404,
+      "vertical_measurements": 0,
+      "average_gain": 0.5696047555981397,
+      "std_gain": 0.7755204222792627,
+      "average_gain_horizontal": 0.5696047555981397,
+      "average_gain_vertical": 0.0,
+      "average_latency_ms": 0.0,
+      "std_latency_ms": 0.0,
+      "average_latency_horizontal_ms": 0.0,
+      "average_latency_vertical_ms": 0.0
+    },
+    "fixed_point": {
+      "total_measurements": 535,
+      "average_deviation_degrees": 1.075902766874692,
+      "median_deviation_degrees": 0.7812547538171886,
+      "rms_deviation_degrees": 1.9153038332324206,
+      "std_deviation_degrees": 1.5845573545398053,
+      "max_deviation_degrees": 19.345243132622365,
+      "min_deviation_degrees": 0.0
+    },
+    "plr": {
+      "baseline_samples_count": 24,
+      "response_samples_count": 68,
+      "baseline_diameter_pixels": 187.2892133272611,
+      "min_response_diameter_pixels": 124.89566040039062,
+      "constriction_amplitude_pixels": 62.393552926870484,
+      "constriction_amplitude_percent": 33.31401302745966,
+      "plr_latency_ms": 226.37109375
+    },
+    "blink_rate": {
+      "blinks_per_minute_60s": 4.0,
+      "blinks_per_minute_30s": 6.0,
+      "total_blinks": 6
+    }
+  }
+}
